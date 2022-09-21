@@ -1,0 +1,77 @@
+<html lang="he" dir="rtl">
+    <head>
+        <style>
+            body{
+                background-color:lightskyblue;
+        }
+        h1{
+           color: white;
+           text-align: center; 
+           font-size: 100px;
+           text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        }
+        h2{
+           color: white;
+           text-align: center; 
+           font-size: 75px;
+           text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+        form{
+            text-align: center;
+            font-size: 20px;
+        }
+        button{
+            font-size: 20px;
+        }
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        </style>
+        <title>שמעון אלקיים</title>
+    </head>
+    <body>
+        <h1>ברוכים הבאים!!!</h1>
+        <img src="https://scontent.ftlv19-1.fna.fbcdn.net/v/t1.18169-9/11694966_1457160777942480_8892509702767846910_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=t76xlSMY6iEAX_WZkac&_nc_ht=scontent.ftlv19-1.fna&oh=00_AT9PNt60EFSeFtwlA08Q027FqQA-nK8UqCPJM1Q82qJ6mw&oe=634FA315" width="300"/>
+        <h2>אתר הרשמי של שמעון אלקיים</h2>
+        <p>שלום וברכה, הגעתם למקום שיעזור לכם לטפל בכל העיניינים בנושא רישום פטנטים בינלאומי.</p>
+        
+        <p>בנוסף לכך תמצאו כאן את כל מה שאתם צריעים בנוגע לייצוג חברות הייטק מול הרגולטור. </p>
+        
+        <p>כדי שנוכל לסייע לכם בצורה היעילה ביותר נא תמלאו תופס ומלזור אליעם בהקדם האפשרי!</p>
+        <form>
+            <label for="fullName">אנא כתוב את השם המלא שלך:</label><br/>
+            <input type="text" id="fullName" name="fullName" required><br/>
+            <label for="phoneNum">מספר טלפון שלך:</label><br/>
+            <input type="tel" id="phoneNum" name="phoneNum" placeholder="0551112233" pattern="[0-9]{10}" required><br/>
+            <label for="email">כתובת דואר אלקטרוני שלך:</label><br/>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br/>
+            <label for="options">סמנו דרך פניה מועדפת עליכם</label><br/>
+            <input type="radio" id="options" name="options" required>דרך טלפון 
+            <input type="radio" id="options" name="options" >דרך דואר אלקטרוני <br/>
+            <label for="theme">בחרו נושא הפניה</label><br/>
+            <select name="theme">
+                <option value="1">טיפול ברישום פטנטים בינלאומי</option>
+                <option value="2">ייצוג חברות הייטק מול הרגולטור</option>
+            </select><br/>
+            <label for="note">הערות</label><br/>
+            <input type="text" id="note" name="note" placeholder="אם תרצו להוסיף משהו מעצמכם"><br/>
+            <button type="submit">שלח</button>
+        </form>
+        <text>מקסים מירקין, "האקר-בסט" בע"מ © </text>
+    </body>
+</html>
