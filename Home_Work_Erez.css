@@ -1,0 +1,25 @@
+
+#First, #Second {
+    text-align: center;
+    font-size: 24px;
+}
+
+div {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid white;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type="email"],
+input[type="name"],
+input[type="number"] {
+    background-color: white;
+    color: black;
+    width: 40%;
+    padding: 5px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
