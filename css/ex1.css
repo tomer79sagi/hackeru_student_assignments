@@ -1,0 +1,24 @@
+.row1 {
+    background-color: brown;
+    color: white;
+}
+.row2 {
+    background-color: green;
+    color: white;
+}
+.row3 {
+    background-color: blue;
+    color: white;
+}
+.col1{
+   text-decoration: underline;
+}
+.col2{
+    font-weight: bold;
+ }
+ .col3{
+    font-style: italic;
+ }
+ table{
+    font-size: 30;
+ }
