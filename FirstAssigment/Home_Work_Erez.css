@@ -1,7 +1,9 @@
 
-#First, #Second {
-    text-align: center;
+#First , #Second {
+    text-align: left;
     font-size: 24px;
+    border: 1px solid
+
 }
 
 div {
