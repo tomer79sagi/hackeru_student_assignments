@@ -1,0 +1,36 @@
+body {
+    font-size: 60px;
+}
+
+table {
+    font-size: 60px;
+}
+
+.class_font_underline {
+    text-decoration: underline;
+}
+
+.class_font_bold {
+    font-weight: bold;
+}
+
+.class_font_italic {
+    font-style: italic;
+}
+
+#color_content_of_table {
+    color: white;
+}
+
+#colorOfRowOne {
+    background-color: red;
+}
+
+#colorOfRowTwo {
+    background-color: green;
+}
+
+#colorOfRowThree{
+    background-color: blue;
+}
+
