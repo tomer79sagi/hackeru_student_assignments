@@ -1,35 +1,65 @@
 <html>
   <head>
-    <title>Table exercise</title>
+    <title>sapn\div exercise</title>
     <style>
-      #italicspan {
+      .column1 {
         font-style: italic;
+        border-style: solid;
+        border-color: brown;
       }
-      .boldspan {
+      .column2 {
         font-weight: bold;
+        border-style: solid;
+        border-color: brown;
       }
-      .underlinespan {
+      .column3 {
         text-decoration: underline;
+        border-style: solid;
+        border-color: brown;
+      }
+      #row1 {
+        background-color: red;
+        border-style: solid;
+        border-color: blueviolet;
+      }
+      #row2 {
+        background-color: green;
+        border-style: solid;
+        border-color: blueviolet;
+      }
+      #row3 {
+        background-color: blue;
+        border-style: solid;
+        border-color: blueviolet;
       }
     </style>
   </head>
   <body>
-    <table style="margin-left: auto; margin-right: auto">
-      <tr style="background-color: red">
-        <th><div id="italicspan">1</div></th>
-        <th><div class="boldspan">2</div></th>
-        <th><div class="underlinespan">3</div></th>
-      </tr>
-      <tr style="background-color;:blue ">
-        <th><div id="italicspan">4</div></th>
-        <th><div class="boldspan">5</div></th>
-        <th><div class="underlinespan">6</div></th>
-      </tr>
-      <tr style="background-color: green">
-        <th><div id="italicspan">7</div></th>
-        <th><div class="boldspan">8</div></th>
-        <th><div class="underlinespan">9</div></th>
-      </tr>
-    </table>
+    <div
+      style="
+        text-align: center;
+        border-style: solid;
+        border-color: blueviolet;
+        width: 20%;
+        margin-left: auto;
+        margin-right: auto;
+      "
+    >
+      <div id="row1">
+        <span class="column1">1</span>
+        <span class="column2">2</span>
+        <span class="column3">3</span>
+      </div>
+      <div id="row2">
+        <span class="column1">4</span>
+        <span class="column2">5</span>
+        <span class="column3">6</span>
+      </div>
+      <div id="row3">
+        <span class="column1">7</span>
+        <span class="column2">8</span>
+        <span class="column3">9</span>
+      </div>
+    </div>
   </body>
 </html>
