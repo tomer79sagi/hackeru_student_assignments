@@ -1,0 +1,23 @@
+.board {
+    display: grid;
+    margin: 10px auto;
+    grid-gap: 10px;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    width: 306px;
+}
+
+.board > div{
+    padding: 10px;
+    background-color: silver;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+}
+
+.cell{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    background-color: #cccccc;
+}
