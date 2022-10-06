@@ -3,5 +3,19 @@ li{
 }
 header{
   color: rgb(23, 10, 158);
-
+  background-color:rgb(243, 190, 190);
+  max-width:200px ;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+}
+section{
+background-color: rgb(247, 247, 161);
+max-width:200px ;
+padding: 10px;
+}
+.first{
+  padding-left: 2px;
+  font-size: 20px;
+  text-decoration: underline;
 }
