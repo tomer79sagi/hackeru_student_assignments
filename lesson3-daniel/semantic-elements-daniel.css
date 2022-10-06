@@ -10,9 +10,9 @@ header{
   font-weight: bolder;
 }
 section{
-background-color: rgb(247, 247, 161);
-max-width:200px ;
-padding: 10px;
+  background-color: rgb(247, 247, 161);
+  max-width:200px ;
+  padding: 10px;
 }
 .first{
   padding-left: 2px;
