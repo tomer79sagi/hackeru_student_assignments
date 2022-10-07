@@ -1,0 +1,35 @@
+
+table{
+  align-content: center;
+  border: 1px solid black;
+  width: 100%;
+}
+
+
+td{
+  border: 1px solid rgba(0, 0, 0, 0.427) ;
+  text-align: center;
+  font-size: 20px;
+}
+.t1{
+  background-color: red;
+}
+.t2{
+  background-color: rgb(0, 191, 255);
+}.t3{
+  background-color: rgb(221, 255, 0);
+
+}
+.italic{
+  font-style: italic;
+}
+.bold{
+  font-weight: bolder;
+}
+.underline{
+  text-decoration: underline;
+}
+span{
+border: 1px solid black;
+}
+
