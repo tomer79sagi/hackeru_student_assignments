@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Box-sizing</title>
+        <style>
+            div{
+                width: 50px;
+                background-color: yellow;
+            }
+            #first{
+                height: 70px;
+                background-color: cyan;
+                padding: 50px;
+            }
+            #second{
+                height: 50px;
+                border: 10px solid black;
+                box-sizing: content-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="first">First Div<div id="second">Second Div</div></div>
+    </body>
+</html>

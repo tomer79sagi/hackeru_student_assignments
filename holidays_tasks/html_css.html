@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>HTML & CSS Tasks</title>
+        <style>
+            div{
+                height: 2cm;
+                width: 750px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .odd{
+                background-color: red;
+                opacity: 0.5;
+            }
+            #second{
+                background-color: #801ed6;
+            }
+            #fourth{
+                background-color: blue;/*opposite of color 40 by RYB */
+                color: red;/*opposite of color 290 by RYB */
+            }
+            .odd-1,#second-1,#fourth-1{
+                direction: rtl;
+            }
+            .odd-1{
+                border: 1px solid black;
+            }
+            #second-1{
+                border-color:red;
+                border-style: solid;
+                border-radius: 16px;
+                box-sizing: inherit
+            }
+            #fourth-1{
+                border-color:green;
+                border-style: dashed;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>HTML Entities</h2>
+        <ul>
+            <li>©</li>
+            <li>®</li>
+            <li>¶</li>
+            <li>₪</li>
+            <li>¿</li>
+            <li>¾</li> 
+            <li>∉</li>
+        </ul>
+        <h2>Selector & Color</h2>
+        <div class="odd">First Div</div></br>
+        <div id="second">Second Div</div></br>
+        <div class="odd">Third Div</div></br>
+        <div id="fourth">Fourth Div</div></br>
+        <div class="odd">Fifth Div</div></br>
+        <h2>Display</h2>
+        <ul style="direction:rtl;">
+            <li>©</li>
+            <li>®</li>
+            <li>¶</li>
+            <li>₪</li>
+            <li>¿</li>
+            <li>¾</li> 
+            <li>∉</li>
+        </ul>
+        <div class="odd-1">First Div</div></br>
+        <div id="second-1">Second Div</div></br>
+        <div class="odd-1">Third Div</div></br>
+        <div id="fourth-1">Fourth Div</div></br>
+        <div class="odd-1">Fifth Div</div></br>
+    </body>
+</html>
