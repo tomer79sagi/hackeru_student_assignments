@@ -1,0 +1,12 @@
+p{
+    color: red;
+}
+#test{
+    color: blue;
+}
+.colortext{
+    color: yellow;
+}
+h1,p{
+    color: pink;
+}
