@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GARLIC BREAD</title>
+    <style>
+        body{
+            background-color: burlywood;
+            text-align: center;
+            font-family: cursive;
+        }
+        table{
+            margin: auto;
+            font-size: 20px;
+        }
+        table,tr,th,td{
+            border: 1px solid black;
+        }
+        li{
+            text-align: left;
+        }
+        h1{
+            font-size: 50px;
+        }
+        h2{
+            font-size: 40px;
+        }   
+        h3{
+            font-size: 30px;
+        }
+        p{
+            font-size: 20px;
+        }
+        form{
+            font-size: 20px;
+        }
+
+        .head{grid-area: head;}
+        .ingredients{grid-area: ingredients;}
+        .directions{grid-area: directions;}
+        .contact{grid-area: contact;}
+        .img1{grid-area: img1;}
+        .img2{grid-area: img2;}
+        .img3{grid-area: img3;}
+
+        .grid{
+            display: grid;
+            grid-template-areas: 
+                'head head head head head'
+                'directions directions directions ingredients ingredients'
+                'directions directions directions img1 img1'
+                'directions directions directions img2 img2'
+                'directions directions directions img3 img3'
+                'contact contact contact contact contact';
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grid">
+
+        <div class="head">
+            <h1>GARLIC BREAD</h1>
+        </div>
+
+        <div class="ingredients">
+
+            <h2>INGREDIENTS</h2>
+            <table>
+                <tr>
+                    <th>BREAD</th>
+                    <th>GARLIC BUTTER</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>2 - 2 1/2 cups flour</li>
+                            <li>1 teaspoon salt</li>
+                            <li>1 cup warm water</li>
+                            <li>1/2 tablespoon instant yeast</li>
+                            <li>1/2 tablespoon sugar</li>
+                            <li>1 tablespoon oil</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>1/4 - 1/3 cup butter (room temp, homemade really is better)</li>
+                            <li>1/2 teaspoon dill</li>
+                            <li>6 garlic cloves, minced (i run it through my garlic grinder)</li>
+                            <li>1/2 teaspoon salt</li>
+                            <li>1/2 teaspoon fresh black pepper</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="img1">
+            <img src="https://th.bing.com/th/id/R.360a14a229d7cebc5038814c976f7985?rik=LVQFi%2fQB7o6f%2fQ&riu=http%3a%2f%2fwww.great-chicago-italian-recipes.com%2fimages%2fgarlic_bread.jpg&ehk=WK1fdmRpdyAuSYhvIDxtVF1HXD%2fq3IN6JVmtT7B4ppg%3d&risl=&pid=ImgRaw&r=0" width="100%">
+
+        </div>
+
+        <div class="img2">
+            <img src="https://th.bing.com/th/id/R.9a0bc28c53d8ee3693dbaff2c801058b?rik=1%2fNARQEx3u6cEg&pid=ImgRaw&r=0" width="100%">
+        </div>
+
+        <div class="img3">
+            <img src="https://th.bing.com/th/id/R.985623134af4bfa5a38cdcbd799967ad?rik=xzVgaWgEZ3nlmQ&pid=ImgRaw&r=0" width="100%">
+        </div>
+
+        <div class="directions">
+
+            <h2>DIRECTIONS</h2>
+
+            <h3>1</h3>
+            <p>mix the yeast and sugar in a measuring cup, that keeps it from getting lumpy, add the cup of warm water and stir together. let sit for 5 minute.</p>
+
+            <h3>2</h3>
+            <p>mix 2 cups flour and salt in a med sized bowl, then dump in yeast mix and stir until a soft dough forms.</p>
+
+            <h3>3</h3>
+            <p>kneed until dough is smooth and elastic, adding more flour if needed. don't add so much flour that it becomes dry, it should still be slightly sticky.</p>
+
+            <h3>4</h3>
+            <p>rinse out the bowl and swirl the oil around in it, put the dough back in and turn it over so it's coated.</p>
+
+            <h3>5</h3>
+            <p>cover the bowl (i like to wrap a tea towel over and under it), and place in a warm (not hot!) oven to rise. i usually turn my oven on to the lowest setting that will turn on the element for 5 min and then turn off.</p>
+
+            <h3>6</h3>
+            <p>once the dough has doubled in size, punch it down and form into a long, thin loaf. place on a cookie sheet that you've oiled and sprinkled with cornmeal. slash diagonally with a sharp knife 3 or 4 times. place it back in your warm oven until it's doubled again.</p>
+
+            <h3>7</h3>
+            <p>turn the oven up to 375f for 20 minutes. my oven runs a little cool so i turn it up to closer to 380 or 390. a little too warm is better then a little to cool in this case. after 20 min it should be nicely golden on top. let it cool until no more then warm.</p>
+    
+            <h3>8</h3>
+            <p>in the mean time mix all ingredients of the garlic butter.</p>
+
+            <h3>9</h3>
+            <p>slice vertically into 3/4-1 inch slices, leaving the bottom crust intact. carefully pull slices apart so you can spread the butter on each side of each slice without breaking them apart.</p>
+
+            <h3>10</h3>
+            <p>wrap loosely but completely in foil and bake at 400f for 10-15 minutes. serve immediately.</p><br><br>
+
+        
+        </div>
+
+        <div class="contact">
+            <h2>for mor recipes please contact us</h2>
+
+            <form>
+                <input type="text" id="Name" placeholder="please enter name"><br><br>
+                <input type="text" id="Lname" placeholder="please enter last name"><br><br>
+                <input type="number" id="Fnumber" placeholder="please enter phone number"><br><br>
+                <button type="submit">send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
