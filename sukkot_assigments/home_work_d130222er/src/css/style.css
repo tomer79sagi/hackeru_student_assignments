@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Rubik", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 1440px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+  padding: 0 100px 0 100px;
+  margin-bottom: 100px;
+}
+h1 {
+  display: inline;
+  font-family: "Varela Round", sans-serif;
+  font-size: 44px;
+}
+#logo {
+  width: 120px;
+}
+
+.description {
+  position: relative;
+  margin-bottom: 100px;
+}
+.description__title {
+  text-align: right;
+  margin-right: 150px;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+.description__text {
+  width: 500px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 25px;
+  text-align: right;
+  font-weight: 500;
+  position: absolute;
+  right: 100px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.description__form {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 250px;
+  border: 1px solid black;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 250px;
+  margin-left: 100px;
+}
+
+.input-name {
+  margin-bottom: 10px;
+}
+.input-tell {
+  margin-bottom: 15px;
+}
+
+.input-button {
+  display: flex;
+  justify-content: center;
+}
+
+.family-members__title {
+  font-size: 36px;
+  text-align: right;
+  margin-right: 150px;
+  margin-bottom: 50px;
+}
+
+.family-members__cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  color: black;
+}
+
+.member-box {
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+  width: 500px;
+  height: 250px;
+
+  left: calc(50% - 250px / 2 + 400px);
+  top: calc(50% - 125px / 2 - 95.5px);
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+h3 {
+  text-align: right;
+  width: 250px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.member-text {
+  width: 250px;
+  text-align: right;
+}
+.profile-picure {
+  border-radius: 25px;
+}
+
+.table__title {
+  text-align: right;
+  margin-right: 150px;
+  padding-bottom: 50px;
+}
+
+table {
+  text-align: right;
+  width: 400px;
+  border: 1px solid #000000;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 100px;
+}
+tr,
+td {
+  border: 1px solid #000000;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.bonus {
+  height: 1000px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
