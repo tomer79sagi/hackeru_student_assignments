@@ -9,11 +9,24 @@
         #special:after{
             content: '\00BE';
         }
+        div{
+            width: 30px;
+            height: 30px;
+            font-size: 25px;
+            margin-right: 20px;
+            text-align: center;
+        }
+        .odd{
+            background-color: yellowgreen;
+            opacity: 0.5;
+        }
     </style>
 </head>
-<body style="font-size: 50px;">
+<body>
+
     <!--Html entities-->
-    <ul style="list-style-type: calc();">
+
+    <ul style="list-style-type: calc(); font-size: 50px;">
         <li>&copy;</li>
         <li>&reg;</li>
         <li>&#182;</li>
@@ -21,5 +34,14 @@
         <li id="special"></li>
         <li>&#128170;&#127996;</li>
     </ul>
+
+    <!--selctor + color-->
+    
+    <div class="odd">1</div><br>
+    <div >2</div><br>
+    <div class="odd">3</div><br>
+    <div>4</div><br>
+    <div class="odd">5</div><br>
+
 </body>
 </html>
