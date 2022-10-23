@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="styles/style.css">
+    
+</head>
+<body>
+    <div class="main">
+        <h1 style="text-align: center;">Tic Tac Toe!</h1>
+        <p class="title" id="title">
+
+        </p>
+        <div class="board">
+            
+            <div id="C1" class="cell" onclick="playerMove(0)">
+            </div>
+            <div id="C2" class="cell" onclick="playerMove(1)">
+            </div>
+            <div id="C3" class="cell" onclick="playerMove(2)">
+            </div>
+            <div id="C4" class="cell" onclick="playerMove(3)">
+            </div>
+            <div id="C5" class="cell" onclick="playerMove(4)">
+            </div>
+            <div id="C6" class="cell" onclick="playerMove(5)">
+            </div>
+            <div id="C7" class="cell" onclick="playerMove(6)">
+            </div>
+            <div id="C8" class="cell" onclick="playerMove(7)">
+            </div>
+            <div id="C9"class="cell" onclick="playerMove(8)">
+            </div>
+            
+        </div>
+        <div>
+            <p class="winner_text" id="winner_text"></p>
+        </div>
+        <div style="flex-direction: column ;">
+            <button class="restart_btn" id="restart_btn" onclick="restartGame()">Restart</button>
+            <button class="start_btn" id="start_btn" onclick="startGame()">Start</button>
+        </div>
+        <div class="difficulty_container" id="difficulty_container">
+            <button class="difficulty_btn" id="easy" onclick="setDifficulty(1)">Easy</button>
+            <button class="difficulty_btn" id="normal" onclick="setDifficulty(2)">Normal</button>
+            <button class="difficulty_btn" id="hard" onclick="setDifficulty(3)">Hard</button>
+        </div>
+    </div>
+
+        
+    <script src="script/gameLogic.js"></script>
+</body>
+</html>
