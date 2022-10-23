@@ -1,0 +1,19 @@
+.main {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 75%;
+    max-height: 75%;
+    box-shadow: 5px;
+}
+
+.main > div {
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.main > div > div {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
