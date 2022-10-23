@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #special:after{
+            content: '\00BE';
+        }
+    </style>
+</head>
+<body style="font-size: 50px;">
+    <!--Html entities-->
+    <ul style="list-style-type: calc();">
+        <li>&copy;</li>
+        <li>&reg;</li>
+        <li>&#182;</li>
+        <li>&#8362;</li>
+        <li id="special"></li>
+        <li>&#128170;&#127996;</li>
+    </ul>
+</body>
+</html>
