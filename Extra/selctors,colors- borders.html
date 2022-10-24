@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,6 @@
             width: 30px;
             height: 30px;
             font-size: 25px;
-            margin-right: 20px;
             text-align: center;
         }
         .odd{
@@ -38,10 +37,31 @@
     <!--selctor + color-->
     
     <div class="odd">1</div><br>
-    <div >2</div><br>
+    <div style="color:#ff1eff">2</div><br>
     <div class="odd">3</div><br>
     <div>4</div><br>
     <div class="odd">5</div><br>
 
+    <!--display-->
+
+    <ul style="list-style-type: calc(); font-size: 50px; direction: rtl;">
+        <li>&copy;</li>
+        <li>&reg;</li>
+        <li>&#182;</li>
+        <li>&#8362;</li>
+        <li id="special"></li>
+        <li>&#128170;&#127996;</li>
+    </ul>
+
+    <div class="odd" >1</div><br>
+    <div style="color:#ff1eff; border-radius: 50px; border:rgb(69, 131, 7) solid 2px">2</div><br>
+    <div class="odd">3</div><br>
+    <div style="border:blue dashed 2px ;">4</div><br>
+    <div class="odd">5</div><br>
+
+    <!--box-sizing-->
+
+    <div style="width: 50px; padding: 10px; box-sizing: content-box ; background-color: lightskyblue;">A</div><br>
+    <div style="width: 50px; padding: 10px; box-sizing: border-box ;background-color: lightskyblue;">B</div>
 </body>
 </html>
