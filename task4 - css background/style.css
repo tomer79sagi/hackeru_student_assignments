@@ -1,0 +1,19 @@
+h1{
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+}
+p{
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+}
+body{
+    background-color: aquamarine;
+    background-image: url("Flamingo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
+}
