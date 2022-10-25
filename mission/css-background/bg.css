@@ -1,0 +1,30 @@
+body{
+background-color: blueviolet;
+height: 100vh;
+background-image: url(pics/City-Background-PNG.png);
+background-repeat: none;
+background-position: center;
+background-size:cover;
+height: 100vh;
+text-align: center;
+}
+.text-align{
+display: flexbox;
+flex-direction: column;
+margin-top: 25%;
+margin-left: 25%;
+background-color: rgba(240, 248, 255, 0.162) ;
+max-width: 50%;
+
+}
+h1{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 30px;
+font-weight: bold;
+}
+p{
+font-family: sans-serif;
+font-size: 1.5em;
+font-weight: bold;
+color: red;
+}
