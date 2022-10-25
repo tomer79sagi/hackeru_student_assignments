@@ -1,0 +1,25 @@
+.main_div{
+    max-width: 75%;
+    font-size: 20px;
+    text-shadow: 2px 2px;
+    background-color: antiquewhite;
+}
+.div1{
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.div2{
+    font-family: sans-serif;
+    font-size: 1.5em;
+
+}
+.div3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3em;
+}
+.lw{
+    text-shadow: 2px 4px;
+}
+div > span{
+    font-size: 1.5em;
+}
