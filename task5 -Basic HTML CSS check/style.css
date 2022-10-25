@@ -1,0 +1,60 @@
+.header{
+    height: 80px;
+    background-image: url("bg.jpg");
+    width: 100%;
+    padding-left: 20;
+    padding-top: 50;
+    position: fixed;
+    z-index: 9;
+
+}
+a{
+    font-size: 40px;
+    color: white;
+    position: relative;
+}
+.logo{
+    position: relative;
+    width: 60px;
+    height: 45px;
+    left: 700px;
+}
+.main{
+    position: relative;
+    padding-top: 300px;
+    z-index:-9;
+    height: 550px;
+    width: 100%;
+    background-image: url("flowers.jpg");
+
+}
+.main_div{
+color: white;
+background-color: rgb(17, 17, 66);
+opacity: 0.7;
+
+}
+
+#txt1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0;  
+}
+#txt2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(198, 226, 235);
+    text-align: center;
+  }
+  .footer a{
+    color: black;
+
+  }
