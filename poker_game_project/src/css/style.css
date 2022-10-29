@@ -1,0 +1,159 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Assistant";
+}
+body {
+  background-color: #1d1d1d;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.nav-bar {
+  width: 1140px;
+  height: max-content;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d1d1d;
+}
+
+.nav-logo {
+  display: inline-block;
+  width: 173px;
+}
+
+.nav-list {
+  display: inline-block;
+  list-style: none;
+  margin: 0px;
+}
+
+.nav-element {
+  font-family: "Assistant";
+  font-size: 20px;
+  display: inline-flex;
+  justify-content: right;
+  align-items: center;
+  color: #858585;
+  width: 173px;
+  height: 46px;
+  margin-left: 20px;
+}
+.nav-element:hover {
+  transition-duration: 750ms;
+  color: white;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-logo {
+  margin: 0 auto;
+  top: 50%;
+}
+
+.logo-cards {
+  width: 875px;
+}
+.title {
+  margin: 0 auto;
+  right: 140px;
+  top: -175px;
+  text-align: right;
+  position: relative;
+  font-family: "Secular One";
+  font-weight: 400;
+  font-size: 96px;
+  letter-spacing: 0.2em;
+  z-index: -1;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.25) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.start {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Assistant";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  color: #858585;
+}
+
+.start:hover {
+  transition-duration: 750ms;
+  color: white;
+}
+
+.chip-img {
+  z-index: -2;
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in-out forwards infinite;
+}
+
+.blue {
+  animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+
+.red {
+  animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+
+.white {
+  animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+
+.green {
+  animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 0.75;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
