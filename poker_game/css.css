@@ -1,0 +1,173 @@
+#logo{
+    height: 13.5%;
+    display: block;
+    position: absolute;
+    margin-right: 1%;
+    margin-top: 0.3%;
+    right: 0;
+    top: 0;
+}
+ul{
+    list-style: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    color: #ffffff;
+}
+.header{
+    background-color: #0000ff;
+    width: 100%;
+    display: inline-block;
+    height: 15%;
+}
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+    color: red;
+  } 
+a:hover {
+    color: rgba(255, 0, 0, 0.565);
+  }
+.navbar{
+    width: 30%;
+}
+.flex-menu{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 7%;
+}
+.flex-menu-item{
+    border: 3px solid black;
+    height: 5vh;
+    width: 17.5vw;
+    text-align: center;
+    padding-top: 1.75vh;
+    font-size: 2.625vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+}
+.main{
+    display: inline-block;
+    height: 85%;
+    width: 100%;
+    background-color: #006000;
+}
+#combinations{
+    display: inline-block;
+    width: 29%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.history{
+    margin-top: 5%;
+}
+#table-game{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+.circle{
+    height: 50em;
+    width: 50em;
+    background-color: #0000ff;
+    border-radius: 50%;
+    border: 1em solid #994d00;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.player img{
+    max-height: 282px;
+}
+#style{
+    margin-bottom: 10px;
+}
+.player{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 4%;
+}
+.cards{
+    display: flex;
+    margin-left: auto;
+    margin-right: 37%;
+    width: 25%;
+    justify-content: space-around;
+    padding: 5px;
+}
+.cards > li{
+    height: 100px;
+    width: 70px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+}
+.kobe{
+    margin-top: 4%;
+}
+.michael{
+    margin-top: 26%;
+}
+li img{
+    height: inherit;
+    width: inherit;
+}
+.chips{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 25%;
+}
+.chips > li{
+    height: 3em;
+    width: 4em;
+    text-align: center;
+}
+.chips hr{
+    width: 100%;
+    border: 0px;
+}
+.chips div{
+    position: relative;
+    top: -2.7em;
+}
+#winner{
+    position: fixed;
+    color: gold;
+    opacity: 0.8;
+    font-size: 500%;
+    text-align: center;
+    top: 40vh;
+    left: 0px;
+    right: 0px;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    height: 50em;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+table, td,th{
+    border: 3px solid #000000;
+}
+h1{
+    text-align: center;
+}
