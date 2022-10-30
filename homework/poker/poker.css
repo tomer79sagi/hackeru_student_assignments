@@ -1,0 +1,90 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+display: inline;
+}
+
+li a{
+display: inline;
+padding: 25px;
+background-color: #031a03;
+color: rgb(255, 255, 255);
+text-decoration: none;
+}
+body{
+    background-color: darkgreen;
+    color: red;
+    font-family: cursive;
+    text-align: center;
+}
+.bery{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 170px;
+    left: 30%;
+}
+.Bery{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 230px;
+    left: 45%;
+    font-size: 50px;
+}
+.bery-chips{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    top: 270px;
+}
+.top-cards {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    top: 280px;
+}
+.top-cards > div {
+    margin: 10px;
+    justify-items: center;
+    max-height: 100px;
+}
+.elen-chips{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    top: -270px;
+}
+.button-cards {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    top: -280px;
+}
+.button-cards > div {
+    margin: 10px;
+    justify-items: center;
+    max-height: 100px;
+}
+.Elen{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -290px;
+    right: 46%;
+    font-size: 50px;
+}
+.elen{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -400px;
+    right: 30%;
+}
