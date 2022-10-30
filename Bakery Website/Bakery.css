@@ -13,6 +13,7 @@ body {
     font-family: serif ;
     font-style: italic;
     overflow: auto;
+
   }
 
   .inline-block {
@@ -46,6 +47,7 @@ body {
   background-color: rgb(255, 176, 6);
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   transition-duration: 0.7s;
+  font-size: 18px;
 }
 
 ul {
