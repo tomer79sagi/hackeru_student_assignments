@@ -112,6 +112,10 @@ main {
 }
 
 .description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   margin: 0 auto;
   text-align: right;
   position: relative;
@@ -119,9 +123,25 @@ main {
   top: 170px;
   color: #858585;
   font-size: 18px;
+  background: linear-gradient(
+    180deg,
+    #858585 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
 .description span {
   color: rgb(232, 232, 232);
+}
+
+.description:hover {
+  -webkit-text-fill-color: #858585;
+  -webkit-line-clamp: all;
+  -webkit-box-orient: vertical;
+  overflow: visible;
 }
 
 .chip-img {
