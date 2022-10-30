@@ -1,0 +1,267 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+body {
+  background-color: teal;
+  background-image: url('./Pictures/PokerBackhround.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: stretch;
+  background-size: cover;
+}
+
+.Player {
+  background-color: white;
+}
+
+.flex-container {
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 210px;
+  padding: 10px;
+}
+
+.flex-container>.card {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container>img {
+  margin: 20px;
+}
+
+#explaingame {
+  background-color: white;
+}
+
+.spotA1 {
+  position: absolute;
+  left: 0.60em;
+  top: 0.5em;
+}
+
+.spotA2 {
+  position: absolute;
+  left: 0.60em;
+  top: 1.5em;
+}
+
+.spotA3 {
+  position: absolute;
+  left: 0.60em;
+  top: 2.0em;
+}
+
+.spotA4 {
+  position: absolute;
+  left: 0.60em;
+  top: 2.5em;
+}
+
+.spotA5 {
+  position: absolute;
+  left: 0.60em;
+  top: 3.5em;
+}
+
+.spotB1 {
+  position: absolute;
+  left: 1.55em;
+  top: 0.5em;
+}
+
+.spotB2 {
+  position: absolute;
+  left: 1.55em;
+  top: 1.0em;
+}
+
+.spotB3 {
+  position: absolute;
+  left: 1.55em;
+  top: 2.0em;
+}
+
+.spotB4 {
+  position: absolute;
+  left: 1.55em;
+  top: 3.0em;
+}
+
+.spotB5 {
+  position: absolute;
+  left: 1.55em;
+  top: 3.5em;
+}
+
+.spotC1 {
+  position: absolute;
+  left: 2.50em;
+  top: 0.5em;
+}
+
+.spotC2 {
+  position: absolute;
+  left: 2.50em;
+  top: 1.5em;
+}
+
+.spotC3 {
+  position: absolute;
+  left: 2.50em;
+  top: 2.0em;
+}
+
+.spotC4 {
+  position: absolute;
+  left: 2.50em;
+  top: 2.5em;
+}
+
+.spotC5 {
+  position: absolute;
+  left: 2.50em;
+  top: 3.5em;
+}
+
+.card {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 20pt;
+  position: relative;
+  border-width: 5px;
+  width: 3.75em;
+  height: 5.00em;
+}
+
+.front {
+  background-color: #ffffff;
+  color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.index {
+  font-size: 50%;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 0.25em;
+  top: 0.25em;
+}
+
+.ace {
+  font-size: 300%;
+  position: absolute;
+  left: 0.325em;
+  top: 0.250em;
+}
+
+.face {
+  border: 1px solid #000000;
+  position: absolute;
+  left: 0.50em;
+  top: 0.45em;
+  width: 2.6em;
+  height: 4.0em;
+}
+
+div.Chip {
+  float: center;
+  width: 70px;
+  height: 70px;
+  margin: -15px;
+  border-radius: 150px;
+  border: 10px dotted #fff;
+  align-items: center;
+
+}
+
+div.Chip div {
+  font-family: Verdana;
+  text-align: center;
+  line-height: 70px;
+  font-size: 1.7em;
+}
+
+div.Chip.B {
+  background: #333;
+  color: #eee;
+}
+
+div.Chip.R {
+  background: #fd5f72
+}
+
+.Winner {
+  background-color: #EEEEEE;
+  position: fixed;
+  margin-left: 45%;
+  margin-right: auto;
+  z-index: index;
+  font-size: 30px;
+
+}
+
+#container {
+  background-color:white;
+  width: 600px;
+  height: auto;
+}
+
+.row {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #AFAFAF;
+}
+
+.name {
+  position: relative;
+  display: inline-block;
+  width: 75%;
+  line-height: 45px;
+}
+
+.score {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+}
