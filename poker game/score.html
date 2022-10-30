@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score Page</title>
+    <style>
+      body {
+        background-color: rgb(46, 42, 42);
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: red;
+        position: fixed;
+        width: fit-content;
+        top: 0;
+        left: 0;
+        font-size: 30px;
+      }
+      li {
+        float: left;
+        font-size: 30px;
+      }
+      li a {
+        display: inline-block;
+        color: whitesmoke;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: brown;
+      }
+      h2 {
+        position: relative;
+        color: white;
+        margin: auto;
+        text-align: center;
+        text-decoration: underline;
+        top: 25%;
+        font-size: 40px;
+      }
+      table {
+        background-color: green;
+        margin: auto;
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="navbar">
+      <li><a href="home_page.html">Home</a></li>
+      <li><a href="main.html">Game</a></li>
+      <li><a href="score.html">Score</a></li>
+    </ul>
+    <h2>
+      Game Scores
+      <br /><br />
+      <table>
+        <tr>
+          <th>Name + Game</th>
+          <th>Score</th>
+        </tr>
+        <tr>
+          <td>current wager</td>
+          <td>300 pts.</td>
+        </tr>
+        <tr>
+          <td>player1 (before game)</td>
+          <td>1000 pts.</td>
+        </tr>
+        <tr>
+          <td>player2 (before game)</td>
+          <td>400 pts.</td>
+        </tr>
+        <tr>
+          <td>player1 (after game)</td>
+          <td>850 pts.</td>
+        </tr>
+        <tr>
+          <td>player2 (after game)</td>
+          <td>550 pts.</td>
+        </tr>
+      </table>
+    </h2>
+  </body>
+</html>

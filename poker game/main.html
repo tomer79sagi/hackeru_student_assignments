@@ -1,0 +1,242 @@
+<html>
+  <head>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    <title>Game Page</title>
+    <style>
+      body {
+        background-color: rgb(46, 42, 42);
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: red;
+        position: fixed;
+        width: fit-content;
+        top: 0;
+        left: 0;
+        font-size: 30px;
+      }
+      li {
+        float: left;
+        font-size: 30px;
+      }
+      li a {
+        display: inline-block;
+        color: whitesmoke;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: brown;
+      }
+      .game {
+        margin: auto;
+        position: relative;
+        top: 20%;
+        z-index: 0;
+      }
+      .hand {
+        display: flex;
+        background-color: green;
+        position: relative;
+        margin: auto;
+        width: fit-content;
+      }
+      .card {
+        background-color: white;
+        margin: 20px;
+        padding: 30px;
+        font-size: 30px;
+        width: min-content;
+        height: 40;
+      }
+      .card > .top_symbol {
+        position: relative;
+        bottom: 65px;
+        left: 20px;
+      }
+      .card > .bottom_symbol {
+        position: relative;
+        bottom: 30px;
+        right: 25px;
+      }
+      #heart,
+      #diamond {
+        color: red;
+      }
+      .table {
+        position: relative;
+        display: flex;
+        background-color: green;
+        width: fit-content;
+        margin: auto;
+
+        box-shadow: -10px 10px 2px;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .bet {
+        background-color: white;
+        width: auto;
+        margin: 20px;
+        padding: 30px;
+      }
+      .outer_chip {
+        position: relative;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      #chip150 {
+        background-color: black;
+      }
+      #chip25 {
+        background-color: red;
+      }
+      .inner_chip {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        height: 30px;
+        width: 30px;
+        background-color: rgb(202, 202, 202);
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .inside150 {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+      }
+      .inside25 {
+        position: absolute;
+        top: 15%;
+        left: 20%;
+      }
+      .winner {
+        position: fixed;
+        background-color: beige;
+        z-index: 1;
+        bottom: 50%;
+        left: 50%;
+      }
+      .player_name {
+        background-color: white;
+        position: absolute;
+        color: black;
+        top: -35;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="navbar">
+      <li><a href="home_page.html">Home</a></li>
+      <li><a href="main.html">Game</a></li>
+      <li><a href="score.html">Score</a></li>
+    </ul>
+    <div class="game">
+      <div class="hand" id="top_hand">
+        <div class="card" id="heart">
+          3
+          <span class="top_symbol">&hearts;</span>
+          <span class="bottom_symbol">&hearts;</span>
+        </div>
+        <div class="card" id="club">
+          4
+          <span class="top_symbol">&clubs;</span>
+          <span class="bottom_symbol">&clubs;</span>
+        </div>
+        <div class="card" id="heart">
+          5
+          <span class="top_symbol">&hearts;</span>
+          <span class="bottom_symbol">&hearts;</span>
+        </div>
+        <div class="card" id="diamond">
+          6
+          <span class="top_symbol">&diams;</span>
+          <span class="bottom_symbol">&diams;</span>
+        </div>
+        <div class="card" id="diamond">
+          7
+          <span class="top_symbol">&diams;</span>
+          <span class="bottom_symbol">&diams;</span>
+          <span class="player_name" id="player1">player1</span>
+        </div>
+      </div>
+      <br />
+      <div class="table">
+        <div class="bet" id="player1">
+          <span class="outer_chip" id="chip150">
+            <span class="inner_chip">
+              <div class="inside150">150</div>
+            </span>
+          </span>
+          <span class="outer_chip" id="chip25">
+            <span class="inner_chip">
+              <div class="inside25">25</div>
+            </span>
+          </span>
+          <span class="outer_chip" id="chip25">
+            <span class="inner_chip">
+              <div class="inside25">25</div>
+            </span>
+          </span>
+        </div>
+        <div class="bet" id="player2">
+          <span class="outer_chip" id="chip150">
+            <span class="inner_chip">
+              <div class="inside150">150</div>
+            </span>
+          </span>
+          <span class="outer_chip" id="chip25">
+            <span class="inner_chip">
+              <div class="inside25">25</div>
+            </span>
+          </span>
+          <span class="outer_chip" id="chip25">
+            <span class="inner_chip">
+              <div class="inside25">25</div>
+            </span>
+          </span>
+        </div>
+      </div>
+      <br />
+      <div class="hand" id="bottom_hand">
+        <div class="card" id="spade">
+          2
+          <span class="top_symbol">&spades;</span>
+          <span class="bottom_symbol">&spades;</span>
+        </div>
+        <div class="card" id="spade">
+          A
+          <span class="top_symbol">&spades;</span>
+          <span class="bottom_symbol">&spades;</span>
+        </div>
+        <div class="card" id="spade">
+          5
+          <span class="top_symbol">&spades;</span>
+          <span class="bottom_symbol">&spades;</span>
+        </div>
+        <div class="card" id="spade">
+          Q
+          <span class="top_symbol">&spades;</span>
+          <span class="bottom_symbol">&spades;</span>
+        </div>
+        <div class="card" id="spade">
+          9
+          <span class="top_symbol">&spades;</span>
+          <span class="bottom_symbol">&spades;</span>
+          <span class="player_name" id="player2">player2</span>
+        </div>
+      </div>
+    </div>
+    <div class="winner">
+      <p>player2 is the winner!!!</p>
+    </div>
+  </body>
+</html>
