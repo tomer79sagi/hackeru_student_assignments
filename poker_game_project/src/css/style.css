@@ -6,7 +6,7 @@ body {
 }
 body {
   background-color: #1d1d1d;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -96,7 +96,7 @@ main {
 
 .start {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Assistant";
@@ -109,6 +109,19 @@ main {
 .start:hover {
   transition-duration: 750ms;
   color: white;
+}
+
+.description {
+  margin: 0 auto;
+  text-align: right;
+  position: relative;
+  max-width: 700px;
+  top: 170px;
+  color: #858585;
+  font-size: 18px;
+}
+.description span {
+  color: rgb(232, 232, 232);
 }
 
 .chip-img {
