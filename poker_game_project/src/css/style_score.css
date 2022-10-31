@@ -11,9 +11,14 @@ a {
   text-decoration: none;
 }
 
-a:-webkit-any-link {
+a:any-link {
   text-decoration: none;
 }
+
+a:visited {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
