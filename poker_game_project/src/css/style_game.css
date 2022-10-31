@@ -24,6 +24,8 @@ a:-webkit-any-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
+  background-color: #1d1d1d;
 }
 
 .nav-logo {
@@ -119,7 +121,7 @@ a:-webkit-any-link {
   width: 170px;
   font-size: 24px;
   text-align: center;
-
+  user-select: none;
   color: #dadada;
   text-shadow: #1d1d1d;
 }
@@ -129,4 +131,71 @@ a:-webkit-any-link {
 }
 .bottom-person {
   top: 100%;
+}
+
+.cards-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.cards-box img {
+  width: 70px;
+  position: relative;
+  float: left;
+  margin: 5px -40px 5px 0px;
+  transition-duration: 750ms;
+}
+
+.cards-box img:hover {
+  transform: translate(-10px, -35px);
+  transition-duration: 300ms;
+}
+
+.chips-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.chips-box img {
+  width: 30px;
+  position: relative;
+  float: left;
+  margin: 5px -15px 5px 0px;
+}
+
+.person:nth-child(6) .cards-box {
+  top: 70%;
+  left: 250%;
+  transform: rotate(145deg);
+}
+
+.person:nth-child(4) .cards-box {
+  top: -280%;
+}
+
+.person:nth-child(6) .chips-box {
+  top: 75%;
+  left: 350%;
+  transform: rotate(145deg);
+}
+
+.person:nth-child(4) .chips-box {
+  top: -530%;
+}
+
+.winner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  font-size: 70px;
+  color: #ffffff57;
+  user-select: none;
 }
