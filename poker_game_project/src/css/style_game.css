@@ -47,8 +47,86 @@ a:-webkit-any-link {
   width: 173px;
   height: 46px;
   margin-left: 20px;
+  transition-duration: 750ms;
 }
 .nav-element:hover {
   transition-duration: 750ms;
   color: white;
+}
+
+.table {
+  position: absolute;
+  top: 25%;
+  left: auto;
+  width: 1140px;
+  height: 800px;
+  background-image: url(../img/game/table.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.person {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: rgba(240, 235, 206, 0.2);
+  border-radius: 50%;
+  transition-duration: 750ms;
+}
+
+.person:hover {
+  background: rgba(240, 235, 206, 0.4);
+  transition-duration: 750ms;
+}
+
+.person:nth-child(1) {
+  top: 40px;
+  left: 535px;
+}
+
+.person:nth-child(2) {
+  top: 160px;
+  left: 1040px;
+}
+
+.person:nth-child(3) {
+  top: 570px;
+  left: 1040px;
+}
+
+.person:nth-child(4) {
+  top: 690px;
+  left: 535px;
+  background-image: url(../img/game/Barack\ Obama.png);
+}
+
+.person:nth-child(5) {
+  top: 570px;
+  left: 30px;
+}
+
+.person:nth-child(6) {
+  top: 160px;
+  left: 30px;
+  background-image: url(../img/game/Kim\ Jong\ Un.png);
+}
+
+.name {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 170px;
+  font-size: 24px;
+  text-align: center;
+
+  color: #dadada;
+  text-shadow: #1d1d1d;
+}
+
+.top-person {
+  top: -50%;
+}
+.bottom-person {
+  top: 100%;
 }

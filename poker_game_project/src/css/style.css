@@ -51,6 +51,7 @@ a:-webkit-any-link {
   width: 173px;
   height: 46px;
   margin-left: 20px;
+  transition-duration: 750ms;
 }
 .nav-element:hover {
   transition-duration: 750ms;
@@ -104,6 +105,7 @@ main {
   font-weight: 400;
   font-size: 32px;
   color: #858585;
+  transition-duration: 750ms;
 }
 
 .start:hover {

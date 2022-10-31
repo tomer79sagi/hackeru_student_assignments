@@ -47,6 +47,7 @@ a:-webkit-any-link {
   width: 173px;
   height: 46px;
   margin-left: 20px;
+  transition-duration: 750ms;
 }
 .nav-element:hover {
   transition-duration: 750ms;
