@@ -1,0 +1,33 @@
+body {
+    background-image: url("https://www.din.co.il/upload/%D7%A7%D7%9C%D7%A4%D7%99%D7%9D.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+a {
+    color:aliceblue;
+    font-size: 20px;   
+}
+
+a:hover {
+    background-color: green;
+}
+
+.header {
+    background-color: black;
+    padding: 10px;
+}
+
+.conteinor {
+    color: aliceblue;
+    font-size: 15px;
+}

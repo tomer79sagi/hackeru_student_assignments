@@ -1,0 +1,454 @@
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQERkXY0DQ1GcWVTf3pTGFviKlriIX4TNtcXQ&usqp=CAU");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;;
+}
+
+a {
+    color:aliceblue;
+    font-size: 20px;
+}
+
+a:hover {
+    background-color: green;
+}
+
+.header {
+    background-color: black;
+    padding: 10px;
+}
+
+/* /////////////////////////////////////////////////////// */
+
+.name {
+  margin: 10px 700px;
+  background-color: red ;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.cardA1 {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: relative;
+  width:  3.75em;
+  height: 5.00em;
+}
+.frontA1 {
+  background-color: #ffffff;
+  color:red;
+  width: 100%;
+  height: 100%;
+}
+
+.indexA1 {
+  font-size: 50%;
+  font-weight: bold;
+  margin-left: 5px;
+
+}
+
+.spotA1 { position: absolute; left: 0.60em; top: 0.5em; }
+.spotA2 { position: absolute; left: 1.60em; top: 1.8em; }
+.spotA3 { position: absolute; left: 2.60em; top: 3.5em; }
+
+/* /////////////////////////////////////////////////////// */
+
+.cardA2 {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: relative;
+  width:  3.75em;
+  height: 5.00em;
+}
+.frontA2 {
+  background-color: #ffffff;
+  color:#000000;
+  width: 100%;
+  height: 100%;
+}
+.indexA2 {
+  font-size: 50%;
+  font-weight: bold;
+  margin-left: 5px;
+
+}
+
+.spotB1 { position: absolute; left: 0.60em; top: 0.5em; }
+.spotB2 { position: absolute; left: 2.6em; top: 0.5em; }
+.spotB3 { position: absolute; left: 2.60em; top: 3.5em; }
+.spotB4 { position: absolute; left: 0.60em; top: 3.5em; }
+
+/* /////////////////////////////////////////////////////// */
+
+.cardA3 {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: relative;
+  width:  3.75em;
+  height: 5.00em;
+}
+.frontA3 {
+  background-color: #ffffff;
+  color:#000000;
+  width: 100%;
+  height: 100%;
+}
+.indexA3 {
+  font-size: 50%;
+  font-weight: bold;
+  margin-left: 5px;
+
+}
+
+.spotC1 { position: absolute; left: 0.5em; top: 0.5em; }
+.spotC2 { position: absolute; left: 2.6em; top: 0.5em; }
+.spotC3 { position: absolute; left: 0.5em; top: 3.5em; }
+.spotC4 { position: absolute; left: 2.6em; top: 3.5em; }
+.spotC5 { position: absolute; left: 1.5em; top: 1.9em; }
+
+/* /////////////////////////////////////////////////////// */
+
+.cardA4 {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: relative;
+  width:  3.75em;
+  height: 5.00em;
+}
+.frontA4 {
+  background-color: #ffffff;
+  color:#000000;
+  width: 100%;
+  height: 100%;
+}
+.indexA4 {
+  font-size: 50%;
+  font-weight: bold;
+  margin-left: 5px;
+
+}
+
+.spotD1 { position: absolute; left: 0.7em; top: 0.5em; }
+.spotD2 { position: absolute; left: 0.7em; top: 1.9em; }
+.spotD3 { position: absolute; left: 0.7em; top: 3.5em; }
+.spotD4 { position: absolute; left: 2.6em; top: 0.5em; }
+.spotD5 { position: absolute; left: 2.6em; top: 1.9em; }
+.spotD6 { position: absolute; left: 2.6em; top: 3.5em; }
+
+/* /////////////////////////////////////////////////////// */
+
+.cardA5 {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: relative;
+  width:  3.75em;
+  height: 5.00em;
+}
+.frontA5 {
+  background-color: #ffffff;
+  color:red;
+  width: 100%;
+  height: 100%;
+}
+.indexA5 {
+  font-size: 50%;
+  font-weight: bold;
+  margin-left: 5px;
+
+}
+
+.spotE1 { position: absolute; left: 0.7em; top: 0.5em; }
+.spotE2 { position: absolute; left: 0.7em; top: 1.9em; }
+.spotE3 { position: absolute; left: 0.7em; top: 3.5em; }
+.spotE4 { position: absolute; left: 2.6em; top: 0.5em; }
+.spotE5 { position: absolute; left: 2.6em; top: 1.9em; }
+.spotE6 { position: absolute; left: 2.6em; top: 3.5em; }
+.spotE7 { position: absolute; left: 1.6em; top: 2.8em; }
+
+/* /////////////////////////////////////////////////////// */
+
+.card-row-1 {
+
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cardB1 {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: absolute;
+  width:  3.75em;
+  height: 5.00em;
+  margin: 0px 500px;
+}
+.frontB1 {
+  background-color: #ffffff;
+  color:red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.indexB1 {
+  font-size: 50%;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 0.25em;
+  top:  0.25em;
+}
+
+.spotB11 { position: absolute; left: 0.7em; top: 0.5em; }
+.spotB12 { position: absolute; left: 0.7em; top: 1.5em; }
+.spotB13 { position: absolute; left: 0.7em; top: 2.5em; }
+.spotB14 { position: absolute; left: 0.7em; top: 3.5em; }
+.spotB15 { position: absolute; left: 2.6em; top: 0.5em; }
+.spotB16 { position: absolute; left: 2.6em; top: 1.5em; }
+.spotB17 { position: absolute; left: 2.6em; top: 2.5em; }
+.spotB18 { position: absolute; left: 2.6em; top: 3.5em; }
+.spotB19 { position: absolute; left: 1.6em; top: 2.8em; }
+
+/* /////////////////////////////////////////////////////// */
+
+.cardB2 {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: absolute;
+  width:  3.75em;
+  height: 5.00em;
+  margin: 0px 600px;
+}
+.frontB2 {
+  background-color: #ffffff;
+  color:#000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.indexB2 {
+  font-size: 50%;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 0.25em;
+  top:  0.25em;
+}
+
+.spotB21 { position: absolute; left: 1.7em; top: 0.8em; }
+.spotB22 { position: absolute; left: 1.7em; top: 3.2em; }
+
+/* /////////////////////////////////////////////////////// */
+
+.cardB3 {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: absolute;
+  width:  3.75em;
+  height: 5.00em;
+  margin: 0px 700px;
+}
+.frontB3 {
+  background-color: #ffffff;
+  color: red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.indexB3 {
+  font-size: 50%;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 0.25em;
+  top:  0.25em;
+}
+
+.spotB31 { position: absolute; left: 0.60em; top: 0.5em; }
+.spotB32 { position: absolute; left: 1.60em; top: 1.8em; }
+.spotB33 { position: absolute; left: 2.60em; top: 3.5em; }
+
+/* /////////////////////////////////////////////////////// */
+
+.cardB4 {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: absolute;
+  width:  3.75em;
+  height: 5.00em;
+  margin: 0px 800px;
+}
+.frontB4 {
+  background-color: #ffffff;
+  color: red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.indexB4 {
+  font-size: 50%;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 0.25em;
+  top:  0.25em;
+}
+
+.spotB41 { position: absolute; left: 0.7em; top: 0.5em; }
+.spotB42 { position: absolute; left: 0.7em; top: 1.9em; }
+.spotB43 { position: absolute; left: 0.7em; top: 3.5em; }
+.spotB44 { position: absolute; left: 2.6em; top: 0.5em; }
+.spotB45 { position: absolute; left: 2.6em; top: 1.9em; }
+.spotB46 { position: absolute; left: 2.6em; top: 3.5em; }
+
+/* /////////////////////////////////////////////////////// */
+
+.cardB5 {
+  background-image: url("graphics/cardback.gif");
+  border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+  color: #000000;
+  font-size: 20pt;
+  position: absolute;
+  width:  3.75em;
+  height: 5.00em;
+  margin: 0px 900px;
+}
+.frontB5 {
+  background-color: #ffffff;
+  color:black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.indexB5 {
+  font-size: 50%;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 0.25em;
+  top:  0.25em;
+}
+
+.spotB51 { position: absolute; left: 0.60em; top: 0.5em; }
+.spotB52 { position: absolute; left: 2.6em; top: 0.5em; }
+.spotB53 { position: absolute; left: 2.60em; top: 3.5em; }
+.spotB54 { position: absolute; left: 0.60em; top: 3.5em; }
+
+/* /////////////////////////////////////////////////////// */
+
+.containerB1 {
+  display: flex;
+  margin-top: 50px;
+  margin: 300px 900px;
+  height: 0px;
+}
+
+.chipB1 {
+  height: 130px;
+  width: 140px;
+  border-radius: 50%;
+  border: 7px dashed white;
+  transition: all 1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  margin: 0px 8px;
+  background-color: black;
+}
+
+div span {
+  border: 3px dashed white;
+  height: 120px;
+  width: 130px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 120px;
+}
+
+/* .spin  */
+.containerB1 div:hover {
+  transform: rotate(360deg);
+}
+
+/* /////////////////////////////////////////////////////// */
+
+.containerB2 {
+  display: flex;
+  margin-top: 50px;
+  margin: 300px 700px;
+}
+
+.chipB2 {
+  height: 130px;
+  width: 140px;
+  border-radius: 50%;
+  border: 7px dashed white;
+  transition: all 1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  margin: 0px 8px;
+  background-color: black;
+}
+
+div span {
+  border: 3px dashed white;
+  height: 120px;
+  width: 130px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 120px;
+}
+
+/* .spin  */
+.containerB2 div:hover {
+  transform: rotate(360deg);
+}
