@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family meeting</title>
+</head>
+<style>
+    h1{
+        font-size: 50px;
+        text-align: center;
+    }
+    p,h2{
+        font-size: 50px;
+    }
+    td{
+       text-align: center;
+    }
+</style>
+<body>
+    <h1>Family meeting</h1>
+    <h2>Ahmad <img src="./handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.webp" alt="pic of Ahmad", width="800", height="500">
+  <p>
+    Ahmad's length is 197cm, he has green eyes and his age is 25years old. click on the link to show him photo:
+<a href="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?w=2000">Ahmad</a>
+  </p>
+    </h2>
+    <h2>Morad <img src="./young-handsome-man-beard-wearing-260nw-1768126784.webp" alt="pic of Morad", width="800", height="500">
+    <p>
+        Morad's length is 182cm, he has black eyes and his age is 32 years old. click on the link to show him photo:
+    </p>
+    <a href="https://image.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1768126784.jpg">Morad</a>
+    </h2>
+    <h2>Mahmoud <img src="./young-handsome-man-with-beard-isolated-keeping-arms-crossed-frontal-position_1368-132662.webp" alt="pic of Mahmoud", width="800", height="500">
+    <p>
+        Mahmoud's length is 180cm, he has green eyes and his age is 37 years old. click on the link to show him photo:
+    </p>
+    <a href="https://img.freepik.com/premium-photo/young-handsome-man-with-beard-isolated-keeping-arms-crossed-frontal-position_1368-132662.jpg?w=2000">Mahmoud</a>
+    </h2>
+   
+<table  style="width:70%">
+    <tr>
+      <th>name</th>
+      <th>age</th>
+      <th>Favorite food</th>
+    </tr>
+    <tr>
+      <td>Ahmad</td>
+      <td>25</td>
+      <td>chicken</td>
+    </tr>
+    <tr>
+      <td>Mahmoud</td>
+      <td>37</td>
+      <td>Pizza</td>
+    </tr>
+    <td>Morad</td>
+    <td>32</td>
+    <td>fish</td>
+  </table>
+
+  <iframe width="500" height="320" src="https://www.youtube.com/watch?v=6JDHbNT_5So">
+</iframe>
+
+    <title>Add Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
