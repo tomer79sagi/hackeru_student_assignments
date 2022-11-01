@@ -1,0 +1,92 @@
+body {
+  background-color: darkgreen;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+}
+
+li a {
+  display: inline;
+  padding: 25px;
+  background-color: #031a03;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.table {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  bottom: 300px;
+}
+.dan_cards {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -10px;
+  z-index: 1;
+}
+.dan_cards > div {
+  margin: 10px;
+  justify-items: center;
+  max-height: 100px;
+}
+.dan {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nir {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: -600px;
+}
+.nir_cards {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -590px;
+}
+.nir_cards > div {
+  margin: 10px;
+  justify-items: center;
+  max-height: 100px;
+}
+.dan_chips {
+  position: relative;
+  z-index: 6;
+}
+.nir_chips {
+  position: relative;
+  top: -580px;
+}
+.dan_name {
+  position: relative;
+  top: 50px;
+  font-size: 50px;
+  font-weight: bold;
+}
+.Nir_name {
+  position: relative;
+  top: -630px;
+  font-size: 50px;
+  font-weight: bold;
+}
+.winner {
+  position: fixed;
+  z-index: 10;
+  font-weight: bold;
+  font-size: 25px;
+  left: 500px;
+  font-size: 100px;
+  top: 400px;
+}
