@@ -42,6 +42,13 @@ body{
     z-index: 1;
     top: 270px;
 }
+.game-table{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    
+}
 .top-cards {
     display: flex;
     justify-content: center;
@@ -74,17 +81,25 @@ body{
     max-height: 100px;
 }
 .Elen{
-    display: flex;
+    
     justify-content: center;
-    position: absolute;
-    bottom: -290px;
-    right: 46%;
+    position: relative;
+    bottom: 200px;
     font-size: 50px;
 }
 .elen{
     display: flex;
     justify-content: center;
-    position: absolute;
-    bottom: -400px;
+    position: relative;
+    top: -320px;
     right: 30%;
+    left: 54.5%;
+}
+.winner{
+    position: fixed;
+    z-index: 2;
+    top: 500px;
+    font-size: 100px;
+    left: 20%;
+    right: 20%;
 }

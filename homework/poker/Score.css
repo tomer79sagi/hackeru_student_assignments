@@ -1,0 +1,23 @@
+body {
+    background-image: url("img/poker\ game.jpeg");
+    height: 100%;
+    background-size: cover;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline;
+  }
+  
+  li a {
+    display: inline;
+    padding: 25px;
+    background-color: #031a03;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
