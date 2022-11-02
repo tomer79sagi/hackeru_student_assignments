@@ -1,0 +1,317 @@
+body{
+    background-color:white;
+}
+.d1{
+    background-color: yellow;
+    margin-top: 50px;
+    margin-left: 300px;
+    height: 500px;
+    width: 450px;
+    border-radius: 4%;
+    border:solid;
+}
+.shahor{
+    position:absolute;
+    background-color: #343434;
+    height:25px;
+    width: 75px;
+    left: 660px;
+    top: 120px;
+}
+.zp{
+    position: absolute;
+    margin-top: -495px;
+    margin-left: 330px;
+    border-radius: 10%;
+    background-color: white;
+    text-align: right;
+    font-size: 30px;
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+.zero{
+    position:relative;
+    top: -140px;
+    left: 430px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+    
+}
+.one{
+    position:relative;
+    top: -260px;
+    left: 430px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+    
+}
+.two{
+    position:relative;
+    top: -300px;
+    left: 520px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+}
+.three{
+    position:relative;
+    top: -340px;
+    left: 610px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+}
+.four{
+    position:relative;
+    top: -460px;
+    left: 430px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+}
+.five{
+    position:relative;
+    top: -500px;
+    left: 520px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+}
+.six{
+    position:relative;
+    top: -540px;
+    left: 610px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+}
+.seven{
+    position:relative;
+    top: -660px;
+    left: 430px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+}
+.eight{
+    position:relative;
+    top: -700px;
+    left: 520px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+}
+.nine{
+    position:relative;
+    top: -740px;
+    left: 610px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+}
+.num1{
+    position:relative;
+    top: -780px;
+    left: 690px;
+    background-color: gray;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    line-height: 40px;
+    font-weight: bold;
+}
+.num2{
+    position:relative;
+    top: -740px;
+    left: 690px;
+    background-color: gray;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    line-height: 40px;
+    font-weight: bold;
+}
+.num3{
+    position:relative;
+    top: -700px;
+    left: 690px;
+    font-weight: bold;
+    background-color: gray;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    line-height: 35px;
+}
+.num4{
+    position: relative;
+    top: -680px;
+    left: 685px;
+    background-color: black;
+    color: white;
+    width: 50px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: 50px;
+    line-height: 110px;
+    text-align: center;
+    font-weight: bold;
+}
+.num5{
+    position: relative;
+    top: -1020px;
+    left: 340px;
+    font-weight: bold;
+    background-color: gray;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    line-height: 40px;
+}
+.num6{
+    position: relative;
+    top: -910px;
+    left: 330px;
+    line-height: 55px;
+    background-color: orange;
+    font-size: 25px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+
+    
+}
+.num7{
+    position: relative;
+    top: -890px;
+    left: 330px;
+    line-height: 55px;
+    background-color: orange;
+    font-size: 25px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+}
+.num8{
+    top: -880px;
+    left: 470px;
+    position: relative;
+    line-height: 38px;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: gray;
+    width: 150px;
+    height: 40px;
+    border-radius: 150%;
+    text-align: center;
+    color: white;
+}
+.num9{
+    position:relative;
+    top: -980px;
+    left: 520px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+}
+.num10{
+    position:relative;
+    top: -1020px;
+    left: 610px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 10%;
+    line-height: 40px;
+    font-weight: bold;
+}
+.num11{
+    position: relative;
+    top: -1220px;
+    left: 340px;
+    font-weight: bold;
+    background-color: gray;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    line-height: 40px;
+}
