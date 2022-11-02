@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex_container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around; 
+            width: 340px;
+            height: 450px;
+            background-color:  rgb(246, 147, 208);
+            border-radius: 10%;
+            box-shadow: -15px 15px  rgb(228, 100, 179);
+            position: relative;
+            left: 37%;
+            top: 25px;
+        }
+        .flex_container > div{
+            text-align: center;
+            color: aliceblue;
+            font-size: 35px;
+        }
+        .circle{
+            background-color: rgb(193, 17, 128);
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            box-shadow: -5px 5px  rgb(135, 11, 90);
+        }
+        .circle_borders{
+            background-color: black;
+            width: 65px;
+            height: 50px;
+            border-radius: 20%;
+            box-shadow: -5px 5px rgb(65, 39, 53);
+        }
+        .orange{
+            background-color: rgb(121, 8, 91);
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            box-shadow: -5px 5px  rgb(94, 5, 70);
+        }
+        #screen{
+            background-color: rgb(237, 237, 228); 
+            width:300px; 
+            height: 60px; 
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: -7px 7px rgb(155, 150, 150);
+        }
+        #equal{
+            background-color: rgb(193, 17, 128); 
+            width: 150px; 
+            height:30px; 
+            border-radius: 50%;
+            box-shadow: -5px 5px  rgb(135, 11, 90);
+        }
+
+        .orange:hover, .circle:hover{
+            width: 60px;
+            height: 60px;
+        }
+        .circle_borders:hover{
+            color: black;
+            background-color: antiquewhite;
+        }
+        #equal:hover{
+            width: 160px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body >
+    <div class="flex_container">
+        <div id="screen"></div>
+        <div class="circle">%</div>
+        <div class="circle_borders">1</div>
+        <div class="circle_borders">2</div>
+        <div class="circle_borders">3</div>
+        <div class="circle">÷</div>
+        <div class="circle">√</div>
+        <div class="circle_borders">4</div>
+        <div class="circle_borders">5</div>
+        <div class="circle_borders">6</div>
+        <div class="circle">X</div>
+        <div class="orange">CE</div>
+        <div class="circle_borders">7</div>
+        <div class="circle_borders">8</div>
+        <div class="circle_borders">9</div>
+        <div class="circle">-</div>
+        <div class="orange">ON</div>
+        <div class="circle_borders">0</div>
+        <div class="circle_borders">.</div>
+        <div class="circle_borders">
+            <span style="position: relative; left: 10%;">+</span>
+            <span style="position: relative; top: 15%; right: 5%;">/</span>
+            <span style="position: relative; top:30%; right: 15%;">-</span>
+        </div>
+        <div class="circle">+</div>
+        <div id="equal">=</div>
+    </div>
+</body>
+</html>

@@ -20,7 +20,11 @@
             background-size:cover; 
             height: 35vw;
             }
-        div{
+        .flex_container{
+            display: flex;
+            align-items: center;
+        }
+        .flex_container > div{
             background-color: white; 
             opacity: 0.5; 
             height: 50px; 
@@ -29,7 +33,6 @@
             color: black;
             position: relative;
             display: flex;
-            align-items: center;
         }
         footer{
             background-color: rgb(218, 15, 188); 
@@ -57,7 +60,7 @@
         <a href="https://www.youtube.com/watch?v=dFU2X5CFp5I" target="_blank">No More Drama</a>
         <img src="Carlie Puth.jpg" alt="a picture of Charlie Puth" width="80px" height="80px">
     </header>
-    <main>
+    <main class="flex_container">
         <div>Charlie Puth: Discography</div>
     </main>
     <footer>
