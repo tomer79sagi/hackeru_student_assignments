@@ -1,0 +1,68 @@
+body{
+    background-image: url(images/pokerBackground2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ul.navbarFlex{
+    margin:0;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+li a{
+transition: all 0.3s ease 0s;
+}
+
+li a:hover{
+    color: #f1f1f1;
+}
+ul.navbarFlex > li{
+    background-color:green;
+   
+    font-family: Verdana;
+    font-size: 20px;
+    list-style: none;
+    margin: 1px;
+    padding: 3px;
+}
+
+p{
+    font-size: 30px;
+    color: darkslategray;
+    font-weight: bold;
+    text-align: center;
+    background-color:antiquewhite;
+}
+
+
+
+
+
+
+
+/*.navBar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.active{
+    background-color: green;
+}

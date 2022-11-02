@@ -1,0 +1,119 @@
+/*body{
+    background-image: url(images/poker_table.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+body{
+    overflow-x: hidden;
+}
+ul.navbarFlex{
+    margin:0;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+li a{
+transition: all 0.3s ease 0s;
+}
+
+li a:hover{
+    color: #f1f1f1;
+}
+ul.navbarFlex > li{
+    background-color:green;
+   
+    font-family: Verdana;
+    font-size: 20px;
+    list-style: none;
+    margin: 1px;
+    padding: 3px;
+}
+
+img.center {
+    display: block;
+    width: 82.5%;
+   
+  }
+  div.parent{
+    position: relative;
+    left: 10%;
+    z-index: -1;
+  }
+  div.pokerPlayer1{
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    /*left: 385px;*/ /* you must use precantage*/
+    left: 40%;
+  max-width: 20%;
+   min-width: 20%;
+  }
+
+  div.pokerPlayer2{
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+   left: 39%; /*left: 40% same thing the character is upside down*/
+   max-width: 20%;
+   min-width: 20%;
+   
+  }
+  div.namePlayer1{
+    z-index: 2;
+    font-size: 1.5em;
+    font-family: fantasy;
+    font-weight: bold;
+    position: absolute;
+    top: 6%;
+    left: 34.5%;
+  
+  }
+  div.namePlayer2{
+    z-index: 2;
+    font-size: 1.5em;
+    font-family: fantasy;
+    font-weight: bold;
+    position: absolute;
+    bottom: 6%;
+    left: 33.675%;
+  }
+  div.firstCombo{
+    z-index: 3;
+    position: absolute;
+    top: 12%;
+    left: 27.5%;
+
+  }
+
+  div.secondCombo{
+    z-index: 3;
+    position: absolute;
+    bottom: 12%;
+    left: 27.5%;   
+  }
+  div.chips{
+    position: absolute;
+    top: 32%;
+    left: 36.5%;
+  }
+  h1.borderT{      /* why border style doesnt work*/
+    position: absolute;
+    top: 43%;
+    left: 32.5%;
+    color: brown;
+    border-style: bold;
+    /*border-width: 32222px;*/
+    background-color: black;
+    /*border: turquoise;*/
+    
+  }
+  
+
