@@ -198,8 +198,8 @@ a:visited {
 }
 
 .person:nth-child(6) .cards-box {
-  top: 70%;
-  left: 250%;
+  top: 90%;
+  left: 220%;
   transform: rotate(145deg);
 }
 
@@ -208,13 +208,13 @@ a:visited {
 }
 
 .person:nth-child(6) .chips-box {
-  top: 75%;
-  left: 350%;
+  top: 140%;
+  left: 320%;
   transform: rotate(145deg);
 }
 
 .person:nth-child(4) .chips-box {
-  top: -530%;
+  top: -490%;
 }
 
 .winner {
