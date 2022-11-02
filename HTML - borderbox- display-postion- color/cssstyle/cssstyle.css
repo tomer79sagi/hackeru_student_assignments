@@ -1,0 +1,73 @@
+.body_home_page {
+    background-image:url("/assaignments/hackeru_student_assignments/HTML\ -\ borderbox-\ display-postion-\ color/images/Ultimate-Texas-Holdem-2-scaled.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.game_page{
+    background-image: url("/assaignments/hackeru_student_assignments/HTML\ -\ borderbox-\ display-postion-\ color/images/189-1899126_casino-poker-poker-table-1080p.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+}
+
+.h1_home_page {
+    color: red;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.p_home_page{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+   
+}
+    
+.ul {
+    list-style-type: none;
+    margin: 0 ;
+    padding: 6px;
+    background-color:black;
+    font-size: 25px;
+    font-family: Arial;
+  }
+  
+  li  {
+    display: inline;
+  }
+  li a {
+    color: grey;
+  }
+  
+  li a:hover {
+    background-color: #555;
+    color: white;
+    
+  }
+
+
+  .Player1 {
+    text-align: center;
+
+  }
+
+
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+    position: absolute;
+    
+  }
+
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 7px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
