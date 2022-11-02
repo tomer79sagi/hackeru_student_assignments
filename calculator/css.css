@@ -1,0 +1,133 @@
+#body{
+    height: 60em;
+    width: 40em;
+    background-color: #bebe00;
+    border-radius: 10%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 3%;
+}
+#screen{
+    height:6em;
+    width: 38em;
+    background-color: #cacaca;
+    border-radius: 10%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 5%; 
+}
+#number{
+    height: 4.5em;
+    width: 1.2em;   
+    border: 10px solid #000000;
+    border-style: dashed;
+    border-radius: 10%;
+    position: absolute;
+    right: 0;
+    margin-right: 8%;
+    margin-top: 0.3%;
+}
+#number:hover{
+    border:0;
+    border-right: 10px solid #000000;
+    height: 5.5em;
+    margin-top: 0.5%;
+}
+#dot{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #000000;
+    position: absolute;
+    right: 0;
+    margin-right: 6%;
+    margin-top: 14%;
+}
+#solar{
+    height:2em;
+    width: 9.5em;
+    background-color: #2e2e2e;
+    border-radius: 10%;
+    position: relative;
+    left: 29.5em;
+    top: 7%;
+}
+.flex-button{
+    list-style: none;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+    top: 20%;
+    margin-right: 5%;
+}
+.flex-button-item{
+    font-size: 1.2vw;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 4em;
+    height: 6em;
+    background-color: grey;
+    border-radius: 50%;
+    padding-top: 1%;
+    text-align: center;
+    margin: 10px;
+}
+.numbers{
+    color: #ffffff;
+}
+.reset{
+    background-color: #ffa500;
+}
+#plus{
+    height: 10em;
+}
+#equal{
+    position: absolute;
+    border-radius: 10%;
+    width: 15em;
+    height: 3.5em;
+    top: 87%;
+}
+#plus_minus{
+    display:flex;
+    flex-direction: column;
+    line-height: 50%;
+}
+li > span{
+    font-size:150%
+}
+.flex-button-item:hover{
+    background-color: #343434;
+}
+.reset:hover{
+    background-color: #9c6601;
+    color: #ee82ee;
+}
+.numbers:hover{
+    color:#00ffff;
+}
+.symbols:hover{
+    color:#008000;
+}
+#solar:hover{
+    visibility: hidden;
+}
+#screen:hover{
+    background-color: #00d977;
+}
+@keyframes mymove {
+    from {right: -100px;}
+    to {right: 100px;}
+}
+#body:hover{
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+    animation: mymove 10s infinite;
+    animation-direction: alternate;
+}
