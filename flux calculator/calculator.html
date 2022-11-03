@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex calculator</title>
+    <style>
+      div {
+        margin: 10;
+      }
+      .calc {
+        width: 380;
+        height: 400;
+        background-color: yellow;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .screen {
+        border-radius: 15%;
+        width: 360;
+        height: 60;
+        margin: 10;
+        background-color: gray;
+      }
+      .func_button {
+        border-radius: 50%;
+        height: 40;
+        width: 40;
+        background-color: gray;
+      }
+      .num_button {
+        border-radius: 15%;
+        width: 60;
+        height: 40;
+        background-color: gray;
+      }
+      .big_func_button {
+        border-radius: 35%;
+        width: 40;
+        height: 80;
+        background-color: gray;
+      }
+      .equal {
+        position: relative;
+        bottom: 40;
+        justify-content: center;
+        border-radius: 15%;
+        width: 160;
+        height: 40;
+        background-color: gray;
+      }
+      #orange {
+        background-color: orange;
+      }
+      .func_content {
+        position: relative;
+        top: 10;
+        left: 13;
+      }
+      .num_content {
+        position: relative;
+        top: 10;
+        left: 25;
+      }
+      .big_func_cont {
+        position: relative;
+        top: 30;
+        left: 13;
+      }
+      .equal_cont {
+        position: relative;
+        top: 10;
+        left: 75;
+      }
+      .calc div:hover {
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calc">
+      <div class="screen"></div>
+      <div class="func_button">
+        <span class="func_content">%</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">7</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">8</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">9</span>
+      </div>
+      <div class="func_button">
+        <span class="func_content">&divide;</span>
+      </div>
+      <div class="func_button">
+        <span class="func_content">&radic;</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">4</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">5</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">6</span>
+      </div>
+      <div class="func_button">
+        <span class="func_content">&times;</span>
+      </div>
+      <div class="func_button" id="orange">
+        <span class="func_content">CE</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">1</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">2</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">3</span>
+      </div>
+      <div class="func_button">
+        <span class="func_content">&minus;</span>
+      </div>
+      <div class="func_button" id="orange">
+        <span class="func_content">ON</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">0</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">.</span>
+      </div>
+      <div class="num_button">
+        <span class="num_content">&#8723;</span>
+      </div>
+      <div class="big_func_button">
+        <span class="big_func_cont">&plus;</span>
+      </div>
+      <div class="equal">
+        <span class="equal_cont">=</span>
+      </div>
+    </div>
+  </body>
+</html>
