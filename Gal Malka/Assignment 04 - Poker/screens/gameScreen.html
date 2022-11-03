@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../poker.css">
+    <title>Poker</title>
+</head>
+<body class="body">
+    <header>
+        <img style="width: 50px; height: 50px;" src="../props/poker-cards.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">Home Room</a></li>
+                <li><a href="#">Game Room</a></li>
+                <li><a href="#">Score Room</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button>Settings</button></a>
+    </header>
+    
+    <section class="playerInfo">
+        <div>
+            <p>John(AI) Cash: </p>
+            <p id="aiCash">1500</p>
+        </div>
+        <div>
+            <p>John's bet: </p>
+            <p id="aiBet">0</p>
+        </div>
+        <div>
+            <p>Current Pot:</p>
+            <p id="pot">0</p>
+        </div>
+        <div>
+            <p>Player's bet: </p>
+            <p id="playerBet">0</p>
+        </div>
+        <div>
+            <p>Player Cash: </p>
+            <p id="playerCash">1500</p>
+        </div>
+    </section>
+
+    <div class="side_menu" id="sidemenu">
+        <div class="side_menu_slide">
+            <img src="../props/menu.png" alt="" onclick="sideMenuTransition()">
+            <ul class="strength_list" id="strength_list">
+                <li>High Card</li>
+                <li>One Pair</li>
+                <li>Two Pairs</li>
+                <li>Three of a kind</li>
+                <li>Straight</li>
+                <li>Flush</li>
+                <li>Full House</li>
+                <li>Four of a kind</li>
+                <li>Straight Flush</li>
+                <li>Royal Flush</li>
+            </ul>
+            
+        </div>
+    </div>
+    <section class="aiCards">
+        <img id="aicard_1" src="../props/cards/backcard.png" alt="">
+        <img id="aicard_2" src="../props/cards/backcard.png" alt="">
+        <img id="aicard_3" src="../props/cards/backcard.png" alt="">
+        <img id="aicard_4" src="../props/cards/backcard.png" alt="">
+        <img id="aicard_5" src="../props/cards/backcard.png" alt="">
+    </section>
+
+    <button class="deal_btn" id="deal_btn" onclick="dealCards()">Deal</button>
+    <div class="player_actions">
+        <button class="call_btn" id="call_btn" onclick="callBtn()">Call</button>
+        <button class="check_btn" id="check_btn" onclick="checkBtn()">Check</button>
+        <button class="raise_btn" id="raise_btn" onclick="raiseBtn()">Raise</button>
+        <button class="done_btn" id="done_btn" onclick="doneBtn()">Done</button>
+        <button class="fold_btn" id="fold_btn" onclick="foldBtn()">Fold</button>
+    </div>
+    <div class="text_box" id="text_box">Test</div>
+
+    <section class="playerCards">
+        <img id="playercard_1" onclick="replaceCards(1)" src="../props//cards/backcard.png" alt="">
+        <img id="playercard_2" onclick="replaceCards(2)" src="../props//cards/backcard.png" alt="">
+        <img id="playercard_3" onclick="replaceCards(3)" src="../props//cards/backcard.png" alt="">
+        <img id="playercard_4" onclick="replaceCards(4)" src="../props//cards/backcard.png" alt="">
+        <img id="playercard_5" onclick="replaceCards(5)" src="../props//cards/backcard.png" alt="">
+    </section>
+
+    <section class="chips">
+        <img src="../props/chips/pokerchipgreen.png" alt="" onclick="bet(20)">
+        <img src="../props/chips/pokerchipred.png" alt="" onclick="bet(50)">
+        <img src="../props/chips/pokerchipblack.png" alt="" onclick="bet(100)">
+    </section>
+    
+    <script src="../poker.js"></script>
+</body>
+</html>
