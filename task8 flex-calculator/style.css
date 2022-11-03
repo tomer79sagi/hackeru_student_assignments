@@ -1,0 +1,115 @@
+.calculator {
+  width: 400px;
+  height: 700px;
+  outline: solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  background-color: rgb(255, 227, 18);
+  box-shadow: 10px 10px rgb(113, 110, 110);
+  border-radius: 10%;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.screen {
+  outline: solid;
+  height: 80px;
+  width: 300px;
+  background-color: azure;
+  font-size: 80px;
+  text-align: end;
+  border-radius: 5%;
+  margin-top: 5px;
+}
+.buttons {
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+.grey,
+.orange {
+  border-radius: 45%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 9px #999;
+  text-align: center;
+  font-size: 35px;
+  margin: 4px;
+  font-weight: bold;
+}
+.black {
+  border-radius: 20%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 9px #999;
+  text-align: center;
+  font-size: 40px;
+  margin: 4px;
+  font-weight: bold;
+}
+.grey:hover,
+.equal:hover {
+  background-color: rgb(93, 91, 91);
+}
+.black:hover {
+  background-color: rgb(65, 64, 64);
+}
+.orange:hover {
+  background-color: rgb(201, 137, 19);
+}
+.grey {
+  background-color: grey;
+}
+.black {
+  background-color: black;
+  color: white;
+}
+.orange {
+  background-color: orange;
+}
+.equal {
+  width: 200px;
+  height: 50px;
+
+  border-radius: 15%;
+  background-color: grey;
+  box-shadow: 0 9px #999;
+  text-align: center;
+  font-size: 45;
+  font-weight: bold;
+}
+#plusminus {
+  display: flex;
+  justify-content: center;
+}
+.plus {
+  position: absolute;
+  margin-top: -6;
+
+  margin-left: auto;
+}
+.minus {
+  position: absolute;
+  margin-top: 20;
+}
+.middle {
+  position: absolute;
+  margin-top: -8;
+}
+.equal:active,
+.grey:active {
+  background-color: rgb(184, 184, 140);
+}
+.black:active {
+  background-color: rgb(103, 107, 74);
+}
+.orange:active {
+  background-color: rgb(240, 185, 82);
+}
