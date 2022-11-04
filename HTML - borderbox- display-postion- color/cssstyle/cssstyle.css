@@ -73,20 +73,7 @@
     margin-top: 29.4em;
 
   }
-  /*.p1ziton25 {
-    margin-top: 8em;
-    margin-left: 50em;
-    width: 3em;
-  }
-
-  .pl1ziton25_2{
-    margin-top: 3em;
-    margin-left: 50em;
-    width: 3em;
-  }
-            */
-
-
+ 
    .zitonsflexp1 {    
     display: flex;
     flex-wrap: nowrap;
@@ -165,4 +152,19 @@
     text-align: center;
     line-height: 10px;
   }
+
+
+.score{
+    border-collapse: collapse;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+th,td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid  #ddd;
+}
+
+tr:hover {background-color: aqua;}
 
