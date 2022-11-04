@@ -20,7 +20,19 @@ a:hover {
     padding: 10px;
 }
 
-/* /////////////////////////////////////////////////////// */
+
+.announcement {
+  display: flex;
+  background-color: purple ;
+  border: 2px solid black;
+  font-weight: bold;
+  justify-content: center;
+  width: 15%;
+  margin: 10px auto;
+  position: sticky;
+  top: 50%;
+  z-index: 1;
+}
 
 .name {
   margin: 10px 700px;
@@ -28,6 +40,8 @@ a:hover {
   border: 2px solid black;
   text-align: center;
 }
+
+/* /////////////////////////////////////////////////////// */
 
 .cardA1 {
   background-image: url("graphics/cardback.gif");
@@ -167,17 +181,18 @@ a:hover {
   width:  3.75em;
   height: 5.00em;
 }
+
 .frontA5 {
   background-color: #ffffff;
   color:red;
   width: 100%;
   height: 100%;
 }
+
 .indexA5 {
   font-size: 50%;
   font-weight: bold;
   margin-left: 5px;
-
 }
 
 .spotE1 { position: absolute; left: 0.7em; top: 0.5em; }
@@ -199,6 +214,8 @@ a:hover {
   justify-content: center;
 }
 
+/* /////////////////////////////////////////////////////// */
+
 .cardB1 {
   background-image: url("graphics/cardback.gif");
   border-color: #808080 #000000 #000000 #808080;
@@ -206,25 +223,22 @@ a:hover {
   border-style: solid;
   color: #000000;
   font-size: 20pt;
-  position: absolute;
+  position: relative;
   width:  3.75em;
   height: 5.00em;
-  margin: 0px 500px;
 }
+
 .frontB1 {
   background-color: #ffffff;
   color:red;
-  position: absolute;
   width: 100%;
   height: 100%;
 }
+
 .indexB1 {
   font-size: 50%;
   font-weight: bold;
-  text-align: center;
-  position: absolute;
-  left: 0.25em;
-  top:  0.25em;
+  margin-left: 5px;
 }
 
 .spotB11 { position: absolute; left: 0.7em; top: 0.5em; }
@@ -246,25 +260,21 @@ a:hover {
   border-style: solid;
   color: #000000;
   font-size: 20pt;
-  position: absolute;
+  position: relative;
   width:  3.75em;
   height: 5.00em;
-  margin: 0px 600px;
 }
 .frontB2 {
   background-color: #ffffff;
   color:#000000;
-  position: absolute;
   width: 100%;
   height: 100%;
 }
+
 .indexB2 {
   font-size: 50%;
   font-weight: bold;
-  text-align: center;
-  position: absolute;
-  left: 0.25em;
-  top:  0.25em;
+  margin-left: 5px;
 }
 
 .spotB21 { position: absolute; left: 1.7em; top: 0.8em; }
@@ -279,25 +289,22 @@ a:hover {
   border-style: solid;
   color: #000000;
   font-size: 20pt;
-  position: absolute;
+  position: relative;
   width:  3.75em;
   height: 5.00em;
-  margin: 0px 700px;
 }
+
 .frontB3 {
   background-color: #ffffff;
   color: red;
-  position: absolute;
   width: 100%;
   height: 100%;
 }
+
 .indexB3 {
   font-size: 50%;
   font-weight: bold;
-  text-align: center;
-  position: absolute;
-  left: 0.25em;
-  top:  0.25em;
+  margin-left: 5px;
 }
 
 .spotB31 { position: absolute; left: 0.60em; top: 0.5em; }
@@ -313,25 +320,22 @@ a:hover {
   border-style: solid;
   color: #000000;
   font-size: 20pt;
-  position: absolute;
+  position: relative;
   width:  3.75em;
   height: 5.00em;
-  margin: 0px 800px;
 }
+
 .frontB4 {
   background-color: #ffffff;
   color: red;
-  position: absolute;
   width: 100%;
   height: 100%;
 }
+
 .indexB4 {
   font-size: 50%;
   font-weight: bold;
-  text-align: center;
-  position: absolute;
-  left: 0.25em;
-  top:  0.25em;
+  margin-left: 5px;
 }
 
 .spotB41 { position: absolute; left: 0.7em; top: 0.5em; }
@@ -350,25 +354,22 @@ a:hover {
   border-style: solid;
   color: #000000;
   font-size: 20pt;
-  position: absolute;
+  position: relative;
   width:  3.75em;
   height: 5.00em;
-  margin: 0px 900px;
 }
+
 .frontB5 {
   background-color: #ffffff;
   color:black;
-  position: absolute;
   width: 100%;
   height: 100%;
 }
+
 .indexB5 {
   font-size: 50%;
   font-weight: bold;
-  text-align: center;
-  position: absolute;
-  left: 0.25em;
-  top:  0.25em;
+  margin-left: 5px;
 }
 
 .spotB51 { position: absolute; left: 0.60em; top: 0.5em; }
@@ -378,52 +379,25 @@ a:hover {
 
 /* /////////////////////////////////////////////////////// */
 
-.containerB1 {
+.card-row-2 {
+
+  width: 100%;
+  height: 400px;
   display: flex;
-  margin-top: 50px;
-  margin: 300px 900px;
-  height: 0px;
-}
-
-.chipB1 {
-  height: 130px;
-  width: 140px;
-  border-radius: 50%;
-  border: 7px dashed white;
-  transition: all 1s;
-  display: inline-flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  color: white;
-  font-family: 'Lato', sans-serif;
-  font-size: 26px;
-  margin: 0px 8px;
-  background-color: black;
 }
-
-div span {
-  border: 3px dashed white;
-  height: 120px;
-  width: 130px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 120px;
-}
-
-/* .spin  */
-.containerB1 div:hover {
-  transform: rotate(360deg);
-}
-
 /* /////////////////////////////////////////////////////// */
 
-.containerB2 {
+.chips {
   display: flex;
-  margin-top: 50px;
-  margin: 300px 700px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 650px;
+  margin: auto;
 }
 
-.chipB2 {
+.chip-Black1 {
   height: 130px;
   width: 140px;
   border-radius: 50%;
@@ -448,7 +422,83 @@ div span {
   line-height: 120px;
 }
 
-/* .spin  */
-.containerB2 div:hover {
-  transform: rotate(360deg);
+.chip-Black2 {
+  height: 130px;
+  width: 140px;
+  border-radius: 50%;
+  border: 7px dashed white;
+  transition: all 1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  margin: 0px 8px;
+  background-color: black;
 }
+
+.chip-Red1 {
+  height: 130px;
+  width: 140px;
+  border-radius: 50%;
+  border: 7px dashed white;
+  transition: all 1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  margin: 0px 8px;
+  background-color: red;
+}
+
+.chip-Red2 {
+  height: 130px;
+  width: 140px;
+  border-radius: 50%;
+  border: 7px dashed white;
+  transition: all 1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  margin: 0px 8px;
+  background-color: red;
+}
+
+.chip-Red3 {
+  height: 130px;
+  width: 140px;
+  border-radius: 50%;
+  border: 7px dashed white;
+  transition: all 1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  margin: 0px 8px;
+  background-color: red;
+}
+
+.chip-Red4 {
+  height: 130px;
+  width: 140px;
+  border-radius: 50%;
+  border: 7px dashed white;
+  transition: all 1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  margin: 0px 8px;
+  background-color: red;
+}
+

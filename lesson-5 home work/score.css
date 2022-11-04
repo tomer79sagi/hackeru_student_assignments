@@ -1,0 +1,40 @@
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQERkXY0DQ1GcWVTf3pTGFviKlriIX4TNtcXQ&usqp=CAU");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;;
+}
+
+a {
+    color:aliceblue;
+    font-size: 20px;
+}
+
+a:hover {
+    background-color: green;
+}
+
+.header {
+    background-color: black;
+    padding: 10px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  color: red;
+  background-color: yellow;
+}
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+h1 {
+        text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+}
