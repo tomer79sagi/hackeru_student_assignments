@@ -16,13 +16,14 @@
     </style>
   </head>
   <body>
+    <div class="screen"></div>
     <div class="main_calc_container">
-      <div style="background-color: gray">%</div>
+      <div class="operations" style="background-color: gray">%</div>
       <div style="background-color: black">7</div>
       <div style="background-color: black">8</div>
       <div style="background-color: black">9</div>
-      <div style="background-color: gray">/</div>
-      <div style="background-color: gray">√</div>
+      <div class="operations" style="background-color: gray">/</div>
+      <div class="operations" style="background-color: gray">√</div>
       <div style="background-color: black">4</div>
       <div style="background-color: black">5</div>
       <div style="background-color: black">6</div>
@@ -35,9 +36,13 @@
       <div style="background-color: chocolate">ON/C</div>
       <div style="background-color: black">0</div>
       <div style="background-color: black">.</div>
-      <div style="background-color: black">+/-</div>
-      <div style="background-color: gray">+</div>
-      <div style="background-color: gray" width="180px">=</div>
+      <div style="background-color: black">
+        <span class="plus">+</span><span>/</span><span class="minus">-</span>
+      </div>
+      <div class="plusp" style="background-color: gray">+</div>
+      <div class="resulte">
+        <div style="color: black">=</div>
+      </div>
     </div>
   </body>
 </html>
