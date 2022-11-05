@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms7.css">
+    <title>ניב חולון</title>
+</head>
+<header>
+    <h1>טופס הרשמה לבית הספר ע"ש יעקב ניב:</h1>
+</header>
+<body>
+    <!--https://www.w3schools.com/-->
+
+
+<ol>
+   <li> <form action="https://www.w3schools.com/action_page.php" target="_blank">
+    <label for="name">כתוב את שמך</label><br>
+   </li>
+    <input type="text" id="name" name="name" required/><br>
+    
+    
+  <li> <label for="mail">כתוב את המייל שלך</label><br>
+  </li> 
+    <input type="email" id="mail" name="mail" required/><br>
+  
+    
+    
+    
+    
+  <li>  <label for="date">הכנס תאריך לידה</label><br>
+  </li>
+    <input type="date" id="date" name="date" /><br>
+  
+  
+  
+   <li> <label  >סמן את מינך</label><br>
+   </li>
+    <input type="radio" id="male" name="male-female" value="Male"/>
+    <label for="male">זכר
+    </label><br>
+    <input type="radio" id="female" name="male-female" value="Female"/>
+    <label for="female">נקבה</label><br><br>
+
+ 
+
+  <li><label for="num"> רשום את מספר הזהות שלך:</label><br>
+  </li>
+    <input type="tel" id="num" name="numberid" maxlength="10"/><br><br>
+
+   <li><label for="add"> רשום את הכתובת שלך:</label><br>
+   </li>
+    <input type="text" id="add" name="address" /><br><br>
+
+    <li><label for="proffesion"> בחר את המקצוע האהוב עליך</label><br>
+    </li>
+    <select id="proffesion">
+        <option value="מתמטיקה" >מתמטיקה</option>
+        <option value="אנגלית">אנגלית</option>
+        <option value="ספרות">ספרות </option>
+        <option value="תנ''ך">תנ"ך</option>
+        <option value="היסטוריה"> היסטוריה</option>
+    </select><br><br>
+
+    <li> <label> סמן את המצב המשפחתי שלך (ניתן לסמן יותר מאחד):</label><br>
+    </li>
+    <input type="checkbox" id="רווק" name="מצבמשפחתי" value="רווק" />
+    <label for="רווק">רווק\ה</label><br>
+    <input type="checkbox" id="בזוגיות" name="מצבמשפחתי" value="בזוגיות"/>
+    <label for="בזוגיות">בזוגיות</label><br>
+    <input type="checkbox" id="זה מסובך" name="מצבמשפחתי" value="זה מסובך"/>
+    <label for="זה מסובך">זה מסובך</label><br>
+    <input type="checkbox" id="גרוש" name="מצבמשפחתי" value="גרוש" />
+    <label for="גרוש">גרוש</label><br>
+    <input type="checkbox" id="אלמן" name="מצבמשפחתי" value="אלמן" />
+    <label for="אלמן">גרוש</label><br><br>
+    </select>
+
+    <li><label for="פירוט אישי"> ספר על עצמך(תחביבים,סיפורים אישיים,על המשפחה):</label><br>
+    </li>
+    <textarea name="פירוט אישי" id="פירוט אישי" cols="37" rows="10"></textarea><br>
+
+</ol>
+
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <input type="submit" value="submit"/>
+</form>
