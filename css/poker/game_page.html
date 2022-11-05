@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html{
+            margin: 0;
+            height: 100%;   
+        }
+        .table_bg{
+            background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20220428/pngtree-poker-table-green-cloth-on-dark-background-image_1106547.jpg);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        li{
+            float: left;
+            border-right: 1px solid lightgrey;
+        }
+        li a{
+            display: block;
+            padding: 25px 40px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            width: 50px;
+            height: 25px;
+        }
+        li a:hover:not(.active){
+            background-color: #111;
+        }
+        .active{
+            background-color: rgb(242, 47, 17);
+        }
+        .flex_container{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(229, 203, 168);
+            align-items: center;
+            opacity: 0.5;
+            height: 150px;
+        }
+        .flex_container > h2{
+            color: white;
+            position: fixed;
+            align-self: center;
+            font-size: 35px;
+        }
+        .flex_container > img{
+            width: 60px;
+            height: 80px;
+        }
+        /*.black_container{
+            display: flex;
+            justify-content: center;
+            background-color: aqua;
+        }*/
+        .flex_container > h3{
+            color: white;
+            position: fixed;
+        }
+        #poker_chip{
+            z-index: 990;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="home_page.html">Home</a></li>
+        <li><a class="active" href="game_page.html">Game</a></li>
+        <li><a href="scoring_page.html">Score</a></li>
+    </ul>
+
+    <div class="table_bg">
+
+        <div class="flex_container">
+            <h3 style="margin-top: 85px; font-size:30px; background-color: aquamarine;">Player A</h3>
+        </div>
+        <div class="flex_container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Playing_card_club_3.svg/819px-Playing_card_club_3.svg.png" alt="flowe_three">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Playing_card_heart_4.svg/819px-Playing_card_heart_4.svg.png" alt="heart_four">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playing_card_diamond_5.svg/1200px-Playing_card_diamond_5.svg.png" alt="diamond_five">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Playing_card_heart_6.svg/1638px-Playing_card_heart_6.svg.png" alt="heart_six">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Playing_card_heart_7.svg/819px-Playing_card_heart_7.svg.png" alt="heart_seven">
+        </div>
+
+        <div class="flex_container">
+            <h2>The Winner Is Player B</h2>
+        </div>
+
+        <div class="flex_container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Playing_card_spade_2.svg/1638px-Playing_card_spade_2.svg.png" alt="leaf_two"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Playing_card_spade_4.svg/1200px-Playing_card_spade_4.svg.png" alt="leaf_four"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Playing_card_spade_5.svg/1200px-Playing_card_spade_5.svg.png" alt="leaf_five">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Playing_card_spade_9.svg/1200px-Playing_card_spade_9.svg.png" alt="leaf_nine">
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Playing_card_spade_10.svg/1638px-Playing_card_spade_10.svg.png" alt="leaf_ten">
+        </div>
+
+        <div class="flex_container">
+            <h3 style="font-size:30px; background-color: aquamarine;">Player B</h3>
+        </div>
+        
+        
+        <div id="poker_chip">
+            <img src="black_pokerchip_100.png" alt="black_pokerchip_100" width="60px">
+            <img src="black_pokerchip_100.png" alt="black_pokerchip_100" width="60px">
+            <br>
+            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
+            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
+            
+            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
+            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
+        </div>
+      
+
+        
+    </div>
+</body>
+</html>

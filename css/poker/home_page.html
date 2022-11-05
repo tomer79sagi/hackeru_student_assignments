@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html{
+            margin: 0;
+            height: 100%;   
+        }
+        .bg{
+            background-image: url(https://casino-home.net/wp-content/uploads/2020/08/texas_web_banner.jpg);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -10;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        li{
+            display: flex;
+            float: left;
+            border-right: 1px solid lightgrey;
+        }
+        li a{
+            display: block;
+            padding: 25px 40px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            width: 50px;
+            height: 25px;
+        }
+        li a:hover:not(.active){
+            background-color: #111;
+        }
+        .active{
+            background-color: rgb(242, 47, 17);
+        }
+        h1{
+            color: white; 
+            padding-top: 45px; 
+            padding-left:  65px; 
+            font-size: 100px; 
+            margin-bottom: 20px;
+            text-shadow: 5px 5px 4px black;
+        }
+        p{
+            color: white;
+            padding-left:  65px;
+            padding-right: 55%;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>  
+    <ul>
+        <li><a class="active" href="home_page.html">Home</a></li>
+        <li><a href="game_page.html">Game</a></li>
+        <li><a href="scoring_page.html">Score</a></li>
+    </ul>
+    <div class="bg" >
+        <h1 >Poker</h1>
+        <p>Poker is a family of comparing card games in which players wager over which hand is best according to that specific game's rules. While the earliest known form of the game was played with just 20 cards, today it is usually played with a standard deck, although in countries where short packs are common, it may be played with 32, 40 or 48 cards. Thus poker games vary in deck configuration, the number of cards in play, the number dealt face up or face down, and the number shared by all players, but all have rules that involve one or more rounds of betting.</p>
+        <p>In most modern poker games, the first round of betting begins with one or more of the players making some form of a forced bet (the blind or ante). In standard poker, each player bets according to the rank they believe their hand is worth as compared to the other players. The action then proceeds clockwise as each player in turn must either match (or "call") the maximum previous bet, or fold, losing the amount bet so far and all further involvement in the hand. A player who matches a bet may also "raise" (increase) the bet. The betting round ends when all players have either called the last bet or folded. If all but one player folds on any round, the remaining player collects the pot without being required to reveal their hand. If more than one player remains in contention after the final betting round, a showdown takes place where the hands are revealed, and the player with the winning hand takes the pot.</p>
+    </div>
+</body>
+</html>

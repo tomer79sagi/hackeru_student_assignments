@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        li{
+            float: left;
+            border-right: 1px solid lightgrey;
+        }
+        li a{
+            display: block;
+            padding: 25px 40px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            width: 50px;
+            height: 25px;
+        }
+        li a:hover:not(.active){
+            background-color: #111;
+        }
+        .active{
+            background-color: rgb(242, 47, 17);
+        }
+        h1{
+            padding-top: 60px;
+            text-align: center;
+            font-size: 6em;
+        }
+        .container{
+            display: flex;
+            
+        }
+        .container > table{
+            margin-left: 24%;
+            margin-right: 20%;
+            align-items: center;
+        }
+        th, td{
+            width: 200px;
+            height: 100px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="home_page.html">Home</a></li>
+        <li><a href="game_page.html">Game</a></li>
+        <li><a class="active" href="scoring_page.html">Score</a></li>
+    </ul>
+    <h1>Final Score</h1>
+    <div class="container">
+        <table border="1">
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>Aharon</th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Lisa</th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
