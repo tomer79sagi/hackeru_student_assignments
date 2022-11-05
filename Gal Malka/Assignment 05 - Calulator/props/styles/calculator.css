@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.calculaotr{
+    margin: auto;
+    height: 700px;
+    width: 500px;
+    border-style: solid;
+    border-color: rgb(29, 29, 29);
+    border-radius: 10px;
+    background-color: rgb(73, 73, 73);
+}
+
+.screen {
+    border-style: solid;
+    border-color: rgb(29, 29, 29);
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 150px;
+    width: 450px;
+}
+
+.result{
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+.body {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.actions {
+    margin-right: 10px;
+    border-style: solid;
+    border-color: rgb(29, 29, 29);
+    border-radius: 10px;
+    height: 400px;
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.actions button {
+    margin: 5px;
+    height: 70px;
+    width: 70px;
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.clear {
+    width: 140px;
+}
+
+.equal {
+    width: 140px;
+}
+
+.buttons {
+    margin-left: 10px;
+    border-style: solid;
+    border-color: rgb(29, 29, 29);
+    border-radius: 10px;
+    display: flex;
+    height: 400px;
+    width: 300px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    margin: 5px;
+    height: 70px;
+    width: 70px;
+    font-family: "Montserrat" , sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+button {
+    border-radius: 10px;
+    background-color: rgb(97, 72, 204);
+}

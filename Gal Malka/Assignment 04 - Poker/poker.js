@@ -334,7 +334,7 @@ function bet(amount){
     console.log(betsAllowed)
     if(gameOn){
         if(playerCash - amount >= 0){
-            if(gamePhase == 1 || gamePhase == 3 || gamePhase == 5){
+            if(gamePhase == 1 || gamePhase == 3 || gamePhase == 5 || gamePhase == 6){
                 if(betsAllowed){
                     switch(amount) {
                         case 20:
@@ -459,7 +459,7 @@ function doneBtn(){
         return
     }
 
-    else if(gamePhase == 5){
+    else if(gamePhase == 5 || gamePhase == 6){
         betsAllowed = false
         text_box.textContent = "Calculating John Actions..."
         displayAIActions()
@@ -494,7 +494,7 @@ function aiMove(){
     if(alreadyRaised && (possibleHandShapes == 5 || possibleHandValues == 5 || aiCurrentHand >= 5)){
         aiRaise()
     }
-    else if(alreadyRaised && playerBet >= 200 && (possibleHandShapes <= 3 && possibleHandValues <= 3 && aiCurrentHand <= 3)){
+    else if(alreadyRaised && playerBet >= 200 &&  aiCurrentHand <= 3){
         aiFold()
     }
     else if(alreadyRaised && (aiCurrentHand >= 3 && aiCurrentHand <= 5)){
