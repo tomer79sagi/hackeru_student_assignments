@@ -98,7 +98,7 @@ body{
 .winner{
     position: fixed;
     z-index: 2;
-    top: 500px;
+    top: 40%;
     font-size: 100px;
     left: 20%;
     right: 20%;
