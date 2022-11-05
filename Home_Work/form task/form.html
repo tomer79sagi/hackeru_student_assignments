@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form HM</title>
+    <style>
+      body {
+        background-color: gainsboro;
+        margin-right: 50px;
+      }
+      h1 {
+        text-align: center;
+      }
+      textarea {
+        background-color: darkgray;
+      }
+      input {
+        background-color: darkgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form assignment</h1>
+    <form action="action page.html" target="_blank">
+      <label for="user_name">הכנס שם:</label>
+      <input type="text" id="user_name" name="user_name" /><br /><br />
+      <label for="password">הכנס סיסמא:</label>
+      <input type="password" id="password" name="password" />
+      <p>בחירת תחביב אהוב עליך:</p>
+      <label for="gaming">משחקי מחשב</label>
+      <input type="checkbox" id="gaming" name="gaming" value="gaming" />
+      <br />
+      <br />
+      <label for="sport">ספורט</label>
+      <input type="checkbox" id="sport" name="sport" value="sport" />
+      <br />
+      <br />
+      <label for="programing">תכנות</label>
+      <input
+        type="checkbox"
+        id="programing"
+        name="programing"
+        value="programing"
+      />
+      <br />
+      <br />
+      <p>תושב ישראלי:</p>
+      <label for="yes">כן</label>
+      <input type="radio" id="yes" name="choice" value="yes" />
+      <br />
+      <br />
+      <label for="no">לא</label>
+      <input type="radio" id="no" name="choice" value="no" />
+      <br />
+      <br />
+      <label for="message">הודעה:</label>
+      <br />
+      <textarea id="message" name="message" rows="5" cols="30"></textarea>
+      <br />
+      <br />
+      <label for="colors">בחירת מבע אהוב עליך</label>
+      <select id="colors" name="colors">
+        <option value="green">ירוק</option>
+        <option value="yellow">צהוב</option>
+        <option value="orange">כתום</option>
+        <option value="green">ירוק</option>
+      </select>
+      <br />
+      <input type="reset" />
+      <br />
+      <br />
+      <input type="submit" value="submit" /><br /><br />
+    </form>
+  </body>
+</html>
