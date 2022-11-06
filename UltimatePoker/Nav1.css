@@ -5,9 +5,10 @@ body{
 
 
 .navbar {
+  font-size: 30px;
     list-style-type: none;
-    margin: 1em;
-    padding: 1em;
+    margin: 0.5em;
+    padding: 0.5em;
     overflow: hidden;
     background-color: black;
   }
@@ -85,5 +86,31 @@ body{
     font-size: 18px;
   }
   
+  .dot {
+    font-size: 25px;
+    font-weight: bold;
+    height: 35px;
+    width: 35px;
+    background-color: rgb(223, 4, 4);
+    border-radius: 50%;
+    display: inline-block;
+    border: dashed;
+    border-width:3px;
+    padding: 1%;
+  }
 
-  
+  .table{
+    margin-top:20%;
+    align-self: center;;
+    width:1000px;
+    height: 550px;;
+    background-color:#4aad4a;
+    position:relative;
+    left:50%;
+    top:70px;
+    transform:translateX(-50%) translateY(-50%);
+    border-radius:150px;
+    justify-content:end;
+    border:15px solid #a95555;
+    z-index: -1;
+  }
