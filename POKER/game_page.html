@@ -1,0 +1,218 @@
+<html>
+    <head>
+        <title>
+            Poker Game Page
+        </title>
+    </head>
+    <style>
+        body {
+            background-color: silver;
+            background-image: url(./images/background_game_page.jpg);
+            background-repeat: no-repeat;
+            background-position: center;   
+            background-size: cover; 
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            font-size: 150%;
+            font-weight: 700;
+            margin: 0 1%;
+        }
+    
+        .game_contaner {
+            display: flex;
+            justify-content: center;
+        }
+
+        .pocker_table {
+            position: absolute;
+            top: 25%;
+            height: 55%;
+            width: 80%;
+            background-color: green;
+            border-radius: 40%;
+            border: 1.5vw solid #a06b17;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cards_of_player_one {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 5%;
+        }
+
+        .cards_of_player_one img {
+            width: 7%;
+            margin: 0.1%;
+        }
+
+        .cards_of_player_two {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 5%;
+        }
+
+        .cards_of_player_two img {
+            width: 7%;
+            margin: 0.1%;
+        }
+
+        .jetons {
+            
+            position: absolute;
+            top: 45%;
+            left: 43%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .stack_jetons {
+            display: flex;
+            margin: 5%;
+        }
+
+        .winner {
+            color: black;
+            font-weight: bold;
+            position: relative;
+            top: 3%;
+            display: flex;
+            justify-content: center;
+            font-size: 5em;
+            opacity: 0.6;
+            z-index: 1;
+        }
+
+        .player_winner {
+            
+            position: relative;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            font-size: 3em;
+            z-index: 1;
+
+        }
+
+        .player_loser {
+            position: relative;
+            top: 56%;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            font-size: 3em;
+            z-index: 1;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            body {
+                background-color: lightblue;
+            }
+            .winner {
+                top: 15%;
+            }
+            .player_winner {
+                bottom: 1%;
+            }
+            .player_loser {
+                top: 62%;
+            }
+            .cards_of_player_one {
+                top: 10%;
+            }
+            .cards_of_player_two {
+                bottom: 10%;
+            }
+            .stack_jetons img:first-of-type {
+                width: 10%;
+            }
+            .stack_jetons img:nth-of-type(2) {
+                width: 9%;
+            }
+            .stack_jetons img:nth-of-type(3) {
+                width: 9%;
+            }
+
+            .stack_jetons img:nth-of-type(4) {
+                width: 10%;
+
+            }
+            .stack_jetons img:nth-of-type(5) {
+                width: 9%;
+
+            }
+            .stack_jetons img:nth-of-type(6) {
+                width: 9%;
+            }
+
+            a {
+                font-size: 125%;
+            }
+
+            .jetons {
+                left: 39%;
+            }
+        
+        }
+    </style>
+    <body>
+        <h1>Game Page</h1>
+            <a href="home_page.html">To the home page</a>
+            <a href="score_page.html">To the score page</a>
+        <br><br><br>
+        <div class="player_winner">
+            <span class="name_player">player:</span> 
+                <img src="./images/player_winner.png" width="4%" alt="player winner">
+            <span class="name_player">winner</span> 
+        </div>
+        <div class="player_loser">
+            player:
+                <img style="transform: rotateX(180deg);" src="./images/player_loser.png" width="6%" alt="player loser">
+            loser
+        </div>
+        <div class="winner">winner win</div>
+        <div class="game_contaner">
+            <div class="pocker_table">
+                <div class="cards">
+                    <div class="cards_of_player_one">
+                        <img src="./images/10_spades.png" width="7%"  alt="10 spades">
+                        <img src="./images/jack_spades.png" width="7%" alt="jack spades">
+                        <img src="./images/qween_spades.png" width="7%" alt="qween spades">
+                        <img src="./images/king_spades.png" width="7%" alt="king spades">
+                        <img src="./images/ace_spades.png" width="7%" alt="ace spades">
+                    </div>
+                    <div class="jetons">
+                        <div class="stack_jetons">
+                            <img src="./images/chip_100.png" width="8%" alt="chip 100">
+                            <img style="position: absolute; left: 7%; opacity: 0.8" src="./images/chip_25.png" width="6%" alt="chip 25">
+                            <img style="position: absolute; left: 9%; opacity: 0.8" src="./images/chip_25.png" width="6%" alt="chip 25">
+                            <span style="width: 5%;"></span>
+                            <img style="position:absolute; left: 20%" src="./images/chip_100.png" width="8%" alt="chip 100">
+                            <img style="position: absolute; left: 21%" src="./images/chip_25.png" width="6%" alt="chip 25">
+                            <img style="position: absolute; left: 23%" src="./images/chip_25.png" width="6%" alt="chip 25">
+                        </div>
+                    </div>
+                    <div class="cards_of_player_two">
+                        <img src="./images/3_spades.png" width="7%"  alt="3 spades">
+                        <img src="./images/4_heart.png" width="7%"  alt="4 heart">
+                        <img src="./images/5_clubs.png" width="7%"  alt="5 clubs">
+                        <img src="./images/6_diamonds.png" width="7%"  alt="6 diamonds">
+                        <img src="./images/7_spades.png" width="7%"  alt="7 spades">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
