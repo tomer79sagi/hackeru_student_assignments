@@ -9,6 +9,16 @@
         body{
             margin: 0;
         }
+        .symbols_bg{
+            background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20211103/pngtree-dice-poker-casino-light-effect-background-image_914047.png);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin-top: 20px;
+            z-index: -10;
+        }
         ul{
             list-style-type: none;
             margin: 0;
@@ -43,6 +53,7 @@
             padding-bottom: 0;
             text-align: center;
             font-size: 4em;
+            text-shadow: -4px -1px 9px whitesmoke;
         }
         .container{
             display: flex;
@@ -50,11 +61,11 @@
                 }
         th, td{
             width: 230px;
-            height: 70px;
-            font-size: 110%;
+            height: 75px;
+            font-size: 130%;
             text-align: center;
-            border: 2px solid red;
-            background-color: white;
+            border: 5px solid  rgb(2, 7, 2);
+            background-color:rgb(238, 35, 35);
         }
         span{
            font-size: 80%;
@@ -63,39 +74,41 @@
     </style>
 </head>
 <body>
-    <ul>
-        <li><a href="home_page.html">Home</a></li>
-        <li><a href="game_page.html">Game</a></li>
-        <li><a class="active" href="scoring_page.html">Score</a></li>
-    </ul>
-    <h1>Final Score</h1>
-    <div class="container">
-        <table border="1" style="border: 2px solid red; background-color:red">
-            <tr>
-                <th style="font-size: 170%;">name</th>
-                <th style="font-size: 170%;">score</th>
-            </tr>
-            <tr>
-                <td>current game</td>
-                <td>300 <span>chips</span></td>
-            </tr>
-            <tr>
-                <td>player A - before game</td>
-                <td>150 <span>chips</span></td>
-            </tr>
-            <tr>
-                <td>player B - before game</td>
-                <td>150 <span>chips</span></td>
-            </tr>
-            <tr>
-                <td>player A - after game</td>
-                <td>0 <span>chips</span></td>
-            </tr>
-            <tr>
-                <td>player B - after game</td>
-                <td>300 <span>chips</span></td>
-            </tr>
-        </table>
+    <div class="symbols_bg">
+        <ul>
+            <li><a href="home_page.html">Home</a></li>
+            <li><a href="game_page.html">Game</a></li>
+            <li><a class="active" href="scoring_page.html">Score</a></li>
+        </ul>
+        <h1>Final Score</h1>
+        <div class="container">
+            <table border="1" style="border: 2px solid red; background-color:red">
+                <tr>
+                    <th style="font-size: 190%; text-decoration: underline;">name</th>
+                    <th style="font-size: 190%; text-decoration: underline;">score</th>
+                </tr>
+                <tr>
+                    <td>current game</td>
+                    <td>300 <span>chips</span></td>
+                </tr>
+                <tr>
+                    <td>player A - before game</td>
+                    <td>150 <span>chips</span></td>
+                </tr>
+                <tr>
+                    <td>player B - before game</td>
+                    <td>150 <span>chips</span></td>
+                </tr>
+                <tr>
+                    <td>player A - after game</td>
+                    <td>0 <span>chips</span></td>
+                </tr>
+                <tr>
+                    <td>player B - after game</td>
+                    <td>300 <span>chips</span></td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>
