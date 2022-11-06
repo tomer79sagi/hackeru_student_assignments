@@ -29,7 +29,7 @@
             color: white;
             text-align: center;
             text-decoration: none;
-            width: 50px;
+            width: 60px;
             height: 25px;
         }
         li a:hover:not(.active){
@@ -39,23 +39,26 @@
             background-color: rgb(242, 47, 17);
         }
         h1{
-            padding-top: 60px;
+            padding-top: 75px;
+            padding-bottom: 0;
             text-align: center;
-            font-size: 6em;
+            font-size: 4em;
         }
         .container{
             display: flex;
-            
-        }
-        .container > table{
-            margin-left: 24%;
-            margin-right: 20%;
-            align-items: center;
-        }
+            justify-content: center;
+                }
         th, td{
-            width: 200px;
-            height: 100px;
-            font-size: 30px;
+            width: 230px;
+            height: 70px;
+            font-size: 110%;
+            text-align: center;
+            border: 2px solid red;
+            background-color: white;
+        }
+        span{
+           font-size: 80%;
+           text-decoration: underline; 
         }
     </style>
 </head>
@@ -67,24 +70,30 @@
     </ul>
     <h1>Final Score</h1>
     <div class="container">
-        <table border="1">
+        <table border="1" style="border: 2px solid red; background-color:red">
             <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th style="font-size: 170%;">name</th>
+                <th style="font-size: 170%;">score</th>
             </tr>
             <tr>
-                <th>Aharon</th>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>current game</td>
+                <td>300 <span>chips</span></td>
             </tr>
             <tr>
-                <th>Lisa</th>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>player A - before game</td>
+                <td>150 <span>chips</span></td>
+            </tr>
+            <tr>
+                <td>player B - before game</td>
+                <td>150 <span>chips</span></td>
+            </tr>
+            <tr>
+                <td>player A - after game</td>
+                <td>0 <span>chips</span></td>
+            </tr>
+            <tr>
+                <td>player B - after game</td>
+                <td>300 <span>chips</span></td>
             </tr>
         </table>
     </div>
