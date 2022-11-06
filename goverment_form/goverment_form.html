@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css"/>
+    <title>טופס 101</title>
+    <script>
+        submitForms = function(){
+            document.getElementById("works").submit();
+            document.getElementById("worker").submit();
+            document.getElementById("worker_children").submit();
+            document.getElementById("worker_fiance").submit();
+            document.getElementById("worker_payments").submit();
+            document.getElementById("worker_additional_payments").submit();
+            document.getElementById("worker_changes").submit();
+            document.getElementById("worker_zikui").submit();
+            document.getElementById("worker_mas").submit();
+            document.getElementById("worker_agree").submit();
+    }
+    </script>
+</head>
+<body>
+    <div class="heading">
+        <h1>כרטיס עובד<a href="#first-explain" class="explains">(1)</a></h1>
+        <h3>ובקשה להקלה ולתיאום מס על ידי המעביד<a href="#first-explain" class="explains">(1)</a></h2>
+        <p>לפי תקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה), התשנ"ג - 1993</p>
+        <img src="https://upload.wikimedia.org/wikipedia/he/thumb/c/cd/Rashut_HaMisim.svg/400px-Rashut_HaMisim.svg.png" width="120px">
+        <p id="explainer">טופס זה ימולא על-ידי כל עובד עם תחילת עבודתו, וכן בתחילת כל שנת מס (אא"כ המנהל אישר אחרת). הטופס מהווה אסמכתא למעביד למתן<br>
+            הקלות במס ולעריכת תיאומי מס בחישוב משכורת<a href="#first-explain" class="explains">(1)</a>&nbsp;&nbsp;העובד. אם חל שינוי בפרטים - יש להצהיר על כך תוך שבוע ימים.<br>
+            {ראה הסברים (לפי המספרים) מעבר לדף}</p>
+    </div>
+    <form id="works" action="https://www.w3schools.com/action_page.php" target="_blank">
+        <fieldset class="form_works">
+            <legend><strong>א. פרטי המעביד</strong> (למילוי ע"י המעביד)</legend>
+            <label for="tax_year">שנת המס:</label>
+            <input type="number" id="tax_year" name="tax_year" min="2022" required><br><br>
+            <label for="works_name">שם:</label>
+            <input type="text" name="works_name" id="works_name" required><br><br>
+            <label for="works_address">כתובת</label>
+            <input type="email" name="works_address" id="works_address" required><br><br>
+            <label for="works_tel">טלפון:</label>
+            <input type="tel" name="works_tel" id="works_tel" dir="ltr" required><br><br>
+            <label for="works_number">מספר תיק ניכויים:</label>
+            <input type="number" id="works_number" name="works_number" required><br><br>
+        </fieldset>
+    </form>
+    <form id="worker" action="https://www.w3schools.com/action_page.php" target="_blank">
+        <fieldset class="form_worker">
+            <legend><strong>ב. פרטי העובד/ת</strong> (יש לצרף צילום תעודת זהות כולל ספח. אם צורף בעבר, יש לצרף צילום רק אם היו שינויים בפרטים. למי שאין מספר תעודת זהות יש
+                לצרף צילום דרכון ואישור / רשיון שהייה בישראל שנתנו על ידי רשות האוכלוסין וההגירה)</legend>
+            <label for="worker_id">מספר זהות:</label>
+            <input type="number" id="worker_id" name="worker_id"><br>
+            <label for="worker_lname">שם משפחה:</label>
+            <input type="text" id="worker_lname" name="worker_lname" required><br>
+            <label for="worker_fname">שם פרטי:</label>
+            <input type="text" id="worker_fname" name="worker_fname" required><br>
+            <label for="worker_birthday">תאריך לידה:</label>
+            <input type="date" id="worker_birthday" name="worker_birthday" required><br>
+            <label for="worker_immigration">תאריך עליה:</label>
+            <input type="date" id="worker_immigration" name="worker_immigration"><br>
+            <label for="worker_passport">מספר דרכון (למי שאין מספר ת.ז.)</label>
+            <input type="text" id="worker_passport" name="worker_passport">
+            <fieldset class="worker_adress">
+                <legend>כתובת פרטית</legend>
+                <label for="worker_street">רחוב/שכונה:</label>
+                <input type="text" id="worker_street" name="worker_street" required>
+                <label for="worker_street_number">מספר:</label>
+                <input type="number" id="worker_street_number" name="worker_street_number" required>
+                <label for="worker_city">עיר/יישוב:</label>
+                <input type="text" id="worker_city" name="worker_city" required>
+                <label for="worker_postal_code">מיקוד:</label>
+                <input type="number" id="worker_postal_code" name="worker_postal_code" required>
+            </fieldset><br><br>
+            <fieldset class="small">
+                <legend>מין:</legend>
+                <label for="male">זכר</label>
+                <input type="radio" id="male" name="sex" value="Male">
+                <label for="female">נקבה</label>
+                <input type="radio" id="female" name="sex" value="Female" required>
+            </fieldset><br><br>
+            <fieldset>
+                <legend>מצב משפחתי:</legend>
+                <label for="single">רווק/ה</label>
+                <input type="radio" id="single" name="marital_status" value="Single">
+                <label for="maried">נשוי/אה</label>
+                <input type="radio" id="maried" name="marital_status" value="Maried">
+                <label for="widow">אלמן/ה</label>
+                <input type="radio" id="widow" name="marital_status" value="Widow">
+                <label for="divorced">גרוש/ה</label>
+                <input type="radio" id="divorced" name="marital_status" value="Divorced">
+                <label for="separated">פרוד/ה</label>
+                <input type="radio" id="separated" name="marital_status" value="Separated" required>
+                <label for="separated_file">(חובה לצרף אישור פ"ש):</label>
+                <input type="file" id="separated_file" name="separated_file" multiple>
+            </fieldset><br><br>
+            <fieldset class="small">
+                <legend>תושב ישראלי:</legend>
+                <label for="yes">כן</label>
+                <input type="radio" id="yes" name="israel_citizen" value="Yes">
+                <label for="no">לא</label>
+                <input type="radio" id="no" name="israel_citizen" value="No" required>
+            </fieldset><br><br>
+            <fieldset class="small">
+                <legend>חבר קיבוץ/מושב שיתופי:</legend>
+                <label for="Y">כן</label>
+                <input type="radio" id="Y" name="kibutz" value="Yes">
+                <label for="N">לא</label>
+                <input type="radio" id="N" name="kibutz" value="No" required>
+            </fieldset><br><br>
+            <fieldset class="small">
+                <legend>חבר בקופת חולים:</legend>
+                <label for="yeap">כן</label>
+                <input type="radio" id="yeap" name="medicine" value="Yes">
+                <label for="kupa_name">שם הקופה:</label>
+                <input type="text" id="kupa_name" name="kupa_name">
+                <label for="nope">לא</label>
+                <input type="radio" id="nope" name="medicine" value="No" required>
+            </fieldset><br><br><br><br>
+            <label for="worker_email">כתובת דואר אלקטרוני:</label>
+            <input type="email" id="worker_email" name="worker_email" required dir="ltr"><br>
+            <label for="worker_home_tel">מספר טלפון:</label>
+            <input type="tel" id="worker_home_tel" name="worker_home_tel" dir="ltr"><br>
+            <label for="worker_tel">מספר טלפון נייד</label>
+            <input type="tel" id="worker_tel" name="worker_tel" required dir="ltr"><br>
+        </fieldset>
+    </form>
+    <div class="styling">
+        <form id="worker_children" action="https://www.w3schools.com/action_page.php" target="_blank">
+            <fieldset class="form_children">
+                <legend><strong>ג. פרטים על ילדיי שבשנת המס טרם מלאו להם 19 שנה</strong> (עפ”י ספח תעודת זהות)</legend>
+                <label for="children_name1">שם:</label>
+                <input type="text" id="children_name1" name="children_name">
+                <label for="children_id1">מספר זהות</label>
+                <input type="number" id="children_id1" name="children_id">
+                <label for="children_birthday1">תאריך לידה</label>
+                <input type="date" id="children_birthday1" name="children_birthday">
+                <label for="first_option1">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option1" name="status" value="with_me1">
+                <label for="second_option1">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option1" name="status" value="paying_for_me1">
+                <label for="children_name2">שם:</label>
+                <input type="text" id="children_name2" name="children_name">
+                <label for="children_id2">מספר זהות</label>
+                <input type="number" id="children_id2" name="children_id">
+                <label for="children_birthday2">תאריך לידה</label>
+                <input type="date" id="children_birthday2" name="children_birthday">
+                <label for="first_option2">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option2" name="status" value="with_me2">
+                <label for="second_option2">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option2" name="status" value="paying_for_me2">
+                <label for="children_name3">שם:</label>
+                <input type="text" id="children_name3" name="children_name">
+                <label for="children_id3">מספר זהות</label>
+                <input type="number" id="children_id3" name="children_id">
+                <label for="children_birthday3">תאריך לידה</label>
+                <input type="date" id="children_birthday3" name="children_birthday">
+                <label for="first_option3">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option3" name="status" value="with_me3">
+                <label for="second_option3">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option3" name="status" value="paying_for_me3">
+                <label for="children_name4">שם:</label>
+                <input type="text" id="children_name4" name="children_name">
+                <label for="children_id4">מספר זהות</label>
+                <input type="number" id="children_id4" name="children_id">
+                <label for="children_birthday4">תאריך לידה</label>
+                <input type="date" id="children_birthday4" name="children_birthday">
+                <label for="first_option4">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option4" name="status" value="with_me4">
+                <label for="second_option4">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option4" name="status" value="paying_for_me4">
+                <label for="children_name5">שם:</label>
+                <input type="text" id="children_name5" name="children_name">
+                <label for="children_id5">מספר זהות</label>
+                <input type="number" id="children_id5" name="children_id">
+                <label for="children_birthday5">תאריך לידה</label>
+                <input type="date" id="children_birthday5" name="children_birthday">
+                <label for="first_option5">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option5" name="status" value="with_me5">
+                <label for="second_option5">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option5" name="status" value="paying_for_me5">
+                <label for="children_name6">שם:</label>
+                <input type="text" id="children_name6" name="children_name">
+                <label for="children_id6">מספר זהות</label>
+                <input type="number" id="children_id6" name="children_id">
+                <label for="children_birthday6">תאריך לידה</label>
+                <input type="date" id="children_birthday6" name="children_birthday">
+                <label for="first_option6">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option6" name="status" value="with_me6">
+                <label for="second_option6">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option6" name="status" value="paying_for_me6">
+                <label for="children_name7">שם:</label>
+                <input type="text" id="children_name7" name="children_name7">
+                <label for="children_id7">מספר זהות</label>
+                <input type="number" id="children_id7" name="children_id">
+                <label for="children_birthday7">תאריך לידה</label>
+                <input type="date" id="children_birthday7" name="children_birthday">
+                <label for="first_option7">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option7" name="status" value="with_me7">
+                <label for="second_option7">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option7" name="status" value="paying_for_me7">
+                <label for="children_name8">שם:</label>
+                <input type="text" id="children_name8" name="children_name">
+                <label for="children_id8">מספר זהות</label>
+                <input type="number" id="children_id8" name="children_id">
+                <label for="children_birthday8">תאריך לידה</label>
+                <input type="date" id="children_birthday8" name="children_birthday">
+                <label for="first_option8">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option8" name="status" value="with_me8">
+                <label for="second_option8">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option8" name="status" value="paying_for_me8">
+                <label for="children_name9">שם:</label>
+                <input type="text" id="children_name9" name="children_name9">
+                <label for="children_id9">מספר זהות</label>
+                <input type="number" id="children_id9" name="children_id9">
+                <label for="children_birthday9">תאריך לידה</label>
+                <input type="date" id="children_birthday9" name="children_birthday9">
+                <label for="first_option9">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option9" name="status" value="with_me9">
+                <label for="second_option9">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option9" name="status" value="paying_for_me9">
+                <label for="children_name10">שם:</label>
+                <input type="text" id="children_name10" name="children_name10">
+                <label for="children_id10">מספר זהות</label>
+                <input type="number" id="children_id10" name="children_id10">
+                <label for="children_birthday10">תאריך לידה</label>
+                <input type="date" id="children_birthday10" name="children_birthday10">
+                <label for="first_option10">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option10" name="status" value="with_me10">
+                <label for="second_option10">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option10" name="status" value="paying_for_m10e">
+                <label for="children_name11">שם:</label>
+                <input type="text" id="children_name11" name="children_name">
+                <label for="children_id11">מספר זהות</label>
+                <input type="number" id="children_id11" name="children_id">
+                <label for="children_birthday11">תאריך לידה</label>
+                <input type="date" id="children_birthday11" name="children_birthday">
+                <label for="first_option11">הילד נמצא בחזקתי</label>
+                <input type="checkbox" id="first_option11" name="status" value="with_me11">
+                <label for="second_option11">אני מקבל/ת בגינו קצבת ילדים מב"ל</label>
+                <input type="checkbox" id="second_option11" name="status" value="paying_for_me11">
+            </fieldset>
+        </form>
+        <form id="worker_fiance" action="https://www.w3schools.com/action_page.php" target="_blank">
+            <fieldset class="form_fiance">
+                <legend><strong>ד. פרטים על בן/בת הזוג</strong></legend>
+                <label for="fiance_id">מספר זהות:</label>
+                <input type="number" id="fiance_id" name="fiance_id"><br>
+                <label for="fiance_lname">שם משפחה:</label>
+                <input type="text" id="fiance_lname" name="fiance_lname" required><br>
+                <label for="fiance_fname">שם פרטי:</label>
+                <input type="text" id="fiance_fname" name="fiance_fname" required><br>
+                <label for="fiance_birthday">תאריך לידה:</label>
+                <input type="date" id="fiance_birthday" name="fiance_birthday" required><br>
+                <label for="fiance_immigration">תאריך עליה:</label>
+                <input type="date" id="fiance_immigration" name="fiance_immigration"><br>
+                <label for="fiance_passport">מספר דרכון (למי שאין מספר ת.ז.)</label>
+                <input type="text" id="fiance_passport" name="fiance_passport"><br>
+                <input type="radio" id="fiance_not_working" name="fiance_working" value="fiance_not_working">
+                <label for="fiance_not_working">אין לבן/בת הזוג כל הכנסה</label><br>
+                <input type="radio" id="fiance_working" name="fiance_working" value="fiance_working">
+                <label for="fiance_working">יש לבן/בת הזוג הכנסה מ:</label><br>
+                <input type="radio" id="fiance_work" name="fiance_work" value="fiance_work">
+                <label for="fiance_work">עבודה/קצבה/עסק</label><br>
+                <input type="radio" id="fiance_other" name="fiance_work" value="fiance_other">
+                <label for="fiance_other">הכנסה אחרת</label>
+            </fieldset>
+        </form>
+        <form id="worker_payments" action="https://www.w3schools.com/action_page.php" target="_blank">
+            <fieldset class="payments">
+                <legend><strong>ה. פרטים על הכנסותיי ממעביד זה</strong></legend>
+                <label for="start_date">תאריך תחילה העבודה<a href="#first-explain" class="explains">(1)</a>&nbsp;&nbsp; בשנת המס</label>
+                <input type="date" id="start_date" name="start_date">
+                <p>אני מקבל/ת: (ראה הסברים מעבר לדף)</p>
+                <input type="radio" id="montly_payment" name="payment" value="Montly_payment" required>
+                <label for="montly_payment">משכורת חודש<a href="#second-explain" class="explains">(2)</a></label><br>
+                <input type="radio" id="additional_payment" name="payment" value="Additional_payment">
+                <label for="additional_payment">משכורת בעד משרה נוספת<a href="#third-explain" class="explains">(3)</a></label><br>
+                <input type="radio" id="partially_payment" name="payment" value="Partially_payment">
+                <label for="partially_payment">משכורת חלקית<a href="#fourth-explain" class="explains">(4)</a></label><br>
+                <input type="radio" id="daily_payment" name="payment" value="Daily_payment">
+                <label for="daily_payment">שכר עבודה (עובד יומי)<a href="#fifth-explain" class="explains">(5)</a></label><br>
+                <input type="radio" id="allowance" name="payment" value="Allowance">
+                <label for="allowance">קצבה<a href="#sixth-explain" class="explains">(6)</a></label><br>
+                <input type="radio" id="scholarship" name="payment" value="Scholarship">
+                <label for="scholarship">מלגה<a href="#first-explain" class="explains">(1)</a></label>
+                
+            </fieldset>
+        </form>
+    </div>
+    <form id="worker_additional_payments" action="https://www.w3schools.com/action_page.php" target="_blank">
+        <fieldset >
+            <legend><strong>ו. פרטים על הכנסות אחרות</strong></legend>
+            <input type="radio" id="witout_additional_payment" name="with/out_additional_payment" value="witout_additional_payment" required>
+            <label for="witout_additional_payment">אין לי הכנסות אחרות ממשכורת (משכורת חודש, בעד משרה נוספת, משכורת חלקית, שכר עבודה), מקצבה וממלגה<a href="#first-explain" class="explains">(1)</a>&nbsp;&nbsp;</label>
+            <hr>
+            <input type="radio" id="with_additional_payment" name="with/out_additional_payment" value="wit_additional_payment" required>
+            <label for="with_additional_payment">יש לי הכנסות אחרות כמפורט להלן:</label>
+            <label for="montly_payment1">משכורת חודש<a href="#second-explain" class="explains">(2)</a>&nbsp;&nbsp;</label>
+            <input type="radio" id="montly_payment1" name="additional_payment" value="Montly_payment" required>
+            <label for="additional_payment1">משכורת בעד משרה נוספת<a href="#third-explain" class="explains">(3)</a>&nbsp;&nbsp;</label>
+            <input type="radio" id="additional_payment1" name="additional_payment" value="Additional_payment">
+            <label for="partially_payment1">משכורת חלקית<a href="#fourth-explain" class="explains">(4)</a>&nbsp;&nbsp;</label>
+            <input type="radio" id="partially_payment1" name="additional_payment" value="Partially_payment">
+            <label for="daily_payment1">שכר עבודה (עובד יומי)<a href="#fifth-explain" class="explains">(5)</a>&nbsp;&nbsp;</label>
+            <input type="radio" id="daily_payment1" name="additional_payment" value="Daily_payment">
+            <label for="allowance1">קצבה<a href="#sixth-explain" class="explains">(6)</a>&nbsp;&nbsp;</label>
+            <input type="radio" id="allowance1" name="additional_payment" value="Allowance">
+            <label for="scholarship1">מלגה<a href="#first-explain" class="explains">(1)</a>&nbsp;&nbsp;</label>
+            <input type="radio" id="scholarship1" name="additional_payment" value="Scholarship">
+            <p>אם יש לך הכנסה אחרת - נא סמן/י:</p>
+            <input type="radio" id="with_zikui" name="nekudot_zikui" value="with_zikui">
+            <label for="with_zikui">אבקש לקבל נקודות זיכוי ומדרגות מס כנגד הכנסתי זו (סעיף ד). איני מקבל/ת אותן בהכנסה אחרת<a href="#seventh-explain" class="explains">(7)</a></label><br>
+            <input type="radio" id="without_zikui" name="nekudot_zikui" value="without_zikui" required>
+            <label for="without_zikui">אני מקבל/ת נקודות זיכוי ומדרגות מס בהכנסה אחרת ועל כן איני זכאי/ת להן כנגד הכנסה זו<a href="#eighth-explain" class="explains">(8)</a></label><br>
+            <input type="checkbox" id="keren" name="keren" value="keren">
+            <label for="keren">אין מפרישים עבורי לקרן השתלמות בגין הכנסתי האחרת, או שכל הפרשות המעביד לקרן השתלמות בגין הכנסתי האחרת מצורפות להכנסתי האחרת<a href="#ninth-explain" class="explains">(9)</a></label><br>
+            <input type="checkbox" id="bituah" name="bituah" value="bituah">
+            <label for="bituah">אין מפרישים עבורי לקצבה/לביטוח אובדן כושר עבודה/פיצויים בגין הכנסתי האחרת, או שכל הפרשות המעביד לקצבה/לביטוח אובדן כושר עבודה/פיצויים בגין הכנסתי האחרת מצורפות להכנסתי האחרת<a href="#tenth-explain" class="explains">(10)</a></label>
+        </fieldset>
+    </form>
+    <form id="worker_changes" action="https://www.w3schools.com/action_page.php" target="_blank">
+        <fieldset class="form_changes">
+            <legend><strong>ז. שינויים במהלך השנה </strong>(כולל שינויים הקשורים לבקשה להקלה בחישוב המס מעבר לדף)</legend>
+            <table>
+                <tr>
+                    <th>
+                        <span>תאריך השינוי</span>
+                    </th>
+                    <th>
+                        <span>פרטי השינוי</span>
+                    </th>
+                    <th>
+                        <span>תאריך ההודעה</span>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="date" id="date_change1" name="date_change">
+                    </td>
+                    <td>
+                        <textarea id="change_note1" name="change_note" rows="9" cols="209"></textarea>
+                    </td>
+                    <td>
+                        <input type="date" id="date_message1" name="date_message">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="date" id="date_change2" name="date_change">
+                    </td>
+                    <td>
+                        <textarea id="change_note2" name="change_note" rows="9" cols="209"></textarea>
+                    </td>
+                    <td>
+                        <input type="date" id="date_message2" name="date_message">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="date" id="date_change3" name="date_change">
+                    </td>
+                    <td>
+                        <textarea id="change_note3" name="change_note" rows="9" cols="209"></textarea>
+                    </td>
+                    <td>
+                        <input type="date" id="date_message3" name="date_message">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <form id="worker_zikui" action="https://www.w3schools.com/action_page.php" target="_blank">
+        <fieldset>
+            <legend><strong>ח. אני מבקש/ת פטור או זיכוי ממס מהסיבות הבאות</strong></legend>
+            <input type="checkbox" id="citizen" name="citizen">
+            <label for="citizen">אני תושב/ת ישראל.</label><br><hr>
+            <input type="checkbox" id="disabled" name="disabled">
+            <label for="disabled">אני נכה %100 / עיוור/ת לצמיתות. מצורף אישור משרד הביטחון/האוצר/פקיד השומה/תעודת עיוור שהוצאה לאחר 94.1.1.
+                אם לא סומן בפרק ה כי "אין לי הכנסות אחרות לרבות מלגות" העובד יופנה לפקיד השומה לעריכת תיאום מס.</label><br><hr>
+            <input type="checkbox" id="grant_citizen" name="grant_citizen">
+            <label for="grant_citizen">אני תושב/ת קבוע/ה בישוב מזכה<a href="#thirteenth-explain" class="explains">(13)</a>&nbsp;&nbsp;&nbsp;
+                <label for="date_of_start">מתאריך</label><input type="date" id="date_of_start" name="date_of_start">. 
+                אני ובני משפחתי מדרגה ראשונה, מתגוררים <label for="city">ביישוב</label> <input type="text" id="city" name="city"> ואין לי "מרכז חיים" נוסף. מצורף אישור של הרשות ע"ג טופס 1312א.</label><br><hr>
+            <input type="checkbox" id="new_immigrant" name="new_immigrant">
+            <label for="new_immigrant">אני עולה חדש/ה <label for="date_of_immigration">מתאריך</label><input type="date" id="date_of_immigration" name="date_of_immigration"></label>
+            <br>לא היתה לי הכנסה בישראל מתחילת שנת המס הנוכחית עד <label for="day_of_earning">תאריך</label><input type="date" id="day_of_earning" name="day_of_earning">
+            <br>מי שתקופת זכאותו (42 חודש) אינה רצופה בשל שירות חובה בצה"ל, לימודים על תיכוניים או יציאה לחו"ל - יפנה לפקיד השומה.<br>
+            <strong style="text-decoration: underline;">חובה לצרף:</strong><label for="immigration_passport">תעודת עולה.</label>
+            <input type="file" id="immigration_passport" name="immigration_passport" multiple><hr>
+            <input type="checkbox" id="fiance_doesn't_working" name="fiance_doesn't_working">
+            <label for="fiance_doesn't_working">בגין בן/בת זוגי המתגורר/ת עימי ואין לו/לה הכנסות בשנת המס.</label><br>
+            רק אם העובד/ת או בן/בת הזוג הגיע/ה לגיל פרישה או שהוא/היא נכה או עיוור/ת עפ"י סעיף 9)5 (לפקודה.<hr>
+            <input type="checkbox" id="single_parent" name="single_parent">
+            <label for="single_parent">אני הורה במשפחה חד הורית<a href="#eleventh-explain" class="explains">(11)</a>&nbsp;&nbsp; החי בנפרד.</label><br>
+            ימולא רק ע"י הורה כאמור החי בנפרד ומבקש נקודות זיכוי עבור ילדיו, הנמצאים בחזקתו ובגינם
+            מקבל קצבת ילדים מהמוסד לביטוח לאומי (בהתאם לסעיף 7 להלן) ואינו מנהל משק בית משותף עם יחיד/ה אחר/ת.<hr>
+            <input type="checkbox" id="childrens_reason" name="childrens_reason">
+            <label for="childrens_reason">בגין ילדיי שבחזקתי המפורטים בחלק ג</label><br>
+            ימולא רק ע"י הורה במשפחה חד הורית שמקבל את קצבת הילדים בגינם, או ע"י אשה נשואה או ע"י הורה יחיד<a href="#twelveth-explain" class="explains">(12)</a><br>
+            <input type="checkbox" id="number_of_children" name="number_of_children">
+            <label for="number_of_children">מספר ילדים שנולדו בשנת <label for="children_number">המס</label> .<input type="number" id="children_number" name="children_number"></label>
+            <input type="checkbox" id="beetween6_17" name="beetween6_17">
+            <label for="beetween6_17">מספר ילדים שימלאו להם 6 שנים עד 17 שנים בשנת <label for="6_17_number">המס</label><input type="number" id="6_17_number" name="6_17_number"></label><br>
+            <input type="checkbox" id="beetween1_5" name="beetween1_5">
+            <label for="beetween1_5">מספר ילדים שימלאו להם שנה אחת עד 5 שנים בשנת <label for="1_5_number">המס</label><input type="number" id="1_5_number" name="1_5_number"></label>
+            <input type="checkbox" id="above18" name="above18">
+            <label for="above18">מספר ילדים שימלאו להם 18 שנים בשנת <label for="18number">המס</label><input type="number" id="18number" name="18number"></label><hr>
+            <input type="checkbox" id="babies" name="babies">
+            <label for="babies">בגין ילדיי הפעוטים.</label><br>
+            ימולא ע"י הורה (למעט הורה אשר סימן בפסקה 7 לעיל), אשה לא נשואה שילדיה אינם בחזקתה וכן הורה יחיד<a href="#twelveth-explain" class="explains">(12)</a>.<br>
+            <input type="checkbox" id="number_of_children1" name="number_of_children1">
+            <label for="number_of_children1">מספר ילדים שנולדו בשנת <label for="children_number1">המס</label> .<input type="number" id="children_number1" name="children_number1"></label><br>
+            <input type="checkbox" id="babies1_5" name="babies1_5">
+            <label for="babies1_5">מספר ילדים שימלאו להם שנה אחת עד 5 שנים בשנת <label for="1_5_babies">המס</label><input type="number" id="1_5_babies" name="1_5_babies"></label><hr>
+            <input type="checkbox" id="childrens_reason1" name="childrens_reason1">
+            <label for="childrens_reason1">אני הורה יחיד<a href="#twelveth-explain" class="explains">(12)</a>&nbsp;&nbsp; לילדיי שבחזקתי (המפורטים בסעיף 7 ו-8 לעיל).</label><br><hr>
+            <input type="checkbox" id="childrens_payment" name="childrens_payment">
+            <label for="childrens_payment">בגין ילדיי שאינם בחזקתי המפורטים בחלק ג ואני משתתף/ת בכלכלתם.</label><br>
+            ימולא ע"י הורה החי בנפרד, שאינו זכאי לנקודות זיכוי בגין ילדיו, אשר המציא פס"ד המחייב אותו בתשלום מזונות.<hr>
+            <input type="checkbox" id="disabled_childrens" name="disabled_childrens">
+            <label for="disabled_childrens">אני הורה ל<input type="number" id="disabled_childrens_number" name="disabled_childrens_number"> ילדים עם מוגבלות שטרם מלאו להם 19 שנים, בגינם אני מקבל/ת גמלת ילד נכה מהמוסד לביטוח לאומי.</label><br>
+            מצורף אישור גמלת ילד נכה מהמוסד לביטוח לאומי לשנה נוכחית. בן זוגי אינו מקבל נקודות זיכוי אלה. לילדיי, בגינם אני מבקש את נקודות הזיכוי, אין הכנסות בשנה הנוכחית.<input type="file" id="disable_file" name="disable_file"><hr>
+            <input type="checkbox" id="exfiances_payment" name="exfiances_payment">
+            <label for="exfiances_payment">בגין מזונות לבן/בת זוגי לשעבר.</label><br>
+            ימולא ע"י מי שנישא בשנית. מצורף פסק דין.<input type="file" id="exfinces_document" name="exfinces_document"><hr>
+            <input type="checkbox" id="beetween16_18" name="beetween16_18">
+            <label for="beetween16_18">מלאו לי או לבן/בת זוגי 16 שנים וטרם מלאו לי או לבן/בת זוגי 18 שנים בשנת המס.</label><br><hr>
+            <input type="checkbox" id="ex_soldier" name="ex_soldier">
+            <label for="ex_soldier">אני חייל/ת משוחרר/ת / שרתתי בשירות לאומי. <label for="army_starts">תאריך תחילת השירות</label><input type="date" id="army_starts" name="army_starts"> <label for="army_ends">תאריך סיום השירות</label><input type="date" id="army_ends" name="army_ends"></label><br><hr>
+            <input type="checkbox" id="learning" name="learning">
+            <label for="learning">בגין סיום לימודים לתואר אקדמי, סיום התמחות או סיום לימודי מקצוע.</label><br>
+            מצורפת הצהרה בטופס 119.<input type="file" id="learning_file" name="learning_file"><hr>
+        </fieldset>
+    </form>
+    <form id="worker_mas" action="https://www.w3schools.com/action_page.php" target="_blank">
+        <fieldset class="form_mas">
+            <legend><strong>ט. אני מ בקש/ת תיאום מס מהסיבות הבאות</strong></legend>
+            <input type="radio" id="without_another_work" name="tium_mas" value="without_another_work">
+            <label for="without_another_work">לא היתה לי הכנסה מתחילת שנת המס הנוכחית עד לתחילת עבודתי אצל מעביד זה.</label><br>
+            הערות: 1 .יש להמציא הוכחה כגון: אישור משטרת הגבולות בגין שהייה בחו"ל, אישור מחלה וכיו"ב. בהעדר הוכחה יש לפנות לפקיד השומה. <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            2 .דמי לידה ודמי אבטלה הינם הכנסה חייבת.<br>
+            <input type="radio" id="with_another_work" name="tium_mas" value="with_another_work">
+            <label for="with_another_work">יש לי הכנסות נוספות ממשכורת<a href="#first-explain" class="explains">(1)</a>&nbsp;&nbsp; כמפורט להלן:</label><br>
+            <table>
+                <tr>
+                    <th colspan="3">המעביד/משלם המשכורת<a href="#first-explain" class="explains">(1)</a></th>
+                    <td rowspan="2" colspan="1">סוג ההכנסה (עבודה/קצבה/מלגה/אחר)</td>
+                    <td>הכנסה חודשית</td>
+                    <td>המס שנוכה</td>
+                </tr>
+                <tr>
+                    <td>ש ם</td>
+                    <td>כתובת</td>
+                    <td>מספר תיק ניכויים</td>
+                    <td colspan="2">(לפי התלושים)</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="another_work1" name="another_work" ></td>
+                    <td><input type="text" id="another_work1_adress" name="another_work_adress" ></td>
+                    <td><input type="number" id="another_work_id1" name="another_work_id" ></td>
+                    <td>
+                        <input type="radio" id="from_another_work" name="payments_from_another_place" value="from_another_work">
+                        <label for="from_another_work">עבודה</label>
+                        <input type="radio" id="from_allowance" name="payments_from_another_place" value="from_allowance">
+                        <label for="from_allowance">קצבה</label>
+                        <input type="radio" id="from_scholarship" name="payments_from_another_place" value="from_scholarship">
+                        <label for="from_scholarship">מלגה</label>
+                        <input type="radio" id="other" name="payments_from_another_place" value="other">
+                        <label for="other">אחר</label>
+                    </td>
+                    <td><input type="number" id="amount_of_money" name="amount_of_money"></td>
+                    <td><input type="number" id="amount_of_tax" name="amount_of_tax"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="another_work2" name="another_work" ></td>
+                    <td><input type="text" id="another_work2_adress" name="another_work_adress" ></td>
+                    <td><input type="number" id="another_work_id2" name="another_work_id" ></td>
+                    <td>
+                        <input type="radio" id="from_another_work2" name="payments_from_another_place2" value="from_another_work2">
+                        <label for="from_another_work2">עבודה</label>
+                        <input type="radio" id="from_allowance2" name="payments_from_another_place2" value="from_allowance2">
+                        <label for="from_allowance2">קצבה</label>
+                        <input type="radio" id="from_scholarship2" name="payments_from_another_place2" value="from_scholarship2">
+                        <label for="from_scholarship2">מלגה</label>
+                        <input type="radio" id="other2" name="payments_from_another_place2" value="other2">
+                        <label for="other2">אחר</label>
+                    </td>
+                    <td><input type="number" id="amount_of_money2" name="amount_of_money"></td>
+                    <td><input type="number" id="amount_of_tax2" name="amount_of_tax"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="another_work3" name="another_work" ></td>
+                    <td><input type="text" id="another_work3_adress" name="another_work_adress" ></td>
+                    <td><input type="number" id="another_work_id3" name="another_work_id" ></td>
+                    <td>
+                        <input type="radio" id="from_another_work3" name="payments_from_another_place3" value="from_another_work3">
+                        <label for="from_another_work3">עבודה</label>
+                        <input type="radio" id="from_allowance3" name="payments_from_another_place3" value="from_allowance3">
+                        <label for="from_allowance3">קצבה</label>
+                        <input type="radio" id="from_scholarship3" name="payments_from_another_place3" value="from_scholarship3">
+                        <label for="from_scholarship3">מלגה</label>
+                        <input type="radio" id="other3" name="payments_from_another_place3" value="other3">
+                        <label for="other3">אחר</label>
+                    </td>
+                    <td><input type="number" id="amount_of_money3" name="amount_of_money"></td>
+                    <td><input type="number" id="amount_of_tax3" name="amount_of_tax"></td>
+                </tr>
+            </table>
+            <input type="radio" id="pakid" name="tium_mas" value="pakid">
+            <label for="pakid">פקיד השומה אישר תיאום לפי אישור מצורף.</label>
+        </fieldset>
+    </form>
+    <form id="worker_agree" action="https://www.w3schools.com/action_page.php" target="_blank">
+        <fieldset>
+            <legend><strong>י. הצהרה</strong></legend>
+            <p><strong>אני מצהיר/ה כי הפרטים שמסרתי בטופס זה הינם מלאים ונכונים. ידוע לי שהשמטה או מסירת פרטים לא נכונים הינה עבירה על פקודת
+                מס הכנסה. אני מתחייב/ת להודיע למעביד על כל שינוי שיחול בפרטיי האישיים ובפרטים דלעיל תוך שבוע ימים מתאריך השינוי.</strong></p><br>
+            <div class="flex-container">
+                <input type="date" id="day_agree" name="day_agree" required>
+                <input type="text" id="signature" name="signature" placeholder="שם ומשפחה" required>
+            </div>
+        </fieldset>
+    </form>
+    <input id="submit" type="button" value="שלח" onclick="submitForms()"/><br><br>
+    <div class="explain">
+        <h3 style="text-align: center;">דברי הסבר למילוי טופס 101</h3>
+        <span id="first-explain">(1)</span><strong>"עובד"</strong> יחיד המקבל משכורת. <strong>"מעביד"</strong> אדם המשלם משכורת. <strong>"משכורת"</strong> הכנסת עבודה, קיצבה, מענק עקב פרישה או מוות, מילגה וכיו"ב.
+        <br><strong>"עבודה"</strong> לרבות קבלת משכורת. <strong>"מלגה"</strong> לרבות מענק, פרס או פטור מתשלום שניתן לסטודנט או לחוקר.<br>
+        <span id="second-explain">(2)</span> <strong>משכורת חודש</strong> - משכורת בעד עבודה של לא פחות מ - 18 יום בחודש.<br>
+        <span id="third-explain">(3)</span><strong> משכורת בעד משרה נוספת</strong> - משכורת בעד עבודה של יותר מ - 5 שעות ביום, נוסף למשכורת ו/או בנוסף לקצבה החייבת במס ממקום אחר. העובד רשאי לבחור את מקום העבודה בו תחשב
+        משכורתו כ"משכורת בעד משרה נוספת".<br>
+        <span id="fourth-explain">(4)</span><strong> משכורת חלקית</strong> - משכורת בעד עבודה של 5 שעות או פחות ליום או משכורת בעד עבודה במשך יותר מ-5 שעות ליום אך פחות מ-8 שעות בשבוע.
+        <strong>ממשכורת חלקית ינוכה מס בשיעור מירבי אלא אם כן זו הכנסה יחידה שאז ינוכה מס לפי לוח הניכויים.</strong><br>
+        <span id="fifth-explain">(5)</span><strong> שכר עבודה</strong> - משכורת בעד עבודה של פחות מ - 18 יום בחודש אך לא פחות מ - 8 שעות בשבוע. משכר עבודה ינוכה מס לפי לוח יומי אלא אם כן זו הכנסה יחידה שאז ינוכה
+        מס לפי לוח הניכויים.<br>
+        <span id="sixth-explain">(6)</span><strong> קצבה</strong> - אין לדווח על קצבה פטורה מביטוח לאומי וקצבת שאירים שכולה פטורה.<br>
+        <span id="seventh-explain">(7)</span><strong> אם העובד לא מילא משבצת זו</strong> - המעביד מנוע מלנכות מס לפי לוח הניכויים ויש לנכות מס מירבי לפי התקנות מכל תשלומי המעביד.<br>
+        <span id="eighth-explain">(8)</span><strong>אם העובד מילא משבצת זו</strong> - המעביד מנוע מלנכות מס לפי לוח הניכויים ויש לנכות מס מירבי לפי התקנות מכל תשלומי המעביד.<br>
+        <span id="ninth-explain">(9)</span><strong> אם העובד לא מילא משבצת זו</strong> - על המעביד לצרף למשכורת את סכומי ההפרשות לקרן השתלמות ולנכות מס לפי התקנות או לפעול לפי אישור תיאום מס מפקיד השומה.<br>
+        <span id="tenth-explain">(10)</span><strong>אם העובד לא מילא משבצת זו</strong> - על המעביד לצרף למשכורת את סכומי ההפרשות לקצבה/לאובדן כושר עבודה ולנכות מס לפי התקנות או לפעול לפי אישור תיאום מס מפ"ש.<br>
+        <span id="eleventh-explain">(11)</span><strong>הורה במשפחה חד הורית הוא אחד מאלה:</strong> רווק, גרוש, אלמן, פרוד (עפ"י אישור פ"ש בלבד).<br>
+        <span id="twelveth-explain">(12)</span><strong> הורה יחיד</strong> - הורה במשפחה חד הורית שהיה לו ילד שבשנת המס טרם מלאו לו 19 שנים ושההורה השני של הילד נפטר או שהילד רשום במרשם האוכלוסין בלא פרטי ההורה השני.<br>
+        <span id="thirteenth-explain">(13)</span><strong> ישוב מזכה</strong> - ישוב שחל עליו סעיף 11 לפקודה או סעיף 11 לחוק אס”ח, לפי העניין.<br>
+    </div>
+</body>
+</html>

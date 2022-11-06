@@ -1,0 +1,103 @@
+/*------------------Heading------------------*/
+.heading{
+    text-align: center;
+    font-size: larger;
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.heading img{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.heading label{
+    font-weight: bold;
+}
+#tax_year{
+    width: 50px;
+}
+.explains{
+    position: absolute;
+    font-size: 0.5em;
+    padding-top: 5px;
+}
+#explainer{
+    border: 1px groove black;
+    width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*------------------Forms------------------*/
+.form_worker{
+    width: 98%;
+    height: 400px;
+    display: flex;
+    flex-flow:column wrap;
+}
+.form_worker > label, input{
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.prefix{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.worker_adress{
+    display: flex;
+    flex-flow: column wrap;
+    height: 200px;
+    width: fit-content;
+}
+.small{
+    width: fit-content;
+}
+.form_works{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+}
+.form_children{
+    width: 970px;
+    height: 310px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.payments{
+    width: 200px;
+    height: 310px;
+}
+.styling{
+    display: flex;
+}
+.form_fiance{
+    height: 310px;
+}
+.form_changes{
+    width: 70%;
+    height: 500px;
+}
+.form_changes table, td, th{
+    border: 1px groove black;
+    border-collapse: collapse;
+}
+.form_mas table, td{
+    border: 1px groove black;
+    border-collapse: collapse;
+}
+.form_mas table{
+    text-align: center;
+    width: 1850px;
+    height: 500px;
+}
+.flex-container{
+    display: flex;
+}
+#submit{
+    position: absolute;
+    margin-left: 50%;
+    margin-right: 50%;
+    height: 50px;
+    width: 100px;
+}
