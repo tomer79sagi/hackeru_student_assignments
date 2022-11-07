@@ -40,6 +40,7 @@
             text-decoration: none;
             width: 60px;
             height: 25px;
+            font-size: 20px;
         }
         li a:hover:not(.active){
             background-color: #111;
@@ -50,32 +51,34 @@
         .flex_container{
             display: flex;
             justify-content: center;
-            /*background-color: rgb(229, 203, 168);
-            opacity: 0.5;*/
             align-items: center;
             height: 150px;
         }
-        .flex_container > h2{
-            color: white;
-            position: fixed;
-            align-self: center;
-            font-size: 35px;
-        }
+        
         .flex_container > img{
-            width: 60px;
-            height: 80px;
+            width: 70px;
+            height: 85px;
         }
-        /*.black_container{
-            display: flex;
-            justify-content: center;
-            background-color: aqua;
-        }*/
         .flex_container > h3{
             color: white;
             position: fixed;
         }
-        #poker_chip{
-            z-index: 990;
+        .container{
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            margin: 0px 370px;
+            height: 50px;
+        }
+        .container > img{
+            width: 70px;
+            height: 70px;
+        }
+        .container > h2{
+            color: white;
+            position: fixed;
+            align-self: center;
+            font-size: 35px;
         }
     </style>
 </head>
@@ -98,36 +101,29 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Playing_card_heart_6.svg/1638px-Playing_card_heart_6.svg.png" alt="heart_six">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Playing_card_heart_7.svg/819px-Playing_card_heart_7.svg.png" alt="heart_seven">
         </div>
-
-        <div class="flex_container">
+        <div class="container">
+            <img src="black_pokerchip_100.png" alt="black_pokerchip_100" width="60px">
+            <img src="black_pokerchip_100.png" alt="black_pokerchip_100" width="60px">
+        </div>
+        <div class="container">
             <h2>The Winner Is Player B</h2>
         </div>
-
+        <div class="container">
+            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
+            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
+            
+            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
+            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
+        </div>
         <div class="flex_container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Playing_card_spade_2.svg/1638px-Playing_card_spade_2.svg.png" alt="leaf_two"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Playing_card_spade_4.svg/1200px-Playing_card_spade_4.svg.png" alt="leaf_four"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Playing_card_spade_5.svg/1200px-Playing_card_spade_5.svg.png" alt="leaf_five">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Playing_card_spade_9.svg/1200px-Playing_card_spade_9.svg.png" alt="leaf_nine">
             
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Playing_card_spade_10.svg/1638px-Playing_card_spade_10.svg.png" alt="leaf_ten">
         </div>
-
         <div class="flex_container">
             <h3 style="font-size:30px;">Player B</h3>
         </div>
-        
-        
-        <div id="poker_chip">
-            <img src="black_pokerchip_100.png" alt="black_pokerchip_100" width="60px">
-            <img src="black_pokerchip_100.png" alt="black_pokerchip_100" width="60px">
-            <br>
-            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
-            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
-            
-            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
-            <img src="red_pokerchip_25.png" alt="red_pokerchip_25" width="60px">
-        </div>
-      
-
-        
     </div>
 </body>
 </html>
