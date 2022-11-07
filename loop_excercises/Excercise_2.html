@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 2</title>
+</head>
+<body>
+    <script>
+        let first_grade = parseInt(prompt("Put your first grade:"));
+        let second_grade = parseInt(prompt("Put your second grade:"));
+        let third_grade = parseInt(prompt("Put your third grade:"));
+        if((first_grade == second_grade) && (first_grade > third_grade)){
+            document.write("First grade: ", first_grade, " and second grade: ", second_grade, " are the biggest grades.");
+        } else if((third_grade == second_grade) && first_grade < third_grade){
+            document.write("Third grade: ", third_grade, " and second grade: ", second_grade, " are the biggest grades.")
+        } else if((first_grade == third_grade) && (first_grade > second_grade)){
+            document.write("First grade: ", first_grade, " and third grade: ", third_grade, " are the biggest grades.");
+        } else if((first_grade == second_grade) && (first_grade == third_grade)){
+            document.write("Grades are equal");    
+        } else if(first_grade > second_grade && first_grade > third_grade){
+            document.write("First grade: ", first_grade, (" is the biggest grade."));
+        } else if (second_grade > third_grade){
+            document.write("Second grade: ", second_grade, (" is the biggest grade."));
+        } else {
+            document.write("Third grade: ", third_grade, (" is the biggest grade."));
+        }
+    </script>
+</body>
+</html>

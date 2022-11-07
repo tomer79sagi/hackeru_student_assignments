@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 7</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+        let number = Math.floor((Math.random()*100));
+        while(count <= 10){
+            let guess = parseInt(prompt("Guess number beetween 1 to 100!"));
+            count++;
+            if (guess > number){
+                alert(guess + " is wrong guess, number is smaller!");
+            } else if (guess < number){
+                alert(guess + " is wrong guess, number is bigger!");
+            } else {
+                alert("You won! Number was " + number + "! That took you " + count + " guesses!");
+                alert("If you want to try again just refresh the page!");
+                break;
+            }
+        }
+        if (count == 10){
+            alert("Oops... You lost... Refresh the page if you want to try again.");
+        }
+    </script>
+</body>
+</html>
