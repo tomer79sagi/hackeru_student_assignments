@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Passport renewal form</title>
+</head>
+
+<body>
+  <header>
+    <div class="logos">
+      <img class="il" src="il.png" alt="il" width="80" height="100" />
+      <div class="subject">
+        מדינת ישראל<br />
+        רשות האוכלוסין וההגירה<br />
+        _________________________________________________________________________
+        <br /><br />
+        בקשה לדרכון / תעודת מעבר ביומטרי
+      </div>
+      <img src="pnim.png" alt="pnim" width="80" height="100" />
+    </div>
+  </header>
+
+  <section>
+    <div class="explanation">
+      בקשה לדרכון רשאי להגיש אזרח ישראלי בלבד. לבקשה יש לצרף תעודת זהות ודרכון
+      קודם שניתן לך. רשאי להגיש הבקשה המבקש/ת עבור עצמו/ה או עבור ילדים קטינים
+      בלבד, נוכחות אישית של המבקש/ת בלשכה חובה. בבקשה עבור קטין/נה או חסוי
+      נוכחות אישית של הקטין / החסוי ואחד ההורים / אפוטרופוסים בלשכה חובה.
+      בבקשה לקטין/נה שהוריו אינם נשואים זה לזו יש לפעול עפ"י ההנחיות בהמשך
+      .על-פי החוק נגבית האגרה בעד הגשת הבקשה ואין מחזירים התשלום אם הבקשה
+      נדחית או מתבטלת. אם שמך מורכב מיותר מ-20 אותיות יירשם במסמך הנסיעה השם
+      הראשון במלואו והאות הראשונה של השם השני. בטרם עברו 7 שנים מיום שינוי השם
+      יירשם במסמך הנסיעה שמך הקודם בסוגריים בסמוך לשם הנוכחי. על-פי החוק
+      ועל-פי תקנון ארגון התעופה הבינלאומי, מסמך הנסיעה ניתן ליחיד. בגין בקשה
+      למסמך נסיעה במקום מסמך נסיעה גנוב, אבוד או מושחת נגבית תוספת לאגרה על-פי
+      החוק. לתשומת ליבך, אין בהנפקת דרכון או תעודת מעבר כדי להוות אישור יציאה
+      מן הארץ למי שיש כנגדו מניעה כלשהי ליציאה מן הארץ
+    </div>
+
+    <form class="request-type">
+      <h3 style="display: inline-block">בקשה ל:</h3>
+      <input type="checkbox" name="paasspot" id="passport" />
+      <label for="passport">דרכון </label>
+      <input type="checkbox" name="traveldoc" id="traveldoc" />
+      <label for="traveldoc">תעודת מעבר </label>
+    </form>
+
+    <form class="request-sub-type">
+      <input type="radio" name="sub-type" id="first" value="first" />
+      <label for="first">ראשון/נה </label>
+      <input type="radio" name="sub-type" id="renewpass" value="renewpass" />
+      <label for="renewpass">חידוש דרכון / תעודת מעבר </label>
+      <input type="radio" name="sub-type" id="changeinfo" value="changeinfo" />
+      <label for="changeinfo">בעקבות שינויים בפרטים אישיים </label>
+      <input type="radio" name="sub-type" id="stolen" value="stolen" />
+      <label for="stolen">במקום גנוב/ה </label>
+      <input type="radio" name="sub-type" id="lost" value="lost" />
+      <label for="lost">במקום אבוד/ה </label>
+      <input type="radio" name="sub-type" id="destoyed" value="destoyed" />
+      <label for="destoyed">במקום מושחת/ת </label>
+      <input type="radio" name="sub-type" id="else" value="else" />
+      <label for="else">אחר</label>
+      <input type="text">
+    </form>
+
+    <div class="applican-details">
+      <h3 style="text-decoration:underline;">פרטי מבקש/ת השרות</h3>
+      <div class="id">
+        <label for="idNum">מספר הזהות</label>
+        <input type="text" name="idNum" id="idNum">
+      </div><br>
+      <div class="personal-info">
+        <table class="personalInfoTable">
+          <tr>
+            <th colspan="2">שם המשפחה</td>
+            <th colspan="2">השם הפרטי</td>
+            <th colspan="1">שם האב</td>
+            <th colspan="1">שם האם</td>
+          </tr>
+          <tr>
+            <td>
+
+              <label for="lname-he">בעברית</label>
+              <input type="text" id="lname-he">
+
+            </td>
+            <td>
+              <label for="lname-en">בלועזית</label>
+              <input type="text" id="lname-en">
+            </td>
+            <td>
+
+              <label for="fname-he">בעברית</label>
+              <input type="text" id="fname-he">
+            </td>
+            <td>
+              <label for="fname-en">בלועזית</label>
+              <input type="text" id="fname-en">
+            </td>
+
+            <td>
+              <label for="">&nbsp</label>
+              <input type="text">
+            </td>
+            <td>
+              <label>&nbsp</label>
+              <input type="text">
+            </td>
+          </tr>
+
+        </table><br>
+
+        <table class="personalInfoTable2">
+          <tr>
+            <th colspan="2">שם המשפחה הקודם (לא שם נעורים)</td>
+            <th colspan="2">השם/ות הפרטי/ים הקודם/ים</td>
+            <th colspan="2">שם הנעורים לנשוי/אה</td>
+
+          </tr>
+          <tr>
+            <td>
+
+              <label for="prevLname-he">בעברית</label>
+              <input type="text" id="prevLname-he">
+
+            </td>
+            <td>
+              <label for="prevLnamelname-en">בלועזית</label>
+              <input type="text" id="prevLnamelname-en">
+            </td>
+            <td>
+
+              <label for="prevfname-he">בעברית</label>
+              <input type="text" id="prevfname-he">
+            </td>
+            <td>
+              <label for="prevfname-en">בלועזית</label>
+              <input type="text" id="prevfname-en">
+            </td>
+            <td>
+
+              <label for="marriedprevfname-he">בעברית</label>
+              <input type="text" id="fname-he">
+            </td>
+            <td>
+              <label for="fname-en">בלועזית</label>
+              <input type="text" id="marriedprevfname-en">
+            </td>
+
+
+          </tr>
+
+        </table>
+      </div>
+      <div class="smallLetters">
+        <p><strong>השם הקודם</strong> ירשם בדרכונך / תעודת המעבר אם טרם עברו 7 שנים מיום השינוי.
+          אם ברצונך שהשם/ות הקודם/ים ירשם/ו למרות שחלפו 7 שנים, נא לסמן x במשבצת זו
+          <input type="checkbox">
+        </p>
+        <p>
+          <strong>שם הנעורים</strong> ירשם אם טרם עברו 7 שנים מיום השינוי. אם ברצונך
+          ששם הנעורים ירשם למרות שחלפו 7 שנים, נא לסמן x במשבצת <input type="checkbox">
+        </p>
+      </div>
+      <table class="birth-info">
+        <tr>
+          <th>מקום הלידה (ישוב)</th>
+          <th>ארץ הלידה</th>
+          <th>תאריך הלידה</th>
+          <th>המין</th>
+          <th>המצב האישי</th>
+          <th>תאריך רישום כעולה</th>
+        </tr>
+        <tr>
+          <td>
+            <label>&nbsp</label>
+            <input type="text">
+          </td>
+          <td>
+            <label>&nbsp</label>
+            <input type="text">
+          </td>
+          <td>
+            <input type="date">
+          </td>
+          <td class="sexRadio">
+            <input type="radio" name="sex" id="male">
+            <label for="male">זכר</label>
+            <input type="radio" name="sex" id="female">
+            <label for="female">נקבה</label>
+          </td>
+          <td>
+            <input type="radio" name="marrStatus" id="single">
+            <label for="single">רווק/ה</label>
+            <input type="radio" name="marrStatus" id="married">
+            <label for="married">נשוי/אה</label>
+            <input type="radio" name="marrStatus" id="divorced">
+            <label for="divorced">גרוש/ה</label>
+            <input type="radio" name="marrStatus" id="widdow">
+            <label for="widdow">אלמנ/ה</label>
+          </td>
+          <td><input type="date"></td>
+
+
+        </tr>
+      </table><br>
+      <table class="adress">
+        <tr>
+          <th>המען</th>
+          <th colspan="1">טלפון נייד</th>
+          <th colspan="1">טלפון נוסף</th>
+        </tr>
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td>הישוב</td>
+                <td>הרחוב</td>
+                <td>מספר בית</td>
+                <td>מס' דירה</td>
+                <td>מיקוד</td>
+              </tr>
+              <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+              </tr>
+            </table>
+          </td>
+          <td><input type="tel" placeholder="05x xxxxxx" pattern="[0-9]{3}[0-9]{7}"></td>
+          <td><input type="tel" placeholder="05x xxxxxx" pattern="[0-9]{3}[0-9]{7}"></td>
+        </tr>
+
+      </table><br>
+      <div>
+        <p>
+          עפ"י חוק עדכון כתובת, התשס"ה-2005 ,כל תושב רשאי למסור בנוסף למען הרשום במרשם התושבים גם כתובת למשלוח דואר אשר
+          יירשם בקובץ מרשם התושבים,
+          "כתובת למשלוח דואר" הרשומה במרשם התושבים תימסר למוסדות ורשויות עפ"י בקשתם בהתאם לרשום בתוספת לחוק.
+        </p>
+        <p>
+          אם הבקשה לדרכון / תעודת מעבר עבור קטין שטרם מלאו לו 18 שנה נדרשת הסכמת ההורים, על אחד ההורים לחתום על בקשה זו, נוכחות ההורה והקטין חובה.
+אם ההורים אינם נשואים זה לזו גם על ההורה השני לחתום על ההסכמה בנוכחות הפקיד בלשכה, או בפני עורך-דין המאשר זאת. בהיעדר הסכמה אישית של ההורה השני יש
+להציג פסק דין או הסכם גירושין מקורי מאושר ע"י בית המשפט, המציין כי החזקה הבלעדית על הקטין ניתנה להורה מגיש הבקשה לצורך בירור והחלטה.
+        </p>
+      </div>
+      <div class="signatures">
+        <div>_______________________</div>
+        <div>_______________________</div>
+        <div>_______________________</div>
+        <div>_______________________</div>
+        <div>חתימת האב</div>
+        <div>מספר הזהות</div>
+        <div>חתימת האם</div>
+        <div>מספר הזהות</div>
+      </div>
+    </div>
+    <div class="internal-use"></div>
+  </section>
+  <footer></footer>
+</body>
+
+</html>

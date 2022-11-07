@@ -1,0 +1,72 @@
+header {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  text-align: center;
+  border: solid;
+  border-radius: 10px;
+  width: 80%;
+}
+.logos {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+.subject {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+.explanation {
+  margin: 10px auto;
+  padding: 5px;
+  border: solid;
+  border-radius: 10px;
+  width: 80%;
+}
+.request-type,
+.request-sub-type,
+.applican-details{
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 10px;
+  width: 80%;
+
+}
+
+table,
+tr,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.smallLetters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+}
+div >p{
+    margin: 5px 10px;
+}
+table{
+    width: 100%;
+}
+.signatures{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.signatures > div{
+    flex: 1 0 21%;
+    font-weight: bold;
+}
+
+
+
+
