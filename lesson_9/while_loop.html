@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+<body>
+    <script>
+        while (true){
+            let number = prompt("Put a number from 1 to infinity:");
+            if(number>=1){
+                let i = 1;
+                while (i<=number){
+                    for(let j = 1; j<=i; j++){
+                    document.write(i);
+                    }
+                    document.write('<br/>');
+                    i++;
+                }
+                break;
+            } else {
+                alert("I thought I was very clear...");
+            }
+        }
+    </script>
+</body>
+</html>
