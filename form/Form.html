@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="/assaignments/hackeru_student_assignments/form/formcss.css">
+</head>
+<body>
+    <h1>Worker card</h1>
+    <hr>
+    <br>
+    <table>
+        <p>Worker Info:</p>
+        <form action="">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" value=""><br><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" value=""><br><br>
+        <label for="phone">Phone number:</label><br>
+        <input type="tel" id="number" placeholder="123-45678" value=""><br><br>
+        <label for="date">Date of birth:</label><br>
+        <input type="date" id="date" value=""><br><br>
+        <label for="adress">Adress:</label><br>
+        <input type="text" id="adress" value=""><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" value=""><br><br>
+        <label for="idnumber">Id number:</label><br>
+        <input type="number" id="idnumber" value=""><br><br>
+        <p>Sex:</p>
+        <input type="radio" id="male" name="sex" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="sex" value="female">
+        <label for="female">Female</label><br><br>
+        <p>Family status:</p>
+        <input type="radio" id="single" name="status" value="single">
+        <label for="single"> Single</label><br>
+        <input type="radio" id="married" name="status" value="married">
+        <label for="married"> Married</label><br>
+        <input type="radio" name="status" id="widower" value="widower">
+        <label for="widower"> Widower</label><br><br>
+        <p>Income ways:</p>
+        <input list="income" name="choose">
+        <datalist id="income">
+            <option value="Monthly paid">
+            <option value="Paid from another job">
+            <option value="Part salery">
+            <option value="Every day paid">
+            <option value="Pension">
+            <option value="scholarship">
+        </datalist><br><br>
+        <p>About my self:</p>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        </form>
+    </table>
+</body>
+</html>
