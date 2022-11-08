@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <script>
+      var num = parseInt(prompt("Please enter a number between 1-100"));
+
+      while (num > 100 || num < 1 || isNaN(num)) {
+        if (num > 100) {
+          alert("the number is larger than 100");
+        }
+        if (num < 1) {
+          alert("the number is smaller than 1");
+        }
+        if (isNaN(num)) {
+          alert("this is not a number");
+        }
+        num = parseInt(prompt("Please enter a number between 1-100"));
+      }
+
+      document.write("The factorial of " + num + " is:<br/>");
+      var factorial = 1;
+      for (i = num; i > 1; i--) {
+        document.write(i + "*");
+        factorial = factorial * i;
+      }
+      document.write("1 = " + factorial);
+    </script>
+  </body>
+</html>

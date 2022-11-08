@@ -1,0 +1,27 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script>
+            
+            const MARKS_COUNT = 3;
+            var currMark=0;
+            var highestMark=0;
+
+            for (i=0; i<MARKS_COUNT; i++){
+                currMark = +prompt("Please enter a mark");
+                if (i==0){
+                    highestMark=currMark;
+                }else{
+                    if (currMark>highestMark){
+                        highestMark= currMark;
+                    }
+                }
+            }
+
+            document.write("The highest mark is :", highestMark);
+            
+        </script>
+    </body>
+</html>

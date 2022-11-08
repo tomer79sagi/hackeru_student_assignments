@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            var x;
+            do {
+                x= +prompt("please enter a number between 1-10");
+            } while (x<0 || x>10)
+            
+            var modCount = 0;
+
+            for(i=0; i<=1000; i++){
+                if(i%x == 0)
+                modCount++;
+            }
+            document.write(modCount);
+
+        </script>
+    </body>
+</html>
