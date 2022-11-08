@@ -1,0 +1,90 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        
+        <script>
+            var random_num = Math.floor(Math.random() * 100);
+            var guess = +prompt("Guess the number between 1 - 100:") 
+            
+            for (let i =1; i < 10; i++) {
+                
+                if (random_num == guess) {
+                    alert("you did it!")
+                    break;
+                }
+
+                if (random_num < guess) {
+                    alert("Try lower");
+                }
+
+                if (random_num > guess) {
+                    alert("Try higher");
+                }
+
+                let attempt = 10 - i;
+                var guess = +prompt("Remaining number of attempts: " + attempt); 
+            } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // document.write("Guess the number: ");
+
+            // while (guess != random_num && i < 10) {
+                
+            //     if (random_num == guess) {
+            //         i = 50;
+            //     }
+
+            //     if (random_num < guess) {
+            //         alert("Try lower");
+            //     }
+
+            //     if (random_num > guess) {
+            //         alert("Try higher");
+            //     }
+
+            //     i++;
+            //     var guess = +prompt("Your new guess?") 
+            // } 
+            // if (i == 50) {
+            //      document.write(random_num);
+            // }
+
+            // else {
+            //     document.write("you failed");
+            // }
+
+
+
+        </script>
+    </body>
+</html>

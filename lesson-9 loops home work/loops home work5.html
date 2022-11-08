@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        
+        <script>
+            
+        var divided_numbers = 0;
+        var number_to_divide = +prompt("Please enter a positive number between 1 - 10");
+        
+        for (let i = 0; i <= 1000; i++) {
+            if (i % number_to_divide == 0) {
+                divided_numbers ++;
+            }
+        }
+
+        document.write("The amount of numbers that are divisible by- " + number_to_divide + " without a remainder is: " + divided_numbers);
+
+        </script>
+    </body>
+</html>
