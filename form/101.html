@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="101.css" />
+    <title>טופס 101</title>
+  </head>
+  <body>
+    <div>
+      <form action="thx.html" target="_blank">
+        <fieldset class="job_info">
+          <legend>
+            <h3>א. פרטי המעביד</h3>
+            <span>(למילוי ע"י המעביד)</span>
+          </legend>
+          <label for="jname">שם:</label>
+          &emsp;
+          <input type="text" id="jname" name="jname" />
+          &emsp;
+          <label for="jadress">כתובת:</label>
+          &emsp;
+          <input type="text" id="jadress" name="jadress" />
+          &emsp;
+          <label for="jnumber">טלפון:</label>
+          &emsp;
+          <input type="tel" id="jnumber" name="jnumber" />
+          &emsp;
+          <label for="jnikuim">מספר תיק ניכויים:</label>
+          &emsp;
+          <input type="number" id="jnikuim" name="jnikuim" />9
+        </fieldset>
+        <br />
+        <br />
+        <fieldset class="worker_info">
+          <legend>
+            <h3>ב. פרטי העובד/ת</h3>
+            <span
+              >(יש לצרף צילום תעודת זהות כולל ספח. אם צורף בעבר, יש לצרף צילום
+              רק אם היו שינויים בפרטים. למי שאין מספר תעודת זהות יש לצרף צילום
+              דרכון ואישור / רשיון שהייה בישראל שנתנו על ידי רשות האוכלוסין
+              וההגירה)
+            </span>
+          </legend>
+          <label for="worker_id">מספר זהות (9 ספרות):</label>
+          <input type="number" id="worker_id" name="worker_id" />
+          <label for="worker_last_name">שם משפחה:</label>
+          <input type="text" id="worker_last_name" name="worker_last_name" />
+          <label for="worker_first_name">שם פרטי:</label>
+          <input type="text" id="worker_first_name" name="worker_first_name" />
+          <label for="birth_date">תאריך לידה:</label>
+          <input type="date" id="birth_date" name="birth_date" />
+          <label for="aliya_date">תאריך עליה:</label>
+          <input type="date" id="aliya_date" name="aliya_date" />
+          <br />
+          <label for="worker_passport">מספר דרכון (למי שאין מספר ת.ז.):</label>
+          <input type="number" id="worker_passport" name="worker_passport" />
+
+          <fieldset class="worker_adress">
+            <legend>כתובת פרטית</legend>
+            <label for="street">כתובת/שכונה:</label>
+            <input type="text" id="street" name="street" />
+            <label for="street_num">מספר:</label>
+            <input type="number" id="street_num" name="street_num" />
+            <label for="city">עיר/יישוב:</label>
+            <input type="text" id="city" name="city" />
+            <label for="mikud">מיקוד:</label>
+            <input type="number" id="mikud" name="mikud" />
+          </fieldset>
+          <fieldset class="worker_sex">
+            <legend>מין:</legend>
+            <input type="radio" id="male" name="worker_sex" value="male" />
+            <label for="male">זכר</label>
+            <br />
+            <input type="radio" id="female" name="worker_sex" value="female" />
+            <label for="female">נקבה</label>
+          </fieldset>
+          <fieldset class="worker_status">
+            <legend>מצב משפחתי:</legend>
+            <input
+              type="radio"
+              id="single"
+              name="worker_status"
+              value="single"
+            />
+            <label for="single">רווק/ה</label>
+            <input
+              type="radio"
+              id="married"
+              name="worker_status"
+              value="married"
+            />
+            <label for="married">נשוי/אה</label>
+            <input
+              type="radio"
+              id="divorced"
+              name="worker_status"
+              value="divorced"
+            />
+            <label for="divorced">גרוש/ה</label>
+            <br />
+
+            <input type="radio" id="widow" name="worker_status" value="widow" />
+            <label for="widow">אלמן/ה</label>
+            <input
+              type="radio"
+              id="seperated"
+              name="worker_status"
+              value="seperated"
+            />
+            <label for="seperated">פרוד/ה (חובה לצרף אישור פ"ש)</label>
+            <input type="file" id="seperated_file" name="seperated_file" />
+          </fieldset>
+          <fieldset class="worker_citizenship">
+            <legend>תושב ישראל:</legend>
+            <input
+              type="radio"
+              id="citizen"
+              name="worker_citizenship"
+              value="citizen"
+            />
+            <label for="citizen">כן</label>
+            <br />
+            <input
+              type="radio"
+              id="not_citizen"
+              name="worker_citizenship"
+              value="not_citizen"
+            />
+            <label for="not_citizen">לא</label>
+          </fieldset>
+          <fieldset class="worker_kibbutz">
+            <legend>חבר קיבוץ/מושב שיתופי:</legend>
+            <input
+              type="radio"
+              id="in_kibbutz"
+              name="worker_kibbutz"
+              value="in_kibbutz"
+            />
+            <label for="in_kibbutz">כן</label>
+            <br />
+            <input
+              type="radio"
+              id="not_in_kibbutz"
+              name="worker_kibbutz"
+              value="not_in_kibbutz"
+            />
+            <label for="not_in_kibbutz">לא</label>
+          </fieldset>
+          <fieldset class="worker_healthcare">
+            <legend>חבר בקופת חולים:</legend>
+            <input
+              type="radio"
+              id="no_healthcare"
+              name="worker_healthcare"
+              value="no_healthcare"
+            />
+            <label for="no_healthcare">לא</label>
+            <br />
+            <input
+              type="radio"
+              id="has_healthcare"
+              name="worker_healthcare"
+              value="has_healthcare"
+            />
+            <label for="has_healthcare">כן, שם הקופה</label>
+            <input type="text" id="healthcar" name="healthcare" />
+          </fieldset>
+          <br /><br />
+          <label for="worker_email">כתובת דואר אלקטרוני:</label>
+          <input type="email" id="worker_email" name="worker_email" />
+          <label for="worker_tel">מספר טלפון:</label>
+          <input type="tel" name="worker_tel" id="worker_tel" />
+          <label for="worker_cel">מספר טלפון נייד:</label>
+          <input type="tel" name="worker_cel" id="worker_cel" />
+        </fieldset>
+        <br />
+        <fieldset class="children_info">
+          <legend>
+            <h3>ג. פרטים על ילדיי שבשנת המס טרם מלאו להם 19 שנה</h3>
+            <span>(עפ”י ספח תעודת זהות)</span>
+            <br />
+            <span
+              >סמן/י √ ליד שם הילד: בטור 1 אם הילד נמצא בחזקתך בטור 2 אם את/ה
+              מקבל/ת בגינו קצבת ילדים מב"ל</span
+            >
+          </legend>
+          <table>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>שם</td>
+              <td>מספר זהות</td>
+              <td>תאריך לידה</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me1" id="with_me1" /></td>
+              <td>
+                <input type="checkbox" name="not_with_me1" id="not_with_me1" />
+              </td>
+              <td><input type="text" id="kid_name1" name="kid_name1" /></td>
+              <td><input type="number" name="kid_id1" id="kid_id1" /></td>
+              <td>
+                <input type="date" name="kid_birthdate1" id="kid_birthdate1" />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me2" id="with_me2" /></td>
+              <td>
+                <input type="checkbox" name="not_with_me2" id="not_with_me2" />
+              </td>
+              <td><input type="text" id="kid_name2" name="kid_name2" /></td>
+              <td><input type="number" name="kid_id2" id="kid_id2" /></td>
+              <td>
+                <input type="date" name="kid_birthdate2" id="kid_birthdate2" />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me3" id="with_me3" /></td>
+              <td>
+                <input type="checkbox" name="not_with_me3" id="not_with_me3" />
+              </td>
+              <td><input type="text" id="kid_name3" name="kid_name3" /></td>
+              <td><input type="number" name="kid_id3" id="kid_id3" /></td>
+              <td>
+                <input type="date" name="kid_birthdate3" id="kid_birthdate3" />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me4" id="with_me4" /></td>
+              <td>
+                <input type="checkbox" name="not_with_me4" id="not_with_me4" />
+              </td>
+              <td><input type="text" id="kid_name4" name="kid_name4" /></td>
+              <td><input type="number" name="kid_id4" id="kid_id4" /></td>
+              <td>
+                <input type="date" name="kid_birthdate4" id="kid_birthdate4" />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me5" id="with_me5" /></td>
+              <td>
+                <input type="checkbox" name="not_with_me5" id="not_with_me5" />
+              </td>
+              <td><input type="text" id="kid_name5" name="kid_name5" /></td>
+              <td><input type="number" name="kid_id5" id="kid_id5" /></td>
+              <td>
+                <input type="date" name="kid_birthdate5" id="kid_birthdate5" />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me6" id="with_me6" /></td>
+              <td>
+                <input type="checkbox" name="not_with_me6" id="not_with_me6" />
+              </td>
+              <td><input type="text" id="kid_name6" name="kid_name6" /></td>
+              <td><input type="number" name="kid_id6" id="kid_id6" /></td>
+              <td>
+                <input type="date" name="kid_birthdate6" id="kid_birthdate6" />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me7" id="with_me7" /></td>
+              <td>
+                <input type="checkbox" name="not_with_me7" id="not_with_me7" />
+              </td>
+              <td><input type="text" id="kid_name7" name="kid_name7" /></td>
+              <td><input type="number" name="kid_id7" id="kid_id7" /></td>
+              <td>
+                <input type="date" name="kid_birthdate7" id="kid_birthdate7" />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me8" id="with_me8" /></td>
+              <td>
+                <input type="checkbox" name="not_with_me8" id="not_with_me8" />
+              </td>
+              <td><input type="text" id="kid_name8" name="kid_name8" /></td>
+              <td><input type="number" name="kid_id8" id="kid_id8" /></td>
+              <td>
+                <input type="date" name="kid_birthdate8" id="kid_birthdate8" />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me9" id="with_me9" /></td>
+              <td>
+                <input type="checkbox" name="not_with_me9" id="not_with_me9" />
+              </td>
+              <td><input type="text" id="kid_name9" name="kid_name9" /></td>
+              <td><input type="number" name="kid_id9" id="kid_id9" /></td>
+              <td>
+                <input type="date" name="kid_birthdate9" id="kid_birthdate9" />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me10" id="with_me10" /></td>
+              <td>
+                <input
+                  type="checkbox"
+                  name="not_with_me10"
+                  id="not_with_me10"
+                />
+              </td>
+              <td><input type="text" id="kid_name10" name="kid_name10" /></td>
+              <td><input type="number" name="kid_id10" id="kid_id10" /></td>
+              <td>
+                <input
+                  type="date"
+                  name="kid_birthdate10"
+                  id="kid_birthdate10"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me11" id="with_me11" /></td>
+              <td>
+                <input
+                  type="checkbox"
+                  name="not_with_me11"
+                  id="not_with_me11"
+                />
+              </td>
+              <td><input type="text" id="kid_name11" name="kid_name11" /></td>
+              <td><input type="number" name="kid_id11" id="kid_id11" /></td>
+              <td>
+                <input
+                  type="date"
+                  name="kid_birthdate11"
+                  id="kid_birthdate11"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me12" id="with_me12" /></td>
+              <td>
+                <input
+                  type="checkbox"
+                  name="not_with_me12"
+                  id="not_with_me12"
+                />
+              </td>
+              <td><input type="text" id="kid_name12" name="kid_name12" /></td>
+              <td><input type="number" name="kid_id12" id="kid_id12" /></td>
+              <td>
+                <input
+                  type="date"
+                  name="kid_birthdate12"
+                  id="kid_birthdate12"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="with_me13" id="with_me13" /></td>
+              <td>
+                <input
+                  type="checkbox"
+                  name="not_with_me13"
+                  id="not_with_me13"
+                />
+              </td>
+              <td><input type="text" id="kid_name13" name="kid_name31" /></td>
+              <td><input type="number" name="kid_id13" id="kid_id13" /></td>
+              <td>
+                <input
+                  type="date"
+                  name="kid_birthdate13"
+                  id="kid_birthdate13"
+                />
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        &emsp;
+        <fieldset class="pay_info">
+          <legend><h3>ד. פרטים על הכנסותיי ממעביד זה</h3></legend>
+          <fieldset class="job_start">
+            <legend>תאריך תחילה העבודה בשנת המס</legend>
+            <input type="date" name="job_start" id="job_start" />
+          </fieldset>
+          <div>אני מקבל/ת: (ראה הסברים מעבר לדף)</div>
+          <input type="radio" name="income_type" id="monthly" value="monthly" />
+          <label for="monthly">משכורת חודש</label>
+          <br />
+          <input
+            type="radio"
+            name="income_type"
+            id="another_job"
+            value="another_job"
+          />
+          <label for="another_job">משכורת בעד משרה נוספת</label>
+          <br />
+          <input
+            type="radio"
+            name="income_type"
+            id="partial_pay"
+            value="partial_pay"
+          />
+          <label for="partial_pay">משכורת חלקית</label>
+          <br />
+          <input
+            type="radio"
+            name="income_type"
+            id="daily_pay"
+            value="daily_pay"
+          />
+          <label for="daily_pay">שכר עבודה (עובד יומי)</label>
+          <br />
+          <input type="radio" name="income_type" id="kitzba" value="kitzba" />
+          <label for="kitzba">קצבה</label>
+          <br />
+          <input
+            type="radio"
+            name="income_type"
+            id="scholarship"
+            value="scholarship"
+          />
+          <label for="scholarship">מלגה</label>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

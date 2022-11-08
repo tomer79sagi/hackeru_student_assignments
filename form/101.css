@@ -1,0 +1,25 @@
+form {
+  width: 1400px;
+}
+
+form > fieldset {
+  box-shadow: 5px 5px gray;
+}
+fieldset > fieldset,
+.children_info,
+.pay_info,
+.other_pay_info {
+  position: relative;
+  display: inline-block;
+}
+
+h3 {
+  display: inline;
+}
+.pay_info,
+.other_pay_info {
+  position: absolute;
+}
+.other_pay_info {
+  right: 500;
+}
