@@ -1,0 +1,70 @@
+body {
+   background-color: brown;
+   margin-right: 50px;
+   display: flex;
+}
+
+.headline {
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.personal_information {
+  border: 2px solid black; 
+  padding: 0.5em;
+  margin: 4px;
+}
+
+.expertise {
+  border: 2px solid black; 
+  padding: 0.5px;
+  margin: 4px;
+}
+
+.work_information {
+  border: 2px solid black; 
+  padding: 5px;
+  margin: 4px;
+}
+
+.gender {
+  border: 2px solid black; 
+  padding: 0.5px;
+  margin: 4px;  
+}
+
+.add_box {
+  border: 2px solid black; 
+  padding: 0.5px;
+  margin: 4px; 
+}
+
+textarea {
+   background-color: wheat;
+}
+
+input {
+   background-color: wheat;
+}
+
+select {
+   background-color: wheat;
+}
+
+.box {
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.workplace {
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,91 @@
+<html lang="en">
+  <head>
+    <title>Software Form</title>
+    <link rel="stylesheet" href="home work.css">
+  </head>
+      <body>
+
+        <form action="result.html" target="_blank">
+
+         <div class="headline">
+            <h1>Job Search Form</h1>
+         </div>
+
+        <div class="personal_information">
+          <label for="first_name">Enter your first name: </label>
+          <input type="text" id="first_name" name="first_name" />
+          <label for="last_name">Enter your last name: </label>
+          <input type="text" id="last_name" name="last_name" />
+          <br />
+          <br />
+          <label for="email">Enter your email: </label>
+          <input type="email" id="email" name="email" />
+          <label for="password">Enter your password: </label>
+          <input type="password" id="password" name="password" />
+        </div>
+
+        <div class="expertise">
+          <p>Area of expertise?</p>
+          <br />
+          <label for="sql">SQL</label>
+          <input type="checkbox" id="sql" name="sql" value="sql"/>
+          <br />
+          <br />
+          <label for="c#">C#</label>
+          <input type="checkbox" id="#" name="#" value="#"/>
+          <br />
+          <br />
+          <label for="java">JAVA</label>
+          <input type="checkbox" id="java" name="java" value="java"/>
+          <br />
+          <br />
+          <label for="python">Python</label>
+          <input type="checkbox" id="python" name="python" value="python"/>
+          <br />
+          <br />
+        </div>
+
+        <div class="work_information">
+          <label class="workplace" for="Area">Preferred workplace:</label>
+          <br />
+          <br />
+          <select id="Area" name="Area">
+          <option value="Central Israel">Central Israel</option>
+          <option value="North Israel">North Israel</option>
+          <option value="South Israel">South Israel</option>
+          <option value="Jerusalem">Jerusalem</option>
+          </select>
+          <br />
+        </div>
+
+        <div class="gender">
+          <p>Gender: </p>
+          <label for="male">Male</label>
+          <input type="radio" id="male" name="choice" value="male" />
+          <br />
+          <br />
+          <label for="Female">Female</label>
+          <input type="radio" id="female" name="choice" value="female" />
+          <br />
+          <br />
+        </div>
+
+        <div class="add_box">
+          <label class="box" for="message">Anything else you'd like to add?</label>
+          <br />
+          <br />
+          <textarea id="message" name="message" rows="6" cols="25"></textarea>
+          <br />
+          <br />
+        </div>
+
+        <div>
+          <input type="reset" value="Reset">  
+          <input type="submit" value="Submit"/>
+          <br />
+          <br />
+        </div>
+
+    </form>
+  </body>
+</html>
