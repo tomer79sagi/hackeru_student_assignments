@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Loops.js"></script>
+    <link rel="stylesheet" href="./Loops.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        1. Calculate The Average of 10 numbers: <br>
+        <input type="number" id="userinput1" />
+        <input type="button" onclick="avgTo()" value="Add" id="Add1" />
+        <p>The Numbers are:</p>
+        <p id="myarr"></p>
+        <p>The Average is:</p>
+        <p id="avg"></p>
+    </div>
+    <br>
+    <div>
+        2. Show the higest number entered <br>
+        <input type="number" id="userinput2" />
+        <input type="button" onclick="highTo()" value="Add" id="Add2" />
+        <p>The Numbers are:</p>
+        <p id="highArr"></p>
+        <p>The Higest Number is:</p>
+        <p id="high"></p>
+    </div>
+    <br>
+    <div>
+        3. Show All the number from the written number all the way to 0 <br>
+        <input type="number" id="userinput3" />
+        <input type="button" onclick="zeroTo()" value="Add" id="Add3" />
+        <p>The Numbers are:</p>
+        <p id="numZero"></p>
+    </div>
+    <br>
+
+    <div>
+        4. Print all numbers from 1 to 10 besides 7 <br>
+        <input type="button" onclick="countToTen()" value="Execute" id="count" />
+        <p>The Numbers are:</p>
+        <p id="countTo"></p>
+    </div>
+    <br>
+
+    <div>
+        5. Print The Amount of numbers from 1 to 1000 that are devided by 1 to 10 (youre choice) <br>
+        <input type="number" id="userinput4" min="1" max="10" value="1" />
+        <input type="button" onclick="dividedBy()" value="Divided" id="divide" />
+        <p>The Amount of Numbers is:</p>
+        <p id="dividedAmount"></p>
+    </div>
+    <br>
+
+    <div>
+        6. Print The Factorial of number entered between 1 to 100 <br>
+        <input type="text" id="userinput5" />
+        <input type="button" onclick="factorialTo()" value="Factorial" id="FactorialIs" />
+        <p>The Factorial of The Number is:</p>
+        <p id="factorialOf"></p>
+    </div>
+    <br>
+
+    <div>
+        6. Guees the Number game Please enter a number between 1 to 100 <br>
+        <input type="number" id="userinput6" min="1" max="100" value="1"/>
+        <input type="button" onclick="gueesTheNumber()" value="Is this the number?" id="GueesedNum" />
+        <p>You already tried:</p>
+        <p id="notThisNumbers"></p>
+        <p>Hints for gueesing the number:</p>
+        <p id="hint"></p>
+    </div>
+    <br>
+</body>
+
+</html>
