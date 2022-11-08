@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>form</title>
+        <style>
+            body {
+                direction: rtl;
+            }
+            .main_border {
+                margin: 5vh ;
+                border: 1px solid black;
+            }
+            .container {
+                position: relative;
+                top: -10vh;
+                display: flex;
+                justify-content: center;
+            }
+            .tofes{
+                width: 90%;
+                text-align: center;
+            }
+            .tofes img{
+                position: relative;
+                left: 37vw;
+                top: 14vh;
+            }
+            .paragraph{
+                border: 1px solid black;
+            }
+            .tofes1 {
+                display: flex;
+                justify-content: center;
+            }
+            :placeholder-shown {
+                font-size: 4vh;
+                font-weight:500;
+                font-family: 'Times New Roman', Times, serif;
+                width: 20vw;
+            }
+            ::placeholder {
+                position: relative;
+                bottom: 2vh;
+                font-size: 3vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main_border">
+            <div class="container">
+                <div class="tofes">
+                    <img src="./picture.png" width="80vw">
+                    <h1>כרטיס עובד</h1>
+                    <h3>ובקשה להקלה ולתיאום מס על ידי המעביד</h3>
+                    <p>
+                        לפי תקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה), התשנ"ג - 1993
+                    </p>
+                    <p class="paragraph">
+                        טופס זה ימולא על-ידי כל עובד עם תחילת עבודתו, וכן בתחילת כל שנת מס
+                        (אא"כ המנהל אישר אחרת). הטופס מהווה אסמכתא למעביד למתן<br>
+                        הקלות במס ולעריכת תיאומי מס בחישוב משכורת העובד.
+                        אם חל שינוי בפרטים - יש להצהיר על כך תוך שבוע ימים.<br>
+                        {ראה הסברים (לפי המספרים) מעבר לדף}
+                    </p> 
+                    <form  action="./actionPage.html" target="_blank">
+                        <span style="display: flex; text-align: start;"><strong>א. פרטי המעביד</strong> (למילוי ע"י המעביד)</span>
+                        <fieldset class="tofes1">
+                            <input type="text" name="name" id="name" placeholder="שם" ><br><br>
+                            <input type="text" name="address" id="address" placeholder="כתובת" ><br><br>
+                            <input type="tel" name="tel_of_boss" id="tel_of_boss" placeholder="מספר טלפון" ><br><br>
+                            <input type="number" name="discount_number" id="discount_number" placeholder="מספר תיק ניחוים" ><br><br>
+                        </fieldset>
+                        <p style="text-align:start ;"><strong>ב. פרטי העובד/ת</strong>(יש לצרף צילום תעודת זהות כולל ספח.
+                            לצרף צילום דרכון ואישור / רשיון שהייה בישראל שנתנו על ידי רשות האוכלוסין וההגירה)
+                            אם צורף בעבר, יש לצרף צילום רק אם היו שינויים בפרטים. למי שאין מספר תעודת זהות יש 
+                            לצרף צילום דרכון ואישור / רשיון שהייה בישראל שנתנו על ידי רשות האוכלוסין וההגירה)
+                        </p>
+                        <fieldset>
+                            <legend><strong>ב. פרטי העובד/ת</strong> (יש לצרף צילום תעודת זהות כולל ספח. אם צורף בעבר, יש לצרף צילום רק אם היו שינויים בפרטים. למי שאין מספר תעודת זהות יש
+                                לצרף צילום דרכון ואישור / רשיון שהייה בישראל שנתנו על ידי רשות האוכלוסין וההגירה)</legend>
+                            <label for="number_of_worker">מספר זהות:</label>&nbsp;
+                            <input type="number" id="number_of_worker" name="number_of_worker"><br>
+                            <label for="last_name_of_worker">שם משפחה:</label>
+                            <input type="text" id="last_name_of_worker" name="last_name_of_worker"><br>
+                            <label for="first_name_of_worker">שם פרטי:</label>&nbsp;&nbsp;&nbsp;
+                            <input type="text" id="first_name_of_worker" name="first_name_of_worker"><br>
+                            <label for="birthday_of_worker">תאריך לידה:</label>
+                            <input type="date" id="birthday_of_worker" name="birthday_of_worker"><br>
+                            <label for="date_of_come_to_country">תאריך עליה:</label>
+                            <input type="date" id="date_of_come_to_country" name="date_of_come_to_country""><br>
+                            <label for="passport_number">מספר דרכון (למי שאין מספר ת.ז.)</label>
+                            <input type="text" id="passport_number" name="passport_number">
+                        <fieldset>
+                            <legend>כתובת פרטית</legend>
+                            <label for="street_of_worker">רחוב/שכונה:</label>
+                            <input type="text" id="street_of_worker" name="street_of_worker">
+                            <label for="house_of_worker">מספר:</label>
+                            <input type="number" id="house_of_worker" name="house_of_worker">
+                            <label for="city_of_worker">עיר/יישוב:</label>
+                            <input type="text" id="city_of_worker" name="city_of_worker">
+                            <label for="postal_code_of_worker">מיקוד:</label>
+                            <input type="number" id="postal_code_of_worker" name="postal_code_of_worker">
+                        </fieldset><br><br>
+                        <fieldset>
+                            <legend>מין:</legend>
+                            <label for="male">זכר</label>
+                            <input type="radio" id="male" name="sex" value="male">
+                            <label for="female">נקבה</label>
+                            <input type="radio" id="female" name="sex" value="female">
+                        </fieldset><br><br>
+                        <fieldset>
+                            <legend>מצב משפחתי:</legend>
+                            <label for="single">רווק/ה</label>
+                            <input type="radio" id="single" name="marrried_or_not" value="Single">
+                            <label for="maried">נשוי/אה</label>
+                            <input type="radio" id="maried" name="marrried_or_not" value="Maried">
+                            <label for="widow">אלמן/ה</label>
+                            <input type="radio" id="widow" name="marrried_or_not" value="Widow">
+                            <label for="divorced">גרוש/ה</label>
+                            <input type="radio" id="divorced" name="marrried_or_not" value="Divorced">
+                            <label for="separated">פרוד/ה</label>
+                            <input type="radio" id="separated" name="marrried_or_not" value="Separated">
+                            <label for="separated_file">(חובה לצרף אישור פ"ש):</label>
+                            <input type="file" id="file_of_client" name="file_of_client" multiple>
+                        </fieldset>
+                        <br><br>
+                        <fieldset>
+                            <legend>תושב ישראלי:</legend>
+                            <label for="sitizen">כן</label>
+                            <input type="radio" id="sitizen" name="citizen_of_israel" value="Yes">
+                            <label for="not_sitizen">לא</label>
+                            <input type="radio" id="not_sitizen" name="citizen_of_israel" value="No">
+                        </fieldset>
+                        <br><br>
+                        <fieldset>
+                            <legend>חבר קיבוץ/מושב שיתופי:</legend>
+                            <label for="yes_haver_kibuz">כן</label>
+                            <input type="radio" id="yes_haver_kibuz" name="kibuznik_za" value="Yes">
+                            <label for="no_haver_kibuz">לא</label>
+                            <input type="radio" id="no_haver_kibuz" name="kibuznik_za" value="No">
+                        </fieldset>
+                        <br><br>
+                        <fieldset>
+                            <legend>חבר בקופת חולים:</legend>
+                            <label for="yeap">כן</label>
+                            <input type="radio" id="yeap" name="medicine" value="Yes">
+                            <label for="nope">לא</label>
+                            <input type="radio" id="nope" name="medicine" value="No">
+                            <label for="kupat_holim">שם הקופה:</label>
+                            <input type="text" id="kupat_holim" name="kupat_holim">
+                        </fieldset>
+                        <br><br><br><br>
+                            <label for="mail_of_worker">כתובת דואר אלקטרוני:</label>
+                            <input type="email" id="mail_of_worker" name="mail_of_worker"><br>
+                            <label for="tel_of_worker">מספר טלפון:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="tel" id="tel_of_worker" name="tel_of_worker"><br>
+                            <label for="mobile_of_worker">מספר טלפון נייד</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="tel" id="mobile_of_worker" name="mobile_of_worker"><br><br>
+                            <input type="submit" value="Submit"
+                             style="font-size: 2.5vh;"/>
+                        </fieldset>
+                        <br>
+                        <input type="reset" value="clear all" 
+                         style="background-color: black; font-size: 3vh; border-radius: 2vh;
+                        color: white" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
