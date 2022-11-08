@@ -18,10 +18,7 @@ var factorial = 0;
 var factorialSum = 0;
 var factorialArr = [];
 
-var randomNum = Math.floor(Math.random() * 100);
-var userSucces = 0;
-var userArr = [];
-var userGuees = 0;
+
 
 function avgTo() {
     if (myarr.length < 10) {
@@ -114,24 +111,33 @@ function factorialTo() {
     document.getElementById("FactorialIs").disabled = true;
 }
 
+const randomNum = Math.floor(Math.random() * 100);
+var userArr = [];
+var userGuees = 0;
+var correctGuess = false;
+var userTries = 10;
 
 function gueesTheNumber() {
     userGuees = document.getElementById("userinput6").value;
-    while (userSucces != 1 || userArr.length != 10) {
-        if (userGuees < randomNum) {
-            document.getElementById("hint").innerHTML = "The Number is Too Low Go Higer"
-            userArr.push(userGuees);
-        }
-        if (userGuees > randomNum) {
-            document.getElementById("hint").innerHTML = "The Number is Too High Go Lower"
-            userArr.push(userGuees);
-        }
-        if (userGuees == randomNum) {
-            document.getElementById("hint").innerHTML = "Well Done You Managed to Guees The Number: ";
-            userSucces = 1;
-        }
-
-        document.getElementById("notThisNumbers").innerHTML = userArr;
+    if (parseInt(userGuees) === randomNum) {
+        document.getElementById("hint").innerHTML = "Well Done You Managed to Guees The Number" + userGuees;
+        document.getElementById("GueesedNum").disabled = true;
     }
-
+    if (userGuees < randomNum) {
+        document.getElementById("hint").innerHTML = "The Number is Too Low Go Higer";
+    }
+    if (userGuees > randomNum) {
+        document.getElementById("hint").innerHTML = "The Number is Too High Go Lower";
+    }
+    if (userTries == 1) {
+        document.getElementById("hint").innerHTML = "You Tried too many times i am sorry";
+        document.getElementById("GueesedNum").disabled = true;
+    }
+    userTries--;
+    userArr.push(userGuees);
+    document.getElementById("triesNum").innerHTML = userTries;
+    document.getElementById("notThisNumbers").innerHTML = userArr;
 }
+
+
+
