@@ -1,0 +1,68 @@
+
+.shadow {
+    position: relative;
+    color:green;
+
+
+}
+h2{
+    color: green;
+}
+img.logo {
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    left: 20px;
+}
+
+#first {
+    border: 3px double black;
+    height: 80px;
+    width: auto;
+    text-align: center;
+}
+
+div.aContainer {
+    display: flex;
+    border: 3px double black;
+    justify-content: space-around;
+    height: 50px;
+}
+
+div.aContainer>div {
+    position: relative;
+    top: 15px;
+}
+
+div.bContainer {
+    display: flex;
+    border: 3px double black;
+    justify-content: space-around;
+    height: 280px;
+    width: 1200px;
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+div.bContainer>div {
+    position: relative;
+    top: 15px;
+}
+div.radioContainer{
+    display: flex;
+    justify-content: space-between;
+   
+    height: 100px;
+    width: 1000px;
+}
+div.radioContainer>div {
+    position: relative;
+    top: 15px;
+}
+
+div.cContainer{
+    display: flex;
+    border: 3px double black;
+    justify-content: space-around;
+}

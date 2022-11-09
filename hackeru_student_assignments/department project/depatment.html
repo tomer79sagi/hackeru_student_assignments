@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department's form Project</title>
+    <link rel="stylesheet" href="./department.css">
+
+</head>
+<body>
+    <form action="_blank.com">
+    <h1 class="shadow">Department's form</h1>
+    <img src="dubai-protocol-logo.png" alt="Department Logo" width="100%">
+    <div id="first">This form will be filled out by each employee upon starting his job, and also at the beginning of
+        each tax year.<br>
+        The form is a reference for the employer to provide tax relief and to make tax adjustments in the calculation of
+        the employee's salary.<br> If there is a change in the details - this must be declared within a week. <br>
+        (For more information, contact us -<b>in section D</b>-)
+    </div>
+    <h2>A. Employer details (to be filled in by the employer)</h2>
+    <div class="aContainer">
+        <div>
+            <label for="firstName">First Name : </label>
+            <input type="text" id="firstName" name="firstName">
+        </div>
+        <div>
+            <label for="address">Address : </label>
+            <input type="text" id="address" name="address">
+        </div>
+        <div>
+            <label for="phone">Phone Number : </label>
+            <input type="number">
+        </div>
+    </div>
+
+    <h2>B. The employee's details (a copy of the ID card, including an appendix, must be attached)</h2>
+    <div class="bContainer">
+        <div>
+            <label for="id">ID Number : </label>
+            <input type="text" id="id" name="id">
+        </div>
+
+        <div>
+            <label for="secondName">Second Name : </label>
+            <input type="text" id="secondName" name="secondName">
+        </div>
+
+        <div>
+            <label for="firstName">First Name : </label>
+            <input type="text" id="firstName" name="firstName">
+        </div>
+
+        <div>
+            <label for="phone">Phone Number : </label>
+            <input type="number" id="phone" name="phone">
+        </div>
+
+        <div>
+            <label for="birth">Date Of Birth : </label>
+            <input type="date" id="birth" name="birth">
+        </div>
+
+        <div>
+            <label for="passport">Passport : </label>
+            <input type="number" id="passport" name="passport">
+        </div>
+
+        <div>
+            <label for="address">Full Address : </label>
+            <input type="text" id="address" name="address">
+        </div>
+
+        <div class="radioContainer">
+
+            <div>
+                <label for="gender1">Gender</label><br>
+                <input type="radio" id="gender1" name="gender">
+                <label for="gender1">Male</label><br>
+                <input type="radio" id="gender2" name="gender">
+                <label for="gender2">Female</label>
+            </div>
+
+            <div>
+                <label for="status1">Marital Status</label><br>
+                <input type="radio" id="status1" name="status">
+                <label for="status1">Single</label>
+                <input type="radio" id="status2" name="status">
+                <label for="status2">Married</label>
+                <input type="radio" id="status3" name="status">
+                <label for="status3">Divorced</label><br>
+                <input type="radio" id="status4" name="status">
+                <label for="status4">Widower</label>
+                <input type="radio" id="status5" name="status">
+                <label for="status5">Sperated</label>
+            </div>
+
+            <div>
+                <label for="residntYes">US resident</label><br>
+                <input type="radio" id="residntYes" name="resident">
+                <label for="residntYes">Yes</label><br>
+                <input type="radio" id="residntNo" name="resident">
+                <label for="residntNo">No</label>
+            </div>
+
+            <div>
+                <label for="cooperativeYes">cooperative session</label><br>
+                <input type="radio" id="cooperativeYes" name="cooperative">
+                <label for="gender1">Yes</label><br>
+                <input type="radio" id="cooperativeNo" name="cooperative">
+                <label for="cooperativeNo">No</label>
+            </div>
+
+            <div>
+                <label for="hmoyes">HMO member</label><br>
+                <input type="radio" id="hmoyes" name="HMO">
+                <label for="gender1">Yes</label><br>
+                <input type="radio" id="hmono" name="HMO">
+                <label for="hmono">No</label>
+            </div>
+
+        </div>
+
+        <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+        </div>
+    </div>
+
+    <h2>C. Details of my income from this employer</h2>
+
+    <label for="SALstatus1">I receive:</label><br>
+    <div class="cContainer">
+        <div>
+            <input type="radio" id="SALstatus1" name="SALstatus">
+            <label for="SALstatus1">A Month's Salary</label></br>
+        </div>
+
+        <div>
+            <input type="radio" id="SALstatus2" name="SALstatus">
+            <label for="SALstatus2">Salary For An Additional Position</label></br>
+        </div>
+
+        <div>
+            <input type="radio" id="SALstatus3" name="SALstatus">
+            <label for="SALstatus3">Partial Salary</label><br>
+        </div>
+
+        <div>
+            <input type="radio" id="SALstatus4" name="SALstatus">
+            <label for="SALstatus4">Daily Wage</label></br>
+        </div>
+
+        <div>
+            <input type="radio" id="SALstatus5" name="SALstatus">
+            <label for="SALstatus5">Allowance</label>
+        </div>
+
+        <div>
+            <input type="radio" id="SALstatus6" name="SALstatus">
+            <label for="SALstatus6">Scholarship</label>
+        </div>
+    </div>
+
+    <h2>D. For More Extended Detalis To Mention</h2>
+    <div style="text-align: center">
+
+        <label for="textBox1"> Additional information:</label><br>
+        <textarea id="textBox1" name="textBox1" rows="15" cols="80"></textarea><br><br>
+        <input type="submit" value="Submit Department's form">
+    </div>
+</form>
+</body>
+</html>
