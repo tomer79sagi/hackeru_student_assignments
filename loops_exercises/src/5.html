@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops Exercises</title>
+  </head>
+  <body>
+    <script>
+      // --5--
+
+      let num = parseInt(prompt("Please enter number:"));
+      let count = 0;
+      for (i = 0; i <= 1000; i++) {
+        if (i % num === 0) count++;
+      }
+      document.write(
+        count + " numbers in range of 0-1000 are divided by " + num
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops Exercises</title>
+  </head>
+  <body>
+    <script>
+      // --6--
+
+      let num = prompt("Please enter number:");
+      if (isNaN(num)) document.write("this is not a number");
+      else if (num > 100) document.write("the number is larger than 100");
+      else if (num < 1) document.write("the number is smaller than 1");
+      else {
+        document.write(factorial(num));
+      }
+
+      function factorial(num) {
+        if (num === 1) return 1;
+        return num * factorial(num - 1);
+      }
+    </script>
+  </body>
+</html>
