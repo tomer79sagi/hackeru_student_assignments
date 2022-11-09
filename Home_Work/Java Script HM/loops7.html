@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var num = Math.floor(Math.random() * 100);
+      var guess = +prompt("guess the number in 10 trys ");
+      for (var i = 1; i <= 10; i++) {
+        if (num == guess) {
+          alert("you did it");
+          break;
+        }
+        if (num > guess) {
+          alert("guess higher");
+        }
+        if (num < guess) {
+          alert("guess lower");
+        }
+        var x = 10 - i;
+        guess = +prompt("try again, you have another " + x + " trys");
+      }
+    </script>
+  </body>
+</html>
