@@ -10,33 +10,108 @@
   <body>
     <main>
       <div class="container">
-        <div class="mas-form">
-          <form>
-            <input
-              type="number"
-              name="mas-year"
-              id="mas-year"
-              value="2022"
-              disabled
-            /><label for="mas-year">שנת המס</label>
-          </form>
-        </div>
-        <div class="employer-info">
-          <div class="form-title">א. פרטי המעביד</div>
-          <div class="employer-form">
-            <form>
-              <label for="employer-name">שם</label><br />
-              <input type="text" name="employer-name" id="employer-name" />
-              <label for="employer-adress">כתובת</label><br />
-              <input type="text" name="employer-adress" id="employer-adress" />
-              <label for="employer-tel">מספר טלפון</label><br />
-              <input type="text" name="employer-tel" id="employer-tel" />
-              <label for="employer-case">מספר תיק ניכויים</label><br />
-              <input type="text" name="employer-case" id="employer-case" />
-            </form>
+        <form action="https://formspree.io/f/mwkzavvw" method="POST">
+          <div class="mas-form">
+            <div class="column-items">
+              <label for="mas-year">שנת המס</label
+              ><input
+                type="number"
+                name="mas-year"
+                id="mas-year"
+                value="2022"
+                disabled
+              />
+            </div>
           </div>
-        </div>
+          <div class="employer-info">
+            <div class="form-title">א. פרטי המעביד</div>
+            <div class="employer-form">
+              <div class="column-items">
+                <label for="employer-name">שם</label>
+                <input type="text" name="employer-name" id="employer-name" />
+              </div>
+              <div class="column-items">
+                <label for="employer-adress">כתובת</label>
+                <input
+                  type="text"
+                  name="employer-adress"
+                  id="employer-adress"
+                />
+              </div>
+              <div class="column-items">
+                <label for="employer-tel">מספר טלפון</label>
+                <input type="text" name="employer-tel" id="employer-tel" />
+              </div>
+              <div class="column-items">
+                <label for="employer-case">מספר תיק ניכויים</label>
+                <input type="text" name="employer-case" id="employer-case" />
+              </div>
+            </div>
+          </div>
+          <div class="form-title">ב. פרטי העובד/ת</div>
+
+          <div class="column-items">
+            <label for="first-name">שם</label>
+            <input type="text" name="first-name" id="first-name" />
+          </div>
+
+          <div class="column-items">
+            <label for="last-name">שם משפחה</label>
+            <input type="text" name="last-name" id="last-name" />
+          </div>
+          <div class="column-items">
+            <label for="id">מספר זהות</label>
+            <input type="number" name="id" id="id" />
+          </div>
+          <div class="column-items">
+            <label for="id-photo">צילום תעודת זהות</label>
+            <input type="file" name="id-photo" id="id-photo" />
+          </div>
+          <div class="column-items">
+            <label for="birth-date">תאריך לידה</label>
+            <input type="date" name="birth-date" id="birth-date" />
+          </div>
+          <div class="column-items">
+            <label for="city">ישוב</label>
+
+            <select name="city" id="city">
+              <option value="Haifa">חיפה</option>
+              <option value="Tel-Aviv">תל-אביב</option>
+              <option value="Jerusalem">ירושלים</option>
+              <option value="Eilat">אילת</option>
+            </select>
+            <div class="column-items">
+              <label for="street">רחוב</label>
+              <input type="text" name="street" id="street" />
+            </div>
+            <div class="column-items">
+              <label for="house">בית</label>
+              <input type="number" name="house" id="house" />
+            </div>
+            <div class="column-items">
+              <label for="zip">מיקוד</label>
+              <input type="number" name="zip" id="zip" />
+            </div>
+            <div class="column-items">
+              <label for="tel">מספר טלפון נייד</label>
+              <input type="number" name="tel" id="tel" />
+            </div>
+            <div class="column-items">
+              <label for="email">כתובת דואר אלקטרוני</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="radio-items">
+              <p>מין</p>
+              <input type="radio" name="sex" id="man" value="man" />
+              <label for="man">זכר</label><br />
+              <input type="radio" name="sex" id="woman" value="woman" />
+              <label for="man">נקבה</label>
+              <input type="submit" value="שלח" />
+            </div>
+          </div>
+        </form>
       </div>
     </main>
   </body>
 </html>
+<div class="column-items"></div>
