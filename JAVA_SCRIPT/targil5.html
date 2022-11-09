@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targil 5</title>
+</head>
+<body>
+    <script>
+    while(true){
+        let number = parseInt(prompt("Put number for divide:"));
+            if (number>=1 && number<=10){
+            let count = 0;
+            let i = 0;
+            
+            while(i<=1000){
+                if((i%number)==0){
+                    count++;
+                }
+                i++;
+            }
+            document.write(count);
+            break;
+        } else {
+            alert("Try again!");
+        }
+    }
+</script>
+</body>
+</html>

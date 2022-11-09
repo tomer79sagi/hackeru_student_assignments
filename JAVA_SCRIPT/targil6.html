@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targil 6</title>
+</head>
+<body>
+    <script>
+        while(true){
+            let number = parseInt(prompt("Put number beetween 1 and 100:"));
+            if(isNaN(number)){
+                alert("This is not a number!")
+            } else if(number < 1){
+                alert("Number is smaller then 1!")
+            } else if(number > 100){
+                alert("Number is bigger then 100!")
+            } else {
+                let factorial = 1;
+                for(let i=1; i<number;i++){
+                    document.write(i + "&nbsp; * &nbsp;");
+                }
+                document.write(number + "&nbsp; = &nbsp;");
+                while (number > 1){
+                    factorial *= number;
+                    number--;
+                }                
+                document.write(factorial);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
