@@ -11,11 +11,11 @@
         while(guess!=x && counter <=10 ){
 
             if( guess < x ){
-                guess= +prompt("Your guess is smaller than the number, try one more time (" + (10-counter) + " guesses left)");
+                guess= +prompt("Your guess is smaller than the number, try one more time (" + (11-counter) + " guesses left)");
 
              }
              else if( guess > x ){
-                guess= +prompt("Your guess is higher than the number, try one more time (" + (10-counter) + " guesses left)" );
+                guess= +prompt("Your guess is higher than the number, try one more time (" + (11-counter) + " guesses left)" );
 
              }
             counter++;
@@ -23,9 +23,9 @@
         }
         if( guess == x)
         document.write("bravo, you guessed the number after " + counter + " times");
-        else{
-            document.write("Sorry you lost!")
-        }
+        else
+        document.write("Sorry you lost!");
+        
 
         </script>
     </body>
