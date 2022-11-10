@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-family: david; 
+            text-align: center;
+            margin: 0 15%;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>כרטיס עובד</h1>
+    <h3>ובקשה להקלה ולתיאום מס על ידי המעביד</h3>
+    <P>לפי תקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה), התשנ"ג - 1993</P>
+
+    <form action="https://tofes101.co.il/assets/forms/tofes-101-2021-07.pdf">
+        <label for="year"><h2 style="margin: 0; display: inline;">שנת המס</h2></label>
+        <input type="number" id="year" name="yaer"><!-- לבדוק איך עושים רק שנה-->
+        <p style="border: 1px solid black;">טופס זה ימולא על-ידי כל עובד עם תחילת עבודתו, וכן בתחילת כל שנת מס (אא"כ המנהל אישר אחרת). הטופס מהווה אסמכתא למעביד למתן
+            העובד. אם חל שינוי בפרטים - יש להצהיר על כך תוך שבוע ימים.
+            הקלות במס ולעריכת תיאומי מס בחישוב משכורת <br>{ראה הסברים (לפי המספרים) מעבר לדף}
+        </p>
+        <p><b> א. פרטי המעביד</b>(למילוי על ידי המעביד)</p>
+        <label for="employerName">שם</label>
+        <input type="text" id="employerName" name="employerName">
+        <label for="address">כתובת</label>
+        <input type="text" id="address" name="address">
+        <label for="phoneNumber">מספר טלפון</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber">
+        <label for="deductioFile">מספר תיק ניכויים</label>
+        <input type="number" id="deductioFile" name="deductioFile">
+        <p><b> ב. פרטי העובד/ת</b>(יש לצרף צילום תעודת זהות כולל ספח. אם צורף בעבר, יש לצרף צילום רק אם היו שינויים בפרטים. למי שאין מספר תעודת זהות יש
+            לצרף צילום דרכון ואישור / רשיון שהייה בישראל שנתנו על ידי רשות האוכלוסין וההגירה)</p>
+
+        <table border="1">
+            <tr>
+                <td>
+                    <label for="idNumber">מספר זהות(9 ספרות)</label>
+                    <input type="number" name="idNumber" id="idNumber">
+                </td>
+                <td>
+                    <label for="lName">שם משפחה</label>
+                    <input type="text" name="lName" id="lName">
+                </td>
+                <td>
+                    <label for="fName">שם פרטי</label>
+                    <input type="text" name="fName" id="fName">
+                </td>
+                <td>
+                    <label for="bithDate">תאריך לידה</label>
+                    <input type="date" name="bithDate" id="bithDate">
+                </td>
+                <td>
+                    <label for="immigrationDate">תאריך עליה</label>
+                    <input type="date" name="immigrationDate" id="immigrationDate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="passportNumber">מספר דרכון (למי שאין מספר ת.ז.)</label>
+                    <input type="number" name="passportNumber" id="passportNumber">
+                </td>
+                <td>
+                    <label for="employeeAddress">כתובת פרטית</label>
+                    <input type="text" name="employeeAddress" id="employeeAddress">
+                </td>
+            </tr>
+            <tr>
+                <td>מין</td>
+                <td>מצב משפחתי</td>
+                <td>תושב ישראל</td>
+                <td>חבר קיבוץ/מושב שיתופי</td>
+                <td>חבר בקופת חולים</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">זכר</label><br>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">נקבה</label> 
+                </td>
+                <td>
+                    <input type="radio" name="familyStatus" id="single" value="single">
+                    <label for="single">רווק/ה</label>
+                    <input type="radio" name="familyStatus" id="married" value="married">
+                    <label for="married">נשוי/אה</label>
+                    <input type="radio" name="familyStatus" id="divorcee" value="divorcee">
+                    <label for="divorcee">גרוש/ה</label><br>
+                    <input type="radio" name="familyStatus" id="widower" value="widower">
+                    <label for="widower">אלמן/ה</label>
+                    <input type="radio" name="familyStatus" id="separated" value="separated">
+                    <label for="separated">פרוד/ה (חובה לצרף אישור פ"ש)</label>
+                </td>
+                <td>
+                    <input type="radio" name="israeli" id="yes" value="yes">
+                    <label for="yes">כן</label><br>
+                    <input type="radio" name="israeli" id="no" value="no">
+                    <label for="no">לא</label>
+                </td>
+                <td>
+                    <input type="radio" name="member" id="yes" value="yes">
+                    <label for="yes">כן</label><br>
+                    <input type="radio" name="member" id="no" value="no">
+                    <label for="no">לא</label>
+                </td>
+                <td>
+                    <input type="radio" name="hmo" id="no" value="no">
+                    <label for="no">לא</label><br>
+                    <input type="radio" name="hmo" id="yes" value="yes">
+                    <label for="yes">כן</label><br>
+                </td>
+            </tr>   
+        </table><br>
+
+        <p><b>ח. אני מבקש/ת פטור או זיכוי ממס מהסיבות הבאות</b> (סמן/י √ בריבוע המתאים)</p>
+        <table border="1">
+            <tr>
+                <td>
+                    <input type="checkbox" name="citizen" id="citizen" value="yes">
+                <label for="citizen">אני תושב/ת ישראל.</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="disabled" id="disabled" value="yes">
+                <label for="disabled">אני נכה 100% / עיוור/ת לצמיתות </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="yishuv" id="yishuv" value="yes">
+                <label for="yishuv"> אני תושב/ת קבוע/ה בישוב מזכה. אני ובני משפחתי מדרגה ראשונה, מתגוררים ביישוב ואין לי "מרכז חיים" נוסף. </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="newcomer" id="newcomer" value="yes">
+                <label for="newcomer">אני עולה חדש/ה</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="spouse'ssalary" id="spouse'ssalary" value="thereIsNot">
+                <label for="spouse'ssalary">בגין בן/בת זוגי המתגורר/ת עימי ואין לו/לה הכנסות בשנת המס</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="singleparent" id="singleparent" value="yes"> 
+                <label for="singleparent">אני הורה במשפחה חד הורית החי בנפרד</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="My_children_in_my_care" id="My_children_in_my_care" value="there_are">
+                <label for="My_children_in_my_care">בגין ילדי שבחזקתי המפורטים בחלק ג</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="toddlers" id="toddlers" value="there_are">
+                <label for="toddlers">בגין ילדי הפעוטים</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="single_parent_for_my_children_in_my_care" id="single_parent_for_my_children_in_my_care" value="yes"> 
+                <label for="single_parent_for_my_children_in_my_care">אני הורה יחיד לילדי שבחזקתי (המפורטים בסעיף 7 ו-8 לעיל).</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="My_children_are_not_in_my_custody" id="My_children_are_not_in_my_custody" value="there_are">
+                <label for="My_children_are_not_in_my_custody">בגין ילדי שאינם בחזקתי המפורטים בחלק ג ואני משתתף/ת בכלכלתם</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="disabled_child" id="disabled_child" value="there_is">
+                <label for="disabled_child">אני הורה לילדים עם מוגבלות שטרם מלאו להם 19 שנים, בגינם אני מקבל/ת גמלת ילד נכה מהמוסד לביטוח לאומי.</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="Divorce_alimony" id="Divorce_alimony" value="yes">
+                <label for="Divorce_alimony">בגין מזונות לבן/בת זוגי לשעבר.</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="age_between_16_to_18" id="age_between_16_to_18" value="yes">
+                <label for="age_between_16_to_18">מלאו לי או לבן/בת זוגי 16 שנים וטרם מלאו לי או לבן/בת זוגי 18 שנים בשנת המס.</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="Service" id="Service" value="yes">
+                <label for="Service">אני חייל/ת משוחרר/ת / שרתתי בשירות לאומי.</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="occupation_graduation" id="occupation_graduation" value="טקד">
+                <label for="occupation_graduation">בגין סיום לימודים לתואר אקדמי, סיום התמחות או סיום לימודי מקצוע.</label><br>
+                </td>
+            </tr>
+        </table><br>
+
+        <p><b>י. הצהרה</b></p>
+        <p style="border: 1px solid black;">
+            אני מצהיר/ה כי הפרטים שמסרתי בטופס זה הינם מלאים ונכונים. ידוע לי שהשמטה או מסירת פרטים לא נכונים הינה עבירה על פקודת
+            מס הכנסה. אני מתחייב/ת להודיע למעביד על כל שינוי שיחול בפרטיי האישיים ובפרטים דלעיל תוך שבוע ימים מתאריך השינוי.
+            <label for="today">תאריך</label>
+            <input type="date" name="today" id="today">
+            <label for="sign">חתימת המבקש/ת</label>
+            <input type="text" name="sign" id="sign">
+        </p><br>
+        <input type="submit" value="submit">
+    </form>
+    <br>
+    <h4>דברי הסבר למילוי טופס 101</h4>
+    <p>(1)" עובד" יחיד המקבל משכורת. "מעביד" אדם המשלם משכורת. "משכורת" הכנסת עבודה, קיצבה, מענק עקב פרישה או מוות, מילגה וכיו"ב.<br>
+        "עבודה" לרבות קבלת משכורת. "מלגה" לרבות מענק, פרס או פטור מתשלום שניתן לסטודנט או לחוקר.</p>
+    <p>(2 (משכורת חודש - משכורת בעד עבודה של לא פחות מ - 18 יום בחודש.</p>
+    <p>(3 (משכורת בעד משרה נוספת - משכורת בעד עבודה של יותר מ - 5 שעות ביום, נוסף למשכורת ו/או בנוסף לקצבה החייבת במס ממקום אחר. העובד רשאי לבחור את מקום העבודה בו תחשב
+        משכורתו כ"משכורת בעד משרה נוספת"</p>
+    <p>(4 (משכורת חלקית - משכורת בעד עבודה של 5 שעות או פחות ליום או משכורת בעד עבודה במשך יותר מ-5 שעות ליום אך פחות מ-8 שעות בשבוע.
+        ממשכורת חלקית ינוכה מס בשיעור מירבי אלא אם כן זו הכנסה יחידה שאז ינוכה מס לפי לוח הניכויים</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    
+</body>
+</html>
