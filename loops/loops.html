@@ -20,7 +20,7 @@
                 counter++;
             }
             total = count / counter;
-            document.write(total);
+            document.write("The average is: " + total);
 
         }
 
@@ -36,7 +36,7 @@
                     count = num;
                 }
             }
-            console.log(count);
+            console.log("The highest is: " + count);
         }
         /* Ex 3 */
         // function that print all the numbers in a decreacing order.
@@ -90,11 +90,11 @@
             } else if (Number.isNaN(num) == true) {
                 alert("This is not a number!");
             } else {
-                for (let i = num; i >= 1; i--) {
+                for (let i = num; i > 1; i--) {
                     num2 *= i;
                     document.write(i + "*")
                 }
-                document.write(" = " + num2);
+                document.write("1 = " + num2);
             }
         }
 
