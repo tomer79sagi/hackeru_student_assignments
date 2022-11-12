@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Exercise</title>
+    <script>
+        /* Ex1 */
+        // function that show the average of 10 grades.
+        function grades() {
+            let counter = 0;
+            let count = 0;
+            let total = 0;
+            let num = 0;
+            for (let i = 0; i < 10; i++) {
+                num = +prompt("Please enter your grade");
+                count += num;
+                counter++;
+            }
+            total = count / counter;
+            document.write(total);
+
+        }
+
+
+        /* Ex2 */
+        // function that show the higher grade of 3.
+        function highestgrade() {
+            let count = 0;
+            let num = 0
+            for (let i = 0; i < 3; i++) {
+                num = +prompt("plaese enter your grade");
+                if (num > count) {
+                    count = num;
+                }
+            }
+            console.log(count);
+        }
+        /* Ex 3 */
+        // function that print all the numbers in a decreacing order.
+        function decnumber() {
+            var i = 0;
+            var num = Number(prompt("please enter number"));
+            i = num;
+            while (i > -1) {
+                console.log(i);
+                i--;
+            }
+        }
+
+        /* Ex 4 */
+        // function that print numbers in an increacing order but 7.
+        function incnumber() {
+            let i = 1;
+            while (i < 11) {
+                console.log(i);
+                i++;
+                if (i == 7) {
+                    i++;
+                }
+
+            }
+
+        }
+        /* Ex5 */
+        // function that show how much numbers can be divided by the receiving number from the user between 0 - 1000.
+        function divide() {
+            let count = 0;
+            let num = parseInt(prompt("Please enter a number between 1 - 10"));
+            for (let i = 0; i >= 0 && i < 1001; i++) {
+                if (i % num == 0) {
+                    count++;
+                }
+
+            }
+            console.log(count);
+        }
+        /* Ex 6 */
+        // function that calculate the factorial of the receiving number from the user.
+        function factorial() {
+            let num2 = 1;
+            let total = 0;
+            let num = parseInt(prompt("Please enter a number between 1 - 100"));
+            if (num > 100) {
+                document.write("The number is larger then 100");
+            } else if (num < 1) {
+                document.write("The number is smaller then 1");
+            } else if (Number.isNaN(num) == true) {
+                alert("This is not a number!");
+            } else {
+                for (let i = num; i >= 1; i--) {
+                    num2 *= i;
+                    document.write(i + "*")
+                }
+                document.write(" = " + num2);
+            }
+        }
+
+        /* Ex 7 */
+        // game of guess - the user needs to guess the number that had been chosen by the function.
+        function guess() {
+            let num = 0;
+            let count = 1;
+            let  winner = Math.floor(Math.random() * 100);
+            for (let i = 0; i < 10; i++) {
+                num = +prompt("Guess the number. " +" Attempt number: " + count);
+                if (winner > num) {
+                    alert("Your guess is lower then the number");
+                } else if (winner < num) {
+                    alert("Your guess is higher then the number");
+                } else {
+                    alert("Your guess is correct!");
+                    document.write("You've won!");
+                    break;
+                }
+                count++;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Loops Exercise</h1>
+    <hr>
+    <p>Some of the answers will show by document.write and other by console.log, please notice.</p>
+
+
+    <button onclick="grades()">Ex1</button><br><br>
+    <button onclick="highestgrade()">Ex2</button><br><br>
+    <button onclick="decnumber()">Ex3</button><br><br>
+    <button onclick="incnumber()">Ex4</button><br><br>
+    <button onclick="divide()">Ex5</button><br><br>
+    <button onclick="factorial()">Ex6</button><br><br>
+    <button onclick="guess()">Ex7</button>
+</body>
+
+</html>
