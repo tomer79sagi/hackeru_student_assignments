@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>loops exercise 2</title>
+  </head>
+  <body>
+    <script>
+      var index = 1;
+      var max_grade = 0;
+      while (index <= 3) {
+        var grade = parseInt(prompt("enter a grade: (0-100)"));
+        if (grade > max_grade) {
+          max_grade = grade;
+        }
+        index++;
+      }
+      document.write("the maximum grade is ", max_grade);
+    </script>
+  </body>
+</html>

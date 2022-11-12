@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>loops exercise 7</title>
+  </head>
+  <body>
+    <script>
+      var randnum = Math.floor(Math.random() * 100);
+      var guesses = 1;
+      //   alert(randnum);
+      while (guesses <= 10) {
+        var this_guess = parseInt(prompt("guess a number between 1 and 100:"));
+        if (this_guess < randnum) {
+          alert("your guess is too little!");
+          guesses++;
+          continue;
+        } else if (this_guess > randnum) {
+          alert("your guess is too big!");
+          guesses++;
+          continue;
+        } else {
+          alert("you guessed the right number!");
+          break;
+        }
+      }
+      if (guesses <= 10) {
+        document.write("it took you ", guesses, " guesses!");
+      } else {
+        document.write("too many guesses! better luck next time");
+      }
+    </script>
+  </body>
+</html>

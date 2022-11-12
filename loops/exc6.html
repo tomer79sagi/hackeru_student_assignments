@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>loops exercise 6</title>
+  </head>
+  <body>
+    <script>
+      var num = parseInt(prompt("enter a number from 1 to 100:"));
+      var num1 = num;
+      var factorial = 1;
+      if (isNaN(num)) {
+        document.write("this is not a number!");
+      } else if (num > 100) {
+        document.write("the number is larger than 100!");
+      } else if (num < 1) {
+        document.write("the number is smaller than 1!");
+      } else {
+        while (num >= 1) {
+          factorial *= num;
+          num--;
+        }
+        document.write("the factorial of ", num1, " is ", factorial);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>loops exercise 5</title>
+  </head>
+  <body>
+    <script>
+      var div = parseInt(prompt("enter a number from 1 to 10:"));
+      var index = 0;
+      var count = 0;
+      while (index <= 1000) {
+        if (index % div == 0) {
+          count++;
+        }
+        index++;
+      }
+      document.write(
+        "the amount of numbers that are divisible by ",
+        div,
+        " is ",
+        count
+      );
+    </script>
+  </body>
+</html>
