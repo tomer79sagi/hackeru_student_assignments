@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="computerNumberGuess">?</h1>
+    <h1 id="guessnum"></h1>
+    <h2>guesses: <span id="gues"></span></h2>
+    <input type="text" id="input" /> <button id="btn">send</button>
+    <h1 id="result"></h1>
+    <script>
+      let guesses = 10;
+      let compNum = Math.floor(Math.random() * 100);
+      let header = document.getElementById("guessnum");
+      document.getElementById("gues").innerText = guesses;
+
+      document.getElementById("btn").addEventListener("click", () => {
+        let userGuess = document.getElementById("input").value;
+        header.innerText = userGuess;
+        if (guesses == 0) {
+          console.log("finito");
+        } else {
+          guesses--;
+        }
+        if (guesses < 1) {
+          header.innerText = "you have passed the limit of your guesses";
+        } else if (userGuess == compNum) {
+          document.getElementById("result").innerText = "you won";
+          document.getElementById("computerNumberGuess").innerText = compNum;
+        } else if (userGuess > compNum) {
+          document.getElementById("result").innerText = "the number is lower";
+        } else if (userGuess < compNum) {
+          document.getElementById("result").innerText = "the number is upper";
+        }
+
+        document.getElementById("gues").innerText = guesses;
+      });
+    </script>
+  </body>
+</html>
