@@ -1,0 +1,53 @@
+body{
+    background-color:  black;
+} 
+h1{
+  position: absolute;top: 10%;left: 37%;
+  font-size: 60px;
+  font-style: italic;
+ 
+  
+}
+.first_div{
+    max-width: 1000px;
+     border:5px solid green;
+    justify-content: space-around;
+     
+
+
+
+}
+
+
+.fourth_div{
+
+   width: 500px;
+  border:5px solid black;
+ position: absolute;left:30%;top: 60%;
+  text-align: center;
+  
+  
+    color: white;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  
+
+}
+
+ .fith_div{
+    
+    text-align: center;
+    
+ } 
+
+.sixth_div{
+    color:  white;
+   position: absolute;top: 30%; left: 30%;
+
+    font-size: large;
+    font-weight: bold;
+   
+}
+a{
+    color: white;
+}

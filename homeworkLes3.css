@@ -1,0 +1,27 @@
+
+tr {
+font-size: 50px;
+
+}
+
+#left{
+    font-style: italic;
+}
+
+#mid{
+    font-weight: bold;
+}
+
+#right{
+    text-decoration: underline;
+}
+
+#id1{
+    background-color: red;
+}
+#id2{
+    background-color: yellow;
+}
+#id3{
+    background-color: blue;
+}

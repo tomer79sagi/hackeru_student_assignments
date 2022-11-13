@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+             var times = 0;
+        var input = +prompt("Please enter a number between 1-10");
+        
+        for(i = 0; i <= 1000; i++) {
+            if(i % input == 0) {
+                times ++;
+            }
+        }
+
+        document.write("you can divide 1000 by" +" " + input +" "+ "without a remainder" +" " + times +" " + "times")
+        </script>
+    </body>
+</html>

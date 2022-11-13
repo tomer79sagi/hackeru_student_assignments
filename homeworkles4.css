@@ -1,0 +1,23 @@
+ h1{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 30px;
+                font-weight: bold;
+ }
+.p1{
+    font-family: sans-serif, Helvetica, Arial;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+   
+}
+body{
+                background-color: aquamarine;
+                background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7040e917-2676-4436-838b-34c95352f75f/dey932h-861c55fb-c661-4d99-99fe-44b31b62cade.png/v1/fill/w_588,h_1040,strp/chainsaw_man___denji_render_by_stormydayze_dey932h-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA0MCIsInBhdGgiOiJcL2ZcLzcwNDBlOTE3LTI2NzYtNDQzNi04MzhiLTM0Yzk1MzUyZjc1ZlwvZGV5OTMyaC04NjFjNTVmYi1jNjYxLTRkOTktOTlmZS00NGIzMWI2MmNhZGUucG5nIiwid2lkdGgiOiI8PTU4OCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.euGgC79oNDPRvhiOc3vLG3AEMQ5svTD2yz1d2vUWWac);
+                background-repeat: no-repeat;
+                background-position: center;
+             /* background-attachment: fixed;(as asked in paragraph 7)*/
+             /* background-attachment: scroll;(as asked in paragraph 8)*/  
+                background-size: cover;
+            }
+         
+            
