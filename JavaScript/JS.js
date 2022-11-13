@@ -72,16 +72,22 @@ function Modulu2(){
 
 function Factorial(){
 
+  var total = 1;
+var Number = parseInt(prompt('Please enter a number from 1 to 100'));
 
-var Number = parseInt(prompt('Please enter a number'));
-var total = 1;
+if (Number>100){
+  alert("The number is larger than 100")
+}else if(Number<1){
+  alert("Number is smaller than 1");
+}else{
+
 
 for (i = 0; i < Number; i++){
     total = total * (Number - i);
 }
 
 document.write(Number + '! = ' + total);
-
+}
 }
 
 function guessNumber() {
