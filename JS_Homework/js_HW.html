@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>JS homework</title>
+    </head>
+    <body>
+        <script>
+            //First Question
+            let i = 1;
+            let sum = 0;
+            while(i<10){
+                let grade = +prompt("please enter a grade");
+                sum += grade;
+                i++;
+            }
+            document.write("The average is: " + (sum/10))
+
+            //Second Question
+            let grade1 = prompt("please enter a grade");
+            let grade2 = prompt("please enter another grade");
+            let grade3 = prompt("please enter yet another grade");
+            if(grade1 > grade2){
+                if(grade1 > grade3){
+                    document.write(grade1 + " is the highest grade");
+                }
+                else{
+                    document.write(grade3 + " is the highest grade");
+                }
+            }
+            else if(grade2 > grade1){
+                if(grade2 > grade3){
+                    document.write(grade2 + " is the highest grade");
+                }
+                else{
+                    document.write(grade3 + " is the highest grade");
+                }
+            }
+            else{
+                document.write("all 3 grades are equal");
+            }
+
+            //Third Question
+            let number = +prompt("enter any number");
+            while(number > 0){
+                document.write(number);
+                number--;
+            }
+
+            //Fourth Question
+            i = 1;
+            while(i < 10){
+                if(i == 7){
+                    continue;
+                }
+                document.write(i);
+                i++;
+            }
+
+            //Fifth Question
+            let count = 0;
+            let divider = +prompt("choose a number as a divider");
+            for(i = 0;i <= 1000;i++){
+                if(i % divider == 0){
+                    count++;
+                }
+            }
+            document.write("between 0-1000 numbers, " + count + " numbers are divided with no remains");
+
+            //Sixth Question
+            let multiple = 1;
+            let reply = +prompt("enter a number between 1-100");
+            if(isNaN(reply)){
+                document.write("This is not a number");
+            }
+            else{
+                if(reply > 100){
+                    document.write("The number is higher than 100")
+                }
+                else if(reply < 1){
+                    document.write("The number is lower than 1");
+                }
+                else{
+                    while(reply > 0){
+                        multiple *= reply;
+                        reply--;
+                    }
+                document.write("The end result is: " + multiple);
+                }
+            }
+
+            //Seventh Question
+            let guess = 0;
+            let guess_number = 1;
+            let rand = Math.floor(Math.random() * 100);
+            while(guess_number >= 10){
+                guess = +prompt("please make a guess");
+                if(guess == rand){
+                    document.write("Your guess is correct! it took you " + guess_number + " guesses!");
+                    break;
+                }
+                else if(guess > rand){
+                    document.write("The number you chose is too high, please try again");
+                    guess_number++;
+                }
+                else{
+                    document.write("The number you chose is too low, please try again");
+                    guess_number++;
+                }
+            }
+            if(guess_number > 10){
+                document.write("You used up all your guesses, please try again next time");
+            }
+        </script>
+    </body>
+</html>
