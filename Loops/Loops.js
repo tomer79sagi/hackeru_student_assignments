@@ -65,7 +65,7 @@ function zeroTo() {
 function countToTen() {
     for (var i = 1; i <= 10; i++) {
         if (i != 7)
-            countToTenArr.push(i)
+            countToTenArr.push(i);
         else {
             continue;
         }
