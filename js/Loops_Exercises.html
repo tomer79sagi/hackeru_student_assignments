@@ -6,17 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let sum = 0;
-        let i = 1;
-        while (i <= 10){
-            sum += (+prompt("enter your grade"));
-            console.log(typeof sum);
-            i++;
-        }
-        document.write("your avrage is: " + (sun/10));
+        // exercise_1
+           let sum = 0;
+           let i = 1;
+           while (i <= 10){
+               sum += +prompt("enter your grade");
+               i++;
+           }
+           document.write("your avrage is: " + sum/10);
+        
+        // exercise_2
+           i =1;
+           let max_grade = +prompt("enter your number");
+           while (i <= 2){
+               let new_grade = +prompt("enter your number");
+               if (max_grade < new_grade){
+                   max_grade = new_grade;
+               }
+               i++
+           }
+           document.write("the highest grade is: " + max_grade);
+
+        // exercise_3
+           i = +prompt("enter a number");
+           while (i >= 0){
+               document.writeln(i);
+               i--;
+           }
+
+        // exercise_4
+            for (i=1; i<=10; i++){
+                if (i !== 7){
+                    document.writeln(i);
+                }
+            }
+
+        // exercise_5
+            let num = +prompt("Enter a number between 1 to 10");
+            i = 0;
+            let count = 0;
+            while(num > 10 || num < 1){
+                num = +prompt("Wrong input! Enter a number between 1 to 10")
+            }
+            while (i <= 1000){
+                if (i % num === 0){
+                    count++;
+                }
+                i++;
+            }
+            document.write("The amount of numbers divided in the number you entered is: " + count);
+
+        //exercise_6
+            num = prompt("Enter a number betweem 1 to 100");
+            let factorial = 1;
+            while(num < 1 || num > 100 || isNaN(num) === true){
+                if(isNaN(num) === true){
+                    num = +prompt("This is not a numbrer! Please try again");
+                }
+                else if (num > 100){
+                    num = +prompt("The number is larger than 100! Please try again");
+                }
+                else{
+                    num = +prompt("The number is smaller than 1! Please try again");
+                }
+            }
+            for (i=2; i <= num; i++){
+                factorial *= i;
+            }
+            document.write("The factorial for the number you entered is: " + factorial);
+
+        //exercise_7
+            const number = Math.floor(Math.random() * 100) + 1;
+            i = 1;
+            while(i <= 10){
+                num = prompt("Enter a number between 1 to 100");
+                if (num == number){
+                    alert("Great job! you used " + i +" guesses");
+                    break;
+                }
+                else if (num > number){
+                    alert("Your number is too larg");
+                }
+                else{
+                    alert("Your number is too small");
+                }
+                i++;
+            }
+            if (i >= 11){
+                alert("You used all of your guesses. The right answer is: " + number);
+            } 
     </script>
 </head>
 <body>
-    
+ 
 </body>
 </html>
