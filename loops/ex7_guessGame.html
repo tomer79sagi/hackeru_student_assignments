@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>ex7</title>
+    </head>
+    <body>
+        <script>
+            let random_number = Math.floor(Math.random()*100)
+            let i = 1
+            let user_number = +prompt("enter number from 1 to 100");
+            while(i < 10){
+                i++
+                if(user_number > random_number){
+                    user_number = +prompt("your number is hier try again")
+                }
+                if(user_number < random_number){
+                    user_number = +prompt("your number is lower try again")
+                }
+                if(user_number == random_number){
+                    document.write("you win")
+                    break
+                }
+                if(i == 9){
+                    document.write("game over")
+                }
+            }
+        </script>
+    </body>
+</html>
