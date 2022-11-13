@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let i,azeret=1,num;
+
+    num=parseInt(prompt("enter num:"));
+let result=Number.isNaN(num);        //בודק האם לא נלחץ מספר או שזהו אינו מספר.
+    while(num>100||num<1||result==false){
+    if (result==false){
+    alert("ITS NAN"); 
+    num=parseInt(prompt("enter num:"));
+    }
+    
+        if(num>100)
+        {
+   alert("the number is larger than 100"); 
+    num=parseInt(prompt("enter num:"));
+        }
+    else if(num<1){
+    alert("the number is smaller than 1"); 
+    num=parseInt(prompt("enter num:"));
+    
+                  }
+       
+                                        }
+        
+    for( i=num;i>=1;i--){
+    azeret*=i
+    }     
+          
+document.write("azeret of"+" "+num+" "+"is "+" "+ azeret);   
+          
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array=[],max,i;
+            
+        for( i=0;i<3;i++){
+
+           array[i]=parseInt(prompt("enter num:"));
+          
+                  
+           } 
+           max=array[0];
+           for(i=0;i<2;i++){
+      
+           if(array[i]>=array[i+1]&&array[i]>=max){
+           max=array[i];
+           }
+           else if (array[i+1]>=array[i]&&array[i+1]>=max) {
+           max=array[i+1];
+           }       
+
+            }
+            document.write("your max num  is:" + max);   
+
+              
+    </script>
+</body>
+</html>
