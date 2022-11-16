@@ -1,0 +1,25 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        
+        <script>
+
+            var num1 = +prompt("Enter a number");
+            var num2 = +prompt("Enter a number");
+            var highest_divisor = 1;
+
+            for (var i = 1; i <= num1 || i <= num2; i++) {
+                if(num1 % i == 0 && num2 % i == 0) {
+                    highest_divisor = i;
+                }
+            }
+
+            document.write("The highest divisor of the numbers " + num1 + " and " + num2 + " is: " + highest_divisor);
+
+
+        </script>
+    </body>
+</html>

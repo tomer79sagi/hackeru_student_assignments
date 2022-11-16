@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        
+        <script>
+
+            var num1 = +prompt("Enter a number");
+            var num2 = " ";
+
+            for (var new_num1 = num1; new_num1 > 0;) {
+                num2 += (new_num1 % 10);
+                new_num1 /= 10;
+                new_num1 = Math.floor(new_num1);
+            }
+
+            num2 = parseInt(num2);
+            if(num1 == num2) {
+                document.write("The number: " + num1 + " is a palindrome");
+            }
+
+            else {
+                document.write("The number: " + num1 + " is not a palindrome");
+            }
+
+
+        </script>
+    </body>
+</html>
