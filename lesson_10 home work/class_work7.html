@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        
+        <script>
+
+            var num = +prompt("Enter a  positive number");
+            var sum = 0;
+            var amount = 0;
+            var avrage;
+
+            while (num != -1) {
+                if (num != 0) {
+                    sum += num;
+                    amount++;
+                }
+                 num = +prompt("Enter a  positive number");
+            }
+
+            avrage = Math.floor(sum / amount);
+
+            document.write("The avrage of all the numbers is: " + avrage);
+
+
+        </script>
+    </body>
+</html>

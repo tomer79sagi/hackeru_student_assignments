@@ -1,0 +1,25 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        
+        <script>
+
+            var num = +prompt("Enter a number");
+            var highest = num; 
+
+            while (num > 0) {
+                if (num > highest) {
+                    highest = num;
+                }
+                num = +prompt("Enter a number");
+            }
+            if (highest > 0) {
+                document.write("The highest number you entered is: " + highest);
+            }
+            
+        </script>
+    </body>
+</html>
