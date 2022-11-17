@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num = +prompt("enter a numeber"); 
+        let numCheck = 0;
+        let copyOfNum = num;
+
+        while(copyOfNum !== 0) //4
+        {
+            numCheck += (copyOfNum - (Math.floor(copyOfNum / 10) * 10 ) );
+            copyOfNum = Math.floor(copyOfNum / 10);
+            if(copyOfNum === 0){
+                continue;
+            }
+            numCheck *= 10;
+            
+        }
+        if(num === numCheck)
+        {
+            document.write("The Numer IS Polindrom");
+        }
+
+        else{
+            document.write("The Number IS NOT Polindrom");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        for (let i = 0; i <= 31; i++) {
+            if(i < 10){
+            document.write(i + "&nbsp" + "&nbsp" + "&nbsp" + "&nbsp" + "&nbsp" +"&nbsp");
+            }
+            else{
+            document.write(i + "&nbsp" + "&nbsp" + "&nbsp" + "&nbsp");
+            }
+            
+        }
+
+        document.write("<br/>");
+
+        for (let j = 1; j <= 31; j++) {
+
+            document.write(j + "&nbsp" + "&nbsp"  );
+
+            if(j < 10){
+                document.write("&nbsp" + "&nbsp" + "&nbsp" + "&nbsp" );
+        }
+
+        else{
+            document.write("&nbsp");
+        }
+            for (let i = 1; i <= 31; i++) {
+                document.write(i*j + "&nbsp");
+
+                if (j*i < 10)
+                    document.write("&nbsp" + "&nbsp" + "&nbsp" + "&nbsp" + "&nbsp");
+                else if(j*i < 100) {
+                    document.write("&nbsp" + "&nbsp" + "&nbsp" );
+                }
+                else{
+                    document.write("&nbsp" );
+                }
+            }
+            document.write("<br/>");
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
