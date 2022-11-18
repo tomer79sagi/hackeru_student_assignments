@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //loop 6 */
+
+      var stop_flag = false;
+
+      while (stop_flag == false) {
+        numbers = +prompt("enter a positive intiger");
+        if (numbers == -1) {
+          stop_flag = true;
+        } else {
+          document.write(numbers + "<br/>");
+        }
+      }
+    </script>
+  </body>
+</html>

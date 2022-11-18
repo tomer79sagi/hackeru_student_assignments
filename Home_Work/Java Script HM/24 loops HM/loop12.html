@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //get 2 numbers: first whatever second 1 digit num*/
+      //show how many times dig is in num*/
+
+      var num = +prompt("Please enter a number");
+      var digit = +prompt("Please enter 1 digit");
+      var count = 0;
+      var length = num.toString().length;
+      var digit_i = 0;
+
+      for (var i = 0; i < length; i++) {
+        digit_i = num.toString()[i];
+
+        if (digit == digit_i) {
+          count++;
+        }
+      }
+      document.write(count);
+    </script>
+  </body>
+</html>

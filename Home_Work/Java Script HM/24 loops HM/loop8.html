@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //get numbers
+      //if 0 or below stop
+      //show largest
+
+      var num = +prompt("enter a number");
+      var largest = num;
+
+      while (num > 0) {
+        if (num > largest) {
+          largest = num;
+        }
+        num = +prompt("enter a number");
+      }
+      if (largest > 0) {
+        document.write("largest number is" + largest);
+      }
+    </script>
+  </body>
+</html>
