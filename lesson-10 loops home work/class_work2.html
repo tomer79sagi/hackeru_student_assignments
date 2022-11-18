@@ -11,16 +11,14 @@
             var num2 = +prompt("Enter a positive number");
 
             if (num1 > num2) {
-                while (num1 > num2) {
-                    document.write(num2 + "<br/>");
-                    num2++;
-                }
+            for (var i = num2; i <= num1; i++) {
+                document.write(i + "<br/>");
+                }   
             }
-
             else {
-                document.write("First number is smaller then the second number");
+                document.write("The first number is smaller than the second number.")
             }
-
+            
         </script>
     </body>
 </html>
