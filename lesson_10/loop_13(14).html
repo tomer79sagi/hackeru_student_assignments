@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 13</title>
+</head>
+<body>
+    <script>
+        let isPalindrome = true;
+        let num;
+        while(true){
+            num=parseInt(prompt("Put a positive number to check if it is palindrome"));
+            if(isNaN(num)){
+                alert("This is not a number!");
+                continue;
+            }
+            if(num<0){
+                let check = num.toString();
+                for(let i=1; i<(check.length/2);i++){
+                if(check.charAt(i)!==check.charAt(check.length-(i))){
+                    isPalindrome = false;
+                    }
+                }
+            } else{
+                let check = num.toString();
+                for(let i=0; i<(check.length/2);i++){
+                    if(check.charAt(i)!==check.charAt(check.length-(i+1))){
+                        isPalindrome = false;
+                    }
+                }
+            }
+            break;
+        }
+        if(isPalindrome){
+            document.write("Number " + num + " is a palindrome!")
+        } else {
+            document.write("Number " + num + " is not a palindrome!")
+        }
+        
+    </script>
+</body>
+</html>

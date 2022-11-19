@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 10</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+        while(true){
+            let num = parseInt(prompt("הכנס מספר"));
+            if(isNaN(num)){
+                alert("חייב מספר...");
+                continue;
+            }
+            if (num < 0) {
+                num*=-1;
+            }
+            if (num >= 1) ++count;
+            while (num / 10 >= 1) {
+                num /= 10;
+                ++count;
+            }
+            if(num==0) count++;
+            break;
+        }
+        alert("במספר יש " + count + " ספרות");
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 6</title>
+</head>
+<body>
+    <script>
+        let number;
+        let avg;
+        let count = 0;
+        alert("Put numbers. Not a number or '0' will stop a programm. In the end you'll see their average except '0'.");
+        while(true){
+            number = parseInt(prompt("Put number"));
+            if(isNaN(number) || number == 0){
+                break;
+            }
+            if(avg === undefined){
+                avg = number;
+                document.write("Your numbers is " + number);
+            } else {
+                avg = avg + number;
+                document.write(" , " + number);
+            }
+            count++;
+        }
+        if(isFinite(avg)){
+            document.write("<br/> Average is " + (avg/count));
+        } else {
+            document.write("Average is " + avg);
+        }
+    </script>
+</body>
+</html>

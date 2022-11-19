@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 7</title>
+</head>
+<body>
+    <script>
+        let max;
+        while(true){
+            let number = parseInt(prompt("Put your number"));
+            if(number<=0){
+                break;
+            } else if (number > max || max === undefined){
+                max = number;
+            }
+        }
+        document.write("The biggest number was " + max);
+    </script>
+</body>
+</html>

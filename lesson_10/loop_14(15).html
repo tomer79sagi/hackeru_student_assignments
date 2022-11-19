@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 14</title>
+</head>
+<body>
+    <script>
+        let num_base;
+        let num_power;
+        let result=1;
+        while(true){
+            num_base = parseInt(prompt("Put a number in base"));
+            num_power = parseInt(prompt("Put a positive number in power"));
+            if(isNaN(num_base) || isNaN(num_power)){
+                alert("I need a number!");
+                continue;
+            }
+            if (num_power === 0 && num_base === 0) {
+                result = undefined;
+            } else if (num_power<0){
+                alert("I need a positive number in power!");
+            } else if(num_power>=0){
+                for (let i = 1; i<=num_power; i++){
+                    result*=num_base;
+                }
+            }
+            break;
+        }
+        document.write(num_base + " to the power of " + num_power + " is " + result);
+    </script>
+</body>
+</html>

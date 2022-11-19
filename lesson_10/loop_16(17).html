@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 16</title>
+</head>
+<body>
+    <script>
+        let num_1;
+        let num_2;
+        while(true){
+            num_1 = parseInt(prompt("Put first positive number"));
+            num_2 = parseInt(prompt("Put second positive number"));
+            if(isNaN(num_1) || isNaN(num_2) || num_1 < 0 || num_2 < 0){
+                alert("I need positives numbers only!");
+            } else {
+                while(num_1 && num_2){
+                    num_1 > num_2 ? num_1 %= num_2 : num_2 %= num_1; 
+                }
+                num_1 += num_2;
+                break;
+            }
+        }
+        document.write("The greatest common divisor of given numbers is " + num_1);
+    </script>
+</body>
+</html>

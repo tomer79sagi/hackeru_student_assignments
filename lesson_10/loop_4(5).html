@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 4</title>
+</head>
+<body>
+    <script>
+        let number;
+        let sum;
+        alert("Put positive numbers. '99' will stop a programm. In the end you'll see their total except '99'.");
+        while(true){
+            number = parseInt(prompt("Put positive number"));
+            if(isNaN(number) || number < 0){
+                alert("Positive numbers only!");
+                continue;
+            }
+            if(number == 99){
+                break;
+            }
+            if(sum === undefined){
+                sum = number;
+                document.write(number);
+            } else {
+                sum = sum + number;
+                document.write(" + " + number);
+            }
+        }
+        if(isFinite(sum)){
+            document.write(" = " + sum);
+        } else {
+            document.write("Total is " + sum);
+        }
+    </script>
+</body>
+</html>
