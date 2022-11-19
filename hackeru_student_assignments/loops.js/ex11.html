@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 11</title>
+</head>
+<body>
+    <script>
+        let count = 0;
+        let num;
+        let dig;
+        while(true){
+            num = parseInt(prompt("הכנס מספר"));
+            dig = parseInt(prompt("הכנס ספרה"));
+            if(isNaN(num) || isNaN(dig)){
+                alert("תקרא שוב מה צריך להכניס.");
+                continue;
+            }
+            if((dig<0) || (dig>10)){
+                alert("חייב ספרה...");
+                continue;
+            }
+            let num_string = num.toString();
+            for (let i = 0; i < num_string.length; i++){
+                if(num_string.charAt(i) == dig){
+                    count++;
+                }
+            }
+            break;
+        }
+        document.write("מספר " + num + " כולל ספרה " + '"' + dig + '"' + "&nbsp;" + count + " פעמים.");
+    </script>
+</body>
+</html>

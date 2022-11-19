@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 3</title>
+</head>
+<body>
+    <script>
+        while(true){
+            let num = parseInt(prompt("Put first number"));
+            let max = parseInt(prompt("Put second number bigger than first"));
+            if (num > max){
+                alert("First number can't be bigger than second! Try again!");
+            } else if (isNaN(num) || isNaN(max)){
+                alert("You did not put a number! Try again!");
+            } else {
+                for (let i = 0; i <= max; i++){
+                    if(i%num===0){
+                        document.write(i + "&nbsp;");
+                    }
+                }
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

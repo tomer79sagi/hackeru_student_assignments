@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 2</title>
+</head>
+<body>
+    <script>
+        while(true){
+            let num = parseInt(prompt("Put a number bigger than 0"));
+            if(isNaN(num) || num <= 0){
+                alert("I thought i was clear... Try again!");
+            } else {
+                for (let i = 0; i<=num; i++){
+                    if(i%2==0){
+                    document.write(i + "&nbsp;");
+                    }
+                }
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

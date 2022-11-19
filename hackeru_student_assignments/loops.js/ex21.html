@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 21</title>
+</head>
+<body>
+    <script>
+        while(true){
+            let num = parseInt(prompt("Put positive number"));
+            if(isNaN(num) || num < 0){
+                alert("Positive number please.");
+            } else {
+                for(let i = 1; i <= num; i++){
+                    for(let j = 1; j < num+i ;j++){
+                        if(j > (num-i)){
+                            document.write("*");
+                        } else {
+                            document.write("&nbsp;&nbsp;");
+                        }
+                    }
+                    document.write("<br/>");
+                }
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

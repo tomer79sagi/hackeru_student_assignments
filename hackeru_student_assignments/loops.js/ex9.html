@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 9</title>
+</head>
+<body>
+    <script>
+        let array= [];
+        while(true){
+            let num_1 = parseInt(prompt("Put 1st number"));
+            let num_2 = parseInt(prompt("Put 2nd number"));
+            let num_3 = parseInt(prompt("Put 3rd number"));
+            let num_4 = parseInt(prompt("Put 4th number"));
+            let num_5 = parseInt(prompt("Put 5th number"));
+            let num_6 = parseInt(prompt("Put 6th number"));
+            let num_7 = parseInt(prompt("Put 7th number"));
+            let num_8 = parseInt(prompt("Put 8th number"));
+            let num_9 = parseInt(prompt("Put 9th number"));
+            let num_10 = parseInt(prompt("Put 10th number"));
+            array = [num_1, num_2, num_3, num_4, num_5, num_6, num_7, num_8, num_9, num_10];
+            if(array.includes(NaN)){
+                alert("I asked for number!")
+            } else {
+                document.write("The serial number of the biggest number is " + (array.indexOf(Math.max(...array)) + 1));
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
