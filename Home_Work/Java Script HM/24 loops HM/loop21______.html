@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number = +prompt("enter number between 5 to 15");
+      if (number >= 5 && number <= 15) {
+        for (let x = 1; x <= number; x++) {
+          for (let i = 1; i <= number; i++) {
+            document.write("*");
+          }
+          document.write("<br/>");
+        }
+      } else {
+        document.write(
+          "wrong number please follow the instaraction and refresh page ang try again"
+        );
+      }
+    </script>
+  </body>
+</html>

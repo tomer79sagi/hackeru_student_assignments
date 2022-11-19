@@ -8,15 +8,18 @@
   </head>
   <body>
     <script>
-      //shows length of an intiger*/
+      var sum = 0;
+      var a = +prompt("Enter a number between 1 - 10 : ");
+      for (var i = 0; i <= 1000; i++) {
+        if (i % a == 0) {
+          sum++;
+        }
+      }
+      document.write(sum);
+    </script>
+  </body>
+</html>
 
-      // var num = +prompt("please enter a number");
-      // var len = Math.floor(Math.log10(num)) + 1;
-
-      // document.write(len);
-
-      var num = prompt("please enter a number");
-      document.write(num.toString().length);
     </script>
   </body>
 </html>
