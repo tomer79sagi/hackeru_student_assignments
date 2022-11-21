@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more loops 11</title>
+  </head>
+  <body>
+    <script>
+      let num = +prompt("enter a number:");
+      const dig = +prompt("enter a single digit number:");
+      let count = 0;
+      while (num > 0) {
+        if (num % 10 == dig) {
+          count++;
+        }
+
+        num = Math.floor(num / 10);
+      }
+
+      document.write(count);
+    </script>
+  </body>
+</html>

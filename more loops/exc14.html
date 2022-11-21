@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more loops 14</title>
+  </head>
+  <body>
+    <script>
+      const num1 = +prompt(
+        "enter a number to raise it to the power of the next number:"
+      );
+      let num2 = +prompt("enter a number");
+      let exp = 1;
+
+      while (num2 > 0) {
+        exp *= num1;
+        num2--;
+      }
+
+      document.write(exp);
+    </script>
+  </body>
+</html>

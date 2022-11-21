@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more loops 15</title>
+  </head>
+  <body>
+    <script>
+      const num = +prompt("enter a number to check its divisors:");
+      let div = [];
+      let index = 1;
+
+      while (index <= num) {
+        if (num % index === 0) {
+          div.push(index);
+        }
+        index++;
+      }
+
+      document.write(div);
+    </script>
+  </body>
+</html>

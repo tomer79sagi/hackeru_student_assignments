@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more loops 23</title>
+  </head>
+  <body>
+    <script>
+      const num = +prompt("enter a number:");
+      for (let row = 1; row <= num; row++) {
+        for (let col = 1; col <= num + row - 1; col++) {
+          if (col <= num - row || col % 2 != row % 2) {
+            document.write("&nbsp&nbsp");
+          } else {
+            document.write("*");
+          }
+        }
+        document.write("<br/>");
+      }
+    </script>
+  </body>
+</html>

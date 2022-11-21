@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more loops 20</title>
+  </head>
+  <body>
+    <script>
+      const num = +prompt("enter a number between 5 and 15:");
+      for (let row = 1; row <= num; row++) {
+        for (let col = 1; col <= num; col++) {
+          if (row < num && row > 1 && col < num && col > 1) {
+            document.write("&nbsp&nbsp");
+          } else {
+            document.write("*");
+          }
+        }
+        document.write("<br/>");
+      }
+    </script>
+  </body>
+</html>

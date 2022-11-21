@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more loops 13</title>
+  </head>
+  <body>
+    <script>
+      let num = +prompt("enter a number to get it reversed:");
+      const copy = num;
+      let new_num = 0;
+      let len = num.toString().length;
+
+      while (len > 0) {
+        new_num += (num % 10) * 10 ** (len - 1);
+        num = Math.floor(num / 10);
+        len--;
+      }
+
+      if (copy == new_num) {
+        document.write("this is a palindrome");
+      } else {
+        document.write("this is not a palindrome");
+      }
+    </script>
+  </body>
+</html>

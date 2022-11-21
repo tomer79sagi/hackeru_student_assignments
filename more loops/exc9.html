@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more loops 9</title>
+  </head>
+  <body>
+    <script>
+      let count = 0;
+      let num = +prompt("enter 10 positive numbers");
+      const nums = [];
+      while (count < 10) {
+        nums.push(num);
+        count++;
+        num = +prompt("enter " + (10 - count) + " more positive numbers");
+      }
+      document.write(nums.indexOf(Math.max.apply(Math, nums)));
+    </script>
+  </body>
+</html>

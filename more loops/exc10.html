@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more loops 10</title>
+  </head>
+  <body>
+    <script>
+      let num = +prompt("enter a number to get number of digits:");
+      let count = 0;
+      while (num > 0) {
+        count++;
+        num = Math.floor(num / 10);
+      }
+      if (count == 0) {
+        document.write(1);
+      } else {
+        document.write(count);
+      }
+    </script>
+  </body>
+</html>

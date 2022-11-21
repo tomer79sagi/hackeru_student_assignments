@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more loops 16</title>
+  </head>
+  <body>
+    <script>
+      const num1 = +prompt("enter a number 1 to check its max divisor:");
+      const num2 = +prompt("enter a number 2 to check its max divisor:");
+      let index = Math.min(num1, num2);
+      let max_div = 1;
+
+      while (index >= 1) {
+        if (num1 % index === 0 && num2 % index === 0) {
+          max_div = index;
+          break;
+        }
+        index--;
+      }
+
+      document.write(max_div);
+    </script>
+  </body>
+</html>

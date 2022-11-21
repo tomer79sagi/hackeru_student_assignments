@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>more loops 8</title>
+  </head>
+  <body>
+    <script>
+      let num = +prompt("enter a positive int:");
+      let nums = [];
+      while (num > 0) {
+        nums.push(num);
+        num = +prompt("enter another positive int:");
+      }
+      if (nums.length == 0) {
+        document.write("no positive numbers");
+      } else {
+        document.write(Math.min.apply(Math, nums));
+      }
+    </script>
+  </body>
+</html>
