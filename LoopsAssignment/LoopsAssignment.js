@@ -405,6 +405,8 @@ function CodingArt(){
 }
 }
 
+// Targil 21 : Coding art 2
+
 function CodingArt2(){
     let number = +prompt("Enter a number from 5 to 15 !");
 
@@ -426,8 +428,37 @@ function CodingArt2(){
 
 }
 
+//Targil 22 : Coding a pyramid
+
+function CodingArt3(){
+    let number = +prompt("enter a number");
+    
+    for (let start = 1 ; start <= number ; start++) {
+
+    
+       
+
+        for (let columns = 1 ; columns <= start ; columns++) {
+            document.write("*");
+        }
+
+        document.write("<br/>");
+    }
+}
 
 
+  
+
+function Multiplication2(){
+
+    let num = +prompt("Enter the size of the multiplication table~!");
+    for(let i=1; i<=num ; i++){
+        for(let j=1; j<=i; j++){
+            document.write(i + " * " + j + " = " + (i*j) + "</br>")
+        }
+        document.write("</br>")
+    }
+}
   
 
 
