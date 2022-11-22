@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20</title>
+  </head>
+  <body>
+    <script>
+      let num = +prompt("Enter a number between 5 and 15");
+      while (num > 15 || num < 5)
+        num = +prompt("Hm... number must be between 5 and 15");
+
+      for (i = 0; i < num; i++) {
+        for (j = 0; j < num; j++) {
+          j === num - 1 || j === 0 || i === 0 || i === num - 1
+            ? document.write("*\xa0")
+            : document.write("\xa0\xa0\xa0");
+        }
+        document.write("<br/>");
+      }
+    </script>
+  </body>
+</html>

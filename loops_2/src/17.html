@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17</title>
+  </head>
+  <body>
+    <script>
+      let num1 = +prompt("Enter the first number");
+      let num2 = +prompt("Enter the second number");
+      let smallest = Math.min(num1, num2);
+      let division = 1;
+
+      for (i = 1; i <= smallest; i++) {
+        if (num1 % i === 0 && num2 % i === 0) division = i;
+      }
+      document.write(division);
+    </script>
+  </body>
+</html>

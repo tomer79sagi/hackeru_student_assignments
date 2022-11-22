@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24</title>
+  </head>
+  <body>
+    <script>
+      let num = +prompt("Enter a the size multiplication table");
+
+      for (i = 1; i <= num; i++) {
+        for (j = 1; j <= num; j++) {
+          if (i === 1 && j === 1) document.write("<div>" + "\xa0" + "</div>");
+          else document.write("<div>" + i * j + "</div>");
+        }
+
+        document.write("<br/>");
+      }
+      let divsList = document.querySelectorAll("div");
+
+      for (i = 0; i <= divsList.length; i++) {
+        divsList[i].style.textAlign = "center";
+        divsList[i].style.display = "inline-block";
+        divsList[i].style.width = "30px";
+        divsList[i].style.height = "30px";
+        divsList[i].style.border = "1px solid black";
+      }
+    </script>
+  </body>
+</html>

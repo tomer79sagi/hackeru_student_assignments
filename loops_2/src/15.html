@@ -4,18 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>13</title>
+    <title>15</title>
   </head>
   <body>
     <script>
       let num = +prompt("Enter the number");
-      let reversedArr = [];
-      stringNum = num.toString();
-      for (let i = stringNum.length - 1; i >= 0; i--) {
-        reversedArr.push(stringNum[i]);
+      let power = +prompt("Enter the power");
+      let result = num;
+      for (i = 0; i < power - 1; i++) {
+        result *= num;
       }
-
-      document.write(reversedArr.join(""));
+      document.write(result);
     </script>
   </body>
 </html>
