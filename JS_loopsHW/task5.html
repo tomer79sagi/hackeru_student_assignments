@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <script>
+            let num = +prompt("enter a series of positive numbers that end with 99");
+            let sum = 0;
+            while(num != 99){
+                sum += num;
+                num = +prompt("enter the next number");
+            }
+            document.write("The sum of the series of numbers without the 99 is: " + sum);
+        </script>
+    </body>
+</html>

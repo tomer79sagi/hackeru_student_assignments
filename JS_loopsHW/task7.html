@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            let count = 0;
+            let sum = 0;
+            let num = +prompt("enter a series of positive numbers");
+            if(num <= 0){
+                document.write("you didn't enter any legal number");
+            }
+            else{
+                while(num > 0){
+                    sum += num;
+                    count++;
+                    num = +prompt("enter the next number");
+                }   
+                document.write("The average number in the series is: " + (sum / count));
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            let num = +prompt("enter a series of  positive numbers");
+            let max = num;
+            if(num <= 0){
+                document.write("you started with an illegal number, please try again");
+            }
+            else{
+                while(num > 0){
+                    if(max < num){
+                        max = num;
+                    }
+                    num = +prompt("enter the next number");
+                }
+                document.write("The highest  poitive number entered is: " + max);
+            }
+        </script>
+    </body>
+</html>

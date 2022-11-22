@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            let num = +prompt("enter a series of positive numbers");
+            let min = num;
+            if(num <= 0){
+                document.write("you started with an illegal number, please try again");
+            }
+            else{
+                while(num > 0){
+                    if(min > num){
+                        min = num;
+                    }
+                    num = +prompt("enter the next number");
+                }
+                document.write("the lowest positive number entered is: " + min);
+            }
+        </script>
+    </body>
+</html>

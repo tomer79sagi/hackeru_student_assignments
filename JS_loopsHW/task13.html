@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <script>
+            let num = +prompt("enter a number");
+            let reverse = "";
+            while(num > 0){
+                let dig = num % 10;
+                reverse += dig;
+                num = Math.floor(num / 10);
+            }
+            document.write("The reversed version of the number is: " + Number(reverse));
+        </script>
+    </body>
+</html>

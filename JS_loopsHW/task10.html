@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            let num;
+            let max = 0;
+            for(let i = 0;i < 10;i++){
+                num = +prompt("enter a number");
+                if(max < num){
+                    max = num;
+                }
+            }
+            document.write("The serial number of the highest value number is: " + (max % 10));
+        </script>
+    </body>
+</html>

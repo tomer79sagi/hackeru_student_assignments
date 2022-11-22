@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+            let num = +prompt("enter a number");
+            let dig = +prompt("enter a digit to check");
+            let count = 0;
+            while(num > 0){
+                if(num % 10 == dig){
+                    count++;
+                }
+                num = Math.floor(num / 10);
+            }
+            document.write("The digit appears " + count + " times in the entered number");
+        </script>
+    </body>
+</html>

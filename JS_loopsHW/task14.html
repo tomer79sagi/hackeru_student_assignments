@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            let num = prompt("Enter a number");
+            let len = num.length - 1;
+            let isPolindrom = true;
+            for(let i = 0;i <= len;i++){
+                if(num[i] != num[len - i]){
+                    document.write("The number is not a polindrom!");
+                    isPolindrom = false;
+                    break;
+                }
+            }
+            if(isPolindrom){
+                document.write("The number is a polindrom!");
+            }
+        </script>
+    </body>
+</html>

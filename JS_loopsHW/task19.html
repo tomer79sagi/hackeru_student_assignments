@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <script>
+            let divider = +prompt("enter a number");
+            let count = 0;
+            for(let i = 0;i <= 1000;i++){
+                if(i % divider == 0){
+                    count++;
+                }
+            }
+            document.write("The amount of numbers between 0-1000 that can be divided by " + divider + " is: " + count);
+        </script>
+    </body>
+</html>

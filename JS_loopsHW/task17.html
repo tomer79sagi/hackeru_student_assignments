@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            let num = +prompt("enter a number");
+            let num2 = +prompt("enter another number");
+            let max = 0;
+            if(num > num2){
+                for(let i = 1;i <= num2;i++){
+                    if(num % i == 0 && num2 % i ==0){
+                        max = i;
+                    }
+                }
+            }
+            else{
+                for(let i = 1;i <= num;i++){
+                    if(num % i == 0 && num2 % i == 0){
+                        max = i;
+                    }
+                }
+            }
+            document.write("The highest whole divisor of both of the numbers is: " + max);
+        </script>
+    </body>
+</html>
