@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <script>
-      //get 2 numbers
-      //
+      let max_devider = 0;
+      let min = 0;
+      let prompt_number1 = +prompt("Enter a number");
+      let prompt_number2 = +prompt("Enter a number");
+
+      if (prompt_number1 < prompt_number2) {
+        min = prompt_number1;
+      } else {
+        min = prompt_number2;
+      }
+
+      for (let i = 1; i <= min; i++) {
+        if (
+          prompt_number1 % i === 0 &&
+          prompt_number2 % i === 0 &&
+          i > max_devider
+        ) {
+          max_devider = i;
+        }
+      }
+      document.write("Larger devider of both numbers is :" + max_devider);
     </script>
   </body>
 </html>
