@@ -1,0 +1,20 @@
+<html>
+  <head> </head>
+
+  <body>
+    <script>
+      var row = +prompt("Please enter a positive number between 5 - 15");
+
+      for (let i = 1; i <= row; i++) {
+        for (let k = 1; k <= row - i; k++) {
+          document.write("&nbsp");
+        }
+
+        for (let j = 1; j <= i; j++) {
+          document.write("* ");
+        }
+        document.write("<br/>");
+      }
+    </script>
+  </body>
+</html>

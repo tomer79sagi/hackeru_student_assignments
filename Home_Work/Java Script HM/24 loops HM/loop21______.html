@@ -1,22 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Document</title>
-  </head>
+<html>
+  <head> </head>
+
   <body>
     <script>
-      let number = +prompt("enter number between 5 to 15");
-      if (number >= 5 && number <= 15) {
-        for (let x = 1; x <= number; x++) {
-          for (let i = 1; i <= number; i++) {
+      var row = +prompt("Please enter a positive number between 5 - 15");
+
+      for (var i = 1; i <= row; i++) {
+        if (i == 1 || i == row) {
+          for (var x = 1; x <= row; x++) {
             document.write("*");
           }
-          document.write("<br/>");
+        } else {
+          for (var y = 1; y <= row; y++) {
+            if (y == 1 || y == row) {
+              document.write("*");
+            } else {
+              document.write("&nbsp;&nbsp;");
+            }
+          }
         }
-      } else {
-        document.write(
-          "wrong number please follow the instaraction and refresh page ang try again"
-        );
+
+        document.write("<br/>");
       }
     </script>
   </body>
