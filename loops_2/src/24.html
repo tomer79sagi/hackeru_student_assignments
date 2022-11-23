@@ -12,7 +12,14 @@
 
       for (i = 1; i <= num; i++) {
         for (j = 1; j <= num; j++) {
-          if (i === 1 && j === 1) document.write("<div>" + "\xa0" + "</div>");
+          if (i === 1 && j === 1)
+            document.write(
+              '<div class="yellow">' + "\xa0" + '</div class="yellow">'
+            );
+          else if (i === 1 || j === 1)
+            document.write(
+              '<div class="yellow">' + i * j + '</div class="yellow">'
+            );
           else document.write("<div>" + i * j + "</div>");
         }
 
@@ -21,6 +28,8 @@
       let divsList = document.querySelectorAll("div");
 
       for (i = 0; i <= divsList.length; i++) {
+        if (divsList[i].className === "yellow")
+          divsList[i].style.backgroundColor = "yellow";
         divsList[i].style.textAlign = "center";
         divsList[i].style.display = "inline-block";
         divsList[i].style.width = "30px";
