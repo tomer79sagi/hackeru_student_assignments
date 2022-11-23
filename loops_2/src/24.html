@@ -28,8 +28,10 @@
       let divsList = document.querySelectorAll("div");
 
       for (i = 0; i <= divsList.length; i++) {
-        if (divsList[i].className === "yellow")
+        if (divsList[i].className === "yellow") {
           divsList[i].style.backgroundColor = "yellow";
+          divsList[i].style.fontWeight = "bold";
+        }
         divsList[i].style.textAlign = "center";
         divsList[i].style.display = "inline-block";
         divsList[i].style.width = "30px";
