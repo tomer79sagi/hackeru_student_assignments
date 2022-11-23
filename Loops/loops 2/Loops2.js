@@ -15,10 +15,17 @@ var num5 = 0;
 var num6 = 0;
 var num7 = 0;
 var num8 = 0;
+var num9 = 0;
+var num10 = 0;
+var digiNum = 0;
 var avg = 0;
 var total = 0;
 var highNum = 0;
 var lowNum = 1;
+var arrOfDigi = [];
+var arrOfDigi2 = [];
+var reverseArr = [];
+var count = 0;
 
 function oneToNum() {
     num = parseInt(document.getElementById("one2Num").value);
@@ -152,8 +159,28 @@ function indexOfArray() {
 
 function numberOfNumbers() {
     num8 = parseInt(prompt('Enter a number: '));
-    
+    length = num8.toString().length;
+    document.getElementById("numberOfNumbers").innerHTML = length;
+    document.getElementById("Add11").disabled = true;
+}
 
-    document.getElementById("numberOfNumbers").innerHTML = indexOf;
-    document.getElementById("Add10").disabled = true;
+function digiInNum() {
+    num9 = parseInt(document.getElementById("DigiNum").value);
+    digi = parseInt(document.getElementById("Digi").value);
+    arrOfDigi = Array.from(String(num9), Number);
+
+    for (var i = 0; i < arrOfDigi.length; i++)
+        if (digi == arrOfDigi[i])
+            count++;
+
+    document.getElementById("amountOfDigi").innerHTML = count;
+    document.getElementById("Add12").disabled = true;
+}
+
+function reverseNum() {
+    num10 = parseInt(prompt('Enter a number to Reverse: '));
+    arrOfDigi2 = Array.from(String(num10), Number);
+    reverseArr = arrOfDigi2.reverse();
+    document.getElementById("reverseNum").innerHTML = reverseArr.join('');
+    document.getElementById("Add13").disabled = true;
 }
