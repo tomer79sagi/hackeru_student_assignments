@@ -60,15 +60,7 @@
             num = prompt("Enter a number betweem 1 to 100");
             let factorial = 1;
             while(num < 1 || num > 100 || isNaN(num) === true){
-                if(isNaN(num) === true){
                     num = prompt("This is not a numbrer! Please try again");
-                }
-                else if (num > 100){
-                    num = prompt("The number is larger than 100! Please try again");
-                }
-                else{
-                    num = prompt("The number is smaller than 1! Please try again");
-                }
             }
             for (i=2; i <= num; i++){
                 factorial *= i;
