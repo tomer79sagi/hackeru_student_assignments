@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var row = +prompt("Please enter a positive number between 5 - 15");
+
+      for (var i = 1; i <= row; i++) {
+        if (i == 1 || i == row) {
+          for (var x = 1; x <= row; x++) {
+            document.write("*");
+          }
+        } else {
+          for (var y = 1; y <= row; y++) {
+            if (y == 1 || y == row) {
+              document.write("*");
+            } else {
+              document.write("&nbsp;&nbsp;");
+            }
+          }
+        }
+
+        document.write("<br/>");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      var num1 = +prompt("Enter a number");
+      var num2 = " ";
+
+      for (var new_num1 = num1; new_num1 > 0; ) {
+        num2 += new_num1 % 10;
+        new_num1 /= 10;
+        new_num1 = Math.floor(new_num1);
+      }
+
+      document.write(
+        "Received input: " + num1 + " <br/> And the output: " + num2
+      );
+    </script>
+  </body>
+</html>
