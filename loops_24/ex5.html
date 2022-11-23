@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>ex5</title>
+    </head>
+    <body>
+        <script>
+            let sum = 0
+            let user_number = 0
+            while (user_number != 99){
+
+                user_number = +prompt("Enter a series of positive numbers , for finish enter 99")
+                
+                if((user_number <= 0 || !Number.isInteger(user_number) || isNaN(user_number))){
+                    alert("no good")
+                    continue
+                }
+                if (sum == 0 ) {
+                    sum = user_number
+                    document.write(user_number)
+                    continue
+                }
+                if (user_number == 99 ) {
+                    document.write(" = " + sum)
+                    break
+                    }
+
+                    else{
+                        sum = sum + user_number
+                        document.write(" + " + user_number)
+                    }
+            }
+        </script>
+    </body>
+</html>

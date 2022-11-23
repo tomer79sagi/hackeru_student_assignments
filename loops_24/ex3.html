@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>ex3</title>
+    </head>
+    <body>
+        <script>
+            num = +prompt("enter number 1")
+            while (num < 0 || !Number.isInteger(num) || isNaN(num) ){
+                alert("no good")
+                num = +prompt("enter number1")
+            }
+            let i = -1
+            while(num > i){ 
+                i++
+                if (i%2 == 0) {
+                document.write(i + "<br/>")
+            }
+        }
+        </script>
+    </body>
+</html>

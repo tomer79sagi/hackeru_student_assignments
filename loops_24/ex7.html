@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>ex7</title>
+    </head>
+    <body>
+        <script>
+            let all_numbers = 0
+            let user_number
+            let i = 0
+            while(user_number != 0){
+                user_number = +prompt("enter number")
+
+                if (user_number == 0) {
+                    if(i == 0){i = 1}
+                    average_of_numbers = all_numbers/i
+                    document.write("average of numbers is " + average_of_numbers)
+                    break
+                }
+
+                if((user_number <= 0 || !Number.isInteger(user_number) || isNaN(user_number))){
+                        alert("no good")
+                        continue
+                        }
+                i++
+                all_numbers += user_number 
+            }
+        </script>
+    </body>
+</html>

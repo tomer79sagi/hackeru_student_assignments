@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>ex4</title>
+    </head>
+    <body>
+        <script>
+            num = +prompt("enter number 1")
+            while (num < 0 || !Number.isInteger(num) || isNaN(num) ){
+                alert("no good")
+                num = +prompt("enter number1")
+            }
+
+            max = +prompt("enter number 2")
+            while (max < 0 || !Number.isInteger(max) || isNaN(max) || max <= num ){
+                alert("no good")
+                max = +prompt("enter number2")
+            }
+
+            let i = 0
+            while(max > i){ 
+                i++
+                if (i%num == 0) {
+                document.write(i + "<br/>")
+            }
+        }
+        </script>
+    </body>
+</html>

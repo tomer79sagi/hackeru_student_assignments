@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>ex23</title>
+    </head>
+    <body>
+        <script>
+            while (true){
+                let user_number = +prompt("enter number")
+                if (( isNaN(user_number))){
+                    alert("no good")
+                    continue
+                    }
+                else {
+                    for(let i = 1; i <= user_number; i++){
+                    for(let j = 1; j < user_number+i; j++){
+                        if(j>user_number-i && ((i%2==0 && j%2==0) || (i%2==1 && j%2==1))){   
+                            document.write("*");
+                        } else {
+                            document.write("&nbsp;&nbsp;");
+                        }
+                    }
+                    document.write("<br/>");
+                }
+                break;
+            }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>ex18</title>
+    </head>
+    <body dir="rtl">
+        <script>
+            let final_number = 1;
+            let user_number = prompt("enter number from 1 to 100");
+            document.write(final_number);
+            while(user_number > 100 || user_number < 1 || isNaN(user_number)){
+                if (user_number > 100) {
+                        alert("the number is larger than 100");
+                    }
+                if (user_number < 1) {
+                        alert("number is smaller than 1");
+                    }
+                if (isNaN(user_number)) {
+                        alert("this is not a number");
+                    }
+                user_number = prompt("enter number from 1 to 100");
+            }
+            for (let i = 2; i <= user_number; i++) {
+                document.write("*" + i);
+                final_number *= i;
+            }
+            document.write("=" + final_number);        
+        </script>
+    </body>
+</html>

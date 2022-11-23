@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>ex20</title>
+    </head>
+    <body>
+        <script>
+            while (true){
+                let user_number = +prompt("enter number from 5 to 15")
+                if (( isNaN(user_number) || user_number < 5 || user_number > 15)){
+                    alert("no good")
+                    continue
+                    }
+                else {
+                    for(let i=0; i<user_number; i++){
+                        for(let j=0; j<user_number; j++){
+                            document.write("*")
+                        }
+                        document.write("</br>");
+                    }
+                    break;
+                }
+            }
+        </script>
+    </body>
+</html>

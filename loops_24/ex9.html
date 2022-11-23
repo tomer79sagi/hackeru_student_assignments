@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>ex9</title>
+    </head>
+    <body>
+        <script>
+            let user_number
+            let min_of_numbers
+
+            while(user_number != 0){
+                user_number = +prompt("enter number")
+
+                if(( isNaN(user_number))){
+                    alert("no good")
+                    continue
+                    }
+
+                if(user_number < min_of_numbers && user_number != undefined && user_number !== 0 || min_of_numbers === undefined){
+                    min_of_numbers = user_number
+                    }
+
+                if (user_number === 0 || user_number < 0){
+                    break
+                    }
+            
+                document.write(user_number + " ")
+
+            }
+            document.write("min of numbers is " + min_of_numbers)  
+
+        </script>
+    </body>
+</html>

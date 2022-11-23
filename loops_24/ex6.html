@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>ex6</title>
+    </head>
+    <body>
+        <script>
+            let user_number = 0
+            while (user_number != -1){
+
+                user_number = +prompt("Enter a series of positive numbers , for finish enter -1")
+
+                    if (user_number == -1 ) {
+                        break
+                        }
+                    
+                    if((user_number <= 0 || !Number.isInteger(user_number) || isNaN(user_number))){
+                        alert("no good")
+                        continue
+                        }
+                        
+                document.write(user_number + " ")
+            }
+        </script>
+    </body>
+</html>

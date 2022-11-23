@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>ex11</title>
+    </head>
+    <body>
+        <script>
+            while (true){
+                let user_number = +prompt("enter number")
+                if (( isNaN(user_number))){
+                    alert("no good")
+                    continue
+                    }
+                
+                else {
+                    let arr = user_number.toString()
+                    document.write(user_number + "<br>")
+                    document.write("number have " + arr.length + " digits")
+                    break
+                    }
+                }
+        </script>
+    </body>
+</html>

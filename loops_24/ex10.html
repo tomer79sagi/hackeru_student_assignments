@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>ex10</title>
+    </head>
+    <body>
+        <script>
+            let user_number = 0
+            let arr = [] 
+            for ( let i=1;  i <=10;  i++){
+                user_number = +prompt("enter number")
+                if(( isNaN(user_number))){
+                    alert("no good")
+                    continue
+                    }
+                    arr.push(user_number);
+                }
+            document.write(arr + "<br>")    
+            document.write("serial number of biggest number in array is "  + (arr.indexOf(Math.max(...arr)) + 1))
+        </script>
+    </body>
+</html>

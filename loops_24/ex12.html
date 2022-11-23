@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>ex12</title>
+    </head>
+    <body>
+        <script>
+            while (true){
+                let num = +prompt("enter number1")
+                let dig = +prompt("enter number2")
+                if (( isNaN(num)) || ( isNaN(dig))){
+                    alert("no good")
+                    continue
+                    }
+                                        
+                let arr = num.toString();
+                let count = 0
+                for (let i = 0; i < arr.length; i++){
+                if(arr.charAt(i) == dig){
+                    count++;
+                        }
+                    }
+                document.write(num + "<br>")
+                document.write("num have " + count + " same digs")
+                break
+            }
+        </script>
+    </body>
+</html>

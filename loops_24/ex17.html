@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>ex17</title>
+    </head>
+    <body>
+        <script>
+            while (true){
+                let num1 = +prompt("enter num1")
+                let num2 = +prompt("enter num2")
+                if (( isNaN(num1)) || ( isNaN(num2))){
+                    alert("no good")
+                    continue
+                    }
+                    else {
+                        let greatest_divisor
+                        for (let i = 1; i <= num1 && i <= num2; i++) {
+
+                                if( num1 % i == 0 && num2 % i == 0) {
+                                    greatest_divisor = i;
+                                }
+                            }
+                    document.write(greatest_divisor + " is greatest divisor of " + num1 + " and " + num2 )
+                    break
+                }
+            }
+        </script>
+    </body>
+</html>

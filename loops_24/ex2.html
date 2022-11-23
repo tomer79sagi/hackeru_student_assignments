@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>ex2</title>
+    </head>
+    <body>
+        <script>
+            num1 = +prompt("enter number 1")
+            while (num1 < 0 || !Number.isInteger(num1) || isNaN(num1) ){
+                alert("no good")
+                num1 = +prompt("enter number1")
+            }
+            let j = 1
+            while(num1 >= j){
+                document.write(j++ + "<br/>")
+            }
+                num2 = +prompt("enter number 2")
+            while (num2 < 0 || !Number.isInteger(num2) || isNaN(num2) || num1 < num2  ){
+                alert("no good")
+                num2 = +prompt("enter number2")
+            }
+            while(num1 >= num2){
+                document.write(num2++)
+            }
+        </script>
+    </body>
+</html>

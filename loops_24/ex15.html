@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>ex15</title>
+    </head>
+    <body>
+        <script>
+            while (true){
+                let num1 = +prompt("enter number1")
+                let num2 = +prompt("enter number2")
+                if (( isNaN(num1)) || ( isNaN(num2))){
+                    alert("no good")
+                    continue
+                    }
+                    if (num2 == 0){
+                        document.write("1");
+                        break
+                    }
+                    else {
+                        let result = num1;
+                        let increment = num1;
+                        
+                        for (let i = 1; i < num2; i++) {
+                            for (let j = 1; j < num1; j++) {
+                                    result += increment;
+                                    }
+                                increment = result;
+                            }
+                        document.write(num1 + " ** " + num2 + " = " + result); 
+                        break 
+                    }                     
+                }
+        </script>
+    </body>
+</html>

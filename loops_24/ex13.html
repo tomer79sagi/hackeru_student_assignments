@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>ex13</title>
+    </head>
+    <body>
+        <script>
+            while (true){
+                let user_number = +prompt("enter number")
+                if (( isNaN(user_number))){
+                    alert("no good")
+                    continue
+                    }
+                
+                else {
+                    let arr = user_number.toString()
+                    let reversed_arr = "";
+                        for (var i = arr.length - 1; i >= 0; i--) {
+                            reversed_arr += arr[i];
+                        }
+                    
+                    document.write(user_number + "<br>")
+                    document.write("reversed number is " + reversed_arr)
+                    break
+                    }
+                }
+        </script>
+    </body>
+</html>

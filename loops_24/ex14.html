@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>ex14</title>
+    </head>
+    <body>
+        <script>
+            while (true){
+                let user_number = +prompt("enter number")
+                if (( isNaN(user_number))){
+                    alert("no good")
+                    continue
+                    }
+                
+                else {
+                    let palindrome = true;
+                    let arr = user_number.toString()
+                    for (let i = 0; i < arr.length / 2; i++) {
+                            if (arr[i] != arr[arr.length - i - 1]) {
+                                palindrome = false
+                            }
+                        }
+                        if(palindrome){
+                            document.write(user_number + " is symmetry number")
+                        } else {
+                            document.write(user_number + " is not symmetry number")
+                            }
+                        break
+                    }
+                }
+        </script>
+    </body>
+</html>

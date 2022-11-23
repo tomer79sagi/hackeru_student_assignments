@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>ex16</title>
+    </head>
+    <body>
+        <script>
+            while (true){
+                let user_number = +prompt("enter number")
+                if (( isNaN(user_number))){
+                    alert("no good")
+                    continue
+                    }
+                else {
+                    let whole_dividor = user_number;
+                    while (whole_dividor > 0){
+                        if(user_number % whole_dividor === 0){
+                            document.write(whole_dividor + "  ")
+                            }
+                            whole_dividor--;
+                        }
+                    document.write(" this is whole dividors of " + user_number)
+                    break
+                    }
+                }
+        </script>
+    </body>
+</html>

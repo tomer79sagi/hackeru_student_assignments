@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>ex8</title>
+    </head>
+    <body>
+        <script>
+            let user_number
+            let max_of_numbers = 0 
+            while(user_number != 0){
+                user_number = +prompt("enter number")
+
+                if(( isNaN(user_number))){
+                    alert("no good")
+                    continue
+                    }
+
+                if(user_number > max_of_numbers){
+                    max_of_numbers = user_number
+                    }
+
+                if (user_number == 0 || user_number < 0){
+                    document.write("max of numbers is " + max_of_numbers)  
+                    break
+                    }
+            
+                document.write(user_number + " ")
+
+            }
+        </script>
+    </body>
+</html>
