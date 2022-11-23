@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <script>
+      let num1 = parseInt(prompt("please enter a number"));
+      let num2 = parseInt(prompt("please enter another number"));
+      let gcdFound = false;
+
+      for (var i = num1; i > 0 && !gcdFound; i--) {
+        if (num1 % i == 0) {
+          for (var j = num2; j > 0; j--) {
+            if (num2 % j == 0) {
+              if (i == j) {
+                document.write(
+                  "The gcd is of " + num1 + " and " + num2 + " is : " + i
+                );
+                gcdFound = true;
+                break;
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

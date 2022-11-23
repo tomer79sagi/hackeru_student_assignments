@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <script>
+      var sum = 0;
+      let num = parseInt(
+        prompt(
+          "please enter a series of positive number ending with the number 99"
+        )
+      );
+      while (num != 99) {
+        sum += num;
+        num = parseInt(
+          prompt(
+            "please continue entereing numbers until you finish with the number 99"
+          )
+        );
+      }
+      document.write("the sum of the numbers you have entered is: " + sum);
+    </script>
+  </body>
+</html>

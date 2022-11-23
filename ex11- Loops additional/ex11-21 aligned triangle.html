@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      var row = +prompt("Please enter a number between 5 - 15");
+
+      for (let i = 1; i <= row; i++) {
+        for (let s = 1; s <= row - i; s++) {
+          document.write("&nbsp");
+        }
+
+        for (let j = 1; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br/>");
+      }
+    </script>
+  </body>
+</html>

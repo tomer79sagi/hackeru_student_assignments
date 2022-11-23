@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script>
+      let num = parseInt(prompt("please enter a series of numbers > 0"));
+      let min = num;
+      while (num > 0) {
+        if (num < min) {
+          min = num;
+        }
+        num = parseInt(prompt("please continue entereing numbers > 0 "));
+      }
+      if(min>0){
+        document.write("The lowest number you have entered is : " + min);
+      }else{
+        document.write("there are no positive numbers entered");
+      }
+      
+    </script>
+  </body>
+</html>

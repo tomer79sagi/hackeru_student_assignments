@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <script>
+    
+    
+    let num = parseInt(prompt("please enter a number"));
+
+    let maxNum = num;
+    let maxNumIndex = 1;
+    for(i=1; i<10 ;i++){
+
+      num = parseInt(prompt("please enter a number"));
+
+      if(maxNum <= num ){
+        maxNum=num;
+        maxNumIndex = i+1;
+      }
+
+    }
+    document.write("The index of the highest number you entered is :" + maxNumIndex);
+    
+      
+    </script>
+  </body>
+</html>

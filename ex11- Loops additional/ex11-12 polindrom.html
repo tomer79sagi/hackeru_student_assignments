@@ -1,0 +1,49 @@
+<html>
+  <body>
+    <script>
+      let num = parseInt(prompt("please enter a number"));
+      let originalNum = num;
+      let originalNum1 = num;
+      let isPolindrom = false;
+      let tensCounter = -1;
+
+      while (num % 10 >= 1) {
+        tensCounter++;
+        num = parseInt(num / 10);
+      }
+
+      let highestDigitplace = 10 ** tensCounter;
+      let highestDigit = Math.floor(originalNum / highestDigitplace);
+
+
+      let digitCounter = tensCounter+1;
+
+
+      while (originalNum % 10 >= 1) {
+        if(digitCounter == 2 && originalNum % 10 == highestDigit){
+          alert(originalNum1 + " is a poindrom");
+          break;
+        }
+        if(digitCounter == 1){
+          alert(originalNum1 + " is a poindrom");
+          break;
+
+        }
+        if (originalNum % 10 == highestDigit) {
+          originalNum = Math.floor((originalNum-(highestDigit*highestDigitplace))/10);
+          highestDigitplace /=100;
+          highestDigit = Math.floor(originalNum / highestDigitplace);
+          digitCounter-=2;
+
+        }else{
+          alert(originalNum1 + " is NOT a poindrom");
+          break;
+        }
+      }
+    
+
+
+
+    </script>
+  </body>
+</html>

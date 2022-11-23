@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <script>
+      
+      let sum=0;
+      let counter =0;
+
+      let num = parseInt(prompt("please enter a series of positive number ending with the number -1"));
+      
+      while(num!=-1 && num!=0){
+        sum+=num;
+        counter++;
+        num = parseInt(prompt("please continue entereing numbers until you finish with the number -1"));
+      }
+      document.write("The average of the numbers you have entered is : " +sum/counter );
+    </script>
+  </body>
+</html>
