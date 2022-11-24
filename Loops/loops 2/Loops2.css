@@ -1,4 +1,14 @@
-div{
+div {
     border: 4px;
     background-color: aqua;
+}
+
+p.starSquare {
+    font-size: 20px;
+    padding: 20px;
+}
+
+p.starPyramid {
+    font-size: 20px;
+    padding: 20px;
 }

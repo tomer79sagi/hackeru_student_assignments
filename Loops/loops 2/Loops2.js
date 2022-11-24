@@ -9,9 +9,15 @@ var myarr6 = [];
 var myarr7 = [];
 var myarr8 = [];
 var myarr9 = [];
+var myarr10 = [];
+var myarr11 = [];
+var myarr12 = [];
+var myarr13 = [];
+
 var sum = 0;
 var sum1 = 0;
 var sum2 = 1;
+var sum3 = 0;
 var num = 0;
 var num1 = 0;
 var num2 = 0;
@@ -27,6 +33,11 @@ var num11 = 0;
 var num12 = 0;
 var num13 = 0;
 var num14 = 0;
+var num15 = 0;
+var num16 = 0;
+var num17 = 0;
+var num18 = 0;
+
 var numTwoDiv = 0;
 var divBy1 = 1;
 var divBy2 = 1;
@@ -274,42 +285,135 @@ function divideTwoNum() {
 		}
 	}
 	document.getElementById("numTwoDivide").innerHTML =
-		"The Common Divider for the numbers is: " + checkSimilar(myarr8,myarr9);
+		"The Common Divider for the numbers is: " + checkSimilar(myarr8, myarr9);
 	document.getElementById("Add17").disabled = true;
 }
 
-function checkSimilar(array1,array2){
-    for (var i = 0; i < array1.length; i++) {
-        for (var j = 0; j < array2.length; j++) {
-            if (array1[i] == array2[j] && commonNum < array1[i]) {
-                commonNum = array1[i];
-            }
-        }
-    }
-    return commonNum;
+function checkSimilar(array1, array2) {
+	for (var i = 0; i < array1.length; i++) {
+		for (var j = 0; j < array2.length; j++) {
+			if (array1[i] == array2[j] && commonNum < array1[i]) {
+				commonNum = array1[i];
+			}
+		}
+	}
+	return commonNum;
 }
 
-
 function factorialTo() {
-    factorial = document.getElementById("userinput5").value;
-    var num = factorial;
-    if (factorial < 1) {
-        alert("the Number is Smaller then 1")
-    }
-    if (factorial > 100) {
-        alert("the Number is Higer then 100")
-    }
-    if (isNaN(factorial)) {
-        alert("this is not a number");
-    }
-    else {
-        for (var i = factorial - 1; i >= 1; i--) {
-            factorial = factorial * i;
-            factorialArr.push(i);
-            factorialSum = factorial;
-        }
-    }
+	factorial = document.getElementById("userinput5").value;
+	var num = factorial;
+	if (factorial < 1) {
+		alert("the Number is Smaller then 1");
+	}
+	if (factorial > 100) {
+		alert("the Number is Higer then 100");
+	}
+	if (isNaN(factorial)) {
+		alert("this is not a number");
+	} else {
+		for (var i = factorial - 1; i >= 1; i--) {
+			factorial = factorial * i;
+			factorialArr.push(i);
+			var factorialSum = factorial;
+		}
+	}
 
-    document.getElementById("factorialOf").innerHTML = factorialSum + " = " + num + "*" + factorialArr.join('*');
-    document.getElementById("Add18").disabled = true;
+	document.getElementById("factorialOf").innerHTML =
+		factorialSum + " = " + num + "*" + factorialArr.join("*");
+	document.getElementById("Add18").disabled = true;
+}
+
+function dividedBy() {
+	var divideBy = document.getElementById("userinput4").value;
+	for (var i = 0; i < 1000; i++) {
+		if (i % divideBy == 0) count++;
+		else continue;
+	}
+	document.getElementById("dividedAmount").innerHTML = count;
+	document.getElementById("Add19").disabled = true;
+}
+
+function starSquare() {
+	num15 = parseInt(
+		prompt(
+			"Enter a number Between 5 - 15 and the function will print a square of the same size: "
+		)
+	);
+	while (num15 > 15 || num15 < 5)
+		num15 = parseInt(
+			prompt(
+				"Please Enter a number Between 5 - 15 and the function will print a square of the same size: "
+			)
+		);
+	for (var i = 0; i < num15; i++) {
+		myarr10.push("<br>");
+		for (var j = 0; j < num15; j++) {
+			myarr10.push("&nbsp&nbsp*");
+		}
+	}
+
+	document.getElementById("starSquare").innerHTML = myarr10.join("");
+	document.getElementById("Add20").disabled = true;
+}
+
+function starSquareHollow() {
+	num16 = parseInt(
+		prompt(
+			"Enter a number Between 5 - 15 and the function will print a square of the same size: "
+		)
+	);
+	while (num16 > 15 || num16 < 5)
+		num16 = parseInt(
+			prompt(
+				"Please Enter a number Between 5 - 15 and the function will print a square of the same size: "
+			)
+		);
+	for (var row = 0; row < num16; row++) {
+		myarr11.push("<br>");
+		for (var col = 0; col < num16; col++) {
+			if (row == 0 || row == num16 - 1 || col == 0 || col == num16 - 1) {
+				myarr11.push("&nbsp&nbsp*");
+			} else {
+				myarr11.push("&nbsp&nbsp&nbsp&nbsp");
+			}
+		}
+	}
+	console.log(myarr11);
+	document.getElementById("starSquareHollow").innerHTML = myarr11.join("");
+	document.getElementById("Add21").disabled = true;
+}
+
+function starPyramid() {
+	num17 = parseInt(
+		prompt(
+			"Enter a number the function will print a pyramid of the same size: "
+		)
+	);
+	for (var i = 1; i <= num17; i++) {
+		myarr12.push("<br>");
+		for (var j = 1; j <= num17 - i; j++) {
+			myarr12.push("&nbsp&nbsp&nbsp&nbsp");
+		}
+		for (var k = 0; k < 2 * i - 1; k++) {
+			myarr12.push("&nbsp&nbsp*");
+		}
+	}
+	console.log(myarr12);
+	document.getElementById("starPyramid").innerHTML = myarr12.join("");
+	document.getElementById("Add22").disabled = true;
+}
+
+function multiBoard() {
+	num18 = parseInt(
+		prompt(
+			"Enter a number the function will print the multification board until that number: "
+		)
+	);
+	for (var i = 1; i <= num18; i++) {
+		myarr13.push(i + ' * ' + num18 + ' = ' + (i * num18) + '<br>');
+	}
+	console.log(myarr13);
+	document.getElementById("multiBoard").innerHTML = myarr13.join("");
+	document.getElementById("Add23").disabled = true;
 }
