@@ -305,15 +305,7 @@
     //document.write("<br/>");
     //n = +prompt("Please enter a number between 1 to 100");
     //while(isNaN(n) === true || n < 1 || n > 100){
-    //    if(isNaN(n) === true){
     //        n = +prompt("Wrong input! Please enter a number between 1 to 100");
-    //    }
-    //    else if(n < 1){
-    //        n = +prompt("Wrong input! Please enter a number between 1 to 100");
-    //    }
-    //    else{
-    //        n = +prompt("Wrong input! Please enter a number between 1 to 100");
-    //    }
     //}
     //const array = [];
     //j = 0;
@@ -350,15 +342,7 @@
 //exercise_20
     //num = +prompt("Please enter a number between 5 to 15");
     //while(isNaN(num) === true || num < 5 || num > 15){
-    //    if(isNaN(num) === true){
     //        num = +prompt("Wrong input! Please enter a number between 5 to 15");
-    //    }
-    //    if(num < 5){
-    //        num = +prompt("Wrong input! Please enter a number between 5 to 15");
-    //    }
-    //    if(num > 15){
-    //        num = +prompt("Wrong input! Please enter a number between 5 to 15");
-    //    }
     //}
     //for(i = 1; i <= num; i++){
     //    for(j = 1; j <= num; j++){
@@ -370,15 +354,7 @@
 //exercise_21
     //num = +prompt("Please enter a number between 5 to 15");
     //while(isNaN(num) === true || num < 5 || num > 15){
-    //    if(isNaN(num) === true){
     //        num = +prompt("Wrong input! Please enter a number between 5 to 15");
-    //    }
-    //    if(num < 5){
-    //        num = +prompt("Wrong input! Please enter a number between 5 to 15");
-    //    }
-    //    if(num > 15){
-    //        num = +prompt("Wrong input! Please enter a number between 5 to 15");
-    //    }
     //}
     //for(let i = 1; i <= num; i++){
     //    for(let j = 1; j <= num; j++){
@@ -392,5 +368,33 @@
     //    document.write("<br/>");
     //} 
     
-//exercise_22
-    
+//exercise_22+23
+    //while(true){
+    //    let num = parseInt(prompt("Put positive number"));
+    //    if(isNaN(num) || num < 0){
+    //        alert("Positive number please.");
+    //    } else {
+    //        for(let i = 1; i <= num; i++){
+    //            for(let j = 1; j <= num+i; j++){
+    //                if(j>num-i && ((i%2==0 && j%2==0) || (i%2==1 && j%2==1))){   
+    //                    document.write("*");
+    //                } else {
+    //                    document.write("&nbsp;&nbsp;");
+    //                }
+    //            }
+    //            document.write("<br/>");
+    //        }
+    //        break;
+    //    }
+    //}
+
+//exercise_24
+    //for(i = 1; i <= 10; i++){
+    //    for(j = 1; j <= 10; j++){
+    //        document.writeln(i*j);
+    //    }
+    //    document.write("<br/>");
+    //}
+
+
+
