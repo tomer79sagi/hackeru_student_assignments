@@ -44,6 +44,8 @@ var reverseArr1 = [];
 var count = 0;
 var numPow = 0;
 var commonNum = 0;
+var factorialArr = [];
+var factorial = 0;
 
 function oneToNum() {
 	num = parseInt(document.getElementById("one2Num").value);
@@ -285,4 +287,29 @@ function checkSimilar(array1,array2){
         }
     }
     return commonNum;
+}
+
+
+function factorialTo() {
+    factorial = document.getElementById("userinput5").value;
+    var num = factorial;
+    if (factorial < 1) {
+        alert("the Number is Smaller then 1")
+    }
+    if (factorial > 100) {
+        alert("the Number is Higer then 100")
+    }
+    if (isNaN(factorial)) {
+        alert("this is not a number");
+    }
+    else {
+        for (var i = factorial - 1; i >= 1; i--) {
+            factorial = factorial * i;
+            factorialArr.push(i);
+            factorialSum = factorial;
+        }
+    }
+
+    document.getElementById("factorialOf").innerHTML = factorialSum + " = " + num + "*" + factorialArr.join('*');
+    document.getElementById("Add18").disabled = true;
 }
