@@ -1,123 +1,175 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Loops2.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Loops2.css" />
     <script src="./Loops2.js"></script>
     <title>Second loops assigment</title>
 </head>
 
 <body>
     <div>
-        1. show all numbers from the 1 to given num: <br>
-        <input type="number" id="one2Num" /> <br>
+        1. show all numbers from the 1 to given num: <br />
+        <input type="number" id="one2Num" />
+        <br />
         <input type="button" onclick="oneToNum()" value="Show the numbers" id="Add1" />
         <p>The Numbers are:</p>
         <p id="myarr"></p>
     </div>
-    <br>
+    <br />
 
     <div>
-        1.2. show all numbers from the 2 numbers: <br>
-        Number1 : <input type="number" id="num2Num1" /> <br>
-        Number2 : <input type="number" id="num2Num2" /><br>
+        1.2. show all numbers from the 2 numbers: <br />
+        Number1 :
+        <input type="number" id="num2Num1" />
+        <br />
+        Number2 :
+        <input type="number" id="num2Num2" /><br />
         <input type="button" onclick="numToNum()" value="Show the numbers" id="Add2" />
         <p>The Numbers are:</p>
         <p id="myarr2"></p>
     </div>
-    <br>
+    <br />
 
     <div>
-        3. show all Even from the the given number: <br>
-        Number : <input type="number" id="evenNum" /> <br>
+        3. show all Even from the the given number: <br />
+        Number :
+        <input type="number" id="evenNum" />
+        <br />
         <input type="button" onclick="evenToNum()" value="Show the numbers" id="Add3" />
         <p>The Numbers are:</p>
         <p id="myarr3"></p>
     </div>
-    <br>
+    <br />
 
     <div>
-        4. show all int number from that are devided by the given number: <br>
-        Number : <input type="number" id="divideByNum" /> <br>
-        Max Num : <input type="number" id="divideByMax" /> <br>
+        4. show all int number from that are devided by the given number: <br />
+        Number :
+        <input type="number" id="divideByNum" />
+        <br />
+        Max Num :
+        <input type="number" id="divideByMax" />
+        <br />
         <input type="button" onclick="divideByNum()" value="Show the numbers" id="Add4" />
         <p>The Numbers are:</p>
         <p id="myarr4"></p>
     </div>
-    <br>
+    <br />
 
     <div>
-        5. Please enter possitive numbers to end please enter 99: <br>
+        5. Please enter possitive numbers to end please enter 99: <br />
         <input type="button" onclick="sumArray()" value="Show the numbers" id="Add5" />
         <p>The Sum is:</p>
         <p id="sum"></p>
     </div>
-    <br>
+    <br />
 
     <div>
-        6+7. Please enter possitive numbers to end please enter -1: <br>
+        6+7. Please enter possitive numbers to end please enter -1: <br />
         <input type="button" onclick="arrayOfArray()" value="Show the numbers" id="Add6" />
         <p>The numbers are:</p>
         <p id="myarr5"></p>
         <p>The Average is:</p>
         <p id="avg"></p>
     </div>
-    <br>
+    <br />
 
     <div>
-        8. Please enter numbers if you enter 0 or a negative number you are presented with the higest number you
-        entered: <br>
+        8. Please enter numbers if you enter 0 or a negative number you are
+        presented with the higest number you entered: <br />
         <input type="button" onclick="highOfArray()" value="Show the numbers" id="Add7" />
         <p>The Higest Number is:</p>
         <p id="highNum"></p>
     </div>
-    <br>
+    <br />
 
     <div>
-        9. Please enter numbers if you enter 0 or a negative number you are presented with the higest number you
-        entered: <br>
+        9. Please enter numbers if you enter 0 or a negative number you are
+        presented with the higest number you entered: <br />
         <input type="button" onclick="lowOfArray()" value="Show the numbers" id="Add8" />
         <p>The Lowest Number is:</p>
         <p id="lowNum"></p>
     </div>
-    <br>
+    <br />
 
     <div>
-        10. Please enter 10 number: <br>
+        10. Please enter 10 number: <br />
         <input type="button" onclick="indexOfArray()" value="Show the numbers" id="Add9" />
         <p>The Higest Number index is:</p>
-        <p id="indexOf"></p> <br>
+        <p id="indexOf"></p>
+        <br />
     </div>
-    <br>
+    <br />
 
     <div>
-        11. Please Enter a Number and see how many digits it have: <br>
+        11. Please Enter a Number and see how many digits it have: <br />
         <input type="button" onclick="numberOfNumbers()" value="Show the numbers" id="Add11" />
         <p>The Amount of digits is:</p>
-        <p id="numberOfNumbers"></p> <br>
+        <p id="numberOfNumbers"></p>
+        <br />
     </div>
-    <br>
+    <br />
 
     <div>
-        12. Please Enter a Number and a Single Digit and see how many times the Digit is in Num : <br>
-        Number : <input type="number" id="DigiNum" /> <br>
-        Digit : <input type="number" id="Digi" min="1" max="9" value="1" /> <br>
+        12. Please Enter a Number and a Single Digit and see how many times the
+        Digit is in Num : <br />
+        Number :
+        <input type="number" id="DigiNum" />
+        <br />
+        Digit :
+        <input type="number" id="Digi" min="1" max="9" value="1" />
+        <br />
         <input type="button" onclick="digiInNum()" value="Show the numbers" id="Add12" />
         <p>The Amount of Times the digit is in Number is:</p>
-        <p id="amountOfDigi"></p> <br>
+        <p id="amountOfDigi"></p>
+        <br />
     </div>
-    <br>
+    <br />
 
     <div>
-        13. Please Enter a Number and watch the numbers reverse : <br>
+        13. Please Enter a Number and watch the numbers reverse : <br />
         <input type="button" onclick="reverseNum()" value="Show the numbers" id="Add13" />
         <p>The Amount of Times the digit is in Number is:</p>
-        <p id="reverseNum"></p> <br>
+        <p id="reverseNum"></p>
+        <br />
     </div>
-    <br>
+    <br />
+
+    <div>
+        14. Please Enter a Number and watch if the number is a palindrome : <br />
+        <input type="button" onclick="palindromeNum()" value="Show the numbers" id="Add14" />
+        <p id="palindromeNum">Is the Number a palindrome?</p>
+    </div>
+    <br />
+
+    <div>
+        15. Please Enter Two Numbers and the function will show you the Pow of the
+        first on second : <br />
+        <input type="button" onclick="powNum()" value="Show the numbers" id="Add15" />
+        <p id="numPow"></p>
+    </div>
+    <br />
+
+    <div>
+        16. Please Enter a number and see all the numbers that it can divide from:
+        <br />
+        <input type="button" onclick="divideNum()" value="Show the numbers" id="Add16" />
+        <p id="numDivide"></p>
+    </div>
+    <br />
+
+    <div>
+        17. Please Enter a number and see all the numbers that it can divide from:
+        <br />
+        <input type="button" onclick="divideTwoNum()" value="Show the numbers" id="Add17" />
+        <p id="numTwoDivide">The Common Divider for the numbers is: </p>
+    </div>
+    <br />
 </body>
 
 </html>
