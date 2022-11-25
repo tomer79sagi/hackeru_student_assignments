@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div>
+        <label for="first_num">Put your first number</label>
+        <input type="number" id="first_num" name="first_num"><br>
+        <label for="second_num">Put your second number</label>
+        <input type="number" id="second_num" name="second_num"><br>
+        <button onclick="plus()">+</button>
+        <button onclick="minus()">-</button>
+        <button onclick="multiple()">*</button>
+        <button onclick="divide()">/</button>
+        <button onclick="moduler()">%</button><br>
+        <span>Result is <span id="result"></span></span>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
