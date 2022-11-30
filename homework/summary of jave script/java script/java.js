@@ -102,7 +102,7 @@ function task6(x, y) {
         alert("click the button agian");
     }else{
         for (let i = x+1; i <y; i++){
-            array.push[i];
+            array.push(i);
         }
         document.getElementById("ptask6").innerHTML +=
             "<br/><br/>" + array;
