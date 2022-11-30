@@ -1,10 +1,11 @@
-const numbers = [88, 12, 102, 66, 1, 13, 5, 10];
+const numbers = [88, 12, 102, 66, 1, 13, 5, 10]; // for excercises 1,2,3,5,7,8
 const vegetables = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet",
-"cabbage"];
-const example = [1, "string", true];
-const greetings = "Hi there!";
-const text_arr = ["This", "is", "a", "text!"];
-const equal_string_arr=["Hello","Hello","Hello"];
+"cabbage"]; // for excecises 3,9,10
+const example = [1, "string", true]; // for excercise 3
+const greetings = "Hi there!"; // for excercise 4
+const text_arr = ["This", "is", "a", "text!"]; // for excercise 4
+const equal_string_arr=["Hello","Hello","Hello"]; // for excercise 5
+let isOn = true; // for excercise 11
 
 //-----------------------------------------//
 
@@ -102,4 +103,54 @@ function excercise6(num1, num2){
 
 function excercise7(array){
     document.getElementById("excercise7").innerHTML += array[Math.floor(Math.random()*array.length)] + "&nbsp;";
+}
+
+//-----------------------------------------//
+
+function excercise8(array){
+    document.getElementById("excercise8").innerHTML += "<br/><br/> First element of given array is: " + array[0] + "; and last element of given array is: " + array[array.length-1];
+    document.getElementById("button8").disabled = true;
+}
+
+//-----------------------------------------//
+
+function excercise9(array){
+    const newArray = array.map(element => element[0].toUpperCase() + element.substring(1));
+    document.getElementById("excercise9").innerHTML += "<br/><br/>" + newArray;
+    document.getElementById("button9").disabled = true;
+}
+
+//-----------------------------------------//
+
+function excercise10(array){
+    const newArray = [];
+    for(let i = 0; i< array.length; i++){
+        if(array[i].length >= 6){
+            newArray.push(array[i]);
+        }
+    }
+    document.getElementById("excercise10").innerHTML += "<br/><br/>" + newArray;
+    document.getElementById("button10").disabled = true;
+}
+
+//-----------------------------------------//
+
+function excercise11(){
+    let status = document.getElementById("button11");
+    if(isOn){
+        status.innerHTML = "OFF";
+        status.style.backgroundColor = "lightcoral";
+        isOn = false;
+    } else {
+        status.innerHTML = "ON";
+        status.style.backgroundColor = "lightgreen";
+        isOn = true;
+    }
+}
+
+//-----------------------------------------//
+
+function excercise12(element){
+    let currWidth =  element.clientWidth;
+    element.style.width = (currWidth + 10) + "px";
 }
