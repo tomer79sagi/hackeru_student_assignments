@@ -1,7 +1,8 @@
 //----1-----//
-const SumOfNum = [10, 20, 30, 40, 50, 60, 73];
+
 
 function task1(SumOfNum) {
+    const SumOfNum = [10, 20, 30, 40, 50, 60, 73];
     let sum = 0;
     for (let i = 0; i < SumOfNum.length; i++) {
         sum += SumOfNum[i];
