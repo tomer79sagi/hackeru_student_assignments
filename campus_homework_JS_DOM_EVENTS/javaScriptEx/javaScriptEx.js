@@ -495,5 +495,5 @@ function ex18() {
     else if (parseInt(date1[0] + date1[1]) < parseInt(date2[0] + date2[1])) {
         alert("date 2:(" + date2 + ") is bigger then" + " date 1:" + date1);
     }
-}
+}//
 
