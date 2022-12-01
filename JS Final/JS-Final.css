@@ -1,0 +1,15 @@
+div {
+    border: 4px;
+    background-color: aqua;
+}
+
+.container{
+    display: flex;
+    border-color: black;
+}
+#img1 {
+    font-size: 1rem;
+    overflow: hidden;
+    border: 1px solid black;
+    height: 60;
+}
