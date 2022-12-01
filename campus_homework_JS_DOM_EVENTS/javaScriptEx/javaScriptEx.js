@@ -129,7 +129,33 @@ function ex12() {
     /*document.write(check)*/
 }
 
-function ex13() { }  // לא עשיתי... לחזור לזה
+function ex13NOTYET() { 
+    let first = document.querySelector('#firstTR')
+    let addTD = document.createElement("td");
+    addTD.innerHTML = "A";
+
+    first.appendChild(addTD);
+
+} 
+
+function ex13(){
+    let createTR;
+    let createTDchild;
+    let createTable;
+    let alpArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    createTable = document.createElement("table");
+    createTable.setAttribute("border","1px")
+    document.querySelector("#myTable").appendChild(createTable);
+    for(let i = 1; i <= 20; i++){
+        createTR = document.createElement("tr");
+        createTable.appendChild(createTR);
+        for(let j = 1;j <= 20; j++){
+            createTDchild = document.createElement("td");
+            createTDchild.innerHTML = alpArray[Math.floor(Math.random()*26)]
+            createTR.appendChild(createTDchild)
+        }
+    }
+}
 
 function ex14() {
     document.addEventListener('mousemove', (e) => {
@@ -495,5 +521,11 @@ function ex18() {
     else if (parseInt(date1[0] + date1[1]) < parseInt(date2[0] + date2[1])) {
         alert("date 2:(" + date2 + ") is bigger then" + " date 1:" + date1);
     }
-}//
+}
+
+function ex19(){
+    rangeValue = document.getElementById("slider").value
+    document.getElementById("output").innerHTML = rangeValue;
+    document.querySelector("body").style.fontSize = rangeValue + "px";
+}
 
