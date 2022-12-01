@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 19</title>
+</head>
+<body>
+    <input type="range" id="range" min="1" max="100" value="16">
+    <p id="p">Font of this this text depeds on range</p>
+    <script>
+        let range = document.getElementById("range");
+        let p = document.getElementById("p");
+        range.addEventListener('input', function(){
+            let size = range.value;
+            p.style.fontSize = size + "px";
+        })
+    </script>
+</body>
+</html>

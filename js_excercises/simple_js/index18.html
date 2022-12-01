@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 18</title>
+    <script>
+        function showLatestDate(){
+            let first = new Date(document.getElementById("first").value);
+            let second = new Date(document.getElementById("second").value);
+            let span = document.getElementById("span");
+            if(first > second){
+                span.innerHTML = first.getDate() + "/" + (first.getMonth() + 1) + "/" + first.getFullYear();
+            } else if (second > first){
+                span.innerHTML = second.getDate() + "/" + (second.getMonth() + 1) + "/" + second.getFullYear();
+            } else if (first.getTime() == second.getTime()) {
+                span.innerHTML = "This is the same day!";
+            } else {
+                span.innerHTML = "Please select both of dates!"
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="first">First date</label>
+    <input type="date" id="first" name="first" required><br/><br/>
+    <label for="second">Second date</label>
+    <input type="date" id="second" name="second" required><br/><br/>
+    <button onclick="showLatestDate();">Click me for display the latest day</button><br>
+    <span id="span"></span>
+</body>
+</html>

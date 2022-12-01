@@ -8,10 +8,10 @@
 </head>
 <body>
     <script>
-        
+        const colors = ["red", "orange", "yellow", "green", "cyan", "blue", "purple"];
         let body = document.querySelector("body");
         function changeColor(){
-            let d = new Color();
+            body.style.backgroundColor = colors[Math.floor(Math.random() * (colors.length-1))];
         }
         setInterval(changeColor, 1000);
     </script>
