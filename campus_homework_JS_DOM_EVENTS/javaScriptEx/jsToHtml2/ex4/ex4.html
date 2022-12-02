@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="ex4.js"></script>
+    </head>
+
+    <body onload="">
+        <!-- <form> -->
+            <label for="fname">Enter Your First Name</label>
+            <input type="text" id="fname" onblur="validName(this)"><br/><br/>
+
+            <label for="sname">Enter Your Second Name</label>
+            <input type="text" id="sname" onblur="validName(this)"><br/><br/>
+
+            <label for="mail">Enter Your Email</label>
+            <input type="email" name="email" id="mail"><br/><br/>
+
+            <label for="color">Pick a Color</label>
+            <input type="color" name="color" id="color" onchange="colorChange(this.value)"><br/><br/>
+
+            <textarea name="textBox" id="alert" cols="20" rows="5"></textarea>
+        <!-- </form> -->
+    </body>
+</html>
