@@ -120,3 +120,15 @@ function task7(vegetables2){
 
    document.getElementById("ptask7").innerHTML += "<br/><br/>" + newVagetable;
 }
+
+//----8-----//
+
+const vegetables3 = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet",
+    "cabbage"];
+
+function task8(vegetables3){
+    let first = vegetables3[0];
+    let last = vegetables3[vegetables3.length -1];
+
+    document.getElementById("ptask8").innerHTML += "<br/><br/>" + "the first element is = " + first + "<br/>" + "and the lest element is = " +  last;
+}
