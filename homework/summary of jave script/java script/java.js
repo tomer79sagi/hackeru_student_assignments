@@ -116,5 +116,7 @@ const vegetables2 = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet"
     "cabbage"];
 
 function task7(vegetables2){
-   
+    let newVagetable = vegetables2[Math.floor(Math.random() * vegetables2.length)];
+
+   document.getElementById("ptask7").innerHTML += "<br/><br/>" + newVagetable;
 }
