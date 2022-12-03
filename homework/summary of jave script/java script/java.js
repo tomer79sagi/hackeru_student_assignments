@@ -100,8 +100,8 @@ function task6(x, y) {
 
     if (y < x) {
         alert("click the button agian");
-    }else{
-        for (let i = x+1; i <y; i++){
+    } else {
+        for (let i = x + 1; i < y; i++) {
             array.push(i);
         }
         document.getElementById("ptask6").innerHTML +=
@@ -115,10 +115,10 @@ function task6(x, y) {
 const vegetables2 = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet",
     "cabbage"];
 
-function task7(vegetables2){
+function task7(vegetables2) {
     let newVagetable = vegetables2[Math.floor(Math.random() * vegetables2.length)];
 
-   document.getElementById("ptask7").innerHTML += "<br/><br/>" + newVagetable;
+    document.getElementById("ptask7").innerHTML += "<br/><br/>" + newVagetable;
 }
 
 //----8-----//
@@ -126,9 +126,18 @@ function task7(vegetables2){
 const vegetables3 = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet",
     "cabbage"];
 
-function task8(vegetables3){
+function task8(vegetables3) {
     let first = vegetables3[0];
-    let last = vegetables3[vegetables3.length -1];
+    let last = vegetables3[vegetables3.length - 1];
 
-    document.getElementById("ptask8").innerHTML += "<br/><br/>" + "the first element is = " + first + "<br/>" + "and the lest element is = " +  last;
+    document.getElementById("ptask8").innerHTML += "<br/><br/>" + "the first element is = " + first + "<br/>" + "and the lest element is = " + last;
+}
+
+//----9-----//
+
+const vegetables4 = ["this is cucumber", "this is tomato", "this is potato", "this is onion", "this is eggplant", "this is beet",
+    "this is cabbage"];
+
+function task9(vegetables4) {
+
 }
