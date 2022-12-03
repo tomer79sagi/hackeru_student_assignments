@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 4</title>
+    <style>
+        option{
+            background-color: white;
+        }
+        option[value="white"]{
+            color: black;
+            background-color: white;
+        }
+        option[value="black"]{
+            color: white;
+            background-color: black;
+        }
+        option[value="red"]{
+            color: black;
+            background-color: red;
+        }
+        option[value="orange"]{
+            color: black;
+            background-color: orange;
+        }
+        option[value="yellow"]{
+            color: black;
+            background-color: yellow;
+        }
+        option[value="green"]{
+            color: black;
+            background-color: green;
+        }
+        option[value="cyan"]{
+            color: black;
+            background-color: cyan;
+        }
+        option[value="blue"]{
+            background-color: blue;
+            color: white;
+        }
+        option[value="purple"]{
+            background-color: purple;
+            color: white;
+        }
+        option[value="other"]{
+            color: black;
+            background-color: lightgray;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" required><br/>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" required><br/>
+        <label for="email">Email adress:</label>
+        <input type="email" id="email" name="email" required><br/>
+        <label for="message">Your message:</label>
+        <textarea id="message" name="message"></textarea><br/>
+        <label for="fav_color">Choose your favorite color</label>
+        <select id="fav_color" name="fav_color" required>
+            <option></option>
+            <option value="white">white</option>
+            <option value="black">black</option>
+            <option value="red">red</option>
+            <option value="orange">orange</option>
+            <option value="yellow">yellow</option>
+            <option value="green">green</option>
+            <option value="cyan">cyan</option>
+            <option value="blue">blue</option>
+            <option value="purple">purple</option>
+            <option value="other">other</option>
+        </select><span id="span"></span>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="excercise4.js"></script>
+</body>
+</html>
