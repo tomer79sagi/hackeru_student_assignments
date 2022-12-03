@@ -1,14 +1,13 @@
 //----1-----//
-
+const SumOfNum = [10, 20, 30, 40, 50, 60, 73];
 
 function task1(SumOfNum) {
-    const SumOfNum = [10, 20, 30, 40, 50, 60, 73];
     let sum = 0;
     for (let i = 0; i < SumOfNum.length; i++) {
         sum += SumOfNum[i];
     }
     document.getElementById("ptask1").innerHTML +=
-        "<br/><br/> Sum of given array is" + sum;
+        "<br/><br/> Sum of given array is " + sum;
 }
 
 //----2-----//
@@ -21,7 +20,7 @@ function task2(AveOfNum) {
         sum += AveOfNum[i];
     }
     document.getElementById("ptask2").innerHTML +=
-        "<br/><br/> average of given array is" + sum / AveOfNum.length;
+        "<br/><br/> average of given array is " + sum / AveOfNum.length;
 }
 
 //----3-----//
@@ -109,4 +108,13 @@ function task6(x, y) {
             "<br/><br/>" + array;
     }
 
+}
+
+//----7-----//
+
+const vegetables2 = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet",
+    "cabbage"];
+
+function task7(vegetables2){
+   
 }
