@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 16</title>
+    <script>
+        function switchValue(){
+            let first = document.getElementById("first");
+            let second = document.getElementById("second");
+            let temp = first.value;
+            first.value = second.value;
+            second.value = temp;
+        }
+    </script>
+</head>
+<body>
+    <label for="first">First input</label>
+    <input type="text" id="first" name="first"><br/><br/>
+    <label for="second">Second input</label>
+    <input type="text" id="second" name="second"><br/><br/>
+    <button onclick="switchValue();">Click me for switch values of those inputs</button>
+</body>
+</html>

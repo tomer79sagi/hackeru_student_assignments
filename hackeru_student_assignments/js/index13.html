@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 13</title>
+    <script>
+        const elements = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        function randomElements(){
+            let cells = document.getElementsByTagName("td");
+            for(let i=0; i<cells.length; i++){
+                cells[i].innerHTML = elements[Math.floor(Math.random() * (elements.length-1))];
+            }
+        }
+    </script>
+    <style>
+        table ,td{
+            border: 1px solid black;
+            border-collapse: collapse; 
+            height: 150px; 
+            width: 450px;
+            margin-left:auto; 
+            margin-right:auto; 
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            font-size: 30px;
+        }
+        </style>
+</head>
+<body>
+    <table  onclick="randomElements();">
+        <p>תלחץ על טבלה בשביל למלא אותה באותיות אקראיות</p>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

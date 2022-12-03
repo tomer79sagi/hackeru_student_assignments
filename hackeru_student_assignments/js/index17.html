@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 17</title>
+    <script>
+        function showDates(){
+            let first = new Date(document.getElementById("first").value);
+            let second = new Date(document.getElementById("second").value);
+            if(first > second){
+                let temp = new Date(first);
+                first = new Date(second);
+                second = new Date(temp);
+            }
+            let d = new Date(first);
+            let span = document.getElementById("span");
+            if(span.innerHTML !== undefined){
+                span.innerHTML = "";
+            }
+            while(d<=second){
+                span.innerHTML += d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear() + "<br/>";
+                let newDate = d.setDate(d.getDate() + 1);
+                d = new Date(newDate);
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="first">First date</label>
+    <input type="date" id="first" name="first" required><br/><br/>
+    <label for="second">Second date</label>
+    <input type="date" id="second" name="second" required><br/><br/>
+    <button onclick="showDates();">Click me for display all the dates between chosen dates</button><br>
+    <span id="span"></span>
+</body>
+</html>
