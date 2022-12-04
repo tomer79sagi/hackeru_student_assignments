@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap</title>
+    <style>
+        #contianer {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="contianer">
+        <input id="input1" type="text" placeholder="Wrtie Somthing">
+        <input id="input2" type="text" placeholder="Write Somthing">
+        <button id="button" onclick="swapValues()">Swap</button>
+    </div>
+    
+    <script>
+        let input_1 = document.getElementById('input1')
+        let input_2 = document.getElementById('input2')
+        function swapValues(){
+            let tempValue = null
+            if(input_1.value.length == 0 || input_2.value.length == 0){
+                alert("Please fill fields!")
+            } else {
+                tempValue = input_1.value
+                input_1.value = input_2.value
+                input_2.value = tempValue
+            }
+        }
+    </script>
+</body>
+</html>

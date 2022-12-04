@@ -212,6 +212,8 @@ function restartGame(){
     AICash = 1500
     playerCash = 1500
 }
+
+
 function displayPlayerRaise(){
     done_btn.style.display = 'inline'
     check_btn.style.display = 'none'
@@ -243,6 +245,7 @@ function displayPlayerOptions(){
     deal_btn.style.display = 'none'
 }
 
+
 function displayAIActions(){
     done_btn.style.display = 'none'
     check_btn.style.display = 'none'
@@ -251,6 +254,7 @@ function displayAIActions(){
     raise_btn.style.display = 'none'
     text_box.style.display = 'inline'
 }
+
 
 function displayDealBtn(){
     done_btn.style.display = 'none'

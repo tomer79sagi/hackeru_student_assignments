@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    width: 10%;
+    height: 10%;
+}
+
+.image:hover {
+    width: 20%;
+    height: 20%;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+}
+
+.table th {
+    font-size: 30px;
+}
