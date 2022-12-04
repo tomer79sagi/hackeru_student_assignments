@@ -1,0 +1,70 @@
+.normal {
+    border: 4px;
+    background-color: aqua;
+}
+
+.container {
+    display: flex;
+    border-color: black;
+}
+
+#img1 {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid black;
+    width: 150px;
+}
+
+#myTable {
+    padding: 15px;
+    width: 100px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#myTable td {
+    padding: 4px;
+    border: 2px solid black;
+}
+
+#containMouse {
+    border: 2px solid black;
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+    width: 50vh;
+    background-color: linear-gradient (135deg, #8fc7f1, #7173f5);
+}
+
+#mouseFrame {
+    width: 3em;
+    height: 3em;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(16, 0, 54, 0.2);
+
+}
+
+#randomColor {
+    border: 2px solid black;
+    padding: 40px;
+    margin: 0;
+    height: 25vh;
+    width: 25vh;
+    background-color: linear-gradient (135deg, #8fc7f1, #7173f5);
+    text-align: center;
+}
+
+#colorSquare {
+    width: 10em;
+    height: 10em;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transition: background-color 1s ease;
+}

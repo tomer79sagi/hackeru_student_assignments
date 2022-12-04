@@ -11,7 +11,7 @@
 		<title>JS Final Assigment Questions</title>
 	</head>
 	<body>
-		<div>
+		<div class="normal">
 			<p>
 				1. please enter an array of numbers and the Function will return the
 				Summary
@@ -32,7 +32,7 @@
 
 		<br />
 
-		<div>
+		<div class="normal">
 			<p>
 				2. please enter an array of numbers and the Function will return the
 				Average
@@ -53,7 +53,7 @@
 
 		<br />
 
-		<div>
+		<div class="normal">
 			<p>
 				3. please enter 2 arrays of numbers and the Function will return the
 				Arrays as One Array
@@ -66,7 +66,7 @@
 
 		<br />
 
-		<div>
+		<div class="normal">
 			<p>
 				4. please enter any String to the Array and the function will return the
 				longest one.
@@ -86,7 +86,7 @@
 		</div>
 		<br />
 
-		<div>
+		<div class="normal">
 			<p>
 				5. please enter any Thing and the function will test if all elements are
 				equal.
@@ -107,7 +107,7 @@
 
 		<br />
 
-		<div>
+		<div class="normal">
 			6. show all numbers from the 2 numbers: <br />
 			Number1 :
 			<input type="text" id="num_1" />
@@ -126,7 +126,7 @@
 
 		<br />
 
-		<div>
+		<div class="normal">
 			<p>
 				7. please enter an array of any thing and the Function will return a
 				random element
@@ -149,7 +149,7 @@
 
 		<br />
 
-		<div>
+		<div class="normal">
 			<p>
 				8. please enter an array of any thing and the Function will return The
 				First and last elements
@@ -172,7 +172,7 @@
 
 		<br />
 
-		<div>
+		<div class="normal">
 			<p>
 				9. please enter an array of Strings the Function will return The Array
 				with all First letters of the string in Capital
@@ -195,7 +195,7 @@
 
 		<br />
 
-		<div>
+		<div class="normal">
 			<p>
 				10. please enter an array of Strings the Function will check if all
 				String are 6 letters or more if not it will remove the string
@@ -218,7 +218,7 @@
 
 		<br />
 
-		<div>
+		<div class="normal">
 			<p>
 				11. if you press the first button it will be disabled and the second
 				button resets to enable
@@ -241,11 +241,66 @@
 
 		<br />
 
-		<div>
-			<p>11. Hover the picture and it will grow Each time you hover it.</p>
+		<div class="normal">
+			<p>12. Hover the picture and it will grow Each time you hover it.</p>
 			<br />
 			<div class="container">
-                <img id="img1" src="./hover.png" alt="Hover Me!" onmouseenter="hoverGrow()">
+				<img
+					id="img1"
+					src="./hover.png"
+					alt="Hover Me!"
+					onmouseenter="hoverGrow()"
+				/>
+			</div>
+		</div>
+		<br />
+
+		<div class="normal">
+			13. Please Enter the amount of Rows And Colums for the table and press the
+			button:
+			<br />
+			Please Enter Rows :
+			<input type="text" id="row1" />
+			<br />
+			Please Enter Columns :
+			<input type="text" id="col1" /><br />
+			<input
+				type="button"
+				onclick="tableCreator()"
+				value="Show the Table"
+				id="button9"
+			/>
+			<input
+				type="button"
+				onclick="tableClear()"
+				value="Click Here To Clear The Last Table"
+			/>
+			<table id="myTable"></table>
+		</div>
+
+		<br />
+
+		<div class="normal">
+			14. The button inside the Div will always move Away from the mouse
+			location.
+			<br />
+			<div id="containMouse" onmouseover="followMouse()">
+				<div id="mouseFrame" onmouseleave="hideMouse()"></div>
+			</div>
+		</div>
+
+		<br />
+
+		<div class="normal">
+			14. The button inside the Div will always move Away from the mouse
+			location.
+			<br />
+			<div
+				id="randomColor"
+				onmouseover="colorsRandom()"
+				onmouseout="colorStop()"
+			>
+				<div id="colorSquare"></div>
 			</div>
 		</div>
 	</body>

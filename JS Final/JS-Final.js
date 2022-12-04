@@ -169,10 +169,90 @@ function EnableButton() {
 }
 
 function hoverGrow() {
-    let img = document.getElementById("img1");
-	let height = img.getAttribute('height');
+	let img = document.getElementById("img1");
+	let currwidth = img.clientWidth;
+	if (currwidth >= 500) {
+		alert("Maximum Size level reached.");
+	} else {
+		img.style.width = currwidth + 50 + "px";
+	}
+}
 
-	img.addEventListener("onmouseenter", () => {
-		img.setAttribute(height) = height++;
+function tableCreator() {
+	tbl = document.getElementById("myTable");
+	var characters =
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	var charactersLength = characters.length;
+
+	var row = parseInt(document.getElementById("row1").value);
+	var col = parseInt(document.getElementById("col1").value);
+
+	for (var i = 0; i < row; i++) {
+		const tr = tbl.insertRow();
+		for (var j = 0; j < col; j++) {
+			if (i == row && j == col) {
+				break;
+			} else {
+				const td = tr.insertCell();
+				td.appendChild(
+					document.createTextNode(
+						characters.charAt(Math.random() * charactersLength)
+					)
+				);
+			}
+		}
+	}
+}
+
+function tableClear() {
+	tbl = document.getElementById("myTable");
+	var row = parseInt(document.getElementById("row1").value);
+
+	for (var i = row; i > 0; i--) {
+		tbl.deleteRow(0);
+	}
+}
+
+function followMouse() {
+	let mouseDiv = document.getElementById("mouseFrame");
+	mouseDiv.style.display = "";
+	const move = (e) => {
+		try {
+			var x = e.pageX;
+			var y = e.pageY;
+		} catch (e) {}
+		mouseDiv.style.left = x + "px";
+		mouseDiv.style.top = y + "px";
+	};
+	document.addEventListener("mousemove", (e) => {
+		move(e);
 	});
+	document.addEventListener("onmouseleave", (e) => {
+		hide(e);
+	});
+}
+
+function hideMouse() {
+	let mouseDiv = document.getElementById("mouseFrame");
+	mouseDiv.style.display = "none";
+}
+
+function colorsRandom() {
+	let square = document.getElementById("colorSquare");
+	var letters = "0123456789ABCDEF";
+	var color = "#";
+	for (var i = 0; i < 6; i++) {
+		color += letters[Math.floor(Math.random() * 16)];
+		square.style.backgroundColor = color;
+	}
+}
+
+function colorStop() {
+	let square = document.getElementById("colorSquare");
+	var letters = "0123456789ABCDEF";
+	var color = "#";
+	for (var i = 0; i < 6; i++) {
+		color += letters[Math.floor(Math.random() * 16)];
+		square.style.backgroundColor = color;
+	}
 }
