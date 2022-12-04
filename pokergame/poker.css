@@ -1,0 +1,43 @@
+
+ header{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }   
+ 
+ .sidenav{
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: fixed;
+    padding-top: 20px; 
+    background-color:black;
+    width: 100px;
+ }
+ .sidenav a{
+color: white;
+    padding:10px 6px 8px 8px  ;            /* top right bottom left*/
+display: block;
+text-decoration: none;
+ }
+ body{
+    background-image: url(https://play-lh.googleusercontent.com/PtFN0tc7cTNq751nodjiFcC5RCwrc92LjAPWH2isbpenSdGi6O3LvkTIZcPHFGRFdw); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+ }
+ 
+ 
+ h1{  color:green;
+     padding-right: 160px;
+     text-decoration: solid 2px red underline ;
+   
+   
+   }
+ p{
+   max-width: 1200px;
+   padding-right: 160px;
+   color:rgb(202, 160, 191);
+   font-weight: bolder;
+   font-size: 30px;
+   z-index:100;
+ }

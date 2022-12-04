@@ -1,0 +1,90 @@
+header{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }   
+ 
+ .sidenav{
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: fixed;
+    padding-top: 20px; 
+    background-color:black;
+    width: 100px;
+ }
+ .sidenav a{
+color: white;
+    padding:10px 6px 8px 8px  ;            /* top right bottom left*/
+display: block;
+text-decoration: none;}
+body{
+    background-image: url(https://media.istockphoto.com/photos/poker-table-with-chairs-picture-id163025145?k=20&m=163025145&s=170667a&w=0&h=v6EkG247R9cM6Nnk5pN65KRnTvcTZLVNjiq72kzdemI=);
+    background-repeat: no-repeat;
+    background-size: 100% 1100px ;
+
+}
+body>p{
+   
+    position: sticky;
+font-size: 80px;
+color: blue;
+text-align: center;
+padding: 0px;
+margin: 0px;
+top: 150px;
+z-index: 10;
+}
+
+
+  .table{
+  display:flex;
+  display: flex;
+    flex-flow: row wrap;
+ justify-content: center;
+align-items: center;
+   padding-top: 250px;
+    padding-left:00px;
+   height: 0px;
+    
+  }
+
+  .table>img{
+     width: 100px;
+     height: 100px;
+     
+   }
+
+
+
+
+
+.player1{
+    display: flex;
+    flex-flow: row wrap;
+ justify-content: center;
+align-items: center;
+   padding-top: 120px;
+    padding-left:200px;
+   height: 0px;
+  
+}
+.player1>img{ width: 80px;
+                height: 80px;
+                padding-left: 5px;
+         }  
+
+         .player2{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top:140px;
+            padding-left: 310px;
+           
+          
+            
+        }
+        .player2>img{ width: 80px;
+                        height: 80px;
+                        padding-left: 5px;
+                 }  
+                
