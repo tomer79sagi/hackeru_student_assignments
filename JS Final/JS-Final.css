@@ -34,6 +34,7 @@
     height: 50vh;
     width: 50vh;
     background-color: linear-gradient (135deg, #8fc7f1, #7173f5);
+    align-items: center;
 }
 
 #mouseFrame {
@@ -44,7 +45,6 @@
     transform: translate(-50%, -50%);
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(16, 0, 54, 0.2);
-
 }
 
 #randomColor {
