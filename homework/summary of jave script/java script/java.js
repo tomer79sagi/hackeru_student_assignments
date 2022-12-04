@@ -31,7 +31,6 @@ const CupleOfArry2 = [10, 20, 30, 40, 50, 60, 73];
 function task3(CupleOfArry1, CupleOfArry2) {
 
     document.getElementById("ptask3.2").innerHTML += "<br/><br/>" + CupleOfArry1 + ", in your face " + CupleOfArry2;
-
 }
 
 //----4-----//
@@ -107,7 +106,6 @@ function task6(x, y) {
         document.getElementById("ptask6").innerHTML +=
             "<br/><br/>" + array;
     }
-
 }
 
 //----7-----//
