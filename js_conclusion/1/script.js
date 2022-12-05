@@ -178,11 +178,54 @@ function switchValue() {
 /* --17-- */
 function printDates() {
   let firstDate = new Date(document.getElementById("ex-17-first").value);
-  let secondDate = document.getElementById("ex-17-second").value;
+  let secondDate = new Date(document.getElementById("ex-17-second").value);
 
-  console.log(firstDate + " " + secondDate);
-  firstDate.setFullYear(1998);
-  console.log(firstDate + " " + secondDate);
+  if (firstDate > secondDate) {
+    firstDate = secondDate;
+    secondDate = new Date(document.getElementById("ex-17-first").value);
+  }
+
+  while (firstDate <= secondDate) {
+    let div = document.createElement("div");
+    div.innerHTML =
+      firstDate.getDate() +
+      "/" +
+      (firstDate.getMonth() + 1) +
+      "/" +
+      firstDate.getFullYear();
+    document.querySelector(".ex-17-printed-dates").appendChild(div);
+    firstDate.setDate(firstDate.getDate() + 1);
+  }
+}
+
+/* --18-- */
+function printBiggerDate() {
+  let firstDate = new Date(document.getElementById("ex-18-first").value);
+  let secondDate = new Date(document.getElementById("ex-18-second").value);
+  let div = document.createElement("div");
+
+  if (firstDate > secondDate) {
+    div.innerHTML =
+      firstDate.getDate() +
+      "/" +
+      (firstDate.getMonth() + 1) +
+      "/" +
+      firstDate.getFullYear();
+    document.querySelector(".ex-18-printed-dates").appendChild(div);
+  } else {
+    div.innerHTML =
+      secondDate.getDate() +
+      "/" +
+      (secondDate.getMonth() + 1) +
+      "/" +
+      secondDate.getFullYear();
+    document.querySelector(".ex-18-printed-dates").appendChild(div);
+  }
+}
+
+/* --19-- */
+function changeFontSize(value) {
+  document.querySelector("*").style.fontSize = value + "em";
 }
 
 window.onload = () => {

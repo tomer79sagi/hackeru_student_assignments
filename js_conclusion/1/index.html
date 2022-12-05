@@ -16,18 +16,18 @@
   </head>
   <body>
     <div class="ex-container ex-1-10">
-      <h2>Exercises 1-10</h2>
+      <h3>Exercises 1-10</h3>
       <p>Only Tests output(No interactions)</p>
     </div>
     <div class="ex-container ex-11">
-      <h2>Exercise 11</h2>
+      <h3>Exercise 11</h3>
 
       <div class="switch">
         <input type="checkbox" id="ex-11-switch" onclick="darkMode()" />
       </div>
     </div>
     <div class="ex-container ex-12">
-      <h2>Exercise 12</h2>
+      <h3>Exercise 12</h3>
       <img
         src="https://live.staticflickr.com/4147/5412039447_d586d5b794_3k.jpg"
         width="200"
@@ -36,7 +36,7 @@
       />
     </div>
     <div class="ex-container ex-13">
-      <h2>Exercise 13</h2>
+      <h3>Exercise 13</h3>
       <table>
         <tr>
           <td></td>
@@ -56,16 +56,16 @@
       </table>
       <button onclick="generate()">Generate</button>
     </div>
-    <div class="ex-container ex-14" onmouseover="mouseFollower()">
-      <h2>Exercise 14</h2>
+    <div class="ex-container ex-14" onmousemove="mouseFollower()">
+      <h3>Exercise 14</h3>
       <div id="ex-14-element"></div>
     </div>
     <div class="ex-container ex-15">
-      <h2>Exercise 15</h2>
+      <h3>Exercise 15</h3>
       <div id="ex-15-element"></div>
     </div>
     <div class="ex-container ex-16">
-      <h2>Exercise 16</h2>
+      <h3>Exercise 16</h3>
       <div class="ex-16__input-container">
         <input
           type="text"
@@ -83,16 +83,38 @@
       <button id="ex-16-button" onclick="switchValue()">Switch</button>
     </div>
     <div class="ex-container ex-17">
-      <h2>Exercise 17</h2>
+      <h3>Exercise 17</h3>
       <div class="ex-17__input-container">
         <input type="date" class="ex-17-input" id="ex-17-first" />
         <input type="date" class="ex-17-input" id="ex-17-second" />
       </div>
       <button id="ex-17-button" onclick="printDates()">Print</button>
+      <div class="ex-17-printed-dates"></div>
     </div>
-    <div class="ex-container ex-18"><h2>Exercise 18</h2></div>
-    <div class="ex-container ex-19"><h2>Exercise 19</h2></div>
-    <div class="ex-container ex-20"><h2>Exercise 20</h2></div>
+    <div class="ex-container ex-18">
+      <h3>Exercise 18</h3>
+      <div class="ex-18__input-container">
+        <input type="date" class="ex-18-input" id="ex-18-first" />
+        <input type="date" class="ex-18-input" id="ex-18-second" />
+      </div>
+      <button id="ex-18-button" onclick="printBiggerDate()">Print</button>
+      <div class="ex-18-printed-dates"></div>
+    </div>
+    <div class="ex-container ex-19">
+      <h3>Exercise 19</h3>
+      <input
+        type="range"
+        id="ex-19-range"
+        min="1"
+        max="1.5"
+        step="0.001"
+        value="1"
+        onmousemove="changeFontSize(this.value)"
+      />
+    </div>
+    <div class="ex-container ex-20"><h3>Exercise 20</h3>
+      <p style="text-align: center;"> I really appreciate it &#128565</p>
+    </div>
 
     <script src="script.js"></script>
   </body>

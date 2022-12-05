@@ -19,12 +19,14 @@ body {
   border-radius: 15px;
 }
 
-.ex-container > h2 {
+.ex-container > h3 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: large;
 }
 
+.ex-1-10 {
+  overflow: hidden;
+}
 /* Switch */
 .switch {
   position: relative;
@@ -169,7 +171,8 @@ button:hover {
   background-color: #f8f5ee;
 }
 
-.ex-17__input-container {
+.ex-17__input-container,
+.ex-18__input-container {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
@@ -181,13 +184,16 @@ button:hover {
   margin-bottom: 30px;
 }
 
-#ex-17-button {
+#ex-17-button,
+#ex-18-button {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
+  margin-bottom: 30px;
 }
 
-.ex-17-input {
+.ex-17-input,
+.ex-18-input {
   height: 25px;
   width: 200px;
   border-color: -internal-light-dark(rgb(118, 118, 118), #5f7161);
@@ -198,4 +204,45 @@ button:hover {
   text-align: center;
   border-radius: 5px;
   background-color: #f8f5ee;
+}
+
+.ex-17-printed-dates {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  margin-bottom: 30px;
+  gap: 0.5em;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.ex-18-printed-dates {
+  text-align: center;
+}
+
+#ex-19-range {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #526254;
+  border-color: #526254;
+  cursor: pointer;
+  width: 300px;
+  height: 20px;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fbf9f4;
+}
+#ex-19-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #5f7161;
+  box-shadow: -310px 0 0 300px #7c9d83;
+}
+
+#ex-19-range::-webkit-slider-thumb:hover {
+  background-color: #526254;
 }
