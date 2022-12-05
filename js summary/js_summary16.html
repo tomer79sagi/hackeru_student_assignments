@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jr summary 16</title>
+    <script>
+        function switch_inputs() {
+           const value1 = document.getElementById("fname").value
+           document.getElementById("fname").value = document.getElementById("lname").value
+           document.getElementById("lname").value = value1           
+        }
+    </script>
+  </head>
+  <body>
+    <input type="text" name="fname" id="fname" /> 
+    <input type="text" name="lname" id="lname"/>
+    <br\>
+    <button onclick="switch_inputs()">click here to switch input values</button>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>HTML + JS summary 5</title>
+    <script>
+      function show_img() {
+        const img_elem = document.getElementById("animal");
+        const img_content = document
+          .getElementById("animal_name")
+          .value.toLowerCase();
+
+        img_elem.src = img_content + ".jpg";
+        img_elem.alt = img_content;
+      }
+    </script>
+  </head>
+  <body>
+    <label for="animal_name">
+      enter a name of an animal to get a picture of it:
+    </label>
+    <input type="text" id="animal_name" name="animal_name" />
+    <button onclick="show_img()">click here to show picture!</button>
+    <br />
+    <img id="animal" />
+    <div id="error"></div>
+  </body>
+</html>

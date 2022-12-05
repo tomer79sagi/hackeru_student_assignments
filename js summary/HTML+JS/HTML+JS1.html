@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>HTML + JS summary 1</title>
+    <script>
+      function change_colors() {
+        let bg_color = document.getElementById("background_color").value;
+        let txt_color = document.getElementById("text_color").value;
+        document.body.style.backgroundColor = bg_color;
+        document.body.style.color = txt_color;
+      }
+    </script>
+  </head>
+  <body>
+    <label for="background_color">write the background color:</label>
+    <br />
+    <input type="text" id="background_color" name="bg_color" />
+    <br />
+    <label for="text_color">write the text color:</label>
+    <br />
+    <input type="text" id="text_color" name="txt_color" />
+    <br />
+    <button onclick="change_colors()">click to change colors!</button>
+  </body>
+</html>

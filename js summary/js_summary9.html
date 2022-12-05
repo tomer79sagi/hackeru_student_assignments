@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>js summary 9</title>
+    <script>
+      function capitalize(array) {
+        const cap_array = [];
+        for (let index = 0; index < array.length; index++) {
+          cap_array[index] =
+            array[index][0].toUpperCase() + array[index].slice(1);
+        }
+        return cap_array;
+      }
+      document.write(
+        capitalize([
+          "cucumber",
+          "tomato",
+          "potato",
+          "onion",
+          "eggplant",
+          "beet",
+          "cabbage",
+        ])
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

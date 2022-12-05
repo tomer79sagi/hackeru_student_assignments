@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jr summary 15</title>
+    <script>
+      function generateRandomColor() {
+        const hex = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += hex[Math.floor(Math.random() * 16)];
+        }
+
+        return color;
+      }
+      function myFunction() {
+        document.body.style.backgroundColor = generateRandomColor();
+      }
+      setInterval(myFunction, 3000);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jr summary 18</title>
+    <script>
+        function enable_func() {
+            document.getElementById("ldate").onchange = bigger_date_func
+        
+        }
+        function bigger_date_func() {
+            const date1 = document.getElementById("fdate").value
+            const date2 = document.getElementById("ldate").value
+            if (new Date(date1) > new Date(date2)) {
+                document.getElementById("bigger_date").innerHTML = new Date(date1).toLocaleDateString()
+
+            } else {
+                document.getElementById("bigger_date").innerHTML = new Date(date2).toLocaleDateString()
+
+            }
+            
+
+        }
+    </script>
+  </head>
+  <body>
+    <input type="date" name="fdate" id="fdate" onchange="enable_func()"/> 
+    <input type="date" name="ldate" id="ldate"/>
+    <br\>
+    <div id="bigger_date"></div>
+  </body>
+</html>

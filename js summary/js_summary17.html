@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jr summary 17</title>
+    <script>
+        function enable_func() {
+            dates_inbetween()
+        }
+        function dates_inbetween() {
+            let date1 = new Date(document.getElementById("fdate").value)
+            const date2 = new Date(document.getElementById("ldate").value)
+            const dates = []
+            for (new Date (date1); new Date(date1) <= new Date(date2); date1.setDate(date1.getDate() + 1)) {
+                dates.push(new Date(date1).toLocaleDateString())
+            }
+            document.getElementById("days_list").innerHTML = dates
+        }
+    </script>
+  </head>
+  <body>
+    <input type="date" name="fdate" id="fdate" onchange="enable_func()"/> 
+    <input type="date" name="ldate" id="ldate" onchange="dates_inbetween()"/>
+    <br\>
+    <div id="days_list"></div>
+  </body>
+</html>

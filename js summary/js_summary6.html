@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>js summary 6</title>
+    <script>
+      function in_between(num1, num2) {
+        const nums = [];
+        const diff = num2 - num1;
+        for (let index = 0; index < diff - 1; index++) {
+          nums[index] = num1 + index + 1;
+        }
+        return nums;
+      }
+      document.write(in_between(24, 32));
+    </script>
+  </head>
+  <body></body>
+</html>

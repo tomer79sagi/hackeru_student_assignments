@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>HTML + JS summary 3</title>
+    <script>
+      function get_sum() {
+        const num1 = parseInt(document.getElementById("num1").value);
+        const num2 = parseInt(document.getElementById("num2").value);
+        document.getElementById("sum").value = num1 + num2;
+      }
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" id="num1" name="num1" />
+      <span>+</span>
+      <input type="text" id="num2" name="num2" />
+      <span>=</span>
+      <input type="text" id="sum" name="sum" />
+      <button type="button" onclick="get_sum()">submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>js summary 11</title>
+    <script>
+      function turn_on() {
+        const obj = document.getElementById("btn");
+        obj.style.color = "green";
+        obj.innerHTML = "click me again!";
+        obj.onclick = turn_off;
+      }
+      function turn_off() {
+        const obj = document.getElementById("btn");
+        obj.style.color = "red";
+        obj.innerHTML = "do not click me!";
+        obj.onclick = turn_on;
+      }
+    </script>
+  </head>
+  <body>
+    <button id="btn" onclick="turn_on()">click me!</button>
+  </body>
+</html>

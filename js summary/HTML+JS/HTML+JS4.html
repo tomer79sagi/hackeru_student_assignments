@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>HTML + JS summary 4</title>
+    <script>
+      const letters = /^[a-zA-Z]+$/;
+      const email_format = /^[a-zA-Z0-9]+@[a-zA-Z]+\.com$/;
+      function validate_text(elem) {
+        if (!letters.test(elem.value)) {
+          document.getElementById("msg").innerHTML =
+            "first/last name are not valid!";
+        } else {
+          document.getElementById("msg").innerHTML = "";
+        }
+      }
+      function validate_mail(elem) {
+        if (email_format.test(elem.value) === false) {
+          document.getElementById("msg").innerHTML = "E-Mail is not valid!";
+        } else {
+          document.getElementById("msg").innerHTML = "";
+        }
+      }
+      function validate_color(elem) {
+        const color_div = document.getElementById("test_color");
+        const Color = elem.value.toLowerCase();
+        color_div.style.color = Color;
+        if (Color === "red") {
+          document.getElementById("msg").innerHTML = "Color is warm!";
+        } else if (Color === "blue") {
+          document.getElementById("msg").innerHTML = "Color is cold!";
+        } else if (color_div.style.color == Color) {
+          document.getElementById("msg").innerHTML =
+            "Thank you for picking a color!";
+        } else {
+          document.getElementById("msg").innerHTML = "This is not a color!";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="fname">enter your first name:</label>
+      <input
+        onchange="() => validate_text(this)"
+        type="text"
+        id="fname"
+        name="fname"
+      />
+      <br />
+      <label for="lname">enter your last name:</label>
+      <input
+        onchange="validate_text(this)"
+        type="text"
+        id="lname"
+        name="lname"
+      />
+      <br />
+      <label for="email">enter your E-mail:</label>
+      <input
+        onchange="validate_mail(this)"
+        type="text"
+        id="email"
+        name="email"
+      />
+      <br />
+      <label for="fav_color">enter your favorite color:</label>
+      <input
+        onchange="validate_color(this)"
+        type="text"
+        name="fav_color"
+        id="fav_color"
+      />
+    </form>
+    <div id="msg"></div>
+    <div id="test_color"></div>
+  </body>
+</html>

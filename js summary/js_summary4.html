@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>js summary 4</title>
+    <script>
+      function longest_elem(array) {
+        let longest = array.reduce(max);
+        function max(current, next) {
+          if (current.length > next.length) {
+            return current;
+          } else return next;
+        }
+        return longest;
+      }
+      const a = ["asss", "asffsa", "aaagggg"];
+      document.write(longest_elem(a));
+    </script>
+  </head>
+  <body></body>
+</html>

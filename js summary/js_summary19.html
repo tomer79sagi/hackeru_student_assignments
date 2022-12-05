@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jr summary 19</title>
+    <script>
+        function change_font_size() {
+            const my_div = document.getElementById("myDiv")
+            let size = document.getElementById("font_size").value
+            my_div.style.fontSize = size + "px"
+        }
+    </script>
+  </head>
+  <body>
+    <input type="range" name="font_size" id="font_size" min="10" max="100" step="5" onchange="change_font_size()"/> 
+    <br\>
+    <div id="myDiv">use the range above to change this divs font size in px</div>
+  </body>
+</html>

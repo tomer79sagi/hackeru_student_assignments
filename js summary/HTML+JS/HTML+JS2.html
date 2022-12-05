@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>HTML + JS summary 2</title>
+    <script>
+      function validate_name() {
+        const Uname = document.getElementById("user_name").value;
+        const regex = /^[a-zA-Z]+$/;
+        if (regex.test(Uname) === true) {
+          document.getElementById("msg").innerHTML = "name is OK!";
+        } else if (Uname.length === 0) {
+          document.getElementById("msg").innerHTML = "plese enter a user name!";
+        } else
+          document.getElementById("msg").innerHTML = "user name is not valid!";
+      }
+    </script>
+  </head>
+  <body>
+    <label for="user_name">write your user user name:</label>
+    <br />
+    <input
+      type="text"
+      id="user_name"
+      name="user_name"
+      onchange="validate_name()"
+    />
+    <br />
+    <div id="msg"></div>
+  </body>
+</html>

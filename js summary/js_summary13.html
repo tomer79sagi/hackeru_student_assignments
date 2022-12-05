@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>js summary 13</title>
+    <script>
+      function get_parameters() {
+        const rows = prompt("enter number of rows for the random table:");
+        const columns = prompt("enter number of columns for the random table:");
+        fill_table(rows, columns);
+      }
+      function fill_table(rows, columns) {
+        let tbl = document.createElement("table");
+        for (let row = 0; row < rows; row++) {
+          let tr = tbl.insertRow();
+          for (let column = 0; column < columns; column++) {
+            let td = tr.insertCell();
+            td.innerHTML = generateRandomLetter();
+          }
+        }
+        document.body.appendChild(tbl);
+      }
+      function generateRandomLetter() {
+        const alphabet =
+          "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+        return alphabet[Math.floor(Math.random() * alphabet.length)];
+      }
+    </script>
+  </head>
+  <body onload="get_parameters()"></body>
+</html>

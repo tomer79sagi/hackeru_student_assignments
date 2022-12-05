@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>js summary 5</title>
+    <script>
+      function equal_array(array) {
+        for (let index = 0; index < array.length; index++) {
+          if (index == array.length - 1) {
+            return true;
+          } else {
+            if (array[index] === array[index + 1]) {
+              continue;
+            } else return false;
+          }
+        }
+      }
+      const a = ["asg", "ag", "ag"];
+      document.write(equal_array(a));
+    </script>
+  </head>
+  <body></body>
+</html>
