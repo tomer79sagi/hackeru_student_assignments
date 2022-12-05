@@ -294,3 +294,23 @@ function datesBetween() {
 	}
 	document.getElementById("Dates").innerHTML = dates.join("");
 }
+
+function datesBetween() {
+	document.getElementById("Date2").innerHTML = "";
+	let date1 = new Date(document.getElementById("date3").value);
+	let date2 = new Date(document.getElementById("date4").value);
+	var day1 = date1.getDate();
+	var month1 = date1.getMonth() + 1;
+	var year1 = date1.getFullYear();
+	var day2 = date2.getDate();
+	var month2 = date2.getMonth() + 1;
+	var year2 = date2.getFullYear();
+
+	if (day1 >= day2 && month1 >= month2 && year1 >= year2) {
+		document.getElementById("Date2").innerHTML =
+			"The First Date is the Higest: <br/>" + date1;
+	} else {
+		document.getElementById("Date2").innerHTML =
+			"The Second Date is the Higest: <br/>" + date2;
+	}
+}
