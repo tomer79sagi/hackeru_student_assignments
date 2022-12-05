@@ -256,3 +256,41 @@ function colorStop() {
 		square.style.backgroundColor = color;
 	}
 }
+
+function randomString() {
+	let string1 = document.getElementById("string3").value;
+	let string2 = document.getElementById("string4").value;
+	let randStr1;
+	let randStr2;
+	var shuffledWord1 = "";
+	var shuffledWord2 = "";
+
+	randStr1 = string1.split("");
+	while (randStr1.length > 0) {
+		shuffledWord1 += randStr1.splice((randStr1.length * Math.random()) << 0, 1);
+	}
+
+	randStr2 = string2.split("");
+	while (randStr2.length > 0) {
+		shuffledWord2 += randStr2.splice((randStr2.length * Math.random()) << 0, 1);
+	}
+
+	document.getElementById("string3").value = shuffledWord1;
+	document.getElementById("string4").value = shuffledWord2;
+}
+
+function datesBetween() {
+	document.getElementById("Dates").innerHTML = "";
+	let date1 = new Date(document.getElementById("date1").value);
+	let date2 = new Date(document.getElementById("date2").value);
+	const dates = [];
+	while (date1 <= date2) {
+		var day = date1.getDate();
+		var month = date1.getMonth() + 1;
+		var year = date1.getFullYear();
+		var dateStr = day + "/" + month + "/" + year + "<br/>";
+		dates.push(dateStr);
+		date1.setDate(date1.getDate() + 1);
+	}
+	document.getElementById("Dates").innerHTML = dates.join("");
+}

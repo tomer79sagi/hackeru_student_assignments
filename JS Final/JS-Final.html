@@ -2,305 +2,269 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="./JS-Final.js"></script>
-		<link rel="stylesheet" href="./JS-Final.css" />
-		<title>JS Final Assigment Questions</title>
-	</head>
-	<body>
-		<div class="normal">
-			<p>
-				1. please enter an array of numbers and the Function will return the
-				Summary
-			</p>
-			<input type="text" id="num1" onchange="focus();select();" />
-			<input
-				type="button"
-				id="button1"
-				value="Add"
-				onclick="array_Builder(document.getElementById('num1').value);"
-			/>
-			<br />
-			<input type="button" value="Reset Array" onclick="reset_Builder()" />
-			<br />
-			<button onclick="questionOne()" id="one1">The Summary Is:</button>
-			<p id="question_One"></p>
-		</div>
 
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="./JS-Final.js"></script>
+	<link rel="stylesheet" href="./JS-Final.css" />
+	<title>JS Final Assigment Questions</title>
+</head>
+
+<body>
+	<div class="normal">
+		<p>
+			1. please enter an array of numbers and the Function will return the
+			Summary
+		</p>
+		<input type="text" id="num1" onchange="focus();select();" />
+		<input type="button" id="button1" value="Add" onclick="array_Builder(document.getElementById('num1').value);" />
 		<br />
-
-		<div class="normal">
-			<p>
-				2. please enter an array of numbers and the Function will return the
-				Average
-			</p>
-			<input type="text" id="num2" onchange="focus();select();" />
-			<input
-				type="button"
-				id="button2"
-				value="Add"
-				onclick="array_Builder(document.getElementById('num2').value);"
-			/>
-			<br />
-			<input type="button" value="Reset Array" onclick="reset_Builder()" />
-			<br />
-			<button onclick="questionTwo()" id="two2">The Average Is:</button>
-			<p id="question_Two"></p>
-		</div>
-
+		<input type="button" value="Reset Array" onclick="reset_Builder()" />
 		<br />
+		<button onclick="questionOne()" id="one1">The Summary Is:</button>
+		<p id="question_One"></p>
+	</div>
 
-		<div class="normal">
-			<p>
-				3. please enter 2 arrays of numbers and the Function will return the
-				Arrays as One Array
-			</p>
-			<button onclick="questionThree()" id="three3">
-				The Combined Array is:
-			</button>
-			<p id="question_Three"></p>
-		</div>
+	<br />
 
+	<div class="normal">
+		<p>
+			2. please enter an array of numbers and the Function will return the
+			Average
+		</p>
+		<input type="text" id="num2" onchange="focus();select();" />
+		<input type="button" id="button2" value="Add" onclick="array_Builder(document.getElementById('num2').value);" />
 		<br />
-
-		<div class="normal">
-			<p>
-				4. please enter any String to the Array and the function will return the
-				longest one.
-			</p>
-			<input type="text" id="string1" onchange="focus();select();" />
-			<input
-				type="button"
-				id="button3"
-				value="Add String"
-				onclick="array_Builder(document.getElementById('string1').value);"
-			/>
-			<br />
-			<button onclick="questionFour()" id="four4">
-				The longest String Is:
-			</button>
-			<p id="question_Four"></p>
-		</div>
+		<input type="button" value="Reset Array" onclick="reset_Builder()" />
 		<br />
+		<button onclick="questionTwo()" id="two2">The Average Is:</button>
+		<p id="question_Two"></p>
+	</div>
 
-		<div class="normal">
-			<p>
-				5. please enter any Thing and the function will test if all elements are
-				equal.
-			</p>
-			<input type="text" id="add1" onchange="focus();select();" />
-			<input
-				type="button"
-				id="button4"
-				value="Add Element"
-				onclick="array_Builder(document.getElementById('add1').value);"
-			/>
-			<br />
-			<button onclick="questionFive()" id="Five5">
-				Is The Array Elements Are Equal?:
-			</button>
-			<p id="question_Five"></p>
-		</div>
+	<br />
 
+	<div class="normal">
+		<p>
+			3. please enter 2 arrays of numbers and the Function will return the
+			Arrays as One Array
+		</p>
+		<button onclick="questionThree()" id="three3">
+			The Combined Array is:
+		</button>
+		<p id="question_Three"></p>
+	</div>
+
+	<br />
+
+	<div class="normal">
+		<p>
+			4. please enter any String to the Array and the function will return the
+			longest one.
+		</p>
+		<input type="text" id="string1" onchange="focus();select();" />
+		<input type="button" id="button3" value="Add String"
+			onclick="array_Builder(document.getElementById('string1').value);" />
 		<br />
+		<button onclick="questionFour()" id="four4">
+			The longest String Is:
+		</button>
+		<p id="question_Four"></p>
+	</div>
+	<br />
 
-		<div class="normal">
-			6. show all numbers from the 2 numbers: <br />
-			Number1 :
-			<input type="text" id="num_1" />
-			<br />
-			Number2 :
-			<input type="text" id="num_2" /><br />
-			<input
-				type="button"
-				onclick="questionSix()"
-				value="Show the numbers"
-				id="button5"
-			/>
-			<p>The Numbers are:</p>
-			<p id="mynumbers"></p>
-		</div>
-
+	<div class="normal">
+		<p>
+			5. please enter any Thing and the function will test if all elements are
+			equal.
+		</p>
+		<input type="text" id="add1" onchange="focus();select();" />
+		<input type="button" id="button4" value="Add Element"
+			onclick="array_Builder(document.getElementById('add1').value);" />
 		<br />
+		<button onclick="questionFive()" id="Five5">
+			Is The Array Elements Are Equal?:
+		</button>
+		<p id="question_Five"></p>
+	</div>
 
-		<div class="normal">
-			<p>
-				7. please enter an array of any thing and the Function will return a
-				random element
-			</p>
-			<input type="text" id="add2" onchange="focus();select();" />
-			<input
-				type="button"
-				id="button6"
-				value="Add"
-				onclick="array_Builder(document.getElementById('add2').value);"
-			/>
-			<br />
-			<input type="button" value="Reset Array" onclick="reset_Builder()" />
-			<br />
-			<button onclick="questionSeven()" id="Seven7">
-				The Random Element Is:
-			</button>
-			<p id="question_Seven"></p>
-		</div>
+	<br />
 
+	<div class="normal">
+		6. show all numbers from the 2 numbers: <br />
+		Number1 :
+		<input type="text" id="num_1" />
 		<br />
+		Number2 :
+		<input type="text" id="num_2" /><br />
+		<input type="button" onclick="questionSix()" value="Show the numbers" id="button5" />
+		<p>The Numbers are:</p>
+		<p id="mynumbers"></p>
+	</div>
 
-		<div class="normal">
-			<p>
-				8. please enter an array of any thing and the Function will return The
-				First and last elements
-			</p>
-			<input type="text" id="add3" onchange="focus();select();" />
-			<input
-				type="button"
-				id="button7"
-				value="Add"
-				onclick="array_Builder(document.getElementById('add3').value);"
-			/>
-			<br />
-			<input type="button" value="Reset Array" onclick="reset_Builder()" />
-			<br />
-			<button onclick="questionEigth()" id="Eigth8">
-				The First and Last Elements Are:
-			</button>
-			<p id="question_Eigth"></p>
-		</div>
+	<br />
 
+	<div class="normal">
+		<p>
+			7. please enter an array of any thing and the Function will return a
+			random element
+		</p>
+		<input type="text" id="add2" onchange="focus();select();" />
+		<input type="button" id="button6" value="Add" onclick="array_Builder(document.getElementById('add2').value);" />
 		<br />
-
-		<div class="normal">
-			<p>
-				9. please enter an array of Strings the Function will return The Array
-				with all First letters of the string in Capital
-			</p>
-			<input type="text" id="add4" onchange="focus();select();" />
-			<input
-				type="button"
-				id="button8"
-				value="Add String"
-				onclick="array_Builder(document.getElementById('add4').value);"
-			/>
-			<br />
-			<input type="button" value="Reset Array" onclick="reset_Builder()" />
-			<br />
-			<button onclick="questionNine()" id="Nine9">
-				The First and Last Elements Are:
-			</button>
-			<p id="question_Nine"></p>
-		</div>
-
+		<input type="button" value="Reset Array" onclick="reset_Builder()" />
 		<br />
+		<button onclick="questionSeven()" id="Seven7">
+			The Random Element Is:
+		</button>
+		<p id="question_Seven"></p>
+	</div>
 
-		<div class="normal">
-			<p>
-				10. please enter an array of Strings the Function will check if all
-				String are 6 letters or more if not it will remove the string
-			</p>
-			<input type="text" id="add5" onchange="focus();select();" />
-			<input
-				type="button"
-				id="button8"
-				value="Add String"
-				onclick="array_Builder(document.getElementById('add5').value);"
-			/>
-			<br />
-			<input type="button" value="Reset Array" onclick="reset_Builder()" />
-			<br />
-			<button onclick="questionTen()" id="Ten10">
-				The First and Last Elements Are:
-			</button>
-			<p id="question_Ten"></p>
-		</div>
+	<br />
 
+	<div class="normal">
+		<p>
+			8. please enter an array of any thing and the Function will return The
+			First and last elements
+		</p>
+		<input type="text" id="add3" onchange="focus();select();" />
+		<input type="button" id="button7" value="Add" onclick="array_Builder(document.getElementById('add3').value);" />
 		<br />
-
-		<div class="normal">
-			<p>
-				11. if you press the first button it will be disabled and the second
-				button resets to enable
-			</p>
-			<br />
-			<input
-				type="button"
-				value="Disable Button"
-				onclick="disableButton()"
-				id="buttonOne"
-			/>
-			<br />
-			<input
-				type="button"
-				value="Enable Button"
-				onclick="EnableButton()"
-				id="buttonTwo"
-			/>
-		</div>
-
+		<input type="button" value="Reset Array" onclick="reset_Builder()" />
 		<br />
+		<button onclick="questionEigth()" id="Eigth8">
+			The First and Last Elements Are:
+		</button>
+		<p id="question_Eigth"></p>
+	</div>
 
-		<div class="normal">
-			<p>12. Hover the picture and it will grow Each time you hover it.</p>
-			<br />
-			<div class="container">
-				<img
-					id="img1"
-					src="./hover.png"
-					alt="Hover Me!"
-					onmouseenter="hoverGrow()"
-				/>
-			</div>
-		</div>
+	<br />
+
+	<div class="normal">
+		<p>
+			9. please enter an array of Strings the Function will return The Array
+			with all First letters of the string in Capital
+		</p>
+		<input type="text" id="add4" onchange="focus();select();" />
+		<input type="button" id="button8" value="Add String"
+			onclick="array_Builder(document.getElementById('add4').value);" />
 		<br />
-
-		<div class="normal">
-			13. Please Enter the amount of Rows And Colums for the table and press the
-			button:
-			<br />
-			Please Enter Rows :
-			<input type="text" id="row1" />
-			<br />
-			Please Enter Columns :
-			<input type="text" id="col1" /><br />
-			<input
-				type="button"
-				onclick="tableCreator()"
-				value="Show the Table"
-				id="button9"
-			/>
-			<input
-				type="button"
-				onclick="tableClear()"
-				value="Click Here To Clear The Last Table"
-			/>
-			<table id="myTable"></table>
-		</div>
-
+		<input type="button" value="Reset Array" onclick="reset_Builder()" />
 		<br />
+		<button onclick="questionNine()" id="Nine9">
+			The First and Last Elements Are:
+		</button>
+		<p id="question_Nine"></p>
+	</div>
 
-		<div class="normal">
-			14. The button inside the Div will always move Away from the mouse
-			location.
-			<br />
-			<div id="containMouse" onmouseover="followMouse()">
-				<div id="mouseFrame" onmouseleave="hideMouse()"></div>
-			</div>
-		</div>
+	<br />
 
+	<div class="normal">
+		<p>
+			10. please enter an array of Strings the Function will check if all
+			String are 6 letters or more if not it will remove the string
+		</p>
+		<input type="text" id="add5" onchange="focus();select();" />
+		<input type="button" id="button8" value="Add String"
+			onclick="array_Builder(document.getElementById('add5').value);" />
 		<br />
+		<input type="button" value="Reset Array" onclick="reset_Builder()" />
+		<br />
+		<button onclick="questionTen()" id="Ten10">
+			The First and Last Elements Are:
+		</button>
+		<p id="question_Ten"></p>
+	</div>
 
-		<div class="normal">
-			15. The Square will change to a random color upon entering and leaving.
-			<br />
-			<div
-				id="randomColor"
-				onmouseover="colorsRandom()"
-				onmouseout="colorStop()"
-			>
-				<div id="colorSquare"></div>
-			</div>
+	<br />
+
+	<div class="normal">
+		<p>
+			11. if you press the first button it will be disabled and the second
+			button resets to enable
+		</p>
+		<br />
+		<input type="button" value="Disable Button" onclick="disableButton()" id="buttonOne" />
+		<br />
+		<input type="button" value="Enable Button" onclick="EnableButton()" id="buttonTwo" />
+	</div>
+
+	<br />
+
+	<div class="normal">
+		<p>12. Hover the picture and it will grow Each time you hover it.</p>
+		<br />
+		<div class="container">
+			<img id="img1" src="./hover.png" alt="Hover Me!" onmouseenter="hoverGrow()" />
 		</div>
-	</body>
+	</div>
+	<br />
+
+	<div class="normal">
+		13. Please Enter the amount of Rows And Colums for the table and press the
+		button:
+		<br />
+		Please Enter Rows :
+		<input type="text" id="row1" />
+		<br />
+		Please Enter Columns :
+		<input type="text" id="col1" /><br />
+		<input type="button" onclick="tableCreator()" value="Show the Table" id="button9" />
+		<input type="button" onclick="tableClear()" value="Click Here To Clear The Last Table" />
+		<table id="myTable"></table>
+	</div>
+
+	<br />
+
+	<div class="normal">
+		14. The button inside the Div will always move Away from the mouse
+		location.
+		<br />
+		<div id="containMouse" onmouseover="followMouse()">
+			<div id="mouseFrame" onmouseleave="hideMouse()"></div>
+		</div>
+	</div>
+
+	<br />
+
+	<div class="normal">
+		15. The Square will change to a random color upon entering and leaving.
+		<br />
+		<div id="randomColor" onmouseover="colorsRandom()" onmouseout="colorStop()">
+			<div id="colorSquare"></div>
+		</div>
+	</div>
+
+	<br />
+
+	<div class="normal">
+		16. Enter anything inside the input and watch the content switch to
+		randomness:
+		<br />
+		Please Enter first Name :
+		<input type="text" id="string3" />
+		<br />
+		Please Enter Second Name :
+		<input type="text" id="string4" />
+		<br />
+		<input type="button" onclick="randomString()" value="Show the Random String" id="button11" />
+		<p id="randString"></p>
+	</div>
+
+	<br />
+
+	<div class="normal">
+		17. Select 2 dates and see all the dates between them.
+		<br />
+		First Date:
+		<input type="date" name="Date1" id="date1" value="2022-12-04" />
+		<br />
+		Second Date: <input type="date" name="Date2" id="date2" value="" />
+		<br />
+		<input type="button" onclick="datesBetween()" value="Show me The Dates" id="button12" />
+		<p id="Dates"></p>
+	</div>
+</body>
+
 </html>
