@@ -165,7 +165,37 @@ button:hover {
   color: #526254;
   border-width: 1px;
   text-align: center;
+  border-radius: 5px;
+  background-color: #f8f5ee;
+}
+
+.ex-17__input-container {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+#ex-17-button {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.ex-17-input {
+  height: 25px;
+  width: 200px;
+  border-color: -internal-light-dark(rgb(118, 118, 118), #5f7161);
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  color: #526254;
   border-width: 1px;
+  text-align: center;
   border-radius: 5px;
   background-color: #f8f5ee;
 }

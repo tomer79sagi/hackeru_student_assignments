@@ -175,6 +175,16 @@ function switchValue() {
   document.getElementById("ex-16-second").value = value1;
 }
 
+/* --17-- */
+function printDates() {
+  let firstDate = new Date(document.getElementById("ex-17-first").value);
+  let secondDate = document.getElementById("ex-17-second").value;
+
+  console.log(firstDate + " " + secondDate);
+  firstDate.setFullYear(1998);
+  console.log(firstDate + " " + secondDate);
+}
+
 window.onload = () => {
   colorChange();
 };
