@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML and Javascript (2nd assignment)</title>
+
+    <script>
+
+    function updateColors(){
+        let styling=document.getElementsByTagName("input");
+        document.body.style.backgroundColor=styling[0].value;
+        document.body.style.color=styling[1].value;
+}
+    </script>
+</head>
+<body>
+</br></br>
+
+    <div style="width: 20%; font-size: 20px; "> Write The Background Color : <br/>
+        <input   name="font"   ></div>
+
+</br></br>
+
+    <div style="width: 20%; font-size: 20px; ">  Write The Text Color : <br/>
+        <input  name="font"   ></div>
+
+</br></br>
+
+    <button onclick="updateColors();"> Change Colors </button> 
+
+</br></br>
+
+</body>
+</html>
