@@ -314,3 +314,10 @@ function datesBetween() {
 			"The Second Date is the Higest: <br/>" + date2;
 	}
 }
+
+let range = document.getElementById("range1");
+let con = document.getElementById('normal');
+range.addEventListener("onchange", function () {
+	var size = range.value;
+	.style.fontSize = size + "px";
+});
