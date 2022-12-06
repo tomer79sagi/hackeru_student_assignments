@@ -5,3 +5,15 @@ function findTags() {
     // Update the 'innerHTML' property
     p_element_object.innerHTML = "Alex De";
 }
+
+
+function enableButton(){
+    document.getElementById("button_2").onclick = alertName;
+}
+
+function alertName(){
+
+    
+    alert("Alex De");
+
+}
