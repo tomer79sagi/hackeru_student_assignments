@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>userColor</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 30px;
+        height: 800px;
+      }
+    </style>
+    <script>
+      function changeColor() {
+        let bgColor = document.getElementById("background-color").value;
+        let textColor = document.getElementById("text-color").value;
+
+        document.querySelector("body").style.backgroundColor = bgColor;
+        document.querySelector("body").style.color = textColor;
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="background-color"
+      placeholder="Write The Background Color"
+      style="width: 300px"
+    />
+    <input
+      type="text"
+      id="text-color"
+      placeholder="Write The Text Color"
+      style="width: 300px"
+    />
+
+    <button onclick="changeColor()">Change Colors</button>
+
+    <p style="max-width: 600px">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+      deleniti voluptatem harum placeat quidem! Quia animi quo voluptatum magni
+      ut ab quisquam, illo nostrum. Saepe ipsum possimus non. Debitis, ullam.
+      Non dolorum sequi consequatur quae perferendis tenetur ipsa ex porro
+      mollitia odit minima, sint eum distinctio vel corrupti aliquam est ad
+      doloremque, dicta natus eligendi totam fugiat inventore. Nam, nostrum!
+    </p>
+  </body>
+</html>
