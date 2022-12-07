@@ -133,9 +133,58 @@ function task8(vegetables3) {
 
 //----9-----//
 
-const vegetables4 = ["this is cucumber", "this is tomato", "this is potato", "this is onion", "this is eggplant", "this is beet",
-    "this is cabbage"];
+const vegetables4 = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet",
+    "cabbage"];
 
-function task9(vegetables4) {
 
-}
+    let FirstLetter = [];
+
+    function task9(vegetables4) {
+      for (let i = 0; i < vegetables4.length; i++) {
+        FirstLetter += vegetables4[i].charAt(0).toUpperCase() + vegetables4[i].slice(1) + " ";
+      }
+      document.getElementById("ptask9").innerHTML += "<br/><br/>" + FirstLetter;
+    }
+    
+    //----10-----//
+
+    const vegetables5 = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet",
+    "cabbage"];
+
+    
+function task10(vegetables5) {
+    let newarray = [];
+    for (let i = 0; i < vegetables5.length; i++) {
+      if (vegetables5[i].length >= 6) {
+        newarray.push(vegetables5[i]);
+      }
+    }
+    document.getElementById("ptask10").innerHTML += "<br/><br/>" + newarray;
+  }
+  
+  //----11-----//
+
+  function task11() {
+    let btn = document.getElementById("task11");
+  
+    if (btn.innerHTML === "fuck") {
+      btn.innerHTML = "you";
+      btn.style.backgroundColor = "red";
+    } else if (btn.innerHTML === "you") {
+      btn.innerHTML = "fuck";
+      btn.style.backgroundColor = "yellow";
+    }
+  }
+  
+
+  //----12-----//
+  function big(x) {
+    x.style.height = "500px";
+    x.style.width = "500px";
+  }
+  
+  function normal(x) {
+    x.style.height = "5px";
+    x.style.width = "5px";
+  }
+  
