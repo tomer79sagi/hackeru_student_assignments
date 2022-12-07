@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function power() {
+                let status = document.getElementById("ton");
+
+                if (status.innerText == 'On') {
+                    document.getElementById("ton").innerHTML = "Off";
+                    status.style.backgroundColor = 'red';
+                }
+
+                else  if (status.innerText == 'Off') {
+                    document.getElementById("ton").innerHTML = "On";
+                    status.style.backgroundColor = 'green';
+                }
+            }
+
+        </script>
+    </head>
+<body>
+
+</body>
+</html> 

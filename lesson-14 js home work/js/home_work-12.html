@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise - 12</title>
+        <script>
+
+            function big_pic() {
+                const img = document.getElementById("123");
+                console.log(img);
+                img.onmouseover = () => {
+                    console.log("test");
+                    img.style.width="300px";
+                    img.style.height="300px";
+                }
+                img.onmouseout = () => {
+                    console.log("test");
+                    img.style.width="200px";
+                    img.style.height="200px";
+                }
+
+            }
+            
+            window.onload = ()=>{
+                big_pic();
+            }
+
+
+        </script>
+    </head>
+<body>
+
+    <img style="height: 200px; width: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTnY1c1eMabzg3pbCt0CjbECHHeKPXiVd0Yg&usqp=CAU" alt="rain" id="123">
+    
+</body>
+</html> 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 18</title>
+    <script>
+
+        function latestDate(){
+            let first = new Date(document.getElementById("first").value);
+            let second = new Date(document.getElementById("second").value);
+            let p = document.getElementById("p");
+
+            if(first > second){
+                p.innerHTML = first.getDate() + "/" + (first.getMonth() + 1) + "/" + first.getFullYear();
+            } 
+
+            else if (second > first){
+                p.innerHTML = second.getDate() + "/" + (second.getMonth() + 1) + "/" + second.getFullYear();
+            } 
+
+            else if (first.getTime() == second.getTime()) {
+                p.innerHTML = "This is the same day!";
+            } 
+            
+            else {
+                p.innerHTML = "Please select both of dates!"
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <label for="first">First date</label>
+    <input type="date" id="first" name="first" required>
+    <br/><br/>
+
+    <label for="second">Second date</label>
+    <input type="date" id="second" name="second" required>
+    <br/><br/>
+
+    <button onclick="latestDate();">Click me for display the latest day</button>
+    <br>
+
+    <p id="p"></p>
+
+</body>
+</html>

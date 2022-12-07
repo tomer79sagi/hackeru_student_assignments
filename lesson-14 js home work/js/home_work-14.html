@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Exercise 14</title>   
+
+    <style>
+        #square{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            height: 50px;;
+            width: 50px;;
+            border: 5px solid red;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="square"></div>
+
+    <script>
+        let square = document.getElementById('square');
+
+        function onMouseMove (position_now) {
+            square.style.left = position_now.pageX + 'px';
+            square.style.top = position_now.pageY + 'px';
+        }
+        document.addEventListener('mousemove', onMouseMove);
+
+    </script>
+    
+</body>
+</html>

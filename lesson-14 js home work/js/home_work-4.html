@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            // The question wasn't really clear and I didn't understand what had to be done, so I made 2 functions for each situation.
+            function array1 (arr) {
+                let longest = 0;
+                let index = 0;
+                for (let i = 0; i <= arr.length-1; i++) {
+                    if (arr[i].length > longest) {
+                    longest = arr[i].length;
+                    index = i;
+                    }
+                }
+                return arr[index];
+            }
+
+
+            function array2 (arr) {
+                let all = "";
+                for (let i = 0; i <= arr.length-1; i++) {
+                    all += arr[i] + " ";
+                }
+                return all;
+             }
+
+             let some = ["aviad", "vaknin", "is", "handsome"];
+             document.write(array2(some));
+
+
+        </script>
+    </head>
+<body>
+
+</body>
+</html> 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Exercise 17</title>
+    <script>
+
+        function printDates(){
+
+            let first = new Date(document.getElementById("first").value);
+            let second = new Date(document.getElementById("second").value);
+
+            if(first > second){
+                let temp = new Date(first);
+                first = new Date(second);
+                second = new Date(temp);
+            }
+
+            let p = document.getElementById("p");
+                p.innerHTML = "";
+
+            let temp = new Date(first);
+            while(temp <= second){
+                p.innerHTML += temp.getDate() + "/" + (temp.getMonth() + 1) + "/" + temp.getFullYear() + "<br/>";
+                temp.setDate(temp.getDate() + 1);
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <label for="first">First date</label>
+    <input type="date" id="first" name="first" required>
+    <br/><br/>
+
+    <label for="second">Second date</label>
+    <input type="date" id="second" name="second" required>
+    <br/><br/>
+
+    <button onclick="printDates();">Click here to display all the dates between the chosen dates</button>
+    <br>
+    <p id="p"></p>
+</body>
+</html>

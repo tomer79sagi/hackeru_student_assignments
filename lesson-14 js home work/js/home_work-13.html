@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Exercise 13</title>
+    <script>
+        let elements = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        function random_chart(){
+            let cells = document.getElementsByTagName("td");
+            for(let i = 0; i < cells.length; i++){
+                cells[i].innerHTML = elements[Math.floor(Math.random() * (elements.length-1))];
+            }
+        }
+    </script>
+
+    <style>
+        table ,td{
+            border: 1px solid black;
+            border-collapse: collapse; 
+            height: 150px; 
+            width: 450px;
+            margin-left:auto; 
+            margin-right:auto; 
+            text-align: center;
+            position: relative;
+        }
+        button {
+            display: flex;
+            text-align: center;
+            font-size: 15px;
+            color:purple;
+            margin:auto;
+
+        }
+        </style>
+
+</head>
+
+<body>
+    <div>
+    <table>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+            <td>e</td>
+            <td>f</td>
+        </tr>
+        <tr>
+            <td>h</td>
+            <td>i</td>
+            <td>j</td>
+            <td>k</td>
+            <td>l</td>
+            <td>m</td>
+        </tr>
+        <tr>
+            <td>n</td>
+            <td>o</td>
+            <td>p</td>
+            <td>q</td>
+            <td>r</td>
+            <td>s</td>
+        </tr>
+    </table>
+    <button onclick=" random_chart()"> Click here to refill the table at random</button>
+</div>
+</body>
+</html>

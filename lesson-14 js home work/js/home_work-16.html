@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Exercise 16</title>
+
+    <script>
+
+        function switchValue(){
+            let first_input = document.getElementById("first");
+            let second_input = document.getElementById("second");
+            let temp = first_input.value;
+            first_input.value = second_input.value;
+            second_input.value = temp;
+        }
+    </script>
+
+</head>
+<body>
+
+    <label for="first">Enter your input</label>
+    <input type="text" id="first" name="first">
+    <br/><br/>
+
+    <label for="second">Enter your input</label>
+    <input type="text" id="second" name="second">
+    <br/><br/>
+
+    <button onclick="switchValue();">Click me to switch values in these inputs</button>
+</body>
+</html>

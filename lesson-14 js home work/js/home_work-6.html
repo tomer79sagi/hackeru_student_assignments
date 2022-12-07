@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            function array (num1, num2) {
+                let array = [];
+                let stop = 0;
+
+                if (num1 > num2) {
+                    stop = num1 - num2 -1;
+                    for (let i = 0; i < stop; i++) {
+                        array[i] = num2 + 1 + i;
+                     }
+                return array;
+                }
+
+                else if (num2 > num1) {
+                    stop = num2 - num1 -1;
+                        for (let i = 0; i < stop; i++) {
+                            array[i] = num1 + 1 + i;
+                     }
+                return array;
+                }
+
+                else if (num1 == num2) {
+                    return array;
+                }
+            }
+
+        </script>
+    </head>
+<body>
+
+</body>
+</html> 
