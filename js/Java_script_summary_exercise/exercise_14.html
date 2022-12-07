@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        
+    <script> 
+        function myFunction(e) {
+            const element = document.getElementById("emoji");
+            element.style.left = e.clientX + "px";
+            element.style.top = e.clientY + "px";
+        }
+        document.addEventListener("mousemove", myFunction);
     </script>
 </head>
-<body>
-    
+<body onload="">
+    <div id="emoji" style="position: absolute;">&#128151;</div>
 </body>
 </html>
