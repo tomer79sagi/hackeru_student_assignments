@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise_2</title>
+    <script>
+        function check_it_out(){
+            let my_name = document.getElementById("my_name").value;
+            let i;
+            if (my_name.length == 0){
+                alert("Please enter user name");
+            }
+            else{
+                for(i = 0; i <= my_name.length-1; i++){
+                    if(parseInt(my_name[i]) == my_name[i]){
+                        alert("invalid input");
+                        break;
+                    }
+                }
+                if(i === my_name.length){
+                    alert("Proper input");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="my_name">Please enter user name</label><br>
+    <input type="text" id="my_name"><br><br>
+    <button onclick="check_it_out();">check it out</button>
+</body>
+</html>

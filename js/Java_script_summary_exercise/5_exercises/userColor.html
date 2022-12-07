@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userColor</title>
+    <script>
+        function change_colors(){
+            const text_color = document.getElementById("text_color").value;
+            const background_color = document.getElementById("background_color").value;
+            let inp_arr = document.querySelectorAll("input");
+            for (let i = 0; i<= inp_arr.length - 1; i++){
+                inp_arr[i].style.color = text_color;
+                inp_arr[i].style.backgroundColor = background_color;
+            }
+        }
+    </script>
+</head>
+<body style="text-align: center;">
+    <label for="text_color">Enter text color:</label><br>
+    <input type="text" id="text_color"><br>
+    <label for="background_color">Enter background color</label><br>
+    <input type="text" id="background_color"><br>
+    <button onclick="change_colors();">change colors</button>
+</body>
+</html>
