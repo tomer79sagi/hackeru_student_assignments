@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise_3</title>
+</head>
+<script>
+    function calculate(){
+        const f_num = +document.getElementById("f_num").value;
+        const s_num = +document.getElementById("s_num").value;
+        document.getElementById("sum").value = (f_num+s_num);
+    }
+</script>
+<body>
+    <p>Exercise_3:</p><br>
+    <label for="f_num"></label>
+    <input type="text" id="f_num">
+    <label for="s_num"> + </label>
+    <input type="text" id="s_num">
+    <label for="sum"> = </label>
+    <input type="text" id="sum">
+    <button onclick="calculate();">calculate</button>
+</body>
+</html>
