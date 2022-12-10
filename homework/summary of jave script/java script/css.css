@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+    background-color: aqua;
+    font-family: cursive;
+}
+p{
+    font-size: 150%;
+    color: blue;
+}
+button{
+    background-color: aquamarine;
+    font-size: 150%;
+}
+div{
+    font-size: 150%;
+    color: red;
+}
