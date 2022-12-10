@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 3</title>
+    <style>
+      body {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        /*   align-content: space-around; */
+        gap: 30px;
+        height: 800px;
+      }
+    </style>
+    <script>
+      function sum() {
+        let first_num = parseFloat(document.getElementById("first_num").value);
+        let second_num = parseFloat(
+          document.getElementById("second_num").value
+        );
+        document.getElementById("sum").value = first_num + second_num;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="first_num" />+<input
+      type="text"
+      id="second_num"
+    />=<input type="text" id="sum" />
+
+    <button onclick="sum()">Submit</button>
+  </body>
+</html>
