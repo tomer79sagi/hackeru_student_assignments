@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum my numbers , page 2 , assignment 3 </title>
+    <script>
+        function sumMyNums(){
+           let num1 = document.getElementById("num1");
+           let num2 = document.getElementById("num2");
+           let sum = document.getElementById("mySum");
+           sum.value= parseInt(num1.value) + parseInt(num2.value);
+        }
+    </script>
+</head>
+<body>
+   <span>
+        <input type="text" id="num1" name="num1"/>    
+        + <input type="text" id="num2" name="num2"/>        
+        = <input  type="text" id="mySum" name="sum"/>
+        <button onclick="sumMyNums();"> Submit </button>
+    </span>
+</body>
+</html>

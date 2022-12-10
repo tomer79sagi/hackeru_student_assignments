@@ -267,7 +267,7 @@ function calculateDays(){
 
 //19
 function fontSize(){
-    let font_size=document.querySelector("#fontsize");
+    let font_size=document.getElementById("fontSize");
     document.body.style.fontSize=font_size.value+"px";
     }
                  

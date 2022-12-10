@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML validation form</title>
+    <meta name="Alex Dedenko" content="width=device-width, initial-scale=1.0">
+    <title> HTML validation form , page 2 , assignment 2 </title>
 <script>
-function checkstring(){
-   let check=document.querySelector("#validCheck");
-   let x=check.value;
-   let i;
+function checkString(){
+
+   let name = document.getElementById("validCheck");
+   let x = name.value;
+ 
     if(x==""){
     alert("Enter your name please");
     }
 
         else{   
-        for ( i=0;i<x.length;i++){
-        if (parseInt(x[i])==x[i]){
+        for ( i=0; i<x.length; i++){
+        if (parseInt(x[i]) == x[i]){
         alert("השם לא תקין");
         break;
         }
@@ -36,7 +37,7 @@ function checkstring(){
     <div>Enter your name , letters only !<br/>
         <input type="text" id="validCheck" name="font"   ></div>
     <br/>
-        <button onclick="checkstring();"> submit</button> 
+        <button onclick="checkString();"> Submit </button> 
     
 </body>
 </html>
