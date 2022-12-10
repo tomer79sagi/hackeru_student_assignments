@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise_4</title>
+    <script>
+        function check(my_name){
+            my_name = my_name.value;
+            for(let i = 0; i <= my_name.length-1; i++){
+                if(parseInt(my_name[i]) == my_name[i]){
+                    alert("invalid input");
+                    break;
+                }
+            }
+        }
+
+        function what_color(color){
+            let msg = document.getElementById("message");
+            if(color.value === "red"){
+                msg.value += "  Hot color";
+            }
+            else if(color.value === "blue"){
+                msg.value += "  Cold color";
+            }
+            else{
+                msg.value += "  Thanks for choosing color";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="f_name">First name:</label>
+        <input onchange="check(this)" type="text" name="f_name" id="f_name" required><br>
+        <label for="l_name">Last name:</label>
+        <input onchange="check(this)" type="text" name="l_name" id="l_name" required><br>
+        <label for="e-mail">E-mail:</label>
+        <input onchange="check_email(this)" type="email" name="e-mail" id="e-mail" required><br>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" cols="30" rows="3"></textarea><br>
+        <label for="fav_color">Favorite color:</label>
+        <input onchange="what_color(this)" type="text" name="fav_color" id="fav_color" required><br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
