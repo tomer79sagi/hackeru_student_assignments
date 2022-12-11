@@ -15,15 +15,6 @@ function array_Builder(num) {
 	}
 }
 
-/* function display_array() {
-	var e = "<hr/>";
-
-	for (var y = 0; y < array.length; y++) {
-		e += "Element " + y + " = " + array[y] + "<br/>";
-	}
-	document.getElementById("Result").innerHTML = e;
-} */
-
 function questionOne() {
 	var sum = 0;
 	for (var i = 0; i < array.length; i++) {
@@ -317,6 +308,8 @@ function datesBetween() {
 
 function changeFontSize() {
 	var range = document.getElementById("slider");
-	var con = document.getElementById("normal");
-	con.style.fontSize = range.value + "px";
+	var con = document.getElementsByTagName("div");
+	for(var i= 0 ; i < con.length; i++){
+		con[i].style.fontSize = range.value + "px";
+	}
 }
