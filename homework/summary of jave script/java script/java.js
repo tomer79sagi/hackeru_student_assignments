@@ -161,11 +161,11 @@ function task10(vegetables) {
 function task11() {
     let btn = document.getElementById("task11");
 
-    if (btn.innerHTML === "fuck") {
-        btn.innerHTML = "you";
+    if (btn.innerHTML === "ON") {
+        btn.innerHTML = "OFF";
         btn.style.backgroundColor = "red";
-    } else if (btn.innerHTML === "you") {
-        btn.innerHTML = "fuck";
+    } else if (btn.innerHTML === "OFF") {
+        btn.innerHTML = "ON";
         btn.style.backgroundColor = "yellow";
     }
 }
