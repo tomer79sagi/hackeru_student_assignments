@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>ex18</title>
+    </head>
+    <body>
+        <label for="first">date 1</label>
+        <input type="date" id="first" name="first" required><br/><br/>
+        <label for="second">date 2</label>
+        <input type="date" id="second" name="second" required><br/><br/>
+        <button onclick="bigDay();">show bigger day</button><br>
+        <span id="span"></span>
+        <script>
+            function bigDay(){
+                let first = new Date(document.getElementById("first").value);
+                let second = new Date(document.getElementById("second").value);
+                let span = document.getElementById("span");
+                if(first > second){
+                    span.innerHTML = first.getDate() + "/" + (first.getMonth() + 1) + "/" + first.getFullYear();
+                } else if (second > first){
+                    span.innerHTML = second.getDate() + "/" + (second.getMonth() + 1) + "/" + second.getFullYear();
+                } else if (first.getTime() == second.getTime()) {
+                    span.innerHTML = "This is the same day!";
+                } else {
+                    span.innerHTML = "inputs are empty"
+                }
+            }
+        </script>
+    </body>
+</html>

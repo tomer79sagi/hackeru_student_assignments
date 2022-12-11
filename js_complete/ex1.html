@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>ex1</title>
+    </head>
+    <body>
+        <p>sum of array  [88, 12, 102, 66, 1, 13, 5, 10] = <span id="sum_of_numbers"></span> </p>
+        <script>
+            const numbers =  [88, 12, 102, 66, 1, 13, 5, 10];
+            let sum = 0;
+            function ex1(){
+                for(let i=0; i < numbers.length; i++){
+                    sum += numbers[i];
+                }
+                sum_of_numbers.innerHTML = sum;
+            }
+            ex1()
+        </script>
+    </body>
+</html>

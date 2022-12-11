@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>ex6</title>
+    </head>
+    <body>
+        <p>this is numbers between number 1 and number 2 = <span id="numbersBetween"></span> </p>
+        <script>
+            let num1 = +prompt("enter number 1")
+                let num2 = +prompt("enter number 2")
+                
+            function ex6() {
+                let  lowEnd = num1
+                let  highEnd = num2
+                
+                if (num1 > num2) {
+                    lowEnd = num2
+                    highEnd = num1
+                }
+                let list = [];
+
+                for (let i = lowEnd + 1; i < highEnd; i++) {
+                    list.push(i);
+                }
+                
+                numbersBetween.innerHTML = list
+                }
+            ex6()
+            
+        </script>
+    </body>
+</html>

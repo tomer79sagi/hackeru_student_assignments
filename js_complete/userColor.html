@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>ex20</title>
+        <style>
+            .center {
+                display: flex;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <div>
+                <label for="colorBackground">Write the background color:</label><br>
+                <input type="text" name="colorBackground" id="colorBackground" /><br>
+                <label for="colorText">Write the text color:</label><br>
+                <input type="text" name="colorText" id="colorText" /><br>
+                <button onclick="setColor()">Change Colors</button>
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam modi ullam enim itaque maxime culpa necessitatibus suscipit id et ipsa, debitis amet nobis incidunt provident illo, quibusdam unde quia. Illum!
+                </p>
+            </div>
+        </div>
+        <script>
+            function setColor(){
+                let colorBackground = document.getElementById("colorBackground");
+                let colorText = document.getElementById("colorText");
+                document.querySelector("body").style.backgroundColor = colorBackground.value;
+                document.querySelector("body").style.color = colorText.value;
+                }
+        </script>
+    </body>
+</html>

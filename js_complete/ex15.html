@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>ex15</title>
+    </head>
+    <body onload="setInterval">
+        <div id="changes">
+            <h1>change colors</h1>
+        </div>
+        <script>
+            setInterval(function() {
+                const colors = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+                changes.style.backgroundColor = colors[Math.floor(Math.random() * (colors.length-1))];
+            }, 800)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>ex11</title>
+        <style>
+            button {
+                background-color: green;
+                border-radius: 5px;
+                width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="button" onclick="ex11()">מופעל</button>
+        <script>
+            כבוי
+            function ex11(){
+                if (button.innerHTML === "מופעל"){
+                    button.innerHTML = "כבוי"
+                    button.style.backgroundColor = "red"
+                } else {
+                    button.innerHTML = "מופעל"
+                    button.style.backgroundColor = "green"
+
+                }
+            }
+        </script>
+    </body>
+</html>

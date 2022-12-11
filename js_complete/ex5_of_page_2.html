@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>ex5_of_page_2</title>
+        <style>
+            img {
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <img id="image" src="./elephant.jpg"><br/>
+        <label for="text">Type the type of animal</label><br/>
+        <input type="text" id="text" name="text">
+        <button onclick="change();">change pic</button>
+        <script>
+            function change(){
+            let image = document.getElementById("image"); 
+            let input = document.getElementById("text");
+            if(input.value == "dog"){
+                image.src = "./dog.jpg";
+            } else if(input.value == "./elephant"){
+                image.src = "./elephant.jpg";
+            } else if(input.value == "fox"){
+                image.src = "./fox.jpg";}
+}
+        </script>
+    </body>
+</html>

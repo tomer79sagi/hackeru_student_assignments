@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>ex16</title>
+    </head>
+    <body>
+        <label for="one">input 1</label>
+        <input type="text" id="one" name="one"><br/><br/>
+        <label for="two">input 2</label>
+        <input type="text" id="two" name="two"><br/><br/>
+        <button onclick="change();">Change values</button>
+        <script>
+            function change(){
+                let one = document.getElementById("one");
+                let two = document.getElementById("two");
+                let helpVariable = one.value;
+                one.value = two.value;
+                two.value = helpVariable;
+            }
+        </script>
+    </body>
+</html>

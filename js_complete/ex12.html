@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>ex12</title>
+        <style>
+            div {
+                display: flex;
+                justify-content: center;
+            }
+            img {
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img id="BigImage" onmouseover="bigImg()"
+                src="https://t4.ftcdn.net/jpg/02/32/98/31/360_F_232983161_9lmUyHKnWbLW0vQPvWCrp5R5DSpexhbx.jpg" width="100px" height="100px" alt="tomato">
+        </div>
+        <script>
+            function bigImg() {
+                let nowWidth =  BigImage.clientWidth;
+                let nowHeight = BigImage.clientHeight;
+                BigImage.style.width = (nowWidth + 5) + "px";
+                BigImage.style.height = (nowHeight + 5) + "px";
+            }
+        </script>
+    </body>
+</html>

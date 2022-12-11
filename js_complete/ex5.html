@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>ex5</title>
+    </head>
+    <body>
+        <p>if all values equal in this array  [88, 12, 102, 66, 1, 13, 5, 10]  = <span id="allSame"></span> </p>
+        <script>
+            const numbers =  [88, 12, 102, 66, 1, 13, 5, 10];
+            let allEqual = true;
+            function ex5() {
+                let isEqual = true;
+                    for(let i = 1; i<numbers.length; i++){
+                        if(numbers[0] !== numbers[i]){
+                            allEqual = false;
+                            break;
+                        }
+                    }
+                    allSame.innerHTML = allEqual;
+                }
+            ex5()
+        </script>
+    </body>
+</html>

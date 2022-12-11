@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>ex9</title>
+    </head>
+    <body>
+        <span id="uppeCase"></span>
+        <script>
+        const vegetables = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet", "cabbage"];
+            function ex9(){
+                const newArray = vegetables.map(element => " " + element[0].toUpperCase() + element.substring(1));
+                uppeCase.innerHTML = newArray
+            }
+            ex9()
+        </script>
+    </body>
+</html>

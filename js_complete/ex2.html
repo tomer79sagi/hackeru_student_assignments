@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>ex2</title>
+    </head>
+    <body>
+        <p>sum of array  [88, 12, 102, 66, 1, 13, 5, 10] = <span id="avg_of_numbers"></span> </p>
+        <script>
+            const numbers  =  [88, 12, 102, 66, 1, 13, 5, 10];
+            let sum = 0;
+            let average_of_numbers
+            function ex2(){
+                for(let i=0; i < numbers.length; i++){
+                    sum += numbers[i];
+                }
+                average_of_numbers = sum/numbers.length
+                avg_of_numbers.innerHTML = average_of_numbers;
+            }
+            ex2()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>ex10</title>
+    </head>
+    <body>
+        <span id="arrSixLetters"></span>
+        <script>
+            const vegetables = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet", "cabbage"];
+            function ex10(){
+                const newArray = [];
+                for(let i = 0; i< vegetables.length; i++){
+                    if(vegetables[i].length >= 6){
+                        newArray.push(vegetables[i]);
+                        }
+                    }
+                    arrSixLetters.innerHTML = newArray
+                }
+                ex10()
+        </script>
+    </body>
+</html>

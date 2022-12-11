@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>ex4</title>
+    </head>
+    <body>
+        <p>long string of strings ["cucumber", "tomato", "potato", "onion", "eggplant", "beet", "cabbage"]  = <span id="longString"></span> </p>
+        <script>
+            const vegetables = ["cucumber", "tomato", "potato", "onion", "eggplant", "beet", "cabbage"]
+            function ex4() {
+                let  long_string = ""
+                long_string = vegetables.join("");
+                longString.innerHTML = long_string;
+             }
+            ex4()
+        </script>
+    </body>
+</html>
