@@ -1,0 +1,12 @@
+
+.normal,#normal {
+    border: 4px;
+    background-color: aqua;
+    font-size: 16px;
+
+}
+
+.container {
+    display: flex;
+    border-color: black;
+}

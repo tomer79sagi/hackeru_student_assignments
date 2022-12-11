@@ -1,5 +1,5 @@
 
-#normal {
+.normal,#normal {
     border: 4px;
     background-color: aqua;
     font-size: 16px;

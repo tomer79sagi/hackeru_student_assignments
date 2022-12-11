@@ -315,9 +315,8 @@ function datesBetween() {
 	}
 }
 
-let range = document.getElementById("range1");
-let con = document.getElementById('normal');
-range.addEventListener("onchange", function () {
-	var size = range.value;
-	.style.fontSize = size + "px";
-});
+function changeFontSize() {
+	var range = document.getElementById("slider");
+	var con = document.getElementById("normal");
+	con.style.fontSize = range.value + "px";
+}
