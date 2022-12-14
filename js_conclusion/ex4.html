@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 30px;
+        height: 800px;
+      }
+    </style>
+    <script>
+      function checkName() {
+        let symbols = "/[ `!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?~]0123456789";
+        let name = document.getElementById("input").value;
+        if (symbols.split("").some((char) => name.includes(char))) {
+          document.getElementById("output").innerHTML =
+            "Incorrect name: Name Includes Symbols";
+          document.getElementById("output").style.color = "tomato";
+        } else if (name === "" || name === null) {
+          document.getElementById("output").innerHTML = "Please enter the name";
+          document.getElementById("output").style.color = "tomato";
+        } else {
+          document.getElementById("output").innerHTML = "Correct name";
+          document.getElementById("output").style.color = "green";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p id="output" style="text-align: center"></p>
+    <form>
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" required /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" required /><br />
+      <label for="email">Email adress:</label>
+      <input type="email" id="email" name="email" required /><br />
+      <label for="message">Your message:</label>
+      <textarea id="message" name="message"></textarea><br />
+      <label for="fav_color">Choose your favorite color</label>
+      <select id="fav_color" name="fav_color" required>
+        <option></option>
+        <option value="white">white</option>
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="orange">orange</option>
+        <option value="yellow">yellow</option>
+        <option value="green">green</option>
+        <option value="cyan">cyan</option>
+        <option value="blue">blue</option>
+        <option value="purple">purple</option>
+        <option value="other">other</option></select
+      ><span id="span"></span>
+      <button type="submit">Submit</button>
+    </form>
+
+    <button onclick="checkName()">Submit</button>
+  </body>
+</html>
