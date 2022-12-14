@@ -35,7 +35,7 @@ function task3(CupleOfArry1, CupleOfArry2) {
     document.getElementById("3").innerHTML += CupleOfArry1 + ", in your face, " + CupleOfArry2 + "<br/>";
 }
 
-// function task31(CupleOfArry1, CupleOfArry2) {
+// function task3(CupleOfArry1, CupleOfArry2) {
 
 //     let array = CupleOfArry1;
 
@@ -43,7 +43,7 @@ function task3(CupleOfArry1, CupleOfArry2) {
 //         let a = CupleOfArry2[i]
 //         array.push(a);
 //     }
-//     document.getElementById("ptask31").innerHTML +=
+//     document.getElementById("ptask3").innerHTML +=
 //         "<br/><br/>" + array;
 // }
     
