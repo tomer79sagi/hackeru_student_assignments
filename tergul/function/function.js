@@ -25,3 +25,37 @@ function three(){
     }
     document.getElementById("three").innerHTML = num;
 }
+
+function four() {
+    let num = document.getElementById("4").value
+    let newNum = ""
+
+    for(let i = num.length - 1; i >=0; i--){
+        newNum += num[i]
+    }
+    document.getElementById("four").innerHTML = newNum;
+}
+
+function five(){
+    let num = document.getElementById("5").value
+    let num1 = 0
+    let word = document.getElementById("massage").value
+
+    for(let i = 0;i < num;i++){
+        let number = +prompt("enter number");
+        num1 += number
+    }
+    document.getElementById("five").innerHTML = num1
+    document.getElementById("word").innerHTML = word
+}
+
+// function six(){}
+
+function seven(){
+    let num1 = document.getElementById("7_1").value
+    let num2 = document.getElementById("7_2").value
+
+    let random = Math.floor(Math.random() * (num2 - num1)+num1);
+
+    document.getElementById("seven").innerHTML = random;
+}
