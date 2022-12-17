@@ -222,3 +222,31 @@ function greet_13() {
     setTimeout(greet_13, 5000);
     
     sayName('John');
+
+
+// 14
+
+function greet_14(name) {
+
+    console.log(`Hello, ${name}!`);
+    
+    }
+    
+    setTimeout(___ => greet_14('Jim'), 1000);
+
+
+// 15
+
+function sum(a, b) {
+
+    console.log(a + b)
+    
+    }
+    
+    function operation(val1, val2, callback) {
+    
+    sum(val1, val2)
+    
+    }
+    
+    operation(6, 5, ________)
