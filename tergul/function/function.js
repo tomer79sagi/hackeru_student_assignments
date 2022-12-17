@@ -25,18 +25,3 @@ function three(){
     }
     document.getElementById("three").innerHTML = num;
 }
-
-
-// var number = +prompt("enter number");
-// var num = 1;
-
-
-// else {
-//     while (number > 0) {
-//         document.writeln(number);
-//         num = num * number;
-//         number--;
-
-//     }
-// }
-// document.write(num);
