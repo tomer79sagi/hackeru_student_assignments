@@ -1,0 +1,143 @@
+#btnTask {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#btnTask>button{
+    background-color: whitesmoke;
+    /* whitesmoke */
+    color: black;
+    /* black */
+    border: 2px solid;
+    /* border */
+    padding: 10px 20px;
+    /* Padding around text */
+    font-size: 16px;
+    /* Text size */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-shadow: 0px 5px black;
+    /* Drop shadow */
+    transition: all 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+#btnTask>button:first-child{
+    cursor: cell;  /* cell cursor on hover */
+}
+
+
+#btnTask>button:hover {
+    background-color: rgba(0, 0, 0, 0.227);
+    /* Darker blue on hover */
+    box-shadow: 0px 3px #666666;
+    /* Lighter shadow on hover */
+    transform: translateY(-1px);
+    /* Lift up the button on hover */
+}
+
+.mainFlex {
+    position: relative;
+    display: block;
+
+    border: solid;
+    background-color: hsl(33, 100%, 88%);
+}
+
+.rowFlex {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    left: 1px;
+    border: 1px hwb(0 0% 100% / 0.212) solid;
+    border-radius: 15px;
+
+}
+
+.rowFlex>div:not(:last-child) {
+    border: 2px solid;
+    width: 100px;
+    height: 60px;
+    border-radius: 15px;
+
+}
+
+.rowFlex>div:last-child {
+    border: 2px solid;
+    width: 200px;
+    height: 60px;
+    border-radius: 15px;
+}
+
+.rowflex>div:nth-child(1)>img {
+    position: relative;
+    left: 30px;
+    bottom: 3px;
+}
+
+.rowflex>div:nth-child(2)>img {
+    position: relative;
+    left: 30px;
+    top: 2px;
+}
+
+/* .rowflex > div:nth-child(3) > input{
+    display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
+
+.rowflex>div:nth-child(1)>span {
+    position: relative;
+    font-size: 18px;
+    font-family: Monospace;
+    top: 12px;
+    right: 20px;
+
+}
+
+.rowflex>div:nth-child(2)>span {
+    position: relative;
+    font-size: 18px;
+    font-family: Monospace;
+    top: 1px;
+    left: 18px;
+
+}
+
+.rowflex>div:nth-child(3)>span {
+    position: relative;
+    font-size: 18px;
+    font-family: Monospace;
+    top: 3px;
+    left: 5px;
+
+}
+
+.completed {
+    display: inline-block;
+    position: relative;
+    left: 75px;
+    bottom: 3px;
+    width: 30px;
+    height: 50px;
+}
+
+.description {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    top: 15px;
+    left: 0px;
+
+
+}
