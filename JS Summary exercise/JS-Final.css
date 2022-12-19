@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    background: darkcyan;
+    color: white;
+
+}
+
+header {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+#new-task {
+    display: flex;
+}
+
+input,
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-info {
+    flex: 1 1 0%;
+    background-color: aqua;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: aliceblue;
+    font-size: 1.25rem;
+}
+
+#submit-task {
+    color: beige;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+main {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: 1rem;
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: burlywood;
+    margin-bottom: 1rem;
+
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: darkblue;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+#tasks .task .content {
+    flex: 1 1 0%;
+}
+
+#tasks .task .content .text {
+    color: aliceblue;
+    font-size: 1.25rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: dodgerblue;
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+#tasks .task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+#tasks .task .actions button:hover {
+    opacity: 0.8;
+}
+
+#tasks .task .actions button:active {
+    opacity: 0.6;
+}
+
+#tasks .task .actions .edit {
+    color: burlywood;
+}
+
+#tasks .task .actions .delete {
+    color: crimson;
+}
