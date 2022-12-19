@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card task-card">
+        <div class="card-header">New task</div>
+        <div class="card-body">
+          <form id="task-form">
+            <input type="text" name="task-input" id="task-input" />
+            <button type="submit" id="add-task">Add task</button>
+          </form>
+          <p class="help">example of help text</p>
+        </div>
+      </div>
+      <div class="card tasks">
+        <div class="tasks-uncomplited">
+          <div class="task">
+            <div class="task-text">
+              <input type="checkbox" name="task-text" />undone task
+            </div>
+
+            <img src="img/garbage.png" alt="delete" id="delete" />
+          </div>
+        </div>
+        <div class="tasks-complited"></div>
+      </div>
+    </div>
+  </body>
+</html>
