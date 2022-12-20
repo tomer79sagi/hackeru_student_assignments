@@ -18,9 +18,8 @@ function loadData(){
         console.log(index);
         Object.keys(localStorage).forEach(key => {
             tm.tasks[key] = JSON.parse(localStorage.getItem(key))
-            data[key] = JSON.parse(localStorage.getItem(key))
-            createTaskDiv(data[key])
-            createSubTask(data[key])
+            createTaskDiv(tm.tasks[key])
+            createSubTask(tm.tasks[key])
         });
         console.log(tm);
         console.log(data);
@@ -29,7 +28,6 @@ function loadData(){
 
 function saveData(key,value){
     if(typeof(Storage) !== undefined){
-        data[key] = value
         localStorage.setItem(key, JSON.stringify(value))
         createTaskDiv(value)
         createSubTask(value)
@@ -38,33 +36,13 @@ function saveData(key,value){
 }
 
 function updateData(id){
-    localStorage.setItem(id,JSON.stringify(data[id]))
+    localStorage.setItem(id,JSON.stringify(tm.tasks[id]))
 }
 
 
 //Task related
 function createTask(){
-    var key = generateKey(index)
-    let title = document.getElementById("task-title").value
-    let description = document.getElementById("task-desc").value
-    let date = document.getElementById("task-date").value
-    let time = document.getElementById("task-time").value
-    let task = new Task(key,title,description,date,time)
-
-    let rtime = calculateRemainingTime(date,time)
-    let possibletime = checkIfTimeHasPassed(rtime)
-    if(checkForAllFields(title,description,date,time)){
-        if(possibletime){
-            saveData(key,task)
-            console.log(task)
-            clearFields()
-        }
-        else {
-            alert("The deadline has already passes...")
-        }
-    } else {
-        alert("Please fill all the fields")
-    }
+    tm.createTask()
 }
 
 function clearFields(){
@@ -99,15 +77,15 @@ function show_task_info(id){
     console.log(id);
     currentJob = id
     popupVisible = true
-    console.log(data[id])
+    console.log(tm.tasks)
     let popup = document.getElementById("popup-screen")
-    if(data[id]){
-        document.getElementById("form-task-title").innerHTML = data[id].title
-        document.getElementById("form-task-desc").innerHTML = data[id].description
-        document.getElementById("form-task-date").innerHTML = data[id].endDate
-        document.getElementById("form-task-time").innerHTML = data[id].endTime
-        document.getElementById("form-task-rtime").innerHTML = calculateRemainingTime(data[id].endDate,data[id].endTime)
-        if(data[id].status == "Complete"){
+    if(tm.tasks[id]){
+        document.getElementById("form-task-title").innerHTML = tm.tasks[id].title
+        document.getElementById("form-task-desc").innerHTML = tm.tasks[id].description
+        document.getElementById("form-task-date").innerHTML = tm.tasks[id].endDate
+        document.getElementById("form-task-time").innerHTML = tm.tasks[id].endTime
+        document.getElementById("form-task-rtime").innerHTML = calculateRemainingTime(tm.tasks[id].endDate,tm.tasks[id].endTime)
+        if(tm.tasks[id].status == "Complete"){
             document.getElementById("check-box").checked = true
         }
         popup.classList.add("active")
@@ -115,57 +93,20 @@ function show_task_info(id){
 }
 
 function saveEdit(){
-    let title = document.getElementById("edit-task-title").value
-    let description = document.getElementById("edit-task-desc").value
-    let date = document.getElementById("edit-task-date").value
-    let time = document.getElementById("edit-task-time").value
-
-    let rtime = calculateRemainingTime(date,time)
-    let possibletime = checkIfTimeHasPassed(rtime)
-    let d = data[currentJob]
-    console.log(currentJob);
-    if(checkForAllFields(title,description,date,time)){
-        if(possibletime){
-            popupVisible = false
-            d.title = title
-            d.description = description
-            d.endDate = date
-            d.endTime = time
-            document.getElementById("time"+currentJob).innerHTML = rtime
-            updateData(currentJob)
-            closePopup()
-            refreshAllTasks()
-            
-        }
-        else {
-            alert("The deadline has already passes...")
-        }
-    } else {
-        alert("Please fill all the fields")
-    }
+    tm.editTask(currentJob)
    
 }
 
 function deleteTask(){
-    console.log("delete")
-    deletePopup()
-    closePopup()
-    localStorage.removeItem(currentJob)
-    refreshAllTasks()
+    tm.deleteTask(currentJob)
+
 }
 
 
 function completeTask(){
     popupVisible = false
-    if(data[currentJob].status == "Complete"){
-        data[currentJob].status = "Incomplete"
-    } else {
-        data[currentJob].status = "Complete"
-    }
-    updateData(currentJob)
-    refreshAllTasks()
-    deletePopup()
-    closePopup()
+    tm.completeTask(currentJob)
+    
 }
 
 function deletePopup(){
@@ -187,9 +128,13 @@ function closePopup(){
 function setPlaceholders(){
     let title = document.getElementById("edit-task-title")
     let description = document.getElementById("edit-task-desc")
+    let date = document.getElementById("edit-task-date")
+    let time = document.getElementById("edit-task-time")
     
-    title.placeholder = data[currentJob].title
-    description.placeholder = data[currentJob].description
+    title.placeholder = tm.tasks[currentJob].title
+    description.placeholder = tm.tasks[currentJob].description
+    date.value = tm.tasks[currentJob].endDate
+    time.value = tm.tasks[currentJob].endTime
 }
 
 //Helpers
@@ -201,23 +146,13 @@ function checkForAllFields(title,desc,date,time){
     }
 }
 
-function generateKey(key){
-    for(var i = 0; i <= index; ++i){
-        if(data[i]){
-            continue
-        } else {
-            return i
-        }
-    }
-    return key++
-}
 
 function updateRemainingTime(){
     console.log("calculating")
     for(var i = 0 ; i<= index;++i){
-        if(data[i]){
-            let rtime = calculateRemainingTime(data[i].endDate, data[i].endTime)
-            document.getElementById("time"+data[i].id).innerHTML = rtime
+        if(tm.tasks[i]){
+            let rtime = calculateRemainingTime(tm.tasks[i].endDate, tm.tasks[i].endTime)
+            document.getElementById("time"+tm.tasks[i].id).innerHTML = rtime
         }
     } 
 }
@@ -295,13 +230,17 @@ function editTask(){
 }
 
 function createTaskDiv(fields){
+    let timeClass = "remaining-time"
     if(showCompleteTasks == false){
         if(fields.status == "Incomplete"){
             let rTime = calculateRemainingTime(fields.endDate,fields.endTime)
+            if(!checkIfTimeHasPassed(rTime)){
+                timeClass = "remaining-time-passed"
+            }
             let task_html = `
                     <div class="task_container" id="${fields.id}" onclick="show_task_info(this.id)">
                         <div id="title${fields.id}" class="title">${fields.title}</div>
-                        <div id="time${fields.id}" class="remaining-time">${rTime}</div>
+                        <div id="time${fields.id}" class="${timeClass}">${rTime}</div>
                         <div id="status${fields.id}">${fields.status} </div>
                         </label>
                         
@@ -316,7 +255,7 @@ function createTaskDiv(fields){
         let task_html = `
                 <div class="task_container" id="${fields.id}" onclick="show_task_info(this.id)">
                     <div id="title${fields.id}" class="title">${fields.title}</div>
-                    <div id="time${fields.id}" class="remaining-time">${rTime}</div>
+                    <div id="time${fields.id}" class="${timeClass}">${rTime}</div>
                     <div id="status${fields.id}">${fields.status} </div>
                     </label>
                     
@@ -329,14 +268,18 @@ function createTaskDiv(fields){
 }
 
 function createSubTask(fields){
+    let timeClass = "remaining-time"
     let rTime = calculateRemainingTime(fields.endDate,fields.endTime)
     let days = String(rTime).charAt(0)
+    if(!checkIfTimeHasPassed(rTime) && fields.status == "Incomplete"){
+        timeClass = "remaining-time-passed"
+    }
     console.log(days);
     if(days == 0 && fields.status == "Incomplete"){
         let task_html = `
                 <div class="task_container" id="${fields.id}" onclick="show_task_info(this.id)">
                     <div id="title${fields.id}" class="sub-title">${fields.title}</div>
-                    <div id="time${fields.id}" class="sub-remaining-time">${rTime}</div>
+                    <div id="time${fields.id}" class="${timeClass}">${rTime}</div>
                     <div id="status${fields.id}">${fields.status} </div>
                     </label>
                     
