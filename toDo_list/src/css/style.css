@@ -36,6 +36,7 @@ body {
   padding-top: 5px;
   padding-left: 15px;
   font-size: smaller;
+  color: #7d9d9c;
 }
 input[type="text"] {
   border: none;
@@ -67,5 +68,51 @@ input[type="text"]:focus {
   font-size: large;
 }
 #add-task:hover {
+  background-color: #4f6467;
   cursor: pointer;
+}
+.tasks-header {
+  font-size: large;
+  margin: 10px;
+  font-style: italic;
+  color: #7d9d9c;
+}
+.tasks {
+  padding: 10px;
+}
+.delete {
+  height: 25px;
+  cursor: pointer;
+}
+.delete:hover {
+  filter: brightness(80%);
+}
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  font-size: large;
+}
+.task-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  overflow: hidden;
+}
+.task-text {
+  display: inline;
+}
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #fff9f0;
+  border-color: #576f72;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
+.tasks-complited {
+  text-decoration: line-through;
+  color: #617b7f;
 }
