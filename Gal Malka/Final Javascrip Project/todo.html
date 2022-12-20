@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Website</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="switch.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body onload="loadData()">
+    <h1>
+        To Do Website
+    </h1>
+    
+    <section class="container">
+        <header>
+            <h3>My Tasks!</h3>
+        </header> 
+        <div class="input_field" id="input-field">
+            <input type="text" name="task_title" id="task-title" placeholder="Title">
+            <input type="text" name="task_desc" id="task-desc" placeholder="Description">
+            <input type="date" name="task_date" id="task-date">
+            <input type="time" name="task_deadline" id="task-time">
+            <input class="plus_btn" type="submit" value="+" onclick="createTask()">
+        </div>
+        <div class="switch-container">
+            <div class="switch-align">  
+            <label class="switch">
+            <input class="checkbox" id="show-all-tasks" type="checkbox" onclick="toggleFilter()"></input>
+            <span class="slider round"></span>
+            </div>
+            <label for="">Show Complete Tasks</label>
+        </div>
+        <section class="all-tasks" id="all-tasks">
+            
+        </section>
+    </section>
+    <section class="popup-screen" id="popup-screen">
+        
+    </section>
+    
+    <section class="sub_container">
+        <h3>Upcoming Tasks!</h3>
+        <div class="sub-tasks" id="sub-tasks">
+
+        </div>
+    </section>
+    <script src="classes.js"></script>
+    <script src="todo.js"></script>
+    <script src="remainingtime.js"></script>
+</body>
+</html>

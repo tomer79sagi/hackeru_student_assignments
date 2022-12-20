@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.header label {
+    text-align: center;
+    
+}
+
+.header input{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.header button{
+    width: 30%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.display-array {
+    text-align: center;
+}
