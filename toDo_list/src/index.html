@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo List</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
   </head>
-  <body>
+  <body onload="start()">
     <div class="container">
       <div class="card task-card">
         <div class="card-header">New task</div>
         <div class="card-body">
-          <form id="task-form">
-            <input type="text" name="task-input" id="task-input" />
-            <button type="submit" id="add-task">Add task</button>
+          <form id="taskForm">
+            <input type="text" name="task-input" id="taskInput" />
+            <button type="submit" id="addTask">Add task</button>
           </form>
           <p class="help">example of help text</p>
         </div>
@@ -25,17 +25,44 @@
         <div class="tasks-uncomplited">
           <div class="task">
             <div class="task-content">
-              <input type="checkbox" name="task-checkbox" id="task-checkbox" />
-              <div class="task-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-                atque?
-              </div>
+              <input
+                type="checkbox"
+                name="task-checkbox"
+                class="task-checkbox"
+              />
+              <input
+                type="text"
+                name="task-text"
+                class="task-text"
+                value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, atque?"
+                disabled
+              />
             </div>
+            <div class="time">00:00:00</div>
             <img src="img/garbage.svg" alt="delete" class="delete" />
           </div>
         </div>
         <div class="tasks-header">Complited</div>
-        <div class="tasks-complited"></div>
+        <div class="tasks-complited">
+          <div class="task">
+            <div class="task-content">
+              <input
+                type="checkbox"
+                name="task-checkbox"
+                class="task-checkbox"
+              />
+              <input
+                type="text"
+                name="task-text"
+                class="task-text"
+                value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, atque?"
+                disabled
+              />
+            </div>
+            <div class="time">00:00:00</div>
+            <img src="img/garbage.svg" alt="delete" class="delete" />
+          </div>
+        </div>
       </div>
     </div>
   </body>

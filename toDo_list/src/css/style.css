@@ -14,7 +14,7 @@ body {
   left: 50%;
   transform: translate(-50%);
   width: 80%;
-  max-width: 800px;
+  max-width: 1000px;
   min-width: 400px;
 }
 .card {
@@ -51,11 +51,11 @@ input[type="text"] {
 input[type="text"]:focus {
   outline: none;
 }
-#task-form {
+#taskForm {
   display: flex;
   flex-wrap: nowrap;
 }
-#add-task {
+#addTask {
   font-family: "roboto", sans-serif;
   margin-left: 20px;
   border-radius: 20px;
@@ -67,7 +67,7 @@ input[type="text"]:focus {
   background-color: #576f72;
   font-size: large;
 }
-#add-task:hover {
+#addTask:hover {
   background-color: #4f6467;
   cursor: pointer;
 }
@@ -95,8 +95,8 @@ input[type="text"]:focus {
   font-size: large;
 }
 .task-content {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  flex-grow: 1;
   align-items: center;
   overflow: hidden;
 }
@@ -110,9 +110,21 @@ input[type="checkbox"] {
   cursor: pointer;
   background-color: #fff9f0;
   border-color: #576f72;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); */
 }
-.tasks-complited {
+.tasks-complited .task-text {
   text-decoration: line-through;
   color: #617b7f;
+}
+
+.task-content input[type="text"] {
+  background-color: #f0ebe3;
+  border-radius: 0%;
+}
+
+.time {
+  font-style: italic;
+  font-size: small;
+  color: #7d9d9c;
+  padding: 0 10px 0 5px;
 }
