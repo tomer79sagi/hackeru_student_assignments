@@ -5,6 +5,16 @@
 
 }
 
+.task-manager {
+    width: auto;
+}
+
+@media (max-width:768px) {
+    .task-manager {
+        width: auto;
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -83,7 +93,17 @@ main {
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
-
+}
+@media (max-width:768px) {
+    #tasks .task {
+        display: flex;
+        justify-content: space-between;
+        background-color: darkblue;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+    } 
 }
 
 #tasks .task .content {
@@ -106,10 +126,10 @@ main {
 
 #tasks .task .actions {
     display: flex;
-    width: 300px;
+    width: 350px;
     margin: 0 -0.5rem;
     justify-content:flex-start;
-    align-items: left;
+    flex-direction: row;
 }
 
 #tasks .task .actions button {

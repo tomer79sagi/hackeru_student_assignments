@@ -1,7 +1,17 @@
 /** @format */
 
 //working non enum + localstorage task manager.
+// const todolist = {
+// 	content: document.querySelector("#content").value,
+// 	status: document.querySelector("#containerCheck"),
+// 	createdAt: new Date().getTime(),
+// }
 
+// class TaskManager {
+// 	taskinfo = content;
+// 	state = status;
+// 	getTime = createdAt;
+// }
 
 window.addEventListener("load", () => {
 	const form = document.querySelector("#new-task");
