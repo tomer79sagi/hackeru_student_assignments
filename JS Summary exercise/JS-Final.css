@@ -40,7 +40,7 @@ button {
     background: none;
 }
 
-#new-task-info {
+#content {
     flex: 1 1 0%;
     background-color: aqua;
     padding: 1rem;

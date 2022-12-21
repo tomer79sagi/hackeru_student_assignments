@@ -1,8 +1,11 @@
 /** @format */
 
+//working non enum + localstorage task manager.
+
+
 window.addEventListener("load", () => {
 	const form = document.querySelector("#new-task");
-	const input = document.querySelector("#new-task-info");
+	const input = document.querySelector("#content");
 	const list_el = document.querySelector("#tasks");
 
 	form.addEventListener("submit", (e) => {

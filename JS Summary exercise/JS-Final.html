@@ -16,7 +16,9 @@
 			<form id="new-task">
 				<input
 					type="text"
-					id="new-task-info"
+					name="content"
+					id="content"
+					value=""
 					placeholder="Please Enter Youre Task Info"
 				/>
 				<input type="submit" id="submit-task" value="Add Task" />
@@ -26,9 +28,16 @@
 			<section class="task-manager">
 				<h2>Tasks</h2>
 				<div id="tasks">
-					<div class="task">
+<!-- 					<div class="task">
 						<div class="content">
-							<input class="text" type="text" value="My New Task" readonly="readonly" />
+							<input
+								class="text"
+								id="text"
+								name="text"
+								type="text"
+								value="My New Task"
+								readonly="readonly"
+							/>
 						</div>
 						<div class="actions">
 							<button class="edit">Edit</button>
@@ -37,13 +46,12 @@
 								>Uncompleted
 								<input class="checkbox" type="checkbox" />
 								<span class="checkmark"></span>
-							</label>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</section>
 		</main>
 
-		<script src="./JS-Final.js"></script>
+		<script src="./JS-Final test unum+localstorage.js"></script>
 	</body>
 </html>
