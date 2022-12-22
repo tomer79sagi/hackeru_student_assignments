@@ -71,34 +71,34 @@ function task3_test() {
 //--------------------------------*/
 // Task 5*/
 
-// function task5(vegetables) {
-//   let longest = 0;
-//   let length = 0;
+function task5() {
+  let longest = 0;
+  let length = 0;
 
-//   for (let i = 0; i < vegetables.length; i++) {
-//     if (vegetables[i].length > length) {
-//       length = vegetables[i].length;
-//       longest = vegetables[i];
-//     }
-//   }
-//   document.getElementById("ptask5").innerHTML += "<br/><br/>" + length;
+  for (let i = 0; i < vegetables.length; i++) {
+    if (vegetables[i].length > length) {
+      length = vegetables[i].length;
+      longest = vegetables[i];
+    }
+  }
+  document.getElementById("ptask5").innerHTML += "<br/><br/>" + length;
 
-//   let short = length;
+  let short = length;
 
-//   for (let i = 0; i < vegetables.length; i++) {
-//     if (vegetables[i].length < short) {
-//       short = vegetables[i].length;
-//       longest = vegetables[i];
-//     }
-//   }
-//   document.getElementById("ptask5").innerHTML += "<br/><br/>" + short;
+  for (let i = 0; i < vegetables.length; i++) {
+    if (vegetables[i].length < short) {
+      short = vegetables[i].length;
+      longest = vegetables[i];
+    }
+  }
+  document.getElementById("ptask5").innerHTML += "<br/><br/>" + short;
 
-//   if (short === length) {
-//     document.getElementById("ptask5").innerHTML += "<br/><br/>" + true;
-//   } else {
-//     document.getElementById("ptask5").innerHTML += "<br/><br/>" + false;
-//   }
-// }
+  if (short === length) {
+    document.getElementById("ptask5").innerHTML += "<br/><br/>" + true;
+  } else {
+    document.getElementById("ptask5").innerHTML += "<br/><br/>" + false;
+  }
+}
 
 //--------------------------------*/
 // Task 6*/
