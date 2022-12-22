@@ -7,7 +7,6 @@ let popupVisible = false
 let showCompleteTasks = false
 let index = 0
 const tm = new TaskManager
-const data = {}
 
 //Local Storage
 
@@ -15,14 +14,11 @@ function loadData(){
     if(typeof(Storage) !== undefined){
         index = localStorage.length
         console.log(localStorage);
-        console.log(index);
         Object.keys(localStorage).forEach(key => {
             tm.tasks[key] = JSON.parse(localStorage.getItem(key))
             createTaskDiv(tm.tasks[key])
             createSubTask(tm.tasks[key])
         });
-        console.log(tm);
-        console.log(data);
     }
 }
 
@@ -45,12 +41,26 @@ function createTask(){
     tm.createTask()
 }
 
+function saveEdit(){
+    tm.editTask(currentJob)
+}
+
+function deleteTask(){
+    tm.deleteTask(currentJob)
+}
+
+function completeTask(){
+    popupVisible = false
+    tm.completeTask(currentJob)
+}
+
 function clearFields(){
     let input_field = document.getElementById("input-field")
     let inputs = input_field.querySelectorAll("input")
     inputs.forEach(element => {
         element.value = ""
     });
+    document.getElementById("plus-btn").value = "+"
 }
 
 function refreshAllTasks(){
@@ -74,10 +84,8 @@ function show_task_info(id){
         closePopup()
     }
     createPopup()
-    console.log(id);
     currentJob = id
     popupVisible = true
-    console.log(tm.tasks)
     let popup = document.getElementById("popup-screen")
     if(tm.tasks[id]){
         document.getElementById("form-task-title").innerHTML = tm.tasks[id].title
@@ -90,23 +98,6 @@ function show_task_info(id){
         }
         popup.classList.add("active")
     }
-}
-
-function saveEdit(){
-    tm.editTask(currentJob)
-   
-}
-
-function deleteTask(){
-    tm.deleteTask(currentJob)
-
-}
-
-
-function completeTask(){
-    popupVisible = false
-    tm.completeTask(currentJob)
-    
 }
 
 function deletePopup(){
@@ -149,12 +140,14 @@ function checkForAllFields(title,desc,date,time){
 
 function updateRemainingTime(){
     console.log("calculating")
-    for(var i = 0 ; i<= index;++i){
-        if(tm.tasks[i]){
-            let rtime = calculateRemainingTime(tm.tasks[i].endDate, tm.tasks[i].endTime)
-            document.getElementById("time"+tm.tasks[i].id).innerHTML = rtime
-        }
-    } 
+    Object.keys(tm.tasks).forEach(key => {
+        let rtime = calculateRemainingTime(tm.tasks[key].endDate, tm.tasks[key].endTime)
+        let doc = document.getElementById("time"+tm.tasks[key].id)
+        doc.innerHTML = rtime
+            if(checkIfTimeHasPassed(rtime)){
+                doc.classList = "remaining-time-passed"
+            }
+    })
 }
 
 
@@ -222,7 +215,6 @@ function editTask(){
             </div>
         </div>
     `
-
     let task_obj = document.createElement('div')
     task_obj.innerHTML = task_html
     Popup.appendChild(task_obj)
@@ -231,12 +223,12 @@ function editTask(){
 
 function createTaskDiv(fields){
     let timeClass = "remaining-time"
+    let rTime = calculateRemainingTime(fields.endDate,fields.endTime)
+    if(checkIfTimeHasPassed(rTime)){
+        timeClass = "remaining-time-passed"
+    }
     if(showCompleteTasks == false){
         if(fields.status == "Incomplete"){
-            let rTime = calculateRemainingTime(fields.endDate,fields.endTime)
-            if(!checkIfTimeHasPassed(rTime)){
-                timeClass = "remaining-time-passed"
-            }
             let task_html = `
                     <div class="task_container" id="${fields.id}" onclick="show_task_info(this.id)">
                         <div id="title${fields.id}" class="title">${fields.title}</div>
@@ -271,10 +263,9 @@ function createSubTask(fields){
     let timeClass = "remaining-time"
     let rTime = calculateRemainingTime(fields.endDate,fields.endTime)
     let days = String(rTime).charAt(0)
-    if(!checkIfTimeHasPassed(rTime) && fields.status == "Incomplete"){
+    if(checkIfTimeHasPassed(rTime) && fields.status == "Incomplete"){
         timeClass = "remaining-time-passed"
     }
-    console.log(days);
     if(days == 0 && fields.status == "Incomplete"){
         let task_html = `
                 <div class="task_container" id="${fields.id}" onclick="show_task_info(this.id)">

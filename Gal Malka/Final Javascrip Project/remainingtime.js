@@ -28,16 +28,14 @@ function calculateRemainingTime(date,time){
 }
 
 function checkIfTimeHasPassed(rtime){
-    console.log(rtime);
     let parts = String(rtime).split(" ")
     let days = parts[0]
     let hours = parts[3]
     let minutes = parts[6]
-    console.log(days + hours + minutes);
     if(days < 0 || hours < 0 || minutes < 0 ){
-        return false
+        return true
     }
-    return true
+    return false
 }
 
 function pushToSubTask(rtime){

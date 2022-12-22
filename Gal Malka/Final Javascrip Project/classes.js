@@ -1,3 +1,8 @@
+const TaskStatus = {
+    INCOMPLETE: 0,
+    COMPLETE: 1
+}
+
 class Task {
     id
     title
@@ -27,7 +32,7 @@ class TaskManager {
         let rtime = calculateRemainingTime(date,time)
         let possibletime = checkIfTimeHasPassed(rtime)
         if(checkForAllFields(title,description,date,time)){
-            if(possibletime){
+            if(!possibletime){
                 saveData(key,task)
                 this.tasks[key] = task
                 console.log(task)
@@ -62,7 +67,7 @@ class TaskManager {
         let d = tm.tasks[index]
         console.log(index);
         if(checkForAllFields(title,description,date,time)){
-            if(possibletime){
+            if(!possibletime){
                 popupVisible = false
                 d.title = title
                 d.description = description
