@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 14</title>   
+    <style>
+        #circle{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            height: 50px;;
+            width: 50px;;
+            border-radius: 50%;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <script>
+        let circle = document.getElementById('circle');
+        const onMouseMove = (x) =>{
+            circle.style.left = x.pageX + 'px';
+            circle.style.top = x.pageY + 'px';
+        }
+        document.addEventListener('mousemove', onMouseMove);
+    </script>
+</body>
+</html>
