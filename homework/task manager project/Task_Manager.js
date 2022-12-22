@@ -13,6 +13,13 @@ class Task{
     status = TaskManager.NUCOMPLETED
 }
 
+function complete(){
+    
+}
+
 function newTask(){
-    let 
+    let task = `
+    butten onclick "complete(this)"
+    
+    `
 }
