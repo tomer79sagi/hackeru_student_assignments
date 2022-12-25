@@ -14,55 +14,25 @@
         <div class="card-header">New task</div>
         <div class="card-body">
           <form id="taskForm">
-            <input type="text" name="task-input" id="taskInput" />
-            <button type="submit" id="addTask">Add task</button>
+            <input
+              type="text"
+              name="task-input"
+              id="taskInput"
+              placeholder="Add a task..."
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+            />
+            <button type="submit" id="addTask">I Got This!</button>
           </form>
           <p class="help">example of help text</p>
         </div>
       </div>
       <div class="card tasks">
         <div class="tasks-header">Uncomplited</div>
-        <div class="tasks-uncomplited">
-          <div class="task">
-            <div class="task-content">
-              <input
-                type="checkbox"
-                name="task-checkbox"
-                class="task-checkbox"
-              />
-              <input
-                type="text"
-                name="task-text"
-                class="task-text"
-                value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, atque?"
-                disabled
-              />
-            </div>
-            <div class="time">00:00:00</div>
-            <img src="img/garbage.svg" alt="delete" class="delete" />
-          </div>
-        </div>
+        <div class="tasks-uncomplited"></div>
         <div class="tasks-header">Complited</div>
-        <div class="tasks-complited">
-          <div class="task">
-            <div class="task-content">
-              <input
-                type="checkbox"
-                name="task-checkbox"
-                class="task-checkbox"
-              />
-              <input
-                type="text"
-                name="task-text"
-                class="task-text"
-                value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, atque?"
-                disabled
-              />
-            </div>
-            <div class="time">00:00:00</div>
-            <img src="img/garbage.svg" alt="delete" class="delete" />
-          </div>
-        </div>
+        <div class="tasks-complited"></div>
       </div>
     </div>
   </body>
