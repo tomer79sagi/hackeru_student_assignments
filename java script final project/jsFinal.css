@@ -1,0 +1,10 @@
+header{
+    background-color:purple;
+    height: 180px;
+}
+h1{
+    color: white;
+    padding: 60px;
+    margin-left: 340px;
+    text-decoration: underline;
+}
