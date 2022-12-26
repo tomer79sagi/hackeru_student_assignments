@@ -1,4 +1,5 @@
 
+//משתנה שמכיל את כל הכפתורים הנדרשים
 let theTask = `
     <button onclick="CompletTask(this)">Complete task</button>
     <button onclick="taskManager.delete(this)">Delete task</button> <!-- שינוי הכפתור למתודה בתוך הכלאס -->
@@ -23,6 +24,7 @@ class Task {
 }
 
 class TaskManager {
+    //פונקציה להוספת משימה חדשה
     add(task) {
         //הגדרת התיאור של המשימה
         task.description = prompt("enter your task");
@@ -51,6 +53,7 @@ class TaskManager {
         taskNumber++
     };
     delete(button) {
+        //פונקציית מחיקה של המשימה
 
         // x == newDiv id
         let x = button.parentNode.id
@@ -70,6 +73,7 @@ class TaskManager {
 
     };
     change(button) {
+        //שינוי המשימה
         let taskName = prompt("Change your task");
         button.parentNode.innerHTML = taskName + "<br/>" + theTask + "<br><br>"//מגדירים משתנה חדש ומדפיסים מחדש את כל הדיב 
     }
