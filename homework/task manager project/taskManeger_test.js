@@ -1,93 +1,109 @@
 
 //משתנה שמכיל את כל הכפתורים הנדרשים
-let theTask = `
-    <button onclick="CompletTask(this)">Complete task</button>
-    <button onclick="taskManager.delete(this)">Delete task</button> <!-- שינוי הכפתור למתודה בתוך הכלאס -->
-    <button onclick="taskManager.change(this)">Change task</button> <!-- שינוי הכפתור למתודה בתוך הכלאס -->
-    `
+const TaskArray = [];
+let taskNumber = TaskArray.length;
 
-//מערך חדש
-const TaskArray = []
-//מספר התחלתי של האיי די של כל טאסק
-let taskNumber = TaskArray.length
+// a new array to put tasks inside
 
+//serial number of task in array
+
+//Enum
 const TaskStatus = {
-    UNCOMPLETED: 1,
-    COMPLETED: 2,
+  UNCOMPLETED: 1,
+  COMPLETED: 2,
 };
 
 class Task {
-    status = TaskStatus.UNCOMPLETED;
-    description = "";
-    //הגדרת id לכל TASK
-    id = taskNumber;
+  status = TaskStatus.UNCOMPLETED;
+  description = "";
+  //task id / serial number
+  id = taskNumber;
 }
 
 class TaskManager {
-    //פונקציה להוספת משימה חדשה
-    add(task) {
-        //הגדרת התיאור של המשימה
-        task.description = prompt("enter your task");
+  //function that add tasks
+  add(task) {
+    //task description
+    task.description = prompt("enter your task");
+    let theTask = `
+        <div>
+          ${task.description}
+        </div>
+        <div>
+          <button onclick="CompletTask(this)">Complete task</button>
+          <button onclick="taskManager.delete(this)">Delete task</button> <!-- שינוי הכפתור למתודה בתוך הכלאס -->
+          <button onclick="taskManager.change(this)">Change task</button> <!-- שינוי הכפתור למתודה בתוך הכלאס -->
+          <input type="checkbox" id="checkboxID_${task.id}">
+          <label for="checkboxID_${task.id}">completed</label>
+        </div>
+        `;
+    // add new div inside the "father div" that we gonna add to it the tasks buttonns and description
+    let newDiv = document.createElement("div");
 
-        //(newTask)אלמנט חדש בתוך הדיב הכללי
-        let newDiv = document.createElement("div")
+    // add task id to the new div
+    newDiv.id = task.id;
 
-        //הגדרת האיי די של הניו דיב מבוסס על איי די של הטאסק
-        newDiv.id = task.id
+    //add the description and the buttons to the new div
+    newDiv.innerHTML = theTask + "<br><br>";
 
-        //מכניס את הערכים החדשים
-        newDiv.innerHTML = task.description + "<br/>" + theTask + "<br><br>"
+    //set the div id as the "big one"
+    let the_big_one = document.querySelector(".newTask");
 
-        //ניגשים לדיב הראשי
-        let the_big_one = document.querySelector(".newTask");
+    //add the new div value inside the "big one"
+    the_big_one.append(newDiv);
 
-        //מכניסים את את הערך החדש של הדיב שיצרנו בתוך הדיב הראשי
-        the_big_one.append(newDiv)
+    //add "task" to task array
+    TaskArray.push(task);
 
-        //הכנסת המשימה למערך
-        TaskArray.push(task)
+    //print the array every task
+    console.log(TaskArray);
+    // add counter +1 every task
+    taskNumber++;
+  }
 
-        //הדפסת המערך אחרי כל משימה
-        console.log(TaskArray);
+  // function for the delete button
+  delete(button) {
+    // x == newDiv id
+    let x = button.parentNode.parentNode.id;
+    console.log(x);
+    button.parentNode.parentNode.remove();
 
-        taskNumber++
-    };
-    delete(button) {
-        //פונקציית מחיקה של המשימה
+    TaskArray.forEach((task) => {
+      if (task.id == x) {
+        //עובר על המערך ומחפש איי די שדומה לאיקס ואז מוציא אותו מהמערך
+        TaskArray.splice(TaskArray.indexOf(task), 1);
+      }
+    });
 
-        // x == newDiv id
-        let x = button.parentNode.id
-        console.log(x);
-        button.parentNode.remove()
-        
+    //show array value after deleting
+    console.log(TaskArray);
+  }
 
-        TaskArray.forEach(task => {
-            if (task.id == x) {
-                //עובר על המערך ומחפש איי די שדומה לאיקס ואז מוציא אותו מהמערך
-                TaskArray.splice(TaskArray.indexOf(task),1)
-            }
-        });
-        
-        //מראה את המערך אחרי המחיקה
-        console.log(TaskArray);
+  //function that changing the description
+  change(button) {
+    let x = button.parentNode.parentNode.id;
 
-    };
-    change(button) {
-        //שינוי המשימה
-        let taskName = prompt("Change your task");
-        button.parentNode.innerHTML = taskName + "<br/>" + theTask + "<br><br>"//מגדירים משתנה חדש ומדפיסים מחדש את כל הדיב 
-    }
+    let taskName = prompt("Change your task");
+    //new varieble that add a new discription and adds all buttons
+    button.parentNode.parentNode.childNodes[1].textContent = taskName;
+    TaskArray.forEach((task) => {
+      if (task.id == x) {
+        task.description = taskName;
+      }
+    });
+    console.log(TaskArray);
+  }
 }
 
-let taskManager = new TaskManager()
+let taskManager = new TaskManager();
 
 //הגדרת משתנה חדש לכפתור משימה חדשה
-let Add_new_task = document.getElementById("Add_task")
+let Add_new_task = document.getElementById("Add_task");
 
 //הגדרת כפתור לחיץ לאיידי
-Add_new_task.onclick = () => { taskManager.add(new Task()) }
-
-
+Add_new_task.onclick = () => {
+  taskManager.add(new Task());
+};
 
 // document.getElementById("newTask").innerHTML += taskName+"<br/>"+theTask+"<br><br>";
 
@@ -96,17 +112,16 @@ Add_new_task.onclick = () => { taskManager.add(new Task()) }
 //     document.getElementById("newTask").innerHTML += taskName+"<br><br>";
 // }
 
-//מחיקה של הדיב שמעל לכפתור המחיקה
+// מחיקה של הדיב שמעל לכפתור המחיקה
 //   function DeleteTask(button){//button = this
 //     button.parentNode.remove()//parentNode = newdiv
 //   }
 
 // function ChangeTask(button) {
 //     let taskName = prompt("Change your task");
-//     button.parentNode.innerHTML = taskName + "<br/>" + theTask + "<br><br>"//מגדירים משתנה חדש ומדפיסים מחדש את כל הדיב 
+//     button.parentNode.innerHTML = taskName + "<br/>" + theTask + "<br><br>"//מגדירים משתנה חדש ומדפיסים מחדש את כל הדיב
 // }
 
 function CompletTask(button) {
-    button.parentNode
-
+  button.parentNode;
 }
