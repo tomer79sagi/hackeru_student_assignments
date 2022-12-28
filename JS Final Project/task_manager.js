@@ -78,6 +78,10 @@ class TaskManager {
             `;
     } else if (task.standing == Standing.Completed) {
       div.innerHTML = `<div class="description">${task.description}</div>
+            <div class="date-container center">
+                <input type="date" class="date" readonly>
+                <input type="time" class="date" readonly>
+            </div>
             <ul class="button-bar">
                 <li class="edit button">
                     <i class="fi fi-rr-edit"></i>
