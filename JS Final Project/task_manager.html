@@ -10,11 +10,22 @@
 </head>
 <body>
     <div class="center">
-        <span id="add_task" class="button">
+        <div id="add_task" class="button">
             <i class="fi fi-rr-plus"></i>
             Add Task
-        </span>
+        </div>
     </div>
+    <nav>
+        <span id="all_task" class="button nav">
+            Display All Task
+        </span>
+        <span id="completed_task" class="button nav disactive">
+            Display Only Completed Task
+        </span>
+        <span id="uncompleted_task" class="button nav disactive">
+            Display Only Uncompleted Task
+        </span>
+    </nav>
     <div class="task-manager">
     </div>
     <script src="task_manager.js"></script>
