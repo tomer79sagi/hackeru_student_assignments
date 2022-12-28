@@ -50,7 +50,7 @@ class TaskManager {
     this.changeStanding(task);
     this.editTask(task);
     this.saveData(task);
-    console.log("after creating:", taskArr);
+    // console.log("after creating:", taskArr);
   }
 
   renderTask(task) {
@@ -114,16 +114,16 @@ class TaskManager {
 
   deleteTask(task) {
     let currentTask = document.querySelector("#" + task.id);
-    console.log(currentTask);
-    console.log(currentTask.childNodes[4]);
-    console.log(currentTask.childNodes[4].childNodes[3]);
+    // console.log(currentTask);
+    // console.log(currentTask.childNodes[4]);
+    // console.log(currentTask.childNodes[4].childNodes[3]);
     currentTask.childNodes[4].childNodes[3].onclick = function () {
       localStorage.removeItem(task.id);
       this.parentNode.parentNode.remove();
       taskArr.splice(task.id.charAt(task.id.length - 1), 1);
       count--;
       task.changeId(task.id.charAt(task.id.length - 1), taskArr);
-      console.log("after deleting", taskArr);
+      // console.log("after deleting", taskArr);
     };
   }
 
@@ -153,7 +153,7 @@ class TaskManager {
           currentTask.style.display = "none";
         }
       }
-      console.log("after changing Standing", taskArr);
+      // console.log("after changing Standing", taskArr);
     };
   }
 
@@ -176,7 +176,7 @@ class TaskManager {
           task.id,
           JSON.stringify({ ...task, standing: task.standing.toString() })
         );
-        console.log("after editing standing", taskArr);
+        // console.log("after editing standing", taskArr);
       };
       input.onkeyup = (e) => {
         if (e.key === "Enter" || e.keyCode === 13) {
@@ -188,16 +188,16 @@ class TaskManager {
   }
   saveData(task) {
     if (typeof Storage !== "undefined") {
-      console.log(task);
+      // console.log(task);
       localStorage.setItem(
         task.id,
         JSON.stringify({ ...task, standing: task.standing.toString() })
       );
-      console.log(
-        "current item",
-        localStorage.key(count),
-        localStorage.getItem(task.id)
-      );
+      // console.log(
+      //   "current item",
+      //   localStorage.key(count),
+      //   localStorage.getItem(task.id)
+      // );
       count++;
     }
   }
@@ -208,21 +208,35 @@ const symbolFromString = (symbolAsString) =>
 function loadData() {
   if (typeof Storage !== "undefined") {
     count = localStorage.length;
-    Object.keys(localStorage).forEach((key) => {
-      let idx = parseInt(key.charAt(key.length - 1));
-      taskArr[idx] = JSON.parse(localStorage.getItem(key));
-      taskArr[idx].standing = symbolFromString(taskArr[idx].standing);
-      console.log(taskArr[idx]);
-      taskArr[idx] = Task.recreateTask(taskArr[idx]);
-      console.log(taskArr[idx]);
-      taskManager.renderTask(taskArr[idx]);
-      taskManager.deleteTask(taskArr[idx]);
-      taskManager.changeStanding(taskArr[idx]);
-      taskManager.editTask(taskArr[idx]);
-    });
-    console.log(localStorage);
-    console.log(count);
-    console.log(taskArr);
+    // Object.keys(localStorage).forEach((key) => {                                       /------------------------------\
+    //   let idx = parseInt(key.charAt(key.length - 1));                                  |                              \
+    //   taskArr[idx] = JSON.parse(localStorage.getItem(key));                            |                              \
+    //   taskArr[idx].standing = symbolFromString(taskArr[idx].standing);                 |                              \
+      // console.log(taskArr[idx]);                                                       |                              \
+      // taskArr[idx] = Task.recreateTask(taskArr[idx]);                                  |                              \
+      // console.log(taskArr[idx]);                                                       |                              \
+      // taskManager.renderTask(taskArr[idx]);                                            |                              \
+      // taskManager.deleteTask(taskArr[idx]);                                            |         NOT WORKING          \
+      // taskManager.changeStanding(taskArr[idx]);                                        |  MAYBE I'LL FIX THIS ONE DAY \
+      // taskManager.editTask(taskArr[idx]);                                              |                              \
+      // console.log(idx)                                                                 |                              \
+    // });                                                                                |                              \
+    // console.log(localStorage);                                                         |                              \
+    // console.log(count);                                                                |                              \
+    // console.log(taskArr);                                                              \------------------------------|
+    for(let i = 0; i<Object.keys(localStorage).length; i++){
+      taskArr[i] = JSON.parse(localStorage.getItem(`task_${i}`));
+      taskArr[i].standing = symbolFromString(taskArr[i].standing);
+      // console.log(taskArr[i]);
+      taskArr[i] = Task.recreateTask(taskArr[i]);
+      // console.log(taskArr[i]);
+      taskManager.renderTask(taskArr[i]);
+      taskManager.deleteTask(taskArr[i]);
+      taskManager.changeStanding(taskArr[i]);
+      taskManager.editTask(taskArr[i]);
+      console.log(i)
+    }
+    console.log(localStorage.length);
   }
 }
 
