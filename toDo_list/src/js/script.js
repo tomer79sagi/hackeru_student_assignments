@@ -4,16 +4,17 @@ const TaskStatus = {
 };
 
 function start() {
-  const uncomplitedlist = document.querySelector(".tasks-uncomplited");
-  const complitedlist = document.querySelector(".tasks-complited");
-  const checkboxes = document.querySelector(".task-checkbox");
+  const uncomplited = document.querySelector(".tasks-uncomplited");
+  const complited = document.querySelector(".tasks-complited");
+  const checkboxes = document.querySelectorAll(".task-checkbox");
 
   taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const todo = new Task(taskInput.value);
     taskInput.value = "";
-    uncomplitedlist.appendChild(todo.displayTask());
-    console.log(checkboxes);
+
+    uncomplited.appendChild(todo.displayTask());
+    localStorage.setItem("todo", todo);
   });
 }
 
@@ -44,6 +45,7 @@ class Task {
   </div>
   <div class="time">${this.date.getHours()}:${this.date.getMinutes()}:${this.date.getSeconds()}</div>
   <img src="img/garbage.svg" alt="delete" class="delete" onclick="this.parentElement.remove()"/>`;
+
     return div;
   }
 }
