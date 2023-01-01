@@ -36,8 +36,19 @@ class Task {
     temp_task.description = task.description;
     temp_task.id = task.id;
     temp_task.standing = task.standing;
-    temp_task.dateTime = Date.parse(task.dateTime);
+    temp_task.dateTime = new Date(task.dateTime);
     return temp_task;
+  }
+  static loadDate(task){
+    let currentTask = document.querySelector("#" + task.id);
+    currentTask.childNodes[2].childNodes[1].value = datetimeLocal(task.dateTime);
+    let date = new Date();
+    let min = date.getFullYear() + "-" + 
+              (date.getMonth() + 1).toString().padStart(2, "0") + "-" + 
+              date.getDate().toString().padStart(2, "0") + "T" + 
+              date.getHours().toString().padStart(2, "0") + ":" + 
+              date.getMinutes().toString().padStart(2, "0");
+    currentTask.childNodes[2].childNodes[1].setAttribute("min", min);
   }
 }
 
@@ -50,7 +61,8 @@ class TaskManager {
     this.changeStanding(task);
     this.editTask(task);
     this.saveData(task);
-    // console.log("after creating:", taskArr);
+    this.editDate(task);
+    console.log("after creating:", taskArr);
   }
 
   renderTask(task) {
@@ -61,37 +73,41 @@ class TaskManager {
     if (task.standing == Standing.Uncompleted) {
       div.innerHTML = `<div class="description">${task.description}</div>
             <div class="date-container center">
-                <input type="date" class="date" readonly>
-                <input type="time" class="date" readonly>
+              <input type="datetime-local" class="date" readonly>
             </div>
             <ul class="button-bar">
-                <li class="edit button">
-                    <i class="fi fi-rr-edit"></i>
-                </li>   
-                <li class="delete button">
-                    <i class="fi fi-rr-trash"></i>
-                </li>
-                <li class="uncompleted button">
-                    <i class="fi fi-rr-square"></i>
-                </li>
+              <li class="calendar-clock button">
+                  <i class="fi fi-rr-calendar-clock"></i>
+              </li>
+              <li class="edit button">
+                  <i class="fi fi-rr-edit"></i>
+              </li>   
+              <li class="delete button">
+                  <i class="fi fi-rr-trash"></i>
+              </li>
+              <li class="uncompleted button">
+                  <i class="fi fi-rr-square"></i>
+              </li>
             </ul>
             `;
     } else if (task.standing == Standing.Completed) {
       div.innerHTML = `<div class="description">${task.description}</div>
             <div class="date-container center">
-                <input type="date" class="date" readonly>
-                <input type="time" class="date" readonly>
+              <input type="datetime-local" class="date" readonly>
             </div>
             <ul class="button-bar">
-                <li class="edit button">
-                    <i class="fi fi-rr-edit"></i>
-                </li>   
-                <li class="delete button">
-                    <i class="fi fi-rr-trash"></i>
-                </li>
-                <li class="completed button">
-                    <i class="fi fi-rr-checkbox"></i>
-                </li>
+              <li class="calendar-clock button">
+                  <i class="fi fi-rr-calendar-clock"></i>
+              </li>
+              <li class="edit button">
+                  <i class="fi fi-rr-edit"></i>
+              </li>   
+              <li class="delete button">
+                  <i class="fi fi-rr-trash"></i>
+              </li>
+              <li class="completed button">
+                  <i class="fi fi-rr-checkbox"></i>
+              </li>
             </ul>
             `;
     }
@@ -101,35 +117,38 @@ class TaskManager {
     }
   }
 
-  setCurrentDate(task){
+  setCurrentDate(task) {
     let currentTask = document.querySelector("#" + task.id);
     let date = new Date();
+    let min = date.getFullYear() + "-" + 
+              (date.getMonth() + 1).toString().padStart(2, "0") + "-" + 
+              date.getDate().toString().padStart(2, "0") + "T" + 
+              date.getHours().toString().padStart(2, "0") + ":" + 
+              date.getMinutes().toString().padStart(2, "0");
+    currentTask.childNodes[2].childNodes[1].setAttribute("min", min);
     date.setDate(date.getDate() + 1);
-    let currentDate = date.toISOString().substring(0,10);
-    let currentTime = date.toISOString().substring(11,16);
-    currentTask.childNodes[2].childNodes[1].value = currentDate;
-    currentTask.childNodes[2].childNodes[3].value = currentTime;
-    task.dateTime = date.toISOString();
+    currentTask.childNodes[2].childNodes[1].value = datetimeLocal(date);
+    task.dateTime = date;
   }
 
   deleteTask(task) {
     let currentTask = document.querySelector("#" + task.id);
-    // console.log(currentTask);
-    // console.log(currentTask.childNodes[4]);
-    // console.log(currentTask.childNodes[4].childNodes[3]);
-    currentTask.childNodes[4].childNodes[3].onclick = function () {
+    console.log(currentTask);
+    console.log(currentTask.childNodes[4]);
+    console.log(currentTask.childNodes[4].childNodes[3]);
+    currentTask.childNodes[4].childNodes[5].onclick = function () {
       localStorage.removeItem(task.id);
       this.parentNode.parentNode.remove();
       taskArr.splice(task.id.charAt(task.id.length - 1), 1);
       count--;
       task.changeId(task.id.charAt(task.id.length - 1), taskArr);
-      // console.log("after deleting", taskArr);
+      console.log("after deleting", taskArr);
     };
   }
 
   changeStanding(task) {
     let currentTask = document.querySelector("#" + task.id);
-    currentTask.childNodes[4].childNodes[5].onclick = function () {
+    currentTask.childNodes[4].childNodes[7].onclick = function () {
       if (task.standing == Standing.Uncompleted) {
         this.className = "completed button";
         this.innerHTML = `<i class="fi fi-rr-checkbox"></i>`;
@@ -141,6 +160,7 @@ class TaskManager {
         if (uncompleted_task.className == "button nav") {
           currentTask.style.display = "none";
         }
+        currentTask.firstChild.style.color = "green";
       } else if (task.standing == Standing.Completed) {
         this.className = "uncompleted button";
         this.innerHTML = `<i class="fi fi-rr-square"></i>`;
@@ -152,8 +172,9 @@ class TaskManager {
         if (completed_task.className == "button nav") {
           currentTask.style.display = "none";
         }
+        currentTask.firstChild.style.color = "black";
       }
-      // console.log("after changing Standing", taskArr);
+      console.log("after changing Standing", taskArr);
     };
   }
 
@@ -164,7 +185,7 @@ class TaskManager {
     input.type = "text";
     input.className = "onchange";
     input.value = description.innerHTML;
-    currentTask.childNodes[4].childNodes[1].onclick = function () {
+    currentTask.childNodes[4].childNodes[3].onclick = function () {
       description.innerHTML = "";
       description.appendChild(input);
       input.focus();
@@ -176,7 +197,6 @@ class TaskManager {
           task.id,
           JSON.stringify({ ...task, standing: task.standing.toString() })
         );
-        // console.log("after editing standing", taskArr);
       };
       input.onkeyup = (e) => {
         if (e.key === "Enter" || e.keyCode === 13) {
@@ -186,19 +206,91 @@ class TaskManager {
       };
     };
   }
+
   saveData(task) {
     if (typeof Storage !== "undefined") {
-      // console.log(task);
+      console.log(task);
       localStorage.setItem(
         task.id,
         JSON.stringify({ ...task, standing: task.standing.toString() })
       );
-      // console.log(
-      //   "current item",
-      //   localStorage.key(count),
-      //   localStorage.getItem(task.id)
-      // );
+      console.log(
+        "current item",
+        localStorage.key(count),
+        localStorage.getItem(task.id)
+      );
       count++;
+    }
+  }
+
+  static ifTimeExpired(){
+    let currentDate = new Date();
+    // currentDate.setHours(currentDate.getHours() + 2);
+    for(let i = 0; i<taskArr.length; i++){
+      if(TaskManager.checkStanging(taskArr[i]) && taskArr[i].dateTime < currentDate){
+        let currentTask = document.querySelector("#" + taskArr[i].id);
+        currentTask.firstChild.style.color = "red";
+      }
+    }
+  }
+
+  static checkStanging(task){
+    let status = (task.standing == Standing.Uncompleted);
+    let currentTask = document.querySelector("#" + task.id);
+    if(!status){
+      currentTask.firstChild.style.color = "green";
+    } else if(status){
+      currentTask.firstChild.style.color = "black";
+    }
+    return status;
+  }
+
+  editDate(task){
+    let currentTask = document.querySelector("#" + task.id);
+    currentTask.childNodes[4].childNodes[1].onclick = function () {
+      let dateField= currentTask.childNodes[2].childNodes[1];
+      dateField.removeAttribute("readonly");
+      if ("showPicker" in HTMLInputElement.prototype) {
+        dateField.showPicker();
+      } else {
+        dateField.className = "date-onchange";
+      }
+      dateField.onblur = () => {
+        dateField.setAttribute("readonly", true);
+        dateField.className = "date";
+        task.dateTime = new Date(currentTask.childNodes[2].childNodes[1].value)
+        localStorage.setItem(
+          task.id,
+          JSON.stringify({ ...task, standing: task.standing.toString() })
+        );
+      };
+      dateField.onmouseout = () =>{
+        dateField.setAttribute("readonly", true);
+        dateField.className = "date";
+        task.dateTime = new Date(currentTask.childNodes[2].childNodes[1].value)
+        localStorage.setItem(
+          task.id,
+          JSON.stringify({ ...task, standing: task.standing.toString() })
+        );
+      }
+      dateField.onkeyup = (e) => {
+        if (e.key === "Enter" || e.keyCode === 13) {
+          dateField.setAttribute("readonly", true);
+          task.dateTime = new Date(currentTask.childNodes[2].childNodes[1].value)
+          localStorage.setItem(
+            task.id,
+            JSON.stringify({ ...task, standing: task.standing.toString() })
+          );
+        }
+      };
+      dateField.onchange = () => {
+        dateField.setAttribute("readonly", true);
+        task.dateTime = new Date(currentTask.childNodes[2].childNodes[1].value)
+        localStorage.setItem(
+                task.id,
+                JSON.stringify({ ...task, standing: task.standing.toString() })
+              );
+      }
     }
   }
 }
@@ -208,33 +300,17 @@ const symbolFromString = (symbolAsString) =>
 function loadData() {
   if (typeof Storage !== "undefined") {
     count = localStorage.length;
-    // Object.keys(localStorage).forEach((key) => {                                       /------------------------------\
-    //   let idx = parseInt(key.charAt(key.length - 1));                                  |                              \
-    //   taskArr[idx] = JSON.parse(localStorage.getItem(key));                            |                              \
-    //   taskArr[idx].standing = symbolFromString(taskArr[idx].standing);                 |                              \
-      // console.log(taskArr[idx]);                                                       |                              \
-      // taskArr[idx] = Task.recreateTask(taskArr[idx]);                                  |                              \
-      // console.log(taskArr[idx]);                                                       |                              \
-      // taskManager.renderTask(taskArr[idx]);                                            |                              \
-      // taskManager.deleteTask(taskArr[idx]);                                            |         NOT WORKING          \
-      // taskManager.changeStanding(taskArr[idx]);                                        |  MAYBE I'LL FIX THIS ONE DAY \
-      // taskManager.editTask(taskArr[idx]);                                              |                              \
-      // console.log(idx)                                                                 |                              \
-    // });                                                                                |                              \
-    // console.log(localStorage);                                                         |                              \
-    // console.log(count);                                                                |                              \
-    // console.log(taskArr);                                                              \------------------------------|
-    for(let i = 0; i<Object.keys(localStorage).length; i++){
+    for (let i = 0; i < Object.keys(localStorage).length; i++) {
       taskArr[i] = JSON.parse(localStorage.getItem(`task_${i}`));
       taskArr[i].standing = symbolFromString(taskArr[i].standing);
-      // console.log(taskArr[i]);
       taskArr[i] = Task.recreateTask(taskArr[i]);
-      // console.log(taskArr[i]);
       taskManager.renderTask(taskArr[i]);
       taskManager.deleteTask(taskArr[i]);
       taskManager.changeStanding(taskArr[i]);
       taskManager.editTask(taskArr[i]);
-      console.log(i)
+      taskManager.editDate(taskArr[i]);
+      Task.loadDate(taskArr[i]);
+      console.log(i);
     }
     console.log(localStorage.length);
   }
@@ -246,7 +322,6 @@ function createTask() {
 
 let taskManager = new TaskManager();
 
-document.body.onload = loadData;
 add_task.onclick = createTask;
 
 function displayTask(button) {
@@ -287,6 +362,12 @@ function displayTask(button) {
   }
 }
 
+function datetimeLocal(datetime) {
+  const dt = new Date(datetime);
+  dt.setMinutes(dt.getMinutes() - dt.getTimezoneOffset());
+  return dt.toISOString().slice(0, 16);
+}
+
 all_task.addEventListener("click", () => {
   displayTask(all_task);
 });
@@ -296,3 +377,6 @@ completed_task.addEventListener("click", () => {
 uncompleted_task.addEventListener("click", () => {
   displayTask(uncompleted_task);
 });
+
+setInterval(() => {TaskManager.ifTimeExpired()}, 500);
+document.body.onload = loadData;
