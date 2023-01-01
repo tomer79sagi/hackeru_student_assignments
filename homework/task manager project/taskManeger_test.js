@@ -91,6 +91,7 @@ class TaskManager {
         task.description = taskName;
       }
     });
+    console.log(x);
     console.log(TaskArray);
   }
 }
@@ -104,6 +105,7 @@ let Add_new_task = document.getElementById("Add_task");
 Add_new_task.onclick = () => {
   taskManager.add(new Task());
 };
+
 
 // document.getElementById("newTask").innerHTML += taskName+"<br/>"+theTask+"<br><br>";
 
@@ -122,6 +124,6 @@ Add_new_task.onclick = () => {
 //     button.parentNode.innerHTML = taskName + "<br/>" + theTask + "<br><br>"//מגדירים משתנה חדש ומדפיסים מחדש את כל הדיב
 // }
 
-function CompletTask(button) {
-  button.parentNode;
+function CompletTask() {
+  console.log("hii");
 }
