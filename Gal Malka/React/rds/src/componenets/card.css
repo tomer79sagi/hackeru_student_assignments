@@ -1,0 +1,25 @@
+.card {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    z-index: 6;
+    background-color: #fff;
+    box-shadow:  0px 10px 13px 5px rgba(0,0,0,0.4);
+}
+
+.card-content {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+
+}
+
+.card:hover {
+    opacity: 0.8;
+}

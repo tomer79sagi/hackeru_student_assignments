@@ -78,6 +78,9 @@ h3 {
 .remaining-time-passed {
     color: red;
 }
+.remaining-time-complete {
+    color: green;
+}
 .task_container:active {
   box-shadow: 0px 0px 0px 0px;
   top: 5px;

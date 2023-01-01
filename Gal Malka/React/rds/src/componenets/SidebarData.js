@@ -1,7 +1,6 @@
 import React from 'react'
 import * as FiIcons from "react-icons/fi"
 import * as AiIcons from "react-icons/ai"
-import * as IoIcons from "react-icons/io"
 import * as MdIcons from "react-icons/md"
 
 export const SidebarData = [
@@ -12,13 +11,13 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: "SinglePlayer",
+        title: "Single Player",
         path: '/singleplayer',
         icon: <AiIcons.AiOutlineUser />,
         cName: 'nav-text'
     },
     {
-        title: "MultiPlayer",
+        title: "Multi Player",
         path: '/multiplayer',
         icon: <AiIcons.AiOutlineTeam />,
         cName: 'nav-text'

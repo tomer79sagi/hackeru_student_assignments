@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    background-color: #ebebeb;
+    min-height: 91vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow:  0px 20px 23px 5px rgba(0,0,0,0.4);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.header {
+    text-align: center;
+}

@@ -39,6 +39,7 @@ function updateData(id){
 //Task related
 function createTask(){
     tm.createTask()
+    tm.tasks[1]
 }
 
 function saveEdit(){
@@ -144,7 +145,10 @@ function updateRemainingTime(){
         let rtime = calculateRemainingTime(tm.tasks[key].endDate, tm.tasks[key].endTime)
         let doc = document.getElementById("time"+tm.tasks[key].id)
         doc.innerHTML = rtime
-            if(checkIfTimeHasPassed(rtime)){
+            if(checkIfTimeHasPassed(rtime) && tm.tasks[key].status == "Complete"){
+                doc.classList = "remaining-time-complete"
+            }
+            else if(checkIfTimeHasPassed(rtime)){
                 doc.classList = "remaining-time-passed"
             }
     })
@@ -224,8 +228,11 @@ function editTask(){
 function createTaskDiv(fields){
     let timeClass = "remaining-time"
     let rTime = calculateRemainingTime(fields.endDate,fields.endTime)
-    if(checkIfTimeHasPassed(rTime)){
+    if(checkIfTimeHasPassed(rTime) && fields.status == "Incomplete"){
         timeClass = "remaining-time-passed"
+    }
+    else if(checkIfTimeHasPassed(rTime) && fields.status == "Complete"){
+        timeClass = "remaining-time-complete"
     }
     if(showCompleteTasks == false){
         if(fields.status == "Incomplete"){
@@ -265,6 +272,9 @@ function createSubTask(fields){
     let days = String(rTime).charAt(0)
     if(checkIfTimeHasPassed(rTime) && fields.status == "Incomplete"){
         timeClass = "remaining-time-passed"
+    }
+    else if(checkIfTimeHasPassed(rTime) && fields.status == "Complete"){
+        timeClass = "remaining-time-complete"
     }
     if(days == 0 && fields.status == "Incomplete"){
         let task_html = `

@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    background-color: #ebebeb;
+    min-height: 91vh;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.body h1 {
+    position: absolute;
+    top: 100px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-evenly;
+}
+
+.player-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.img-container {
+    width: 200px;
+    height: 200px;
+}
+
+.health-point {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+}
+
+.health-point .icon {
+    width: 32px;
+    height: 32px;
+}
+
+.count-down{
+    height: 50px;
+    font-size: 20px;
+    font-weight: 300;
+}

@@ -99,7 +99,11 @@ class TaskManager {
     }
 
     generateKey(key){
-        for(var i = 0; i <= index; ++i){
+        let max = 0
+        Object.keys(this.tasks).forEach((task) =>{
+            task > max ? max = task : null
+        })
+        for(var i = 0; i <= max; ++i){
             if(this.tasks[i]){
                 continue
             } else {
