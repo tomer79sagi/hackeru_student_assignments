@@ -90,7 +90,7 @@ class Task {
       name="task-text"
       class="task-text"
       value="${this.task}"
-      autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+      autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" onfocusout="updateStorage(this)" />
   </div>
   <div class="time">${this.date.getHours()}:${this.date.getMinutes()}:${this.date.getSeconds()}</div>
   <img src="img/garbage.svg" alt="delete" class="delete" onclick="removeElem(this)"/>`;
@@ -102,6 +102,13 @@ class Task {
 function removeElem(obj) {
 
   localStorage.removeItem(`task-${obj.parentElement.firstChild.firstChild.nextElementSibling.id}`);
-  
   obj.parentElement.remove();
 }
+
+function updateStorage(obj) {
+  const task = JSON.parse(localStorage.getItem(`task-${obj.previousElementSibling.id}`));
+  task.task = obj.value;
+  localStorage.setItem(`task-${obj.previousElementSibling.id}`, JSON.stringify(task));
+}
+
+
