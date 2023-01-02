@@ -1,0 +1,52 @@
+body{
+    background-image: url("img/hand-drawn-floral-wallpaper_52683-67169.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#add_btn{
+    margin: 25px;
+    width: 150px;
+    height: 40px;
+}
+button{
+    border-radius: 5px;
+    height: 25px;
+    border: 2px rgba(183, 141, 13, 0.975) solid;
+    background-color: aliceblue;
+}
+button:hover {
+    opacity: 0.7;
+}
+div{
+    width: auto;
+    padding: 10px;
+    border: 2px rgba(183, 141, 13, 0.975) solid;
+    margin: 10px;
+    background-color: rgba(206, 194, 204, 0.3);
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.divs_container{
+    display: flex;
+    flex-direction: column-reverse;
+    border: 0px;
+    background-color: transparent;
+}
+.incomplete_btn{
+    background-color: rgb(207, 38, 38);
+    color:rgb(250, 234, 214);
+
+}
+.completed_btn{
+    background-color: rgb(46, 147, 46);
+    color:antiquewhite;
+}
+h1{
+    color: rgb(148, 114, 11);
+    /*text-shadow: -10px 10px 10px rgb(235, 200, 93);*/
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
