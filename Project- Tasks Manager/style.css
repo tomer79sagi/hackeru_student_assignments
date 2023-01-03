@@ -1,0 +1,53 @@
+
+.container{
+    
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+header{
+
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 60%;
+
+
+}
+
+body{
+    background-image: url("bg1.jpg" );
+    background-repeat: no-repeat;   
+    background-size: 1800px;
+}
+
+input[type='text']{
+width: 30%;
+}
+.container > div {
+
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+}
+#dltBtn{
+    position: absolute;
+    right: 40%;
+}
+#edtBtn{
+    position: absolute;
+    right: 45%;
+}
+#chkBox{
+    
+    position: absolute;
+    vertical-align: middle;
+    margin-left: 20px;
+
+}
+button{
+    margin: 5px;
+}
+
+
