@@ -1,102 +1,101 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Fira sans', sans-serif;
+/** @format */
 
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: "Fira sans", sans-serif;
 }
 
 .task-manager {
-    width: auto;
+	width: auto;
 }
 
-@media (max-width:768px) {
-    .task-manager {
-        width: auto;
-    }
+@media (max-width: 768px) {
+	.task-manager {
+		width: auto;
+	}
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 50vh;
-    background: darkcyan;
-    color: white;
-
+	display: flex;
+	flex-direction: column;
+	min-height: 50vh;
+	background: darkcyan;
+	color: white;
 }
 
 header {
-    flex: 1 1 0%;
-    padding: 2rem 1rem;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
+	flex: 1 1 0%;
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
+	font-size: 2.5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
 }
 
 #new-task {
-    display: flex;
+	display: flex;
 }
 
 input,
 button {
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
 }
 
 #content {
-    flex: 1 1 0%;
-    background-color: aqua;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-right: 1rem;
-    color: aliceblue;
-    font-size: 1.25rem;
+	flex: 1 1 0%;
+	background-color: aqua;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: aliceblue;
+	font-size: 1.25rem;
 }
 
 #submit-task {
-    color: beige;
-    font-size: 1.25rem;
-    font-weight: 700;
+	color: beige;
+	font-size: 1.25rem;
+	font-weight: 700;
 }
 
 main {
-    flex: 1 1 0%;
-    padding: 2rem 1rem;
-    max-width: auto;
-    width: 100%;
-    margin: 0 auto;
+	flex: 1 1 0%;
+	padding: 2rem 1rem;
+	max-width: auto;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .task-list {
-    padding: 1rem;
+	padding: 1rem;
 }
 
 .task-list h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: burlywood;
-    margin-bottom: 1rem;
-
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: burlywood;
+	margin-bottom: 1rem;
 }
 
 #tasks .task {
-    display: flex;
-    justify-content: space-between;
-    background-color: darkblue;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
+	display: wrap;
+	justify-content: space-between;
+	background-color: darkblue;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
 }
-@media (max-width:768px) {
+/* @media (max-width:768px) {
     #tasks .task {
-        display: flex;
+        display: wrap;
         justify-content: space-between;
         background-color: darkblue;
         padding: 1rem;
@@ -104,119 +103,129 @@ main {
         margin-bottom: 1rem;
         flex-direction: column;
     } 
-}
+} */
 
 #tasks .task .content {
-    flex: 1 1 0%;
+	flex: 1 1 0%;
 }
 
 #tasks .task .content .text {
-    color: aliceblue;
-    font-size: 1.25rem;
-    width: 100%;
-    display: block;
-    transition: 0.4s;
-    flex-wrap: wrap;
-
+	color: aliceblue;
+	font-size: 1.25rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+	flex-wrap: wrap;
 }
 
 #tasks .task .content .text:not(:read-only) {
-    color: dodgerblue;
+	color: dodgerblue;
 }
 
 #tasks .task .actions {
-    display: flex;
-    width: 350px;
-    margin: 0 -0.5rem;
-    justify-content:flex-start;
-    flex-direction: row;
+	display: flex;
+	width: 100%;
+	margin: 0 -0.5rem;
+	justify-content: flex;
+	flex-direction: row;
 }
 
 #tasks .task .actions button {
-    cursor: pointer;
-    margin: 0 0.5rem;
-    font-size: 1.125rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: 0.4s;
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
 }
 
 #tasks .task .actions button:hover {
-    opacity: 0.8;
+	opacity: 0.8;
 }
 
 #tasks .task .actions button:active {
-    opacity: 0.6;
+	opacity: 0.6;
 }
 
 #tasks .task .actions .edit {
-    color: burlywood;
-
+	color: burlywood;
 }
 
 #tasks .task .actions .delete {
-    color: crimson;
+	color: crimson;
 }
 
 .containerCheck {
-    padding: 1px 6px;
-    display: flex;
-    justify-content: center;
-        position: relative;
-    padding-left: 2rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
-    font-size: 1.125rem;
-    font-weight: 500;
-    user-select: none;
-    transition: 0.4s;
-    text-transform: uppercase;
+	padding: 1px 6px;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	padding-left: 2rem;
+	margin: 0 0.5rem;
+	cursor: pointer;
+	font-size: 1.125rem;
+	font-weight: 500;
+	user-select: none;
+	transition: 0.4s;
+	text-transform: uppercase;
 }
 
 .containerCheck input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
 }
 
 .checkmark {
-    position: absolute;
-    top: 15%;
-    left: 0%;
-    height: 1rem;
-    width: 1rem;
-    background-color: #eee;
-    border-radius: 50%;
+	position: absolute;
+	top: 15%;
+	left: 0%;
+	height: 1rem;
+	width: 1rem;
+	background-color: #eee;
+	border-radius: 50%;
 }
 
-.containerCheck:hover input~.checkmark {
-    background-color: #ccc;
+.containerCheck:hover input ~ .checkmark {
+	background-color: #ccc;
 }
 
-.containerCheck input:checked~.checkmark {
-    background-color: #2196F3;
+.containerCheck input:checked ~ .checkmark {
+	background-color: #2196f3;
 }
 
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+	content: "";
+	position: absolute;
+	display: none;
 }
 
-.containerCheck input:checked~.checkmark:after {
-    display: block;
-    position: absolute;
-
+.containerCheck input:checked ~ .checkmark:after {
+	display: block;
+	position: absolute;
 }
+
+#tasks:has(.checkmark:after) {
+		text-decoration: line-through;}
 
 .containerCheck .checkmark:after {
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+	text-decoration: line-through;
+	color: var(--grey);
+}
+
+.actions .date {
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
 }
