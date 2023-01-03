@@ -271,14 +271,6 @@ class TaskManager {
           );
         }
       };
-      dateField.onchange = () => {
-        dateField.setAttribute("readonly", true);
-        task.dateTime = new Date(currentTask.childNodes[2].childNodes[1].value)
-        localStorage.setItem(
-                task.id,
-                JSON.stringify({ ...task, standing: task.standing.toString() })
-              );
-      }
     }
   }
 }
