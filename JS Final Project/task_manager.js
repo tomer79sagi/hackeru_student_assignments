@@ -250,11 +250,8 @@ class TaskManager {
     currentTask.childNodes[4].childNodes[1].onclick = function () {
       let dateField= currentTask.childNodes[2].childNodes[1];
       dateField.removeAttribute("readonly");
-      if ("showPicker" in HTMLInputElement.prototype) {
-        dateField.showPicker();
-      } else {
-        dateField.className = "date-onchange";
-      }
+      dateField.showPicker();
+      dateField.focus();
       dateField.onblur = () => {
         dateField.setAttribute("readonly", true);
         dateField.className = "date";
@@ -264,15 +261,6 @@ class TaskManager {
           JSON.stringify({ ...task, standing: task.standing.toString() })
         );
       };
-      dateField.onmouseout = () =>{
-        dateField.setAttribute("readonly", true);
-        dateField.className = "date";
-        task.dateTime = new Date(currentTask.childNodes[2].childNodes[1].value)
-        localStorage.setItem(
-          task.id,
-          JSON.stringify({ ...task, standing: task.standing.toString() })
-        );
-      }
       dateField.onkeyup = (e) => {
         if (e.key === "Enter" || e.keyCode === 13) {
           dateField.setAttribute("readonly", true);
