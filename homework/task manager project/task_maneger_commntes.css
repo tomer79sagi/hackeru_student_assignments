@@ -1,4 +1,16 @@
-body{
+
+body {
     text-align: center;
-    background-color: aqua;
-}
+    background-color: lightgrey;
+    font-weight: bold;
+  }
+  #Add_task{
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    font-size: larger;
+  }
+  button{
+    background-color: cornflowerblue;
+    border-radius: 20px;
+  }
+  
