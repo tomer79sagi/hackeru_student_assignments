@@ -1,27 +1,29 @@
 /** @format */
 const state = {
-	COMPLETED: "Completed",
-	UNCOMPLETED: "Uncompleted",
+	COMPLETED: true,
+	UNCOMPLETED: false,
 };
-
 let objectDate = new Date();
 let day = objectDate.getDate();
-let month = objectDate.getMonth()+1;
+let month = objectDate.getMonth() + 1;
 let year = objectDate.getFullYear();
-
-let fullDate = `${day}/${month}/${year}`;
 
 window.addEventListener("load", () => {
 	todos = JSON.parse(localStorage.getItem("todos")) || [];
 	form = document.querySelector("#new-task");
 	list_el = document.querySelector("#tasks");
+	document.getElementById("date").value = new Date()
+		.toISOString()
+		.substring(0, 10);
 
 	form.addEventListener("submit", (e) => {
+		let fullDate = `${day}/${month}/${year}`;
+
 		const newTodo = {
 			content: document.getElementById("content").value,
-			status: false,
+			status: state.UNCOMPLETED,
 			createdAt: fullDate,
-			dateDeadLine: document.querySelector("date")
+			dateDeadLine: document.querySelector("#date").value,
 		};
 
 		// document.getElementById("date").value = new Date().toLocaleString();
@@ -95,13 +97,14 @@ function DisplayTodos() {
 			task_checkcon_el.classList.add("done");
 		}
 
-		if (newTodo.status == false) {
+		if (newTodo.status == state.UNCOMPLETED) {
 			task_checkcon_el.innerText = "Uncompleted";
 			task_content_el.querySelector(".text").style.textDecoration = "none";
-		} else if (newTodo.status == true) {
+		} else if (newTodo.status == state.COMPLETED) {
 			task_checkcon_el.innerText = "Completed";
 			task_content_el.querySelector(".text").style.textDecoration =
 				"line-through";
+			task_content_el.querySelector(".text").style.color = "yellow";
 		}
 
 		//filling the checkbox with classes
@@ -170,22 +173,54 @@ function DisplayTodos() {
 		task_checkcon_el.addEventListener("change", (e) => {
 			const task_checkcon_el = task_actions_el.querySelector("label");
 			const task_input_el = task_content_el.querySelector("input");
+			const fullDate = `${day}/${month}/${year}`;
 
-			if (task_checkcon_el.innerText.toLowerCase() == "uncompleted") {
+			if (
+				task_checkcon_el.innerText.toLowerCase() == "uncompleted" &&
+				fullDate >= newTodo.dateDeadLine
+			) {
 				task_input_el.style.textDecoration = "line-through";
+				task_input_el.style.color = "yellow";
 				task_checkcon_el.innerText = "Completed";
 				task_checkcon_el.appendChild(task_checkbox_el);
 				task_checkcon_el.appendChild(task_checkmark_el);
-				newTodo.status = true;
+				newTodo.status = state.COMPLETED;
 				localStorage.setItem("todos", JSON.stringify(todos));
 			} else if (task_checkcon_el.innerText.toLowerCase() == "completed") {
 				task_input_el.style.textDecoration = "none";
 				task_checkcon_el.innerText = "Uncompleted";
 				task_checkcon_el.appendChild(task_checkbox_el);
 				task_checkcon_el.appendChild(task_checkmark_el);
-				newTodo.status = false;
+				newTodo.status = state.UNCOMPLETED;
 				localStorage.setItem("todos", JSON.stringify(todos));
+			}
+			getDateTime(newTodo.dateDeadLine);
+			if (
+				newTodo.status == state.UNCOMPLETED &&
+				objectDate <= newTodo.dateDeadLine
+			) {
+				task_input_el.style.textDecoration = "none";
+				task_checkcon_el.innerText = "Uncompleted";
+				task_input_el.style.color = "red";
 			}
 		});
 	});
+}
+
+function getDateTime(taskDate) {
+	// Grab the current time and date
+	const now = new Date();
+	
+	// From the now variable, store the current minutes, hours, day of the month, month, year and seconds
+	const minuteCheck = now.getMinutes();
+	const hourCheck = now.getHours();
+	const dayCheck = now.getDate(); // Do not use getDay() that returns the day of the week, 1 to 7
+	const monthCheck = now.getMonth();
+	const yearCheck = now.getFullYear(); // Do not use getYear() that is deprecated.
+
+	const taskMinuteCheck = taskDate.getMinutes();
+	const taskHourCheck = taskDate.getHours();
+	const taskDayCheck = taskDate.getDate(); // Do not use getDay() that returns the day of the week, 1 to 7
+	const taskMonthCheck = taskDate.getMonth();
+	const taskYearCheck = taskDate.getFullYear(); // Do not use getYear() that is deprecated.
 }

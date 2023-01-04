@@ -21,7 +21,10 @@
 					value=""
 					placeholder="Please Enter Your Task Info"
 				/>
-				<input type="date" id="date" value="">
+				<input type="date" id="date" name="begin" 
+				placeholder="dd-mm-yyyy" value=""
+				format="yyyy-mm-dd"
+				min="1997-01-01" max="2030-12-31">
 				<input type="submit" id="submit-task" value="Add Task" />
 			</form>
 		</header>
@@ -29,7 +32,14 @@
 			<section class="task-manager">
 				<h2>Tasks</h2>
 				<div id="tasks">
-<!-- 					<div class="task">
+					<div id="status">
+						<div id="Completed">Completed
+<label for=""></label>
+						</div>
+						<div id="Uncompleted">Uncompleted
+<label for=""></label>
+						</div>
+						<!-- 					<div class="task">
 						<div class="content">
 							<input
 								class="text"
@@ -49,6 +59,7 @@
 								<span class="checkmark"></span>
 						</div>
 					</div> -->
+					</div>
 				</div>
 			</section>
 		</main>
