@@ -1,5 +1,10 @@
-body{
+body, html{
+    height: 100%;
+}
+.bg{
     background-image: url("img/hand-drawn-floral-wallpaper_52683-67169.webp");
+    height: 100%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -49,4 +54,14 @@ h1{
 }
 button{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.too_late{
+    color: red;
+    text-decoration-line: line-through;
+}
+/*#input{
+    
+}
+#edit_input{
+
 }
