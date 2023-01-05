@@ -1,30 +1,48 @@
-*{
+* {
   font-family: cursive;
 }
 
-
 body {
-    text-align: center;
-    background-color: rgb(58, 180, 224);
-    font-weight: bold;
-    background: url(background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  #Add_task{
-    background-color: rgb(31, 1, 254);
-    border-radius: 20px;
-    font-size: larger;
-    /* border-radius: 500px; */
-  }
+  text-align: center;
+  font-weight: bold;
+  background: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  #Add_task:hover{
-    font-size: 25px;
-  }
+#Add_task {
+  background-color: rgb(31, 1, 254);
+  border-radius: 500px;
+  font-size: larger;
+}
 
-  button{
-    background-color: cornflowerblue;
-    border-radius: 20px;
-  }
-  
+#Add_task:hover {
+  font-size: 25px;
+}
+
+#Add_task::before {
+  font-size: 25px;
+}
+
+button {
+  background-color: cornflowerblue;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+button:hover {
+  background-color: cornflowerblue;
+  font-size: 17px;
+}
+
+h1 {
+  font-size: 50px;
+  color: rgb(167, 13, 13);
+  text-align: center;
+  font-weight: bold;
+}
