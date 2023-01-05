@@ -92,6 +92,7 @@ class TaskManager {
     // add counter +1 every task
     taskNumber++;
   }
+  
 
   /**
    * This function deletes an existing task.
