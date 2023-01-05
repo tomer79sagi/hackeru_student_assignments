@@ -1,0 +1,56 @@
+
+*{
+  font-family: 'Poppins';
+}
+
+  
+
+
+body {
+  text-align: center;
+  background-color: rgb(19, 76, 137);
+  font-weight: bold;
+  background: url(abstract-smooth-green-gradient-color-effect-background-website-poster-graphic-design_120819-758.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Add_task{
+  background-color: rgb(229, 30, 63);
+  border-radius: 20px;
+  font-size: larger;
+  border-radius: 500px;
+  }
+
+#Add_task:hover{
+  font-size: 30px;
+  }
+#Add_task::before {
+  content: "+";
+  font-size: 30px;
+}
+
+button{
+  background-color: dodgerblue;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  border-radius: 500px;
+}
+button:hover{
+  background-color: rgb(151, 172, 220);
+  font-size: 17px;
+}
+
+
+h1{
+  font-size: 70px;
+  color: rgb(80, 69, 69);
+  text-align: center;
+  font-weight: bold;
+}

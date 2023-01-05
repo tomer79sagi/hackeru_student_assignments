@@ -1,8 +1,8 @@
 /**
  * @file taskManeger.js
  *
- * @copyright Copyright 2022 Eytan Bellin | All rights
- *                         to reserved to Eytan Bellin.
+ * @copyright Copyright 2022 Shimon Morgon | All rights
+ *                         to reserved to Shimon Morgon.
  *
  * @project    Task Manager
  * @date       December 27, 2022

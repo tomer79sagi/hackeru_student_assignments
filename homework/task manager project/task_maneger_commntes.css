@@ -1,14 +1,28 @@
+*{
+  font-family: cursive;
+}
+
 
 body {
     text-align: center;
-    background-color: lightgrey;
+    background-color: rgb(58, 180, 224);
     font-weight: bold;
+    background: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+  
   #Add_task{
-    background-color: cornflowerblue;
+    background-color: rgb(31, 1, 254);
     border-radius: 20px;
     font-size: larger;
+    /* border-radius: 500px; */
   }
+
+  #Add_task:hover{
+    font-size: 25px;
+  }
+
   button{
     background-color: cornflowerblue;
     border-radius: 20px;
