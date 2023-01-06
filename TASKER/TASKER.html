@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="TASKER.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="box">
+      <h1>Task Manager</h1>
+    </div>
+
+    <div class="container">
+      <p>
+        <label for="new-task" class="middle"> My to-do list </label>
+        <input
+          id="new-task"
+          type="text"
+          placeholder="Finish my project..."
+        /><button id="addTask">Add new task</button>
+      </p>
+
+      <h3 class="middle">Tasks in progress...</h3>
+      <ul id="incomplete-tasks"></ul>
+
+      <h3 class="middle">Completed Tasks</h3>
+      <ul id="completed-tasks"></ul>
+    </div>
+
+    <script type="text/javascript" src="TASKER.js"></script>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+function myFunc1(){
+const myArray = ['h', 'e', 'l', 'l', 'o'];
+
+// first element
+document.write(myArray[0]);  // "h"
+           }
+
+
+function myFunc2(){
+            let dailyActivities = ['eat', 'sleep'];
+
+// add an element at the end
+dailyActivities.push('exercise');
+
+document.write(dailyActivities); //  ['eat', 'sleep', 'exercise']
+           }
+
+function myFunc3(){
+    let dailyActivities = ['eat', 'sleep'];
+
+// this will add the new element 'exercise' at the 2 index
+dailyActivities[2] = 'exercise';
+
+document.write(dailyActivities); // ['eat', 'sleep', 'exercise']
+}
+
+function myFunc4(){
+    let dailyActivities = [ 'eat', "sleep"];
+
+// this will add the new element 'exercise' at the 3 index
+dailyActivities[3] = 'exercise';
+
+document.write(dailyActivities); // ["eat", "sleep", undefined, "exercise"]
+}
+
+function myFunc5(){
+   // 5.
+let dailyActivities = ['work', 'eat', 'sleep' , 'exercise' ];
+
+// remove the last element
+let x = dailyActivities.pop();
+document.write(dailyActivities); // ['work', 'eat', 'sleep']
+const removedElement = x;
+
+//get removed element
+document.write(removedElement + "</br>"); // 'sleep'
+document.write(dailyActivities + "</br>" );  // ['work', 'eat']
+}
+
+function myFunc6(){
+const dailyActivities = [ 'eat', 'sleep'];
+
+// this gives the total number of elements in an array
+document.write(dailyActivities.length); // 2
+}
+
+function myFunc8(){
+    // program to print a text
+// declaring a function
+function greet() {
+    document.write("Hello there!");
+}
+
+// calling the function
+greet();
+}
+
+function greet9(){
+
+let name = prompt("Enter a name: ");
+
+
+document.write("Hello " + name + ":)");
+
+}
+
+function plus10(){
+    // program to add two numbers using a function
+// declaring a function
+function add(x,y) {
+    document.write(x+y);
+}
+
+// calling functions
+add(3,4);
+document.write("</br>")
+add(2,9);
+}
+
+
+function plus11(){
+    // program to add two numbers
+// declaring a function
+function add(a, b) {
+    return a+b;
+}
+
+// take input from the user
+let number1 = parseFloat(prompt("Enter first number: "));
+let number2 = parseFloat(prompt("Enter second number: "));
+
+// calling function
+let result = number1+number2;
+
+// display the result
+document.write("The sum is " + result);
+}
+
+
+function callback12(name, callback) {
+    document.write('Hi' + ' ' + name);
+    
+// callback function
+function callMe() {
+    document.write('I am callback function');
+}
+
+// passing function as an argument
+greet('Peter', callMe);
+}
+
+function delay13(){
+    //  program that shows the delay in execution and calling the ‘greet’ function after 2 seconds.
+function greet() {
+    console.log('Hello world');
+}
+
+function sayName(name) {
+    console.log('Hello' + ' ' + name);
+}
+
+// calling the function
+greet(sayName, 2000);
+sayName('John');
+}
+
+function greet14() {
+    let name = prompt("enter your name");
+  document.write(`Hello, ${name}!`);
+}
+
+setTimeout( e=> greet('Jim'), 1000);
+
+    </script>
+</head>
+<body>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="myFunc1()"> 1) 1st index
+     </button>
+
+     <button type="button" style="width: 20%; font-size: 20px;" onclick="myFunc2()"> 2) Daily Activities
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="myFunc3()"> 3) Daily dailyActivities
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="myFunc4()"> 4) Daily dailyActivities
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="myFunc5()"> 5) Remove last element
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="myFunc6()"> 6) length
+    </button>
+    
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="myFunc7()"> 7) 
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="myFunc8()"> 8) Function
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="greet9()"> 9) Function prompt
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="plus10()"> 10) 3+4 , 2+9
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="plus11()"> 11) return
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="callback12()"> 12) callback
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="delay13()"> 13) delay
+    </button>
+
+    <button type="button" style="width: 20%; font-size: 20px;" onclick="greet14()"> 14) greet delay
+    </button>
+
+</body>
+</html>
