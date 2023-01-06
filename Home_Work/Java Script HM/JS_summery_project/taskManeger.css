@@ -18,6 +18,7 @@ body {
   background-color: rgb(229, 30, 63);
   font-size: larger;
   border-radius: 500px;
+
   }
 
 #Add_task:hover{
@@ -29,19 +30,21 @@ body {
 
 button{
   background-color: dodgerblue;
-  display: inline-block;
+
   font-size: 16px;
   font-weight: bold;
   padding: 12px 24px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
   border-radius: 500px;
+  
 }
 button:hover{
   background-color: rgb(151, 172, 220);
   font-size: 17px;
+
+ 
 }
 
 
