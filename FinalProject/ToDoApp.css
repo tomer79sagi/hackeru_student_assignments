@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+}
+.instraction{
+    text-align: center;
+}
+.bold{
+    font-size:  x-large;
+    font-weight: bold;
+}
+#container {
+    margin: auto;
+    width: 50%;
+    background-color:  darkgray;
+}
+
+li {
+    border: 2px solid red;
+    margin: 5px;
+    background-color: lightgray;
+    overflow: hidden;
+}
+
+
+li.completed {
+
+    background-color: green;
+}
+ 
