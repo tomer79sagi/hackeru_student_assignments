@@ -1,0 +1,66 @@
+body {
+    background-image: url(pic.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+
+}
+
+table,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: aqua;
+    height: 150px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+}
+
+.add_task {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+}
+
+.description {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.editButton, 
+.deleteButton,
+.completeButton {
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 2px; 
+    background-color: white;
+
+}
+
+.editButton:hover,
+.deleteButton:hover,
+.completeButton:hover {
+    padding: 17px;
+    background-color: aqua;
+} 
+
+#button_add_task {
+    background-color: turquoise;
+    border-radius: 10px;
+    margin: 15px;
+    padding: 10px;
+}
+
+.task {
+    border: solid 5px blue;
+    padding: 5px;
+    margin: 12px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 10px;
+}
