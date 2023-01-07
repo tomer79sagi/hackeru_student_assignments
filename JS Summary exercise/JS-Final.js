@@ -52,20 +52,12 @@ function DisplayTodos() {
 		const task_el = document.createElement("div");
 		task_el.classList.add("task");
 
+		//create the task with text input.
 		const task_content_el = document.createElement("div");
 		task_content_el.classList.add("content");
 		task_content_el.innerHTML = `<input type="text" class="text" id="text" value="${newTodo.content}" readonly style="text-decoration: none;" />`;
 
 		task_el.appendChild(task_content_el);
-
-		//creating a new line for the task
-		//creating the text area for the task
-		// const task_input_el = document.createElement("input");
-		// task_input_el.classList.add("text");
-		// task_input_el.type = "text";
-		// task_input_el.value = `${newTodo.content}`;
-		// task_input_el.setAttribute("readonly", "readonly");
-		// task_content_el.appendChild(task_input_el);
 
 		//creating the area for the buttons
 		const task_actions_el = document.createElement("div");
@@ -207,7 +199,7 @@ function DisplayTodos() {
 	});
 }
 
-function getDateTime(taskDate) {
+/* function getDateTime(taskDate) {
 	// Grab the current time and date
 	const now = new Date();
 	
@@ -223,4 +215,4 @@ function getDateTime(taskDate) {
 	const taskDayCheck = taskDate.getDate(); // Do not use getDay() that returns the day of the week, 1 to 7
 	const taskMonthCheck = taskDate.getMonth();
 	const taskYearCheck = taskDate.getFullYear(); // Do not use getYear() that is deprecated.
-}
+} */

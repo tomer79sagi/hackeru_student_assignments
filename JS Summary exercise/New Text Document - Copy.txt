@@ -1,9 +1,0 @@
-https://subscription.packtpub.com/book/web-development/9781788293969/1/ch01lvl1sec03/todo-list-app
-
-https://www.geeksforgeeks.org/javascript-course-task-tracker-project/
-
-https://www.youtube.com/watch?v=MkESyVB4oUw
-
-https://www.youtube.com/watch?v=i1pxPSl9ZHc
-
-https://www.youtube.com/watch?v=6eFwtaZf6zc (local storage)
