@@ -25,29 +25,28 @@ function createDiv(id, description, status, date){
     task_base.id = id;
     task_base.innerHTML = new_task;
     document.getElementById("divs_container").appendChild(task_base);
-    //check and fit design to the status
     if(status === 'Incomplete'){
         document.getElementById(id+"status").classList.add("incomplete_btn");
     }
     else{
         document.getElementById(id+"status").classList.remove("incomplete_btn");
         document.getElementById(id+"status").classList.add("completed_btn");
+        document.getElementById(id+"desc").classList.add("well_done");
     }
     document.getElementById(id+"date").value = date;
-    //taskManager.checkDate(id);
 }
 
 class TaskManager {
 
     //prop
-    Tasks_obj = [];//change name to task_array
+    Tasks_array = [];
 
     //methods
     //add
     add(description, id){
         let key = this.gen_key(id);
         let create_task = new Task(description, key);
-        this.Tasks_obj[key] = create_task;
+        this.Tasks_array[key] = create_task;
         localStorage.setItem(key,JSON.stringify(create_task));
     }
 
@@ -55,7 +54,7 @@ class TaskManager {
     delete_task(id){
         let element = document.getElementById(id[0]);
         document.getElementById("divs_container").removeChild(element);
-        this.Tasks_obj[id[0]] = null;
+        this.Tasks_array[id[0]] = null;
         localStorage.removeItem(id[0]);
     }
 
@@ -73,33 +72,35 @@ class TaskManager {
     //change status
     change_status(id){
         id = id[0];
-        if(this.Tasks_obj[id].status == TaskStatus.INCOMPLETE){
-            this.Tasks_obj[id].status = TaskStatus.COMPLETED;
+        if(this.Tasks_array[id].status == TaskStatus.INCOMPLETE){
+            this.Tasks_array[id].status = TaskStatus.COMPLETED;
             document.getElementById(id+"status").classList.remove("incomplete_btn");
             document.getElementById(id+"status").classList.add("completed_btn");
+            document.getElementById(id+"desc").classList.add("well_done");
         }
         else{
-            this.Tasks_obj[id].status = TaskStatus.INCOMPLETE;
+            this.Tasks_array[id].status = TaskStatus.INCOMPLETE;
             document.getElementById(id+"status").classList.remove("completed_btn");
             document.getElementById(id+"status").classList.add("incomplete_btn");
+            document.getElementById(id+"desc").classList.remove("well_done");
+            
         }
         let doc = document.getElementById(id+"status");
-        doc.innerHTML = this.Tasks_obj[id].status;
-        localStorage.setItem(id, JSON.stringify(taskManager.Tasks_obj[id]));
+        doc.innerHTML = this.Tasks_array[id].status;
+        localStorage.setItem(id, JSON.stringify(taskManager.Tasks_array[id]));
     }
 
     saveDate(id){
         let my_d = document.getElementById(id).value;
-        this.Tasks_obj[id[0]].date = my_d;
-        localStorage.setItem(id[0], JSON.stringify(taskManager.Tasks_obj[id[0]]))
+        this.Tasks_array[id[0]].date = my_d;
+        localStorage.setItem(id[0], JSON.stringify(taskManager.Tasks_array[id[0]]))
     }
 
     //check the date
     checkDate(id){
-        let my_d = (new Date(this.Tasks_obj[id].date)).setHours(0,0,0,0);
-        console.log(my_d);
+        let my_d = (new Date(this.Tasks_array[id].date)).setHours(0,0,0,0);
         let tod_d = new Date().setHours(0,0,0,0);
-        if((my_d < tod_d) && (this.Tasks_obj[id].status == 'Incomplete')){
+        if((my_d < tod_d) && (this.Tasks_array[id].status == 'Incomplete')){
             document.getElementById(id+"desc").classList.add("too_late");
             document.getElementById(id+"status").classList.remove("incomplete_btn");
             document.getElementById(id+"status").innerHTML = "Too Late";
@@ -109,8 +110,8 @@ class TaskManager {
 
     //preventing empty cells in array
     gen_key(key){
-        for(let j = 0; j <= this.Tasks_obj.length; j++){
-            if(this.Tasks_obj[j]){
+        for(let j = 0; j <= this.Tasks_array.length; j++){
+            if(this.Tasks_array[j]){
                 continue;
             }
             else{
@@ -121,8 +122,6 @@ class TaskManager {
     }
 }
 
-
-
 //elements for edit_task
 let currentJob = 0;
 edit_inp = document.createElement("input");
@@ -131,9 +130,9 @@ edit_btn.innerHTML = "Edit";
 
 function change_description(){
     let input = document.getElementById("edit_input")
-    taskManager.Tasks_obj[currentJob].description = input.value;
+    taskManager.Tasks_array[currentJob].description = input.value;
     document.getElementById(currentJob+"desc").innerHTML = input.value;
-    localStorage.setItem(currentJob, JSON.stringify(taskManager.Tasks_obj[currentJob]));
+    localStorage.setItem(currentJob, JSON.stringify(taskManager.Tasks_array[currentJob]));
     delete_edit_input()
 }
 
@@ -153,6 +152,7 @@ let i = 0;
 let inp = document.createElement("input");
 let new_btn = document.createElement("button");
 inp.id = "input";
+inp.placeholder = "Task Description";
 new_btn.innerHTML = "CREATE";
 function show_input(){
     new_btn.onclick = create_new_task;
@@ -186,12 +186,7 @@ function delete_edit_input(){
     edit_btn.remove()
 }
 
-
-
-//the code will be running in a browser, this assumes the browser is running for at least 24 hrs and will not work otherwise.
-//var dayInMilliseconds = 1000 * 60 * 60 * 24;
-//setInterval(function() { console.log("foo"); }, dayInMilliseconds );
-
+//call the tasks back from localStorage
 function show_tasks(){
     let ls_array = Object.keys(localStorage);
     for(let j = 0; j <= ls_array.length-1; j++){
@@ -199,8 +194,9 @@ function show_tasks(){
             let taskDesc = JSON.parse(localStorage.getItem(j)).description;
             let taskStatus = JSON.parse(localStorage.getItem(j)).status;
             let taskDate = JSON.parse(localStorage.getItem(j)).date;
-            taskManager.Tasks_obj[j] = JSON.parse(localStorage.getItem(j));
+            taskManager.Tasks_array[j] = JSON.parse(localStorage.getItem(j));
             createDiv(j, taskDesc, taskStatus, taskDate);
+            //I call this function only when refreshing or opening the page.
             taskManager.checkDate(j);
         } 
     }

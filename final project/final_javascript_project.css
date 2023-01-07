@@ -59,6 +59,9 @@ button{
     color: red;
     text-decoration-line: line-through;
 }
+.well_done{
+    color: rgb(21, 227, 21);
+}
 #input{
     border: 2px rgba(183, 141, 13, 0.975) solid;
     border-bottom: 0;
