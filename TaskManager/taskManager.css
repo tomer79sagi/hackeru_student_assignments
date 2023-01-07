@@ -1,0 +1,58 @@
+.container {
+    display: block;
+    width: 600px;
+    height: 200px;
+    margin: 50px auto 0;
+    }
+
+#new-task {
+    font-size: 30px;
+    margin: 1%;
+    border-radius: 10px;
+}
+
+#newTaskButton {
+    font-size: 30px;
+    margin: 1%;
+    border-radius: 10px;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li input[type=text] {
+    display: none;
+    }
+    
+ul li.editMode input[type=text] {
+display: block;
+}
+
+#completed-tasks label {
+    text-decoration: line-through;
+    }
+
+    
+ul li.editMode label {
+display: none;
+}
+
+button {
+    margin: 1%;
+}
+
+li {
+    list-style: none;
+    }
+
+label {
+    margin-right: 10%;
+    font-size: 25px;
+}    
+
+
+
+
+
+
