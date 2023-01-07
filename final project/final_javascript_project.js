@@ -2,30 +2,41 @@ class Task {
     description = "";
     id;
     status = TaskStatus;
+    date = "";
     constructor(description, id){
         this.description = description;
         this.id = id;
-        this.status = TaskStatus.INCOMPLETE;
-        createDiv(id, description);
-        
+        this.status = TaskStatus.INCOMPLETE; 
+        this.date = new Date().toISOString().substring(0,10);
+        createDiv(this.id, this.description, this.status, this.date);
     }
 }
 
 //create a div than add a task to the div. will work by clicking the button Add Task and entering description
-function createDiv(id, description){
+function createDiv(id, description, status, date){
     let new_task = `
         <p id="${id}desc" style="font-size: 20px;">${description}</p>
-        <input onchange="taskManager.checkDate(this.id);" type="date" id="${id}date">
-        <button onclick="taskManager.edit_task(this.id);" id="${id}edit" >Edit</button>
-        <button onclick="taskManager.delete_task(this.id);" id="${id}delete" >Delete</button> 
-        <button onclick="taskManager.change_status(this.id);" class="incomplete_btn" id="${id}status">${TaskStatus.INCOMPLETE}</button>           
+        <input onchange="taskManager.saveDate(this.id);" type="date" id="${id}date">
+        <button onclick="taskManager.edit_task(this.id);" id="${id}edit">Edit</button>
+        <button onclick="taskManager.delete_task(this.id);" id="${id}delete">Delete</button> 
+        <button onclick="taskManager.change_status(this.id);" id="${id}status">${status}</button>           
     `;
     let task_base = document.createElement("div");
     task_base.id = id;
     task_base.innerHTML = new_task;
-    document.getElementById("divs_container").appendChild(task_base); 
+    document.getElementById("divs_container").appendChild(task_base);
+    //check and fit design to the status
+    if(status === 'Incomplete'){
+        document.getElementById(id+"status").classList.add("incomplete_btn");
+    }
+    else{
+        document.getElementById(id+"status").classList.remove("incomplete_btn");
+        document.getElementById(id+"status").classList.add("completed_btn");
+    }
+    document.getElementById(id+"date").value = date;
+    //taskManager.checkDate(id);
 }
- 
+
 class TaskManager {
 
     //prop
@@ -38,7 +49,6 @@ class TaskManager {
         let create_task = new Task(description, key);
         this.Tasks_obj[key] = create_task;
         localStorage.setItem(key,JSON.stringify(create_task));
-        console.log(this.Tasks_obj[key]);
     }
 
     //delete
@@ -46,7 +56,6 @@ class TaskManager {
         let element = document.getElementById(id[0]);
         document.getElementById("divs_container").removeChild(element);
         this.Tasks_obj[id[0]] = null;
-        console.log(this.Tasks_obj);
         localStorage.removeItem(id[0]);
     }
 
@@ -64,45 +73,40 @@ class TaskManager {
     //change status
     change_status(id){
         id = id[0];
-        if(taskManager.Tasks_obj[id].status == TaskStatus.INCOMPLETE){
-            taskManager.Tasks_obj[id].status = TaskStatus.COMPLETED;
+        if(this.Tasks_obj[id].status == TaskStatus.INCOMPLETE){
+            this.Tasks_obj[id].status = TaskStatus.COMPLETED;
             document.getElementById(id+"status").classList.remove("incomplete_btn");
             document.getElementById(id+"status").classList.add("completed_btn");
         }
         else{
-            taskManager.Tasks_obj[id].status = TaskStatus.INCOMPLETE;
+            this.Tasks_obj[id].status = TaskStatus.INCOMPLETE;
             document.getElementById(id+"status").classList.remove("completed_btn");
             document.getElementById(id+"status").classList.add("incomplete_btn");
         }
         let doc = document.getElementById(id+"status");
-        doc.innerHTML = taskManager.Tasks_obj[id].status;
-        console.log(id);
-        console.log(taskManager.Tasks_obj[id]);
-        console.log(JSON.stringify(taskManager.Tasks_obj[id]));
+        doc.innerHTML = this.Tasks_obj[id].status;
         localStorage.setItem(id, JSON.stringify(taskManager.Tasks_obj[id]));
-        console.log(localStorage.getItem(id));
     }
 
-    checkDate(id){
-        let my_d = new Date(document.getElementById(id).value).setHours(0,0,0,0);
-        let tod_d = new Date().setHours(0,0,0,0);
-        console.log(typeof(my_d)+my_d);
-        console.log(typeof(tod_d)+tod_d);
-        if((my_d < tod_d) && (this.Tasks_obj[id[0]].status == 'Incomplete')){
-            console.log("Too Late!");
-            document.getElementById(id[0]+"desc").classList.add("too_late");
-        }
-        else if(my_d > tod_d){
-            console.log("Too Soon!");
-        }
-        else if((my_d < tod_d) && (this.Tasks_obj[id[0]].status == 'Completed')){
-            console.log("completed in time");
-        }
-        else{
-            console.log("Today");
-        }
-        //localStorage.setItem(id[0], JSON.stringify(localStorage.getItem(id)))
+    saveDate(id){
+        let my_d = document.getElementById(id).value;
+        this.Tasks_obj[id[0]].date = my_d;
+        localStorage.setItem(id[0], JSON.stringify(taskManager.Tasks_obj[id[0]]))
     }
+
+    //check the date
+    checkDate(id){
+        let my_d = (new Date(this.Tasks_obj[id].date)).setHours(0,0,0,0);
+        console.log(my_d);
+        let tod_d = new Date().setHours(0,0,0,0);
+        if((my_d < tod_d) && (this.Tasks_obj[id].status == 'Incomplete')){
+            document.getElementById(id+"desc").classList.add("too_late");
+            document.getElementById(id+"status").classList.remove("incomplete_btn");
+            document.getElementById(id+"status").innerHTML = "Too Late";
+            document.getElementById(id+"status").disabled = true;
+        }
+    }
+
     //preventing empty cells in array
     gen_key(key){
         for(let j = 0; j <= this.Tasks_obj.length; j++){
@@ -116,6 +120,8 @@ class TaskManager {
         return key++;
     }
 }
+
+
 
 //elements for edit_task
 let currentJob = 0;
@@ -139,7 +145,6 @@ const TaskStatus = {
 
 //a variable of type class TaskNanager which containes the array of all the tasks 
 const taskManager = new TaskManager;
-console.log(taskManager);
 //button add task - html
 add_btn.onclick = show_input;
 //pointer for id
@@ -163,7 +168,6 @@ function create_new_task(){ //disable the button unless the value of inp isn't e
     i++;
     inp.value = " ";
     delete_input();
-    console.log(taskManager.Tasks_obj);
 }
 
 //delete the input and the button after creating the task
@@ -174,6 +178,7 @@ function delete_input(){
     btn.remove();
 }
 
+//delete the input and the button after editting the task
 function delete_edit_input(){
     let edit_inp = document.getElementById("edit_input")
     let edit_btn = document.getElementById("edit_button");
@@ -188,16 +193,16 @@ function delete_edit_input(){
 //setInterval(function() { console.log("foo"); }, dayInMilliseconds );
 
 function show_tasks(){
-    //console.log(JSON.parse(localStorage));
     let ls_array = Object.keys(localStorage);
     for(let j = 0; j <= ls_array.length-1; j++){
         if(JSON.parse(localStorage.getItem(j)) !== null){
-            //console.log(typeof(JSON.parse(localStorage.getItem(j))));
-            //console.log(JSON.parse(localStorage.getItem(j)));
+            let taskDesc = JSON.parse(localStorage.getItem(j)).description;
+            let taskStatus = JSON.parse(localStorage.getItem(j)).status;
+            let taskDate = JSON.parse(localStorage.getItem(j)).date;
             taskManager.Tasks_obj[j] = JSON.parse(localStorage.getItem(j));
-            createDiv(j, JSON.parse(localStorage.getItem(j)).description);
-        }
+            createDiv(j, taskDesc, taskStatus, taskDate);
+            taskManager.checkDate(j);
+        } 
     }
-    console.log(taskManager);
 }
 

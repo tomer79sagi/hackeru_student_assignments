@@ -20,7 +20,7 @@ button{
     background-color: aliceblue;
 }
 button:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 div{
     width: auto;
@@ -59,9 +59,13 @@ button{
     color: red;
     text-decoration-line: line-through;
 }
-/*#input{
-    
+#input{
+    border: 2px rgba(183, 141, 13, 0.975) solid;
+    border-bottom: 0;
+    border-radius: 5px;
 }
 #edit_input{
-
+    border: 2px rgba(183, 141, 13, 0.975) solid;
+    border-bottom: 0;
+    border-radius: 5px;
 }
