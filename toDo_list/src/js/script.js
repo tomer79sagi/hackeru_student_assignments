@@ -1,4 +1,3 @@
-
 const TaskStatus = {
   UNCOMPLITED: 1,
   COMPLITED: 2,
@@ -54,6 +53,7 @@ function start() {
         complitedlist.appendChild(document.getElementById(todo.id).parentElement.parentElement);
         todo.status = TaskStatus.COMPLITED;
         localStorage.setItem(`task-${todo.id}`, JSON.stringify(todo));
+        
       }
       else {
         uncomplitedlist.appendChild(document.getElementById(todo.id).parentElement.parentElement);
@@ -92,7 +92,7 @@ class Task {
       value="${this.task}"
       autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" onfocusout="updateStorage(this)" />
   </div>
-  <div class="time">${this.date.getHours()}:${this.date.getMinutes()}:${this.date.getSeconds()}</div>
+  <div class="time">${this.date.toDateString()} ${this.date.getHours()}:${this.date.getMinutes().toString().length>1? this.date.getMinutes():"0" + this.date.getMinutes()}</div>
   <img src="img/garbage.svg" alt="delete" class="delete" onclick="removeElem(this)"/>`;
     return div;
   }
@@ -110,5 +110,4 @@ function updateStorage(obj) {
   task.task = obj.value;
   localStorage.setItem(`task-${obj.previousElementSibling.id}`, JSON.stringify(task));
 }
-
 
