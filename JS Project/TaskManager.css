@@ -1,0 +1,86 @@
+        /* body {
+            background-image: url('6a06c5.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        } */
+        #task-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #task-list li {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #task-list li input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        #task-list li span {
+            flex-grow: 1;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        #task-list li span.completed {
+            text-decoration: line-through;
+            color: #ccc;
+        }
+
+        #task-list li button {
+            margin-left: 10px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #task-list li button.edit {
+            color: orange;
+        }
+
+        #task-list li button.remove {
+            color: red;
+        }
+
+        /* Style the form */
+        form {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        form input[type="text"],
+        form input[type="date"] {
+            flex-grow: 1;
+            margin-right: 10px;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+         /*   background-color: darkolivegreen;*/
+                }
