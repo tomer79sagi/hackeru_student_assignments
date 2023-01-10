@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop 1</title>
+</head>
+<body>
+    <script>
+        while(true){
+            let number_1 = parseInt(prompt("Put first number"));
+            let number_2 = parseInt(prompt("Put second number bigger than first"));
+            if (number_1 > number_2){
+                alert("Second number is smaller than first! Try again!");
+            } else if (isNaN(number_1) || isNaN(number_2)){
+                alert("You did not put a number! Try again!");
+            } else {
+                for (let i = number_1; i <= number_2; i++){
+                    document.write(i + "&nbsp;");
+                }
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
