@@ -1,0 +1,8 @@
+.holy-grail__main {
+    /* Take the remaining height */
+    flex-grow: 1;
+  
+    /* Layout the left sidebar, main content and right sidebar */
+    display: flex;
+    flex-direction: row;
+  }

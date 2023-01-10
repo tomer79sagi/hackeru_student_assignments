@@ -1,0 +1,4 @@
+.holy-grail__middle {
+    /* Take the remaining width */
+    flex-grow: 1;
+  }
