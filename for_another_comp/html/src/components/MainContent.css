@@ -1,0 +1,13 @@
+.holy-grail__middle {
+    /* Take the remaining width */
+    flex-grow: 1;
+    background-color: aqua;
+  }
+
+.book_description{
+  display:none;
+}
+
+.book_isbn{
+  font-weight: bold;
+}
