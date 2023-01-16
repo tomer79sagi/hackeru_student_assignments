@@ -1,0 +1,11 @@
+table{
+  min-width: 100%
+}
+
+th{
+  background-color: aqua;
+}
+
+tr{
+  background-color: aquamarine;
+}
