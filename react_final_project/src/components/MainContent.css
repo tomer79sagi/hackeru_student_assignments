@@ -1,0 +1,14 @@
+table{
+    min-width: 100%;
+}
+
+.crudDiv{
+    text-align: center;
+    background-color: rgb(60, 97, 97);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.up{
+    position: relative;
+    bottom: 30px;
+}
