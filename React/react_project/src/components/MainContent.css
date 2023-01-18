@@ -1,5 +1,5 @@
 table{
-  min-width: 110%;
+  min-width: 100%;
 }
 
 th{
@@ -9,3 +9,4 @@ th{
 tr{
   background-color: aquamarine;
 }
+
