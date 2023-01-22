@@ -1,0 +1,28 @@
+.table-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.table-header div {
+    width: 10%
+}
+
+
+
+.table div {
+    width: 10%;
+}
+
+table {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    border-left: 2px solid rgba(128, 128, 128, 0.5);
+    border-right: 2px solid rgba(128, 128, 128, 0.5) ;
+}
+
+table tr th,td {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
