@@ -1,9 +1,10 @@
-
+*{
+    background-color: rgb(238, 237, 237);
+}
 
 table{
-    min-width: 107%;
-
-    
+    min-width: 104%;
+  
     
 }
 

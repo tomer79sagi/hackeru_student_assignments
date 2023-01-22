@@ -38,6 +38,16 @@ class MainContent extends Component {
           birth_date: "05/28/1986",
           status: "Lead",
         },
+        {
+          ID: 3,
+          first_name: "Walter",
+          last_name: "Beau",
+          email: "walter.beau@melivecode.com",
+          profile_pic: "https://www.melivecode.com/users/3.png",
+          phone_number: "947-622-5503",
+          birth_date: "06/31/1992",
+          status: "Lead",
+        },
       ],
     };
   }
@@ -155,45 +165,58 @@ class MainContent extends Component {
     return (
       <article className="holy-grail__middle">
         {/* EDIT NEW user */}
-        <button
-          className="btn btn-primary m-2"
-          onClick={this.AddCustomerHandle.bind(this)}
-        >
-          Add Customer
-        </button>
+        <div className="add_customer">
+          <button
+            className="btn btn-primary m-2"
+            onClick={this.AddCustomerHandle.bind(this)}
+          >
+            Add Customer
+          </button>
+        </div>
 
         {this.state.isEdit === true && (
-          <div className="user_edit user_add input-group-text ">
+          <div className="input-group-text">
             <form onSubmit={this.onUpdateHandle.bind(this)}>
               {/* <input type="text" name="frm_user_name" defaultValue={this.state.editUser.name}></input> */}
 
               <input
+                className="form-control"
                 type="text"
                 name="first_name"
+                placeholder="First Name"
                 defaultValue={this.state.editUser.first_name}
               ></input>
               <input
+                className="form-control"
                 type="text"
                 name="last_name"
+                placeholder="Last Name"
                 defaultValue={this.state.editUser.last_name}
               ></input>
               <input
+                className="form-control"
                 type="number"
                 name="phone_number"
+                placeholder="Phone Number"
                 defaultValue={this.state.editUser.phone_number}
               ></input>
               <input
+                className="form-control"
                 type="email"
                 name="email"
+                placeholder="Email"
                 defaultValue={this.state.editUser.email}
               ></input>
               <input
+                className="form-control"
                 type="date"
                 name="birth_date"
+                placeholder="Birth Date"
                 defaultValue={this.state.editUser.birth_date}
               ></input>
 
               <select
+                className="form-select"
                 name="status"
                 id="status"
                 defaultValue={this.state.editUser.status}
@@ -205,14 +228,18 @@ class MainContent extends Component {
               </select>
 
               <input
+                className="form-control"
                 type="url"
                 name="profile_pic"
+                placeholder="Profile Pic URL"
                 defaultValue={this.state.editUser.profile_pic}
               ></input>
-              <button className="btn btn-primary m-2">Update</button>
+              <button className="btn btn-primary m-2 btn btn-success">
+                Update
+              </button>
               <button
                 onClick={this.CancelCustomerUpdate.bind(this)}
-                className="cancle_btn btn btn-primary "
+                className="cancle_btn btn btn-primary btn btn-light"
               >
                 Cancel
               </button>
@@ -224,37 +251,46 @@ class MainContent extends Component {
         {this.state.isADD && (
           // { this.state.isEdit === false &&
           // { this.state.isEdit !== true &&
-          <div className="user_add input-group-text ">
+          <div className="input-group-text   ">
             <form onSubmit={this.onSubmitHandle.bind(this)}>
               {/* <input type="number" name="ID" placeholder="ID"></input> */}
 
               <input
+                className="form-control "
                 type="text"
                 name="first_name"
                 placeholder="First Name"
               ></input>
 
               <input
+                className="form-control"
                 type="text"
                 name="last_name"
                 placeholder="Last Name"
               ></input>
 
               <input
+                className="form-control"
                 type="number"
                 name="phone_number"
                 placeholder="Phone Number"
               ></input>
 
-              <input type="email" name="email" placeholder="Email"></input>
+              <input
+                className="form-control"
+                type="email"
+                name="email"
+                placeholder="Email"
+              ></input>
 
               <input
+                className="form-control"
                 type="date"
                 name="birth_date"
                 placeholder="Birth Date"
               ></input>
 
-              <select name="status" id="status">
+              <select className="form-select" name="status" id="status">
                 <option value="Lead">Lead</option>
                 <option value="Interested">Interested</option>
                 <option value="Trial">Trial</option>
@@ -262,23 +298,24 @@ class MainContent extends Component {
               </select>
 
               <input
+                className="form-control"
                 type="url"
                 name="profile_pic"
                 placeholder="Profile Pic URL"
               ></input>
 
-              <button className="btn btn-primary ">Save</button>
+              <button className="btn btn-primary btn btn-info">Save</button>
               <button
                 onClick={this.CancelCustomerHandle.bind(this)}
-                className="cancle_btn btn btn-primary m-2"
+                className="cancle_btn btn btn-primary m-2 btn btn-light"
               >
                 Cancel
               </button>
             </form>
           </div>
         )}
-        <table className="user_list ">
-          <tr className="border border-2 ">
+        <table className="user_list  ">
+          <tr className="border border-3  ">
             <th>#</th>
             <th>Avatar</th>
             <th>First name</th>
@@ -292,12 +329,12 @@ class MainContent extends Component {
 
           {
             this.state.users.map((user, index) => (
-              <tr className="user_item border border-2 ">
-                <td className="ID">&nbsp;{(user.ID = index += 1)}</td>
+              <tr className="user_item border border-2  ">
+                <td className="ID ">&nbsp;{(user.ID = index += 1)}</td>
                 <td className="profile_pic">
                   <img src={user.profile_pic} alt="avatar" height="50px" />
                 </td>
-                <td className="first_name">{user.first_name}</td>
+                <td className="first_name ">{user.first_name}</td>
                 <td className="last_name">{user.last_name}</td>
                 <td className="phone_number">{user.phone_number}</td>
                 <td className="email">{user.email}</td>
