@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Content.css';
+import './UsersComponent.css';
 
 class UsersComponent extends Component {
 
@@ -13,44 +13,37 @@ class UsersComponent extends Component {
 
     render() {
         return (
-            <>
-
-                <table>
-                    <tbody>
-                        <tr className='border-bottom border-4'>
-                            <th>#</th>
-                            <th>Avatar</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Phone Number</th>
-                            <th>eMail</th>
-                            <th>Birthday</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </tbody>
-                    {this.props.Users.map((user, index) => (
-                        <React.Fragment key={user.id}   >
-                            <tbody>
-                                <tr className='border-bottom'>
-                                    <td>{user.id = (index += 1)}</td>
-                                    <td><img src={user.avatar} height='50px' alt='Avatar' /></td>
-                                    <td>{user.fname}</td>
-                                    <td>{user.lname}</td>
-                                    <td>{user.phone}</td>
-                                    <td>{user.email}</td>
-                                    <td>{user.bdate}</td>
-                                    <td>{user.status}</td>
-                                    <td>
-                                        <button className='btn btn-outline-secondary' onClick={this.onEditHandle.bind(this, user.id)}>Edit</button>
-                                        <button className='btn btn-outline-danger' onClick={this.onDeleteHandle.bind(this, user.id)}>Delete</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </React.Fragment>
-                    ))}
-                </table>
-            </>
+            <section className=''>
+                <div>
+                    <div className="col border-bottom border-dark border-4">#</div>
+                    <div className="col border-bottom border-dark border-4">Avatar</div>
+                    <div className="col border-bottom border-dark border-4">First Name</div>
+                    <div className="col border-bottom border-dark border-4">Last Name</div>
+                    <div className="col border-bottom border-dark border-4">Phone Number</div>
+                    <div className="col border-bottom border-dark border-4">eMail</div>
+                    <div className="col border-bottom border-dark border-4">Birthday</div>
+                    <div className="col border-bottom border-dark border-4">Status</div>
+                    <div className="col border-bottom border-dark border-4">Action</div>
+                </div>
+                {this.props.Users.map((user, index) => (
+                    <React.Fragment key={user.id} >
+                        <div>
+                            <div className="col border-bottom border-dark">{user.id = (index += 1)}</div>
+                            <div className="col border-bottom border-dark"><img src={user.avatar} height='50px' alt='Avatar' /></div>
+                            <div className="col border-bottom border-dark">{user.fname}</div>
+                            <div className="col border-bottom border-dark">{user.lname}</div>
+                            <div className="col border-bottom border-dark">{user.phone}</div>
+                            <div className="col border-bottom border-dark">{user.email}</div>
+                            <div className="col border-bottom border-dark">{user.bdate}</div>
+                            <div className="col border-bottom border-dark">{user.status}</div>
+                            <div className="col border-bottom border-dark">
+                                <button className='btn btn-outline-secondary' onClick={this.onEditHandle.bind(this, user.id)}>Edit</button>
+                                <button className='btn btn-outline-danger' onClick={this.onDeleteHandle.bind(this, user.id)}>Delete</button>
+                            </div>
+                        </div>
+                    </React.Fragment>
+                ))}
+            </section>
         );
     }
 }

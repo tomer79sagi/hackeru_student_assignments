@@ -1,6 +1,21 @@
 header{
-    min-width: 100%;
+    min-width: 670px;
     display:flex;
     justify-content: space-between;
     background-color: burlywood;
+}
+@media (max-width: 1540px) {
+    form{
+        width: 1200px;
+    }
+}
+@media (max-width: 1387px){
+    form{
+        width: 650px;
+    }
+}
+@media (max-width: 802px){
+    form{
+        width: 485px;
+    }
 }

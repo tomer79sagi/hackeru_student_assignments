@@ -1,0 +1,11 @@
+section{
+    display: table;
+    width: 100%;
+    background-color: rgb(234, 234, 234);
+}
+section > *{
+    display: table-row;
+}
+section .col{
+    display: table-cell;
+}
