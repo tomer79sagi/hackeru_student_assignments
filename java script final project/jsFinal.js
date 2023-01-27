@@ -9,7 +9,7 @@ window.onload = () => {
 function addItem(e) {
 	e.preventDefault();
 	if (submit.value != "Submit") {
-		console.log("Hello");
+		console.log("Hello");6
 		editItem.target.parentNode.childNodes[0].data= document.getElementById("item").value;
 		submit.value = "Submit";
 		document.getElementById("item").value = "";

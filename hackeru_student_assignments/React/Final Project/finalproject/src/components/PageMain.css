@@ -1,0 +1,56 @@
+.sub-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.newuser-btn {
+    border: 1px solid grey;
+    border-radius: 30px;
+    background-color: gray;
+    height: 50px;
+    
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1.25);
+    width: 30%;
+    height: 50%;
+    text-align: center;
+    padding: 20px 30px;
+    background: rgba(184, 184, 184, 0.9);
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0,15);
+    border-radius: 15px;
+    z-index: 5;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.input-container {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.input-container .input-field{
+    margin: auto;
+    width: 70%;
+    height: 50%;
+}
