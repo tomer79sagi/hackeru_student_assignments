@@ -52,15 +52,13 @@ class MainContent extends Component {
         let text = "Are you sure that you want to delete this user? ";
         if (window.confirm(text) === true) {
             this.setState({
-                users: this.state.users.filter(user => user.id !== args[0])
+                users: this.state.users.filter(user => user.id !== args[0]),
+                isEdit: false,
+                isForm: false,
             });
         }
     }
     onEditHandle = (...args) => {
-        this.setState({
-            isForm: false,
-            isEdit: false
-        })
         const user = this.state.users.find(user => user.id === args[0]);
         this.setState({
             isForm: true,
