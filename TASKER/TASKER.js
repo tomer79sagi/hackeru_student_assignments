@@ -10,8 +10,9 @@ let incompleteTaskHolder = document.getElementById("incomplete-tasks");
 // completed-tasks
 let completedTasksHolder = document.getElementById("completed-tasks");
   
-/*---- Part 1 ----*/
-// function to create new task item
+/*---- 1 ----*/
+
+// new task item
 let createNewTaskElement = function (taskString) {
   
     let listItem = document.createElement("li");
@@ -30,18 +31,18 @@ let createNewTaskElement = function (taskString) {
   
     label.innerText = taskString;
   
-    // Each elements, needs appending
+    
     checkBox.type = "checkbox";
     editInput.type = "text";
   
  
-    // innerText encodes special characters, HTML does not.
+    // innerText 
     editButton.innerText = "Edit";    
     editButton.className = "edit";
     deleteButton.innerText = "Delete";
     deleteButton.className = "delete";
   
-    // appending.
+    // append
     listItem.appendChild(checkBox);
     listItem.appendChild(label);
     listItem.appendChild(editInput);
@@ -49,7 +50,7 @@ let createNewTaskElement = function (taskString) {
     listItem.appendChild(deleteButton);
     return listItem;
 }
-/*---- Part 2 ----*/
+/*---- 2 ----*/
 let addTask = function () {
     console.log("Add Task...");
   
@@ -67,7 +68,7 @@ let addTask = function () {
   
 }
   
-/*---- Part 3 ----*/
+/*---- 3 ----*/
 let editTask = function () {
     console.log("Edit Task...");
     console.log("Change 'edit' to 'save'");
@@ -78,7 +79,7 @@ let editTask = function () {
     let editInput = listItem.querySelector('input[type=text]');
     let label = listItem.querySelector("label");
     let containsClass = listItem.classList.contains("editMode");
-    // If class of the parent is .editmode
+    
     if (containsClass) {
         label.innerText = editInput.value;
     } else {
@@ -87,18 +88,17 @@ let editTask = function () {
     listItem.classList.toggle("editMode");
 }
   
-/*---- Part 4 ----*/
+/*---- 4 ----*/
 let deleteTask = function () {
     console.log("Delete Task...");
   
     let listItem = this.parentNode;
     let ul = listItem.parentNode;
-    // Remove the parent list item from the ul.
     ul.removeChild(listItem);
   
 }
   
-/*---- Part 5 ----*/
+/*---- 5 ----*/
   
 let taskCompleted = function () {
     console.log("Complete Task...");
@@ -110,16 +110,16 @@ let taskCompleted = function () {
   
 }
   
-/*---- Part 6 ----*/
+/*---- 6 ----*/
 let taskIncomplete = function () {
     console.log("Incomplete Task...");
-    // Mark task as incomplete.
+    // incomplete.
     let listItem = this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
 }
   
-/*---- Part 7 ----*/
+/*---- 7 ----*/
 addButton.onclick = addTask;
 addButton.addEventListener("click", addTask);
   
@@ -139,9 +139,9 @@ let bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
     checkBox.onchange = checkBoxEventHandler;
 }
   
-/*---- Part 8 ----*/
-// cycle over incompleteTaskHolder ul list items
-// for each list item
+/*---- 8 : Loop ----*/
+
+
 for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
   
     // bind events to list items children(tasksCompleted)
@@ -153,6 +153,8 @@ for (let i = 0; i < completedTasksHolder.children.length; i++) {
     // bind events to list items children(tasksIncompleted)
     bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
+
+/*-- Local Storage --*/
 
 // let myContainer = document.getElementsByClassName("middle");
 // let myStorage = myContainer;
