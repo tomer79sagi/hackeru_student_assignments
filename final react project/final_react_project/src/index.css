@@ -3,8 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-.center{
+.stylesheet{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
