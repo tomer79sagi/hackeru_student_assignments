@@ -1,0 +1,28 @@
+/** @format */
+
+.holy-grail__middle {
+	/* Take the remaining width */
+	flex-grow: 1;
+}
+
+.client_isbn {
+	font-weight: bold;
+}
+
+.client_description {
+	display: none;
+}
+
+.client_list{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.client_item {
+	padding: 5px;
+}
+.client_item.div.span {
+	padding: inherit;
+
+}
