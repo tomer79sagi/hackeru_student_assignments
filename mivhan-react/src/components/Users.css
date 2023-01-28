@@ -1,0 +1,91 @@
+table th, table td {
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 10px 40px;
+    font-size: larger;
+    color: blue;
+    /* background-color: aquamarine; */
+}
+
+table {
+    margin-top: 20px;
+    /* border-collapse: collapse; */
+}
+
+.tableWrap {
+    /* height: 100vh; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table th {
+    padding: 20px;
+    color: black;
+}
+
+input {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.addForm {
+    width: 100px;
+    padding: 10px;
+    color: white;
+    background-color: green;
+    border-radius: 5vh;
+    font-size: 15px;
+    font-weight:bold ;
+    margin-top: 9.5vh;
+}
+
+.addForm:hover {
+    cursor: pointer;
+    background-color: rgb(7, 62, 7);
+}
+
+.edit {
+    color: white;
+    margin-right: 5px;
+    background-color: blue;
+}
+
+.edit:hover {
+    background-color: rgb(7,7,72);
+}
+
+.delete {
+    color: white;
+    background-color: red;
+}
+
+.delete:hover{
+    background-color: rgb(108,8,8);
+}
+
+.edit, .delete {
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.display-block {
+    visibility: visible;
+  }
+  
+  .display-none {
+    visibility: hidden;
+  }
+
+ .update{
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: purple;
+ } 
+  

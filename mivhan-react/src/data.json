@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "avatar":"https://www.melivecode.com/users/1.png",
+        "first": "David",
+        "last": "Goldman",
+        "username":"david@gmail.com" 
+    },
+    {
+        "id": 2,
+        "avatar":"https://www.melivecode.com/users/2.png",
+        "first": "Noam",
+        "last": "Cohen",
+        "username": "noam@gmail.com"
+    },
+    {
+        "id": 3,
+        "avatar":"https://www.melivecode.com/users/3.png",
+        "first": "Adam",
+        "last": "Levi",
+        "username": "adam@gmail.com"
+    }
+
+]
