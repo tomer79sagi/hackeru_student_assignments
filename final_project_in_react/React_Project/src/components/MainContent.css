@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(238, 237, 237);
+}
+
+table{
+    min-width: 104%;
+  
+    
+}
+
+.book_isbn {
+    font-weight: bold;
+}
