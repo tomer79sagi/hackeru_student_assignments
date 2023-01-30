@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import s from "./Form.module.css";
 
+
 const USER_STATUS = {
     Lead: 1,
     Interested:2,
@@ -222,56 +223,57 @@ class Form extends Component {
 
     render() { 
         return (
-        <div>
+        <div >
 
              {/* Update new user */}
              { this.state.isEdit && 
               <div>
-                <form onSubmit={this.onUpdateHandle.bind(this)} className={s.userAdd}>
-                <input type="text" name='user_fname' placeholder='First Name' defaultValue={this.state.editUser.fname}></input>
-                    <input type="text" name='user_lname' placeholder='Last Name' defaultValue={this.state.editUser.lname}></input>
-                    <input type="tel" name='user_tel' placeholder='0521234567' defaultValue={this.state.editUser.tel}></input>
-                    <input type="date" name='user_bdate' defaultValue={this.state.editUser.bdate}></input>
-                    <input type="email" name='user_email' placeholder='Email' defaultValue={this.state.editUser.email}></input>
-                    <select name='user_status' defaultValue={Object.keys(USER_STATUS)[this.state.editUser.status-1]} >
+                <form onSubmit={this.onUpdateHandle.bind(this)} className={s.userAdd} >
+                <input type="text" name='user_fname' placeholder='First Name' defaultValue={this.state.editUser.fname} className='form-control'></input>
+                    <input type="text" name='user_lname' placeholder='Last Name' defaultValue={this.state.editUser.lname} className='form-control'></input>
+                    <input type="tel" name='user_tel' placeholder='0521234567' defaultValue={this.state.editUser.tel} className='form-control'></input>
+                    <input type="date" name='user_bdate' defaultValue={this.state.editUser.bdate} className='form-control'></input>
+                    <input type="email" name='user_email' placeholder='Email' defaultValue={this.state.editUser.email} className='form-control'></input>
+                    <select className="form-select"  name='user_status' defaultValue={Object.keys(USER_STATUS)[this.state.editUser.status-1]}  >
                     <option disabled value="">User Starus</option>
                         <option value="Lead">Lead</option>
                         <option value="Interested">Interested</option>
                         <option value="Trial">Trial</option>
                         <option value="Customer">Customer</option>
                     </select>
-                    <input type="url" name='user_avatar' placeholder='Image URL' defaultValue={this.state.editUser.avatar}/>
+                    <input type="url" name='user_avatar' placeholder='Image URL' defaultValue={this.state.editUser.avatar} className='form-control'/>
 
-                    <button>Updete</button>
+                    <button className='btn btn-success'>Updete</button>
                 </form>
             </div>
               }
 
             {/* Add new user */}
             { !this.state.isEdit && 
-            <div>
+            <div className='container-sm' >
                 <form onSubmit={this.onSubmitHandle.bind(this)} className={s.userAdd}>
-                <input type="text" name='user_id' placeholder='ID'></input>
-                    <input type="text" name='user_fname' placeholder='First Name'></input>
-                    <input type="text" name='user_lname' placeholder='Last Name'></input>
-                    <input type="tel"  name='user_tel' placeholder='0521234567'></input>
-                    <input type="date" name='user_bdate'></input>
-                    <input type="email" name='user_email' placeholder='Email'></input>
-                    <select name='user_status' >
+                <input type="text" name='user_id' placeholder='ID' className='form-control'></input>
+                    <input type="text" name='user_fname' placeholder='First Name' className='form-control'></input>
+                    <input type="text" name='user_lname' placeholder='Last Name' className='form-control'></input>
+                    <input type="tel"  name='user_tel' placeholder='0521234567' className='form-control'></input>
+                    <input type="date" name='user_bdate' className='form-control'></input>
+                    <input type="email" name='user_email' placeholder='Email' className='form-control'></input>
+                    <select className="form-select" name='user_status' >
                     <option selected disabled value="">User Starus</option>
                         <option value="Lead">Lead</option>
                         <option value="Interested">Interested</option>
                         <option value="Trial">Trial</option>
                         <option value="Customer">Customer</option>
                     </select>
-                    <input type="url" name='user_avatar' placeholder='Image URL' />
+                    <input type="url" name='user_avatar' placeholder='Image URL' className='form-control'/>
                     
-                    <button>Add</button>
+                    <button className='btn btn-primary'>Add</button>
                 </form>
             </div>
             }
 
-                    <table>
+                    <table className='container-md' >
+           
   <tr>
     <th>Id</th>
     <th>Avatar</th>
@@ -294,8 +296,8 @@ class Form extends Component {
     <td>{user.email}</td>
     <td>{Object.keys(USER_STATUS)[user.status-1]}</td>
     <td><div className={s.userButtons} >
-                    <button onClick={this.onEditHandle.bind(this,user.id)}>Edit</button>
-                    <button onClick={this.onDleleteHandle.bind(this,user.id)}>Delete</button>
+                    <button onClick={this.onEditHandle.bind(this,user.id)} className='btn btn-success btn-sm'>Edit</button>
+                    <button onClick={this.onDleleteHandle.bind(this,user.id)} className='btn btn-danger btn-sm'>Delete</button>
                  </div></td>
     
   </tr>
