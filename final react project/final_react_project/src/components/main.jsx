@@ -6,10 +6,13 @@ class Main extends Component {
         super(props);
 
         this.state = { 
-            //1. properties - declare them 
-            //2. action - find out how to use enum in order to use three states/statuses
-
             action: "none",
+            enum:{    //find a way to repplace the numbers
+                Lead: 1,
+                Interested: 2,
+                Trial: 3,
+                Customer: 4
+            },
             editCustomer:{
                 id: "",
                 avatar: "",
@@ -29,7 +32,7 @@ class Main extends Component {
                     phone: "0525498555",
                     username: "karn.yong@melivecode.com",
                     birth_date: "1997-12-05",
-                    status: ""
+                    status: this.enum.Lead
                 },
                 {
                     id: 2,
@@ -39,7 +42,7 @@ class Main extends Component {
                     phone: "0545899974",
                     username: "ivy.cal@melivecode.com",
                     birth_date: "2002-10-25",
-                    status: ""
+                    status: this.enum.Lead
                 },
                 {
                     id: 3,
@@ -49,7 +52,7 @@ class Main extends Component {
                     phone: "0508745211",
                     username: "walter.beau@melivecode.com",
                     birth_date: "1985-07-10",
-                    status: ""
+                    status: this.enum.Lead   //what should i do with it?
                 }
             ]
         }  
@@ -63,17 +66,15 @@ class Main extends Component {
         }
 
     onSubmitHandle(event){
+
         event.preventDefault();
+        let lengthArray = this.state.customers.length-1;
         this.setState({
+            
             customers:[
                 ...this.state.customers,
                 {
-                    //probs: when i delete a customer someting with the id goes wrong -
-                    //1. the last id is depends on the length of the array which is changing
-                    //2. the order of the ids is changing
-                    //solution1: find a way to check the id of the last cell in the array and increase it in one.
-
-                    id:this.state.customers.length+1,
+                    id: this.state.customers[lengthArray].id+1,
                     avatar: event.target.avatar.value,
                     first_name: event.target.firstName.value,
                     last_name: event.target.lastName.value,
@@ -96,6 +97,9 @@ class Main extends Component {
     }
 
     onEditHandle(event){
+        //prob1: avoid editing the id
+        //prob2: the defaulValue of allvthe inputs but the id's is the url of the avatar
+
         const cus = this.state.customers.find(cus => cus.id === arguments[0]);
         this.setState({
             action: "edit",
@@ -113,13 +117,33 @@ class Main extends Component {
     }
 
     onDeleteHandle(event){
-        this.setState({
-            customers: this.state.customers.filter(cus => cus.id !== arguments[0])
-        })
+        //prob1: when i delete a customer the order of the ids is changing
+
+        if(window.confirm("Are you sure you want to delete this customer") === true){
+            this.setState({
+                customers: this.state.customers.filter(cus => cus.id !== arguments[0])
+            })
+        }
     }
 
     onUpdateHandle(event){
-
+        this.setState({
+            action: "none",
+            customers: this.state.customers.map(cus => {
+                if(cus.id === arguments[0]){
+                    cus.id = event.target.id.value;
+                    cus.avatar = event.target.avatar.value;
+                    cus.first_name = event.target.firstName.value;
+                    cus.last_name = event.target.lastName.value;
+                    cus.phone = event.target.phone.value;
+                    cus.username = event.target.username.value;
+                    cus.birth_date = event.target.birthDate.value;
+                    cus.status = event.target.status.value;
+                    //return cus
+                }
+                return cus;
+            })
+        })
     }
 
 
@@ -132,15 +156,28 @@ class Main extends Component {
                 </div>
                 {this.state.action === "create" &&
                     <form onSubmit={this.onSubmitHandle.bind(this)}>
-                        <label htmlFor="avatar">avatar:&nbsp;</label><input type="text" name="avatar"/><br/>
-                        <label htmlFor="firstName">firs tName:&nbsp;</label><input type="text" name="firstName" id="firstName"/><br/>
-                        <label htmlFor="lastName">last Name:&nbsp;</label><input type="text" name="lastName" id="lastName"/><br/>
-                        <label htmlFor="phone">phone number:&nbsp;</label><input type="number" name="phone" id="phone"/><br/>
-                        <label htmlFor="username">username:&nbsp;</label><input type="email" name="username" id="username"/><br/>
-                        <label htmlFor="birthDate">birth date:&nbsp;</label><input type="date" name="birthDate" id="birthDate"/><br/>
-                        <label htmlFor="status">status:&nbsp;</label><input type="text" name="status" id="status"/><br/>
+                        <label htmlFor="avatar">avatar:&nbsp;</label>
+                        <input type="url" name="avatar"/><br/>
+                        <label htmlFor="firstName">firs tName:&nbsp;</label>
+                        <input type="text" name="firstName" id="firstName"/><br/>
+                        <label htmlFor="lastName">last Name:&nbsp;</label>
+                        <input type="text" name="lastName" id="lastName"/><br/>
+                        <label htmlFor="phone">phone number:&nbsp;</label>
+                        <input type="tel" name="phone" id="phone"/><br/>
+                        <label htmlFor="username">e-mail:&nbsp;</label>
+                        <input type="email" name="username" id="username"/><br/>
+                        <label htmlFor="birthDate">birth date:&nbsp;</label>
+                        <input type="date" name="birthDate" id="birthDate"/><br/>
+                        <label>status:&nbsp;
+                            <select value={"status"}>
+                            <option value="Lead">{this.state.enum.Lead}</option>
+                                <option value="Interested">{this.state.enum.Interested}</option>
+                                <option value="Trial">{this.state.enum.Trial}</option>
+                                <option value="Customer">{this.state.enum.Customer}</option>
+                            </select>
+                        </label><br/>
                         <div>
-                            <button>Add</button>&nbsp;
+                            <button type="submit">Add</button>&nbsp;
                             <button onClick={this.onCancleHandle.bind(this)}>Cancel</button>
                         </div>
                     </form>
@@ -148,16 +185,30 @@ class Main extends Component {
 
                 {this.state.action === "edit" &&
                     <form onSubmit={this.onUpdateHandle.bind(this, this.id)}>
-                        <label htmlFor="id">#:&nbsp;</label><input type="text" name="id" defaultValue={this.state.editCustomer.id}/><br/>
-                        <label htmlFor="avatar">avatar:&nbsp;</label><input type="text" name="avatar" defaultValue={this.state.editCustomer.avatar}/><br/>
-                        <label htmlFor="firstName">firs tName:&nbsp;</label><input type="text" name="firstName" id="firstName" defaultValue={this.state.editCustomer.avatar}/><br/>
-                        <label htmlFor="lastName">last Name:&nbsp;</label><input type="text" name="lastName" id="lastName" defaultValue={this.state.editCustomer.avatar}/><br/>
-                        <label htmlFor="phone">phone number:&nbsp;</label><input type="number" name="phone" id="phone" defaultValue={this.state.editCustomer.avatar}/><br/>
-                        <label htmlFor="username">username:&nbsp;</label><input type="email" name="username" id="username" defaultValue={this.state.editCustomer.avatar}/><br/>
-                        <label htmlFor="birthDate">birth date:&nbsp;</label><input type="date" name="birthDate" id="birthDate" defaultValue={this.state.editCustomer.avatar}/><br/>
-                        <label htmlFor="status">status:&nbsp;</label><input type="text" name="status" id="status" defaultValue={this.state.editCustomer.avatar}/><br/>
+                        <label htmlFor="id">#:&nbsp;</label>
+                        <input type="text" name="id" defaultValue={this.state.editCustomer.id}/><br/>
+                        <label htmlFor="avatar">avatar:&nbsp;</label>
+                        <input type="url" name="avatar" defaultValue={this.state.editCustomer.avatar}/><br/>
+                        <label htmlFor="firstName">first Name:&nbsp;</label>
+                        <input type="text" name="firstName" id="firstName" defaultValue={this.state.editCustomer.avatar}/><br/>
+                        <label htmlFor="lastName">last Name:&nbsp;</label>
+                        <input type="text" name="lastName" id="lastName" defaultValue={this.state.editCustomer.avatar}/><br/>
+                        <label htmlFor="phone">phone number:&nbsp;</label>
+                        <input type="tel" name="phone" id="phone" defaultValue={this.state.editCustomer.avatar}/><br/>
+                        <label htmlFor="username">e-mail:&nbsp;</label>
+                        <input type="email" name="username" id="username" defaultValue={this.state.editCustomer.avatar}/><br/>
+                        <label htmlFor="birthDate">birth date:&nbsp;</label>
+                        <input type="date" name="birthDate" id="birthDate" defaultValue={this.state.editCustomer.avatar}/><br/>
+                        <label>status:&nbsp;
+                            <select value={"status"}>
+                                <option value="Lead">{this.state.enum.Lead}</option>
+                                <option value="Interested">{this.state.enum.Interested}</option>
+                                <option value="Trial">{this.state.enum.Trial}</option>
+                                <option value="Customer">{this.state.enum.Customer}</option>
+                            </select>
+                        </label><br/>
                         <div>
-                            <button>Update</button>&nbsp;
+                            <button type="submit">Update</button>&nbsp;
                             <button onClick={this.onCancleHandle.bind(this)}>Cancel</button>
                         </div>
                     </form>
@@ -179,7 +230,9 @@ class Main extends Component {
                        return(
                            <tr>
                                <td>{cus.id}</td>
-                               <td>{cus.avatar}</td>
+                               <td>
+                                <img src={cus.avatar} alt="avatar" height={"60em"}/>
+                                </td>
                                <td>{cus.first_name}</td>
                                <td>{cus.last_name}</td>
                                <td>{cus.phone}</td>
@@ -187,7 +240,7 @@ class Main extends Component {
                                <td>{cus.birth_date}</td>
                                <td>{cus.status}</td>
                                <td>
-                                   <button onClick={this.onEditHandle.bind(this)}>Edit</button>&nbsp;
+                                   <button onClick={this.onEditHandle.bind(this, cus.id)}>Edit</button>&nbsp;
                                    <button onClick={this.onDeleteHandle.bind(this, cus.id)}>Delete</button>
                                </td>
                            </tr>)}
