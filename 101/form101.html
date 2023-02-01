@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>101</title>
+  <link rel="stylesheet" href="form101.css">
+</head>
+<body>
+  <section class="f-101">
+    <div class="header">
+      <div class="left">
+        <div>
+          <p id="top-number">0101/130</p>
+        </div>
+        <div id="chaeck">
+          <p>סמן/י √ בריבוע המתאים</p>
+        </div>
+      </div>
+      <div class="center">
+        <h1 id="top-header">כרטיס עובד</h1>
+        <p id="header-line">ובקשה להקלה ולתיאום מס על ידי המעביד
+        </p>
+        <p id="s-header-line">לפי תקנות מס הכנסה (ניכוי ממשכורת ומשכר עבודה), התשנ"ג - 1993
+        </p>
+      </div>
+      <div class="right">
+        <img src="200px-Rashut_HaMisim.svg.png" alt="logo" id="logo">
+      </div>
+    </div>
+    <div class="header-note">
+      <p>טופס זה ימולא על-ידי כל עובד עם תחילת עבודתו, וכן בתחילת כל שנת מס (אא"כ המנהל אישר אחרת). הטופס  מהווה אסמכתא למעביד למתן
+      <br>
+      הקלות במס ולעריכת תיאומי מס בחישוב משכורת
+      העובד. אם חל שינוי בפרטים - יש להצהיר על כך תוך שבוע ימים.
+      <br>
+      {ראה הסברים (לפי המספרים) מעבר לדף}</p>
+    </div>
+    <section class="boss">
+      <h1 id="headline">א. פרטי המעביד (למילוי ע"י המעביד)</h1>
+      <form action="/form101.html" target="_self" class="boss-form">
+        <label for=" name">שם</label>
+        <input type="text" id="name" name="name">
+        <label for="addres">כתובת</label>
+        <input type="text" id="addres" name="addres">
+        <label for="phone">מספר טלפון</label>
+        <input type="number" id="phone" name="phone">
+        <label for="other">מספר תיק ניכויים</label>
+        <input type="number" id="other" name="other">
+      </form>
+    </section>
+    <section class="employe">
+      <h1 id="headline">ב. פרטי העובד/ת (יש לצרף צילום תעודת זהות כולל ספח. אם צורף בעבר, יש לצרף צילום רק אם היו שינויים בפרטים. למי שאין מספר תעודת זהות יש
+      לצרף צילום דרכון ואישור / רשיון שהייה בישראל שנתנו על ידי רשות האוכלוסין וההגירה)
+      </h1>
+      <form action="/form101.html" target="_self" class="employe-form"">
+        <label for=" name">מספר זהות</label>
+        <input type="number" id="zehot" name="zehot">
+
+        <label for="lname">שם משפחה </label>
+        <input type="text" id="lname" name="lname">
+
+        <label for="fname"> שם פרטי </label>
+        <input type="text" id="fname" name="fname">
+
+        <label for="b-date">תאריך לידה</label>
+        <input type="number" id="b-date" name="b-date">
+
+        <label for="a-date"> תאריך עלייה</label>
+        <input type="number" id="a-date" name="a-date">
+      </form>
+      <form action="/form101.html" target="_self" class="employe-form">        
+
+        <label for="addres">כתובת פרטית</label>
+        <input type="text" id="lname" name="lname">
+        <input type="text" id="addres-input" name="street" value="רחוב/שכונה">
+        <input type="number" id="addres-input" name="number" value=" מספר">
+        <input type="text" id="addres-input" name="city" value=" עיר/ישוב">
+        <input type="number" id="addres-input" name="post" value=" מיקוד">
+
+        <label for="">מספר דרכון</label>
+        <input type="text" id="paporrt" name="pasport">
+
+      </form> 
+      <div class="check-form">
+        <form action="/form101.html" target="_self" class="status-form">
+        <p>מצב משפחתי</p>
+        <label for="status"> רווק/ה</label>
+        <input type="checkbox" id="status" name="status" value="רווק/ה">
+        <label for="status">נשוי/אה</label>
+        <input type="checkbox" id="status" name="status" value="נשוי/אה">
+        <label for="status">אלמן/ה</label>
+        <input type="checkbox" id="status" name="status" value="אלמן/ה">
+        <br>
+        <label for="status">גרושה/ה</label>
+        <input type="checkbox" id="status" name="status" value="גרוש/ה">
+        <label for="status">פרוד/ה</label>
+        <input type="checkbox" id="status" name="status" value="פרוד/ה">
+        </form>
+        <form action="/form101.html" target="_self" class="citizen-form">
+        <p>מין</p>
+        <label for="gender"> זכר</label>
+        <input type="checkbox" id="gender" name="gender" value="זכר">
+        <label for="gender"> נקבה</label>
+        <input type="checkbox" id="gender" name="gender" value="נקבה">
+        <p> תושב ישראל</p>
+        <label for="citizen"> כן </label>
+        <input type="checkbox" id="citizen" name="street" value="כן">
+        <label for="citizen"> לא </label>
+        <input type="checkbox" id="citizen" name="citizen" value=" לא">
+        </form>
+      </div>
+    </section>
+  </section>
+</body>
+</html>
