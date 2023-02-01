@@ -18,6 +18,7 @@ class Form extends Component {
         super(props);
         this.state = { 
           isEdit: false,
+          selectedUser: {},
             users: [
                 {
                     id: 1,
@@ -144,7 +145,7 @@ class Form extends Component {
      }
 
      onSubmitHandle(e){
-      e.preventDefault();
+    
   
       this.setState({
           users: [
@@ -172,18 +173,20 @@ class Form extends Component {
   }
   
       
-     onDleleteHandle(){
-      this.setState({
-          users: this.state.users.filter(user => user.id !== arguments[0])
-      });
-  }
+  onDeleteHandle(){
+    if (window.confirm("Are you sure you want to delete this user?")){
+  this.setState({
+      users: this.state.users.filter(user => user.id !== arguments[0])
+  });}
+}
   
   onEditHandle(){
-  
+
       const user = this.state.users.find(user => user.id === arguments[0])
   
       this.setState({
           isEdit: true,
+          selectedUser: user,
           editUser: {
             id: user.id,
             status: user.status,
@@ -221,6 +224,14 @@ class Form extends Component {
     });
 }
 
+onToggleAddMode = () => {
+    this.setState({ 
+      isEdit: false,
+      selectedUser: {} 
+    });
+  };
+
+
     render() { 
         return (
         <div >
@@ -228,9 +239,9 @@ class Form extends Component {
              {/* Update new user */}
              { this.state.isEdit && 
               <div>
-                <form onSubmit={this.onUpdateHandle.bind(this)} className={s.userAdd} >
-                <input type="text" name='user_fname' placeholder='First Name' defaultValue={this.state.editUser.fname} className='form-control'></input>
-                    <input type="text" name='user_lname' placeholder='Last Name' defaultValue={this.state.editUser.lname} className='form-control'></input>
+                <form onSubmit={this.onUpdateHandle.bind(this)} className={s.userAdd+" row"} >
+                <input type="text" name='user_fname' placeholder='First Name' defaultValue={this.state.editUser.fname} className='form-control col'></input>
+                    <input type="text" name='user_lname' placeholder='Last Name' defaultValue={this.state.editUser.lname} className='form-control col'></input>
                     <input type="tel" name='user_tel' placeholder='0521234567' defaultValue={this.state.editUser.tel} className='form-control'></input>
                     <input type="date" name='user_bdate' defaultValue={this.state.editUser.bdate} className='form-control'></input>
                     <input type="email" name='user_email' placeholder='Email' defaultValue={this.state.editUser.email} className='form-control'></input>
@@ -243,7 +254,8 @@ class Form extends Component {
                     </select>
                     <input type="url" name='user_avatar' placeholder='Image URL' defaultValue={this.state.editUser.avatar} className='form-control'/>
 
-                    <button className='btn btn-success'>Updete</button>
+                    <button className='btn btn-success col'>Updete</button>
+                    <button className='btn btn-secondary col-2' onClick={this.onToggleAddMode}>Close</button>
                 </form>
             </div>
               }
@@ -251,14 +263,14 @@ class Form extends Component {
             {/* Add new user */}
             { !this.state.isEdit && 
             <div className='container-sm' >
-                <form onSubmit={this.onSubmitHandle.bind(this)} className={s.userAdd}>
+                <form onSubmit={this.onSubmitHandle.bind(this)} className={s.userAdd+ " row"}>
                 <input type="text" name='user_id' placeholder='ID' className='form-control'></input>
-                    <input type="text" name='user_fname' placeholder='First Name' className='form-control'></input>
-                    <input type="text" name='user_lname' placeholder='Last Name' className='form-control'></input>
-                    <input type="tel"  name='user_tel' placeholder='0521234567' className='form-control'></input>
-                    <input type="date" name='user_bdate' className='form-control'></input>
+                    <input type="text" name='user_fname' placeholder='First Name' className='form-control col'></input>
+                    <input type="text" name='user_lname' placeholder='Last Name' className='form-control col'></input>
+                    <input type="tel"  name='user_tel' placeholder='0521234567' className='form-control col'></input>
+                    <input type="date" name='user_bdate' className='form-control col'></input>
                     <input type="email" name='user_email' placeholder='Email' className='form-control'></input>
-                    <select className="form-select" name='user_status' >
+                    <select className="form-select" name='user_status' required>
                     <option selected disabled value="">User Starus</option>
                         <option value="Lead">Lead</option>
                         <option value="Interested">Interested</option>
@@ -267,7 +279,7 @@ class Form extends Component {
                     </select>
                     <input type="url" name='user_avatar' placeholder='Image URL' className='form-control'/>
                     
-                    <button className='btn btn-primary'>Add</button>
+                    <button className='btn btn-primary' onClick={this.onToggleAddMode}>Add</button>
                 </form>
             </div>
             }
@@ -297,7 +309,7 @@ class Form extends Component {
     <td>{Object.keys(USER_STATUS)[user.status-1]}</td>
     <td><div className={s.userButtons} >
                     <button onClick={this.onEditHandle.bind(this,user.id)} className='btn btn-success btn-sm'>Edit</button>
-                    <button onClick={this.onDleleteHandle.bind(this,user.id)} className='btn btn-danger btn-sm'>Delete</button>
+                    <button onClick={this.onDeleteHandle.bind(this,user.id)} className='btn btn-danger btn-sm'>Delete</button>
                  </div></td>
     
   </tr>
