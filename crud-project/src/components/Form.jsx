@@ -315,7 +315,35 @@ onToggleAddMode = () => {
   </tr>
 )})}
 
-</table></div>
+</table>
+
+<div
+      class="toast fade hide position-absolute top-50 start-50 translate-middle"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-body">
+        Really?
+        <div class="mt-2 pt- border-top row g-1">
+          <button
+            type="button"
+            class="btn btn-danger btn-sm mt-2 col mx-3"
+            fdprocessedid="o8iex"
+          >
+            Delete
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary btn-sm mt-2 col-3 mx-3"
+            data-bs-dismiss="toast"
+            fdprocessedid="4mlvneq"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div></div>
         );
     }
 }
