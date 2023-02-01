@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let i,mone=0,mehalek;
+mehalek=parseInt(prompt("enter num:"));
+          
+    while(mehalek>=1000||mehalek<=0){
+    alert("the number isnt correct"); 
+    mehalek=parseInt(prompt("enter num:"));
+    }
+    for( i=1;i<1000;i++){
+    if (i%mehalek===0)
+    mone++;
+    }     
+          
+document.write("quantity of numbers between 0->1000 that divided in" + " "+ mehalek +" "+"are:"+ mone );   
+          
+</script>
+</body>
+</html>

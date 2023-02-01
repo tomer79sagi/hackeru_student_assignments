@@ -1,0 +1,47 @@
+header{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }   
+ 
+ .sidenav{
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: fixed;
+    padding-top: 20px; 
+    background-color:black;
+    width: 100px;
+ }
+ .sidenav a{
+color: white;
+    padding:10px 6px 8px 8px  ;            /* top right bottom left*/
+display: block;
+text-decoration: none;
+ }
+ body{
+    background-image: url(https://casino-home.net/wp-content/uploads/2020/08/texas_web_banner.jpg); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+ }
+
+ /*הגדרות סצפיפיות לדף תוצאות המשחק(האחרון) */
+
+ table{
+   color:lightblue;
+   font-size: xx-large;
+   position: fixed;
+      right: 900px;
+    border: 1px solid white;
+      
+ }
+ h1{
+   color: yellow;
+   position: relative;
+   right: 970px;
+   text-decoration: dotted underline;
+ }
+ .td{
+   padding: 15px;
+   text-align: center;
+   font-weight: bolder;
+ }

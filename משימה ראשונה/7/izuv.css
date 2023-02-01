@@ -1,0 +1,56 @@
+
+
+ header>h2{
+   font-size: 50px;
+color:blue;
+position: relative;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+text-decoration: underline solid blue;
+margin-top:20px ;
+}   
+
+
+body>ul{
+
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+     
+}
+
+a{  color: blue;   text-decoration: underline;}
+
+
+body{
+
+
+background: url(https://hamaroch.com/wp-content/uploads/2020/05/%D7%A7%D7%95%D7%9C%D7%90%D7%96-%D7%9C%D7%9E%D7%90%D7%A4%D7%99%D7%9D-%D7%9E%D7%9C%D7%95%D7%97%D7%99%D7%9D-%D7%98%D7%99%D7%95%D7%98%D7%94.jpg) no-repeat fixed;
+background-size: 100% 100%;
+
+
+}
+
+
+
+
+ footer p{
+font-size: xx-large;
+color: yellow;
+ position:fixed;
+  top: 90%;
+  right:40%;
+}
+body>p{
+    font-size: 30px;
+    font-weight: bold;
+ padding-right: 20px;
+    width:800px;
+
+}
+body>ul{
+   color: rgb(34, 0, 128);
+    font-size: 30px;
+    font-weight: bold;
+
+}
