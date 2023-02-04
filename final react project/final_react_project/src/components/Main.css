@@ -3,12 +3,11 @@
 }
 .cls_table{
     width: 90em;
-    margin: auto;
 }
 .headline{
     display: flex;
     justify-content: space-between;
-    margin: auto;
+    margin-bottom: 2%;
 }
 .form_container{
     display: flex;
@@ -34,7 +33,7 @@
 }
 .cls_create_btn{
     color: rgb(6, 167, 39);
-    width: 75px;
+    width: 85px;
     height: 50px;
     border-radius: 10px; 
     background-color: white;
@@ -69,10 +68,10 @@
 label{
     font-weight: 2;
 }
-th{
+.cls_table_title{
     border-bottom: 2px solid black;
 }
-td, tr{
+.cls_table_content > td{
     border-bottom: 1px solid hsl(0, 0%, 0%, 0.2);
     padding: 10px;
 }

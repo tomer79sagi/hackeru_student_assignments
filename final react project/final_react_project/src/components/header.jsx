@@ -2,7 +2,7 @@ import "./Header.css"
 
 const Header = () => {
     return ( 
-        <header className="cls_header">Final React Project</header>
+        <header className="cls_header">CRUD</header>
      );
 }
  

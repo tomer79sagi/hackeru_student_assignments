@@ -1,5 +1,9 @@
 .cls_header{
-    margin: 10px;
-    font-size: 1.5em;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 1%;
+    font-size: 2em;
+    color: azure;
+    background-color: rgb(36, 57, 77);
 }
 

@@ -111,7 +111,7 @@ class Main extends Component {
 
     onDeleteHandle(event){
         //when i delete a customer the order of the ids is changing
-        if(window.confirm("Are you sure you want to delete this user?") === true){
+        if(window.confirm("Are you sure you want to delete this user?")){
             this.setState({
                 customers: this.state.customers.filter(cus => cus.id !== arguments[0])
             })
@@ -153,17 +153,17 @@ class Main extends Component {
                 {this.state.action === "create" &&
                     <form className="form_container" onSubmit={this.onSubmitHandle.bind(this)}>
                         <label htmlFor="avatar">avatar:</label>
-                        <input type="url" name="avatar"/>
-                        <label htmlFor="firstName">firs tName:</label>
-                        <input type="text" name="firstName" id="firstName"/>
-                        <label htmlFor="lastName">last Name:</label>
-                        <input type="text" name="lastName" id="lastName"/>
+                        <input type="url" name="avatar" required/>
+                        <label htmlFor="firstName">first name:</label>
+                        <input type="text" name="firstName" id="firstName" required/>
+                        <label htmlFor="lastName">last name:</label>
+                        <input type="text" name="lastName" id="lastName" required/>
                         <label htmlFor="phone">phone number:</label>
-                        <input type="tel" name="phone" id="phone"/>
+                        <input type="tel" name="phone" id="phone" required/>
                         <label htmlFor="username">e-mail:</label>
-                        <input type="email" name="username" id="username"/>
+                        <input type="email" name="username" id="username" required/>
                         <label htmlFor="birthDate">birth date:</label>
-                        <input type="date" name="birthDate" id="birthDate"/>
+                        <input type="date" name="birthDate" id="birthDate" required/>
                         <label htmlFor="status">status:</label>
                         <select id="status" name={"status"}>
                             <option value="Lead">Lead</option>
@@ -180,7 +180,7 @@ class Main extends Component {
 
                 {this.state.action === "edit" &&
                     <form className="form_container" onSubmit={this.onUpdateHandle.bind(this)}>
-                        <label htmlFor="id">#:</label>
+                        <label htmlFor="id">#:</label> 
                         <input type="text" name="id" defaultValue={this.state.editCustomer.id} readOnly="readonly"/>
                         <label htmlFor="avatar">avatar:</label>
                         <input type="url" name="avatar" defaultValue={this.state.editCustomer.avatar}/>
@@ -209,7 +209,7 @@ class Main extends Component {
                 }
 
                 <table className="cls_table">
-                   <tr>
+                   <tr className="cls_table_title">
                       <th>#</th>
                       <th>Avatar</th>
                       <th>First</th>
@@ -222,11 +222,11 @@ class Main extends Component {
                    </tr>
                    {this.state.customers.map(cus =>{
                        return(
-                           <tr>
+                           <tr className="cls_table_content">
                                <td>{cus.id}</td>
                                <td>
                                 <img src={cus.avatar} alt="avatar" height={"60em"}/>
-                                </td>
+                               </td>
                                <td>{cus.first_name}</td>
                                <td>{cus.last_name}</td>
                                <td>{cus.phone}</td>
