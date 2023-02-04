@@ -111,7 +111,7 @@ class Main extends Component {
 
     onDeleteHandle(event){
         //when i delete a customer the order of the ids is changing
-        if(window.confirm("Are you sure you want to delete this customer?") === true){
+        if(window.confirm("Are you sure you want to delete this user?") === true){
             this.setState({
                 customers: this.state.customers.filter(cus => cus.id !== arguments[0])
             })
@@ -119,7 +119,6 @@ class Main extends Component {
     }
 
     onUpdateHandle(event){ 
-        //update the date
         event.preventDefault();
 
         this.setState({
@@ -194,7 +193,7 @@ class Main extends Component {
                         <label htmlFor="username">e-mail:</label>
                         <input type="email" name="username" id="username" defaultValue={this.state.editCustomer.username}/>
                         <label htmlFor="birthDate">birth date:</label>
-                        <input type="date" name="birthDate" id="birthDate" defaultValue={this.state.editCustomer.status}/>
+                        <input type="date" name="birthDate" id="birthDate" defaultValue={this.state.editCustomer.birth_date}/>
                         <label htmlFor="status">status:</label>
                         <select id="status" name={"status"} defaultValue={this.state.editCustomer.status}>
                             <option value="Lead">Lead</option>
