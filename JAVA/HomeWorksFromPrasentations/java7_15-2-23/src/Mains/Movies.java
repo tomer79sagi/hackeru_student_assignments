@@ -10,5 +10,7 @@ public class Movies {
                 new String[]{"Denzel Washington", "Marton Csokas", "Chloe Grace Moretz", "and more..."});
 
         System.out.println(movie1);
+
+        System.out.println("Test");
     }
 }
