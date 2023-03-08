@@ -1,4 +1,4 @@
-package lessone_9.class_project_part3;
+package class_project.class_project_part3;
 
 public class colors {
     static  String RED = "\u001B[31m";

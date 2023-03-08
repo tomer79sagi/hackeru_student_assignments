@@ -1,4 +1,4 @@
-package lessone_9.class_project_part3;
+package class_project.class_project_part3;
 
 //1. add menu with 3 options to the program.  show/add/remove
 //2. show the number of current registered student in the array.
@@ -9,26 +9,24 @@ package lessone_9.class_project_part3;
 
 import java.util.ArrayList;
 
-import static lessone_9.class_project_part3.colors.*;
-
 public class CollegeManagementPartC {
 
     static ArrayList<Student> students = new ArrayList<Student>();
     public static void main(String[] args) {
 
-        System.out.println(PURPLE+"Starting College Management App"+"\n");
+        System.out.println(colors.PURPLE+"Starting College Management App"+"\n");
         menu();
     }
 
     public static void menu() {
 
-        System.out.println(YELLOW+ "There is " +"(" +GREEN+ students.size() +YELLOW+ ")" + " students registered");
-        System.out.println(RED+ "Select an option");
-        System.out.println(BLUE+ "(1). Show student list");
-        System.out.println(BLUE+ "(2). Add a new student");
-        System.out.println(BLUE+ "(3). Remove a student");
-        System.out.println(BLUE+ "(4). Exit program");
-        System.out.print(RESET_COLOR);
+        System.out.println(colors.YELLOW+ "There is " +"(" + colors.GREEN+ students.size() + colors.YELLOW+ ")" + " students registered");
+        System.out.println(colors.RED+ "Select an option");
+        System.out.println(colors.BLUE+ "(1). Show student list");
+        System.out.println(colors.BLUE+ "(2). Add a new student");
+        System.out.println(colors.BLUE+ "(3). Remove a student");
+        System.out.println(colors.BLUE+ "(4). Exit program");
+        System.out.print(colors.RESET_COLOR);
 
         int optionNum = IO.nextInt();
 
@@ -43,7 +41,7 @@ public class CollegeManagementPartC {
                 removeStudent();
                 break;
             case 4:
-                System.out.println(RED+"You ara out of the system");
+                System.out.println(colors.RED+"You ara out of the system");
                 exitProgram();
                 break;
         }
@@ -56,7 +54,7 @@ public class CollegeManagementPartC {
         }
         for (Student student : students) {
             count++;
-            System.out.println(YELLOW + student + "Index is: " + count+ "\n");
+            System.out.println(colors.YELLOW + student + "Index is: " + count+ "\n");
         }
         menu();
     }
@@ -87,12 +85,12 @@ public class CollegeManagementPartC {
             int count = 0;
             for (Student student : students) {
                 count++;
-                System.out.println(YELLOW + student + "Index is: " + count + "\n");
+                System.out.println(colors.YELLOW + student + "Index is: " + count + "\n");
             }
 
             int index = IO.nextInt();
             Student removedStudent = students.remove(index - 1);
-            System.out.println(RED + "Student removed: " + YELLOW + removedStudent);
+            System.out.println(colors.RED + "Student removed: " + colors.YELLOW + removedStudent);
 
             menu();
         }

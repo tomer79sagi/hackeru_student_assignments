@@ -1,7 +1,6 @@
-package lessone_9.class_project_part2;
+package class_project.class_project_part2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CollegeManagement {

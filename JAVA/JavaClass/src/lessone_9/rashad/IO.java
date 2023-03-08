@@ -1,4 +1,4 @@
-package lessone_9.part_2;
+package lessone_9.rashad;
 
 import java.util.Scanner;
 

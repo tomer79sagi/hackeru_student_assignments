@@ -1,4 +1,4 @@
-package lessone_9.class_project_part1;
+package class_project.class_project_part1;
 
 import java.util.Scanner;
 

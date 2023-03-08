@@ -1,4 +1,4 @@
-package lessone_9.class_project_part4;
+package class_project.class_project_part4;
 
 public class Student {
     String name;
