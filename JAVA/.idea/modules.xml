@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HacherUProject/HacherUProject.iml" filepath="$PROJECT_DIR$/HacherUProject/HacherUProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JAVA.iml" filepath="$PROJECT_DIR$/.idea/JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWorksFromPrasentations/Java3_1-2-23/Java3_1-2-23.iml" filepath="$PROJECT_DIR$/HomeWorksFromPrasentations/Java3_1-2-23/Java3_1-2-23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaClass/JavaClass.iml" filepath="$PROJECT_DIR$/JavaClass/JavaClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson_1/Lesson_1.iml" filepath="$PROJECT_DIR$/Lesson_1/Lesson_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWorksFromPrasentations/java3_5-2-23/java3_5-2-23.iml" filepath="$PROJECT_DIR$/HomeWorksFromPrasentations/java3_5-2-23/java3_5-2-23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWorksFromPrasentations/java5_8-2-23/java5_8-2-23.iml" filepath="$PROJECT_DIR$/HomeWorksFromPrasentations/java5_8-2-23/java5_8-2-23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWorksFromPrasentations/java6_12-2-23/java6_12-2-23.iml" filepath="$PROJECT_DIR$/HomeWorksFromPrasentations/java6_12-2-23/java6_12-2-23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWorksFromPrasentations/java7_15-2-23/java7_15-2-23.iml" filepath="$PROJECT_DIR$/HomeWorksFromPrasentations/java7_15-2-23/java7_15-2-23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWorksFromPrasentations/java8_19-02-23/java8_19-02-23.iml" filepath="$PROJECT_DIR$/HomeWorksFromPrasentations/java8_19-02-23/java8_19-02-23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeWorksFromPrasentations/java9_22-02-23/java9_22-02-23.iml" filepath="$PROJECT_DIR$/HomeWorksFromPrasentations/java9_22-02-23/java9_22-02-23.iml" />
+    </modules>
+  </component>
+</project>
