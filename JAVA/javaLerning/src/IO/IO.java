@@ -1,3 +1,5 @@
+package javaLerning.src.IO;
+
 import java.util.Scanner;
 
 public class IO {
