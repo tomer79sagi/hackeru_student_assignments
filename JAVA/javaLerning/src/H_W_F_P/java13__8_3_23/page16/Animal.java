@@ -1,6 +1,6 @@
 package javaLerning.src.H_W_F_P.java13__8_3_23.page16;
 
-public class Animal {
+public abstract class Animal {
     private String name;
 
     public String getName() {
@@ -15,9 +15,8 @@ public class Animal {
         setName(name);
     }
 
-    void makeSound(){
-        System.out.println("Making sound");
-    }
+    abstract void makeSound();
+
 
     public String toString(){
         return "Name is: " + name + "\n";
