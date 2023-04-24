@@ -9,5 +9,6 @@ public class Ex2 {
 
         System.out.println(hours + ":" + minute);
         System.out.printf("%02d:%02d%n",hours,minute);
+        System.out.println(hours + " hours and " + minute + " minutes");
     }
 }
