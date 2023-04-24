@@ -1,6 +1,6 @@
 package javaLerning.src.H_W_F_P.java3__1_2_23;
 
-public class Ex_page9 {
+public class Ex_page_9 {
     public static void main(String[] args) {
 
         System.out.println("5*10");
