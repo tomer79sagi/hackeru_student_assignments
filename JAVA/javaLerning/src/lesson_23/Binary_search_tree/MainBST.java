@@ -1,4 +1,4 @@
-package javaLerning.src.lesson_23;
+package javaLerning.src.lesson_23.Binary_search_tree;
 
 public class MainBST {
     public static void main(String[] args) {
