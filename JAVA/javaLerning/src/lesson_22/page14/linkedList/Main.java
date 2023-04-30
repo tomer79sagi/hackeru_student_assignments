@@ -12,27 +12,33 @@ public class Main {
         course.add("Set");
         course.add("Hashtable");
 
-        course.print();
-        System.out.println(course.getSize());
-
-        course.prepend("Inheritance");
-
-        course.print();
-        System.out.println(course.getSize());
-
-        course.add(5,"threads");
-        course.add(3,"Inner Class");
-        course.add(1,"Class");
-
-        course.print();
-        System.out.println(course.getSize());
-
-        course.removeByValue("Set");
+        System.out.println("course 1");
         course.print();
         System.out.println(course.getSize());
         System.out.println();
 
-        System.out.println(course.indexOf("Clas"));
+        course.prepend("Inheritance");
+        System.out.println("course with one more liable at the first please");
+        course.print();
+        System.out.println(course.getSize());
+        System.out.println();
+
+        course.add(5,"threads");
+        course.add(3,"Inner Class");
+        course.add(1,"Class");
+        System.out.println("course whit 3 more values at 5,3,1");
+        course.print();
+        System.out.println(course.getSize());
+        System.out.println();
+
+        course.removeByValue("Set");
+        System.out.println("course without 'set'");
+        course.print();
+        System.out.println(course.getSize());
+        System.out.println();
+
+        System.out.println("index of the value");
+        System.out.println(course.indexOf("list"));
 
 
     }

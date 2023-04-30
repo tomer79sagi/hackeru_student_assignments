@@ -13,7 +13,7 @@ public class Ex_page_8 {
             number--;
         }
         System.out.println();
-        System.out.println(num);
+        System.out.println(num+"\n");
 
 
         System.out.println("fibonacci");

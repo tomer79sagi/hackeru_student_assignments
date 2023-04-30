@@ -128,6 +128,21 @@ public class LinkedList<T>{
         }
     }
 
+    public LinkedList<T> reverse() {
+        // 1. Create LinkedList<T> to hold the new reversed list
+
+        // 2. Convert LinkedList to Array
+        // - Create array of size .getSize()
+        // - 'while' loop over .next() objects that are not null
+        // - Add each element to array
+
+        // 3. Iterate over array from last to first
+        // - Add nodes to the new LinkedList
+
+        // 4. Return new linkedlist
+        return null;
+    }
+
     @Override
     public String toString() {
        String s = "";
