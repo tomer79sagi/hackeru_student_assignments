@@ -1,0 +1,151 @@
+body{
+width: 100vw;
+padding: 50px;
+background-color: rgb(128, 128, 128);
+justify-content: center;
+align-content: center;
+}
+.f-101{
+max-width: 90vw;
+display: flex;
+flex-direction: column;
+background-color: white;
+justify-content: flex-start;
+align-content: center;
+padding: 20px;
+}
+.header{
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-content: flex-start;
+}
+.center{
+text-align: center;
+}
+#top-header{
+font-size: 3em;
+}
+#header-line{
+font-size: 1.3em;
+}
+.header-note{
+justify-content: space-around;
+display: flex;
+border: 2px solid black;
+flex-direction: column;
+align-content: flex-start;
+text-align: center;
+}
+#logo{
+width: 100px;
+height: 100px;
+display: flex;
+justify-content: space-around;
+align-content: flex-start;
+}
+.right{
+padding-top: 20px;
+display: flex;
+justify-content: space-around;
+align-content: flex-start;
+}
+.left{
+padding-top: 20px;
+display: flex;
+align-content: flex-start;
+flex-direction: column;
+}
+#top-number{
+font-weight: 500;
+font-size: 2em;
+border: 1px solid black;
+display: flex;
+justify-content: space-between;
+align-content: flex-start;
+}
+#chaeck{
+display: flex;
+justify-content: space-between;
+align-content: flex-start;
+}
+.boss{
+padding-top: 20px;
+display: flex;
+justify-content: space-around;
+align-content: flex-start;
+flex-direction: column;
+}
+#headline{
+text-align: right;
+}
+.boss-form{
+justify-content: space-around;
+display: flex;
+border: 2px solid black;
+flex-direction: row-reverse;
+align-content: flex-start;
+text-align: center;
+padding: 10px;
+}
+label{
+display: flex;
+justify-content: space-around;
+text-align: center;
+padding: 10px;
+}
+input{
+height: 40px;
+}
+.employe{
+padding-top: 20px;
+display: flex;
+justify-content: space-around;
+align-content: flex-start;
+flex-direction: column;
+}
+.employe-form{
+justify-content: space-around;
+display: flex;
+border: 2px solid black;
+flex-direction: row-reverse;
+align-content: flex-start;
+text-align: center;
+padding: 10px;
+}
+.employe-form label{
+display: flex;
+justify-content: space-between;
+text-align: center;
+padding: 10px;
+}
+.employe-form input{
+height: 40px;
+}
+.check-form{
+display: flex;
+flex-direction: row;
+width: 100%;
+justify-content: space-between;
+flex-wrap: wrap;
+flex-flow: row-reverse;
+}
+.status-form{
+justify-content: space-around;
+display: flex;
+border: 2px solid black;
+flex-direction: row-reverse;
+padding: 10px;
+width: 50%;
+
+}
+.citizen-form{
+justify-content: space-around;
+display: flex;
+border: 2px solid black;
+flex-direction: row-reverse;
+padding: 10px;
+width: 50%;
+
+}
