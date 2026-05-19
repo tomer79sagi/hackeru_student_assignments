@@ -1,0 +1,29 @@
+div{
+width: 250px;
+height: 300px;
+}
+#adiv{
+background-color:#5610b3;
+opacity: 30%;
+}
+#bdiv{
+background-color: #ff1ec7;
+}
+#cdiv{
+background-color: #0055FF;
+}
+.blist{
+display:inline-block;
+}
+
+#special{
+border: 3px dashed black;
+background-color: #0055FF;
+}
+#unic{
+border-radius: 100%;
+background-color: #ff1ec7;
+}
+#bsection{
+display: inline-block;
+}
