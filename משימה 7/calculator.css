@@ -1,0 +1,39 @@
+
+ 
+
+ .flex-container {
+  
+  display: flex;
+  background-image: url(7709.png_860_2_-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-size: 100% 1100px ;
+background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+ 
+  flex-flow:row wrap;
+  padding-top: 390px;
+  padding-left: 280px;
+padding-right: 300px;
+}
+
+.flex-container > div {
+  background-color: #59ffee;
+  font-weight: bold;
+  flex-basis: 210px;
+  height: 100px;
+  margin: 10px 20px;
+  padding: 30px;
+  padding-top: 30px;
+  font-size: 80px;
+  text-align: center;
+}
+
+/* mouse over link */
+.flex-container > div:hover {
+    background-color: yellow;
+  }
+  
+  /* selected link */
+  .flex-container > div:active {
+   background-color: blue;}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 14</title>   
+    <style>
+        #element{
+         position: absolute;
+         transform: translate(-50%,-50%);
+         border-radius: 20px;
+         border: black 3px solid;
+         width: 90px;
+         text-align: center;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="element">element</div>
+    <script>
+        let circle = document.getElementById('element');
+       function onMouseMove  (x) {
+            circle.style.left = x.pageX + 'px';
+            circle.style.top = x.pageY + 'px';
+        }
+        document.addEventListener('mousemove', onMouseMove);
+    </script>
+</body>
+</html>
+
+
+<!--pageX, pageY, screenX, screenY, clientX, and clientY returns a number which indicates the number of logical “CSS pixels” an event point is from the reference point. The event point is where the user clicked and the reference point is a point in the upper left. These properties return the horizontal and vertical distance of the event point from that reference point.
+
+pageX and pageY:
+Relative to the top left of the fully rendered content area in the browser. This reference point is below the URL bar and back button in the upper left. This point could be anywhere in the browser window and can actually change location if there are embedded scrollable pages embedded within pages and the user moves a scrollbar.
+
+screenX and screenY:
+Relative to the top left of the physical screen/monitor, this reference point only moves if you increase or decrease the number of monitors or the monitor resolution.
+
+clientX and clientY:
+Relative to the upper left edge of the content area (the viewport) of the browser window. This point does not move even if the user moves a scrollbar from within the browser.-->
